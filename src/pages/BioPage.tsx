@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Lock, MapPin, Play, ShoppingCart, ExternalLink, Music } from 'lucide-react';
+import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { Link as LinkType, PageData } from '../types';
 import { getPageData, trackLinkClick, trackPageView } from '../services/pageService';
 import PixelInjector from '../components/PixelInjector';
@@ -1269,6 +1270,10 @@ const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }>
 const BioPage: React.FC = () => {
   const [pageData, setPageData] = useState<PageData | null>(null);
   const [loading, setLoading] = useState(true);
+  
+  // Background music for bio/links page
+  // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
+  useBackgroundMusic('/biopage-music.mp3', { volume: 0.2 });
   const [expandedBlocks, setExpandedBlocks] = useState<Set<string>>(new Set());
   const [error, setError] = useState<string | null>(null);
 

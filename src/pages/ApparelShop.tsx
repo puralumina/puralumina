@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ShoppingBag, Filter } from 'lucide-react';
+import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 
 const ApparelShop: React.FC = () => {
+  // Background music for apparel shop page
+  // EDIT THIS PATH: Change '/apparel-shop-music.mp3' to your desired music file
+  useBackgroundMusic('/apparel-shop-music.mp3', { volume: 0.2 });
   
   return (
     <div className="min-h-screen bg-gray-50">

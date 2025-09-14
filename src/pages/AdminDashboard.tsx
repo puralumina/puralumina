@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { PageData } from '../types';
 import { getPageData, savePageData } from '../services/pageService';
 import { useNavigate } from 'react-router-dom';
@@ -32,6 +33,10 @@ const updateFavicon = (faviconUrl: string) => {
 const AdminDashboard: React.FC = () => {
   const { logout } = useAuth();
   const navigate = useNavigate();
+  
+  // Background music for admin dashboard
+  // EDIT THIS PATH: Change '/admin-dashboard-music.mp3' to your desired music file
+  useBackgroundMusic('/admin-dashboard-music.mp3', { volume: 0.15 });
 
   const [draftData, setDraftData] = useState<PageData | null>(null);
   const [liveData, setLiveData] = useState<PageData | null>(null);

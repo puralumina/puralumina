@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ShoppingCart, Filter } from 'lucide-react';
+import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { Product, Category } from '../types';
 import { useCart } from '../contexts/CartContext';
 
@@ -146,6 +147,10 @@ const ShopPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const { addToCart } = useCart();
+  
+  // Background music for shop page
+  // EDIT THIS PATH: Change '/shop-music.mp3' to your desired music file
+  useBackgroundMusic('/shop-music.mp3', { volume: 0.2 });
 
   useEffect(() => {
     if (selectedCategory === 'all') {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Lock, Eye, EyeOff, ArrowLeft } from 'lucide-react';
+import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { useAuth } from '../contexts/AuthContext';
 
 const AdminLogin: React.FC = () => {
@@ -12,6 +13,10 @@ const AdminLogin: React.FC = () => {
   
   const { login } = useAuth();
   const navigate = useNavigate();
+  
+  // Background music for admin login page
+  // EDIT THIS PATH: Change '/admin-login-music.mp3' to your desired music file
+  useBackgroundMusic('/admin-login-music.mp3', { volume: 0.15 });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

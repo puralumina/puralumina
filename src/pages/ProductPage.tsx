@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ShoppingCart, Plus, Minus } from 'lucide-react';
+import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { Product } from '../types';
 import { useCart } from '../contexts/CartContext';
 
@@ -112,6 +113,25 @@ const ProductPage: React.FC = () => {
   const [product, setProduct] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useCart();
+  
+  // Background music for individual products
+  // EDIT THESE PATHS: Add music files for each product ID
+  const getMusicForProduct = (productId: string | undefined) => {
+    const musicMap: { [key: string]: string } = {
+      '1': '/product-1-music.mp3',  // The Richest Habit
+      '2': '/product-2-music.mp3',  // The Compound Engine
+      '3': '/product-3-music.mp3',  // Money is a Language
+      '4': '/product-4-music.mp3',  // The Delayed Dividend
+      '5': '/product-5-music.mp3',  // The 7 Financial Rooms
+      '6': '/product-6-music.mp3',  // Professional Camera
+      '7': '/product-7-music.mp3',  // Camera Lens
+      '8': '/product-8-music.mp3',  // Photography Kit
+      '9': '/product-9-music.mp3',  // Vintage Camera
+    };
+    return productId ? musicMap[productId] || '/default-product-music.mp3' : '/default-product-music.mp3';
+  };
+  
+  useBackgroundMusic(getMusicForProduct(id), { volume: 0.2 });
 
   useEffect(() => {
     const foundProduct = sampleProducts.find(p => p.id === id);
