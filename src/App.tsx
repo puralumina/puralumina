@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { CartProvider } from './contexts/CartContext';
+import HomePage from './pages/HomePage';
 import BioPage from './pages/BioPage';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
@@ -15,7 +16,8 @@ function App() {
       <CartProvider>
         <Router>
           <Routes>
-            <Route path="/" element={<BioPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/links" element={<BioPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/admin/login" element={<AdminLogin />} />

@@ -105,11 +105,11 @@ const AdminLogin: React.FC = () => {
 
         <div className="mt-6 text-center">
           <Link
-            to="/"
+            to="/links"
             className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-1" />
-            Back to HomePage
+            Back to Links Page
           </Link>
         </div>
       </div>
