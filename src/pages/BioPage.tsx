@@ -1273,7 +1273,7 @@ const BioPage: React.FC = () => {
   
   // Background music for bio/links page
   // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
-  useBackgroundMusic('/biopage-music.mp3', { volume: 0.2 });
+  useBackgroundMusic('/biopage-music.mp3', { volume: 0.1 });
   const [expandedBlocks, setExpandedBlocks] = useState<Set<string>>(new Set());
   const [error, setError] = useState<string | null>(null);
 
