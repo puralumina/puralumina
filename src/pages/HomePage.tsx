@@ -43,9 +43,9 @@ const HomePage = () => {
               />
             </div>
 
-            {/* Pulse Rings */}
+            {/* Pulse Rings
             <div className="absolute inset-0 rounded-full border-4 border-[#895503] animate-ping opacity-75"></div>
-            <div className="absolute inset-0 rounded-full border-4 border-[#895503] animate-ping opacity-50 animation-delay-1000"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-[#895503] animate-ping opacity-50 animation-delay-1000"></div>*/}
           </div>
         </div>
       </div>
