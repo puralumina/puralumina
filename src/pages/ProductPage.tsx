@@ -75,7 +75,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '3',
-    name: 'Money is a Language',
+    name: 'Seducing His Senses: A Woman\'s Guide to Pleasuring Her Man',
     price: 11.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
