@@ -119,7 +119,7 @@ const sampleProducts: Product[] = [
   {
     id: '12',
     name: 'The 30-Day Relationship Challenge',
-    price: 180,
+    price: 6.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
