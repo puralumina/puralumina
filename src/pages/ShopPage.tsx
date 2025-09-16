@@ -89,7 +89,7 @@ const sampleProducts: Product[] = [
   {
     id: '9',
     name: '"Truth or Dare" for Couples Cards',
-    price: 6.99,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
@@ -99,7 +99,7 @@ const sampleProducts: Product[] = [
   {
     id: '10',
     name: 'Date Night Idea Cards',
-    price: 6.99,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
@@ -109,7 +109,7 @@ const sampleProducts: Product[] = [
   {
     id: '11',
     name: 'Couples\' Affirmation Cards',
-    price: 6.99,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
@@ -119,7 +119,7 @@ const sampleProducts: Product[] = [
   {
     id: '12',
     name: 'The 30-Day Relationship Challenge',
-    price: 6.99,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
@@ -129,7 +129,7 @@ const sampleProducts: Product[] = [
   {
     id: '13',
     name: 'The Ultimate Date Night Planner',
-    price: 6.99,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
@@ -139,7 +139,7 @@ const sampleProducts: Product[] = [
   {
     id: '14',
     name: '"State of the Union" Meeting Guide',
-    price: 6.99,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
@@ -149,7 +149,7 @@ const sampleProducts: Product[] = [
   {
     id: '15',
     name: 'All Products Bundle',
-    price: 180,
+    price: 69.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
