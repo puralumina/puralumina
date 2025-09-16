@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ShoppingCart, Filter } from 'lucide-react';
+import { ArrowLeft, Filter } from 'lucide-react';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { Product, Category } from '../types';
-import { useCart } from '../contexts/CartContext';
 
 // Sample products - you can modify these manually
 const sampleProducts: Product[] = [
@@ -141,15 +140,42 @@ const sampleCategories: Category[] = [
   },
 ];
 
+// Recently viewed products functionality
+const getRecentlyViewed = (): Product[] => {
+  const stored = localStorage.getItem('recentlyViewed');
+  if (!stored) return [];
+  
+  const productIds = JSON.parse(stored);
+  return productIds
+    .map((id: string) => sampleProducts.find(p => p.id === id))
+    .filter(Boolean)
+    .slice(0, 4); // Show max 4 recently viewed
+};
+
+const addToRecentlyViewed = (productId: string) => {
+  const stored = localStorage.getItem('recentlyViewed');
+  let productIds = stored ? JSON.parse(stored) : [];
+  
+  // Remove if already exists
+  productIds = productIds.filter((id: string) => id !== productId);
+  
+  // Add to beginning
+  productIds.unshift(productId);
+  
+  // Keep only last 8
+  productIds = productIds.slice(0, 8);
+  
+  localStorage.setItem('recentlyViewed', JSON.stringify(productIds));
+};
+
 const ShopPage: React.FC = () => {
   const [products] = useState<Product[]>(sampleProducts);
   const [categories] = useState<Category[]>(sampleCategories);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
-  const { addToCart } = useCart();
+  const [recentlyViewed, setRecentlyViewed] = useState<Product[]>([]);
   
   // Background music for shop page
-  // EDIT THIS PATH: Change '/shop-music.mp3' to your desired music file
   useBackgroundMusic('/shop-music.mp3', { volume: 0.2 });
 
   useEffect(() => {
@@ -160,49 +186,49 @@ const ShopPage: React.FC = () => {
     }
   }, [selectedCategory, products]);
 
-  const handleAddToCart = (product: Product) => {
-    // Direct Stripe payment instead of cart
-    if (product.stripePaymentLink) {
-      window.open(product.stripePaymentLink, '_blank');
-    } else {
-      alert('Payment link not configured for this product.');
-    }
+  useEffect(() => {
+    setRecentlyViewed(getRecentlyViewed());
+  }, []);
+
+  const handleProductClick = (productId: string) => {
+    addToRecentlyViewed(productId);
+    setRecentlyViewed(getRecentlyViewed());
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{ backgroundColor: '#f5f5f5', fontFamily: "'Montserrat', sans-serif" }}>
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="max-w-7xl mx-auto px-8 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Link to="/" className="flex items-center text-gray-600 hover:text-gray-900">
+            <div className="flex items-center space-x-6">
+              <Link to="/links" className="flex items-center text-gray-600 hover:text-gray-900 transition-colors">
                 <ArrowLeft className="w-5 h-5 mr-2" />
                 Back to Home
               </Link>
-              {/*<h1 className="text-2xl font-bold text-gray-900">Shop</h1>*/}
             </div>
           </div>
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-8 py-12">
         {/* Categories */}
-        <div className="mb-8">
-          <div className="flex items-center mb-4">
-            <Filter className="w-5 h-5 mr-2 text-gray-600" />
-            <h2 className="text-lg font-semibold text-gray-900">Categories</h2>
+        <div className="mb-16">
+          <div className="flex items-center mb-8">
+            <Filter className="w-5 h-5 mr-3 text-gray-600" />
+            <h2 className="text-xl font-medium text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Categories</h2>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-4">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-6 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${
                   selectedCategory === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                    ? 'bg-[#C27006] text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                 }`}
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 {category.name}
               </button>
@@ -210,52 +236,106 @@ const ShopPage: React.FC = () => {
           </div>
         </div>
 
+        
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {filteredProducts.map((product) => (
-            <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              <Link to={`/product/${product.id}`}>
-                <div className="aspect-square bg-gray-200">
+            <Link
+              key={product.id}
+              to={`/product/${product.id}`}
+              onClick={() => handleProductClick(product.id)}
+              className="group block"
+            >
+              <div className="transition-all duration-300">
+                {/* Product Image */}
+                <div className="aspect-square bg-gray-100 overflow-hidden rounded-xl">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                   />
                 </div>
-              </Link>
-              <div className="p-4">
-                <Link to={`/product/${product.id}`}>
-                  <h3 className="font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors">
+                
+                {/* Product Info */}
+                <div className="p-6">
+                  <h3 className="font-bold text-gray-900 mb-2 text-sm leading-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                     {product.name}
                   </h3>
-                </Link>
-                <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-gray-900">
+                  <p className="font-normal text-gray-700 text-sm" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                     {product.currency === 'USD' && '$'}
                     {product.currency === 'EUR' && '€'}
                     {product.currency === 'GBP' && '£'}
                     {product.price}
-                  </span>
-                  <button
-                    onClick={() => handleAddToCart(product)}
-                    className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full transition-colors"
-                    title="Pay Now"
-                  >
-                    <ShoppingCart className="w-4 h-4" />
-                  </button>
+                  </p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
-        </div>
+        </div><br/><br/><br/>
+
+        {/* Recently Viewed Products */}
+        {recentlyViewed.length > 0 && (
+          <div className="mb-16">
+            <h2 className="text-xl font-medium text-center text-gray-900 mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              Recently Viewed
+            </h2>
+            <div className="grid grid-cols-3 lg:grid-cols-6 gap-8">
+              {recentlyViewed.map((product) => (
+                <Link
+                  key={product.id}
+                  to={`/product/${product.id}`}
+                  onClick={() => handleProductClick(product.id)}
+                  className="group block"
+                >
+                  <div className="transition-all duration-300">
+                    {/* Product Image */}
+                    <div className="aspect-square bg-gray-100 overflow-hidden rounded-xl">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                      />
+                    </div>
+                    
+                    {/* Product Info */}
+                    <div className="p-6">
+                      <h3 className="font-bold text-gray-900 mb-2 text-sm leading-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                        {product.name}
+                      </h3>
+                      <p className="font-normal text-gray-700 text-sm" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                        {product.currency === 'USD' && '$'}
+                        {product.currency === 'EUR' && '€'}
+                        {product.currency === 'GBP' && '£'}
+                        {product.price}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
 
         {filteredProducts.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500">No products found in this category.</p>
+          <div className="text-center py-16">
+            <p className="text-gray-500" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              No products found in this category.
+            </p>
           </div>
         )}
       </div>
+
+      {/* Custom Styles */}
+      <style>{`
+        .scale-103 {
+          transform: scale(1.03);
+        }
+        
+        .group:hover .group-hover\\:scale-103 {
+          transform: scale(1.03);
+        }
+      `}</style>
     </div>
   );
 };

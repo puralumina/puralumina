@@ -154,11 +154,21 @@ export interface Product {
   price: number;
   currency: string;
   image: string;
+  images?: string[];
   description: string;
   category: string;
   inStock: boolean;
   stripeProductId?: string;
   stripePriceId?: string;
+  stripePaymentLink?: string;
+  // Enhanced product information
+  rating?: number; // 1-5 stars
+  reviewCount?: number;
+  stockCount?: number;
+  originalPrice?: number; // For showing discounts
+  discountPercentage?: number;
+  isOnSale?: boolean;
+  saleLabel?: string; // e.g., "SOLDE", "SALE", "LIMITED TIME"
 }
 
 export interface CartItem {
