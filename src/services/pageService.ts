@@ -47,7 +47,7 @@ const defaultPageData: PageData = {
       id: '1',
       type: 'standard',
       title: 'Official Website',
-      url: 'https://wisefossi.com',
+      url: 'https://.com',
       order: 0,
       active: true,
     },
