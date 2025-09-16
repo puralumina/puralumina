@@ -296,7 +296,17 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
       'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
     ],
-    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+    description: `
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">Discover the ultimate resource for enhancing your intimate life with our exclusive 15-Book Digital Bundle! This comprehensive package includes every book available on our website, spanning all categories, offering you a wealth of expert insights and techniques to transform your relationship and satisfy your deepest desires. Here's what you'll receive:</p>
+
+<ul style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin: 20px 0; padding-left: 20px;">
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Books Category:</strong> Dive into expert guides on intimacy and pleasure with titles like "Mastering Her Pleasure" and "Seducing His Senses."</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Couples Games:</strong> Explore fun and sensual games designed to spice up your relationship and deepen your connection.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Cards:</strong> Utilize playful cards to explore desires, build intimacy, and keep things exciting in the bedroom.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Planners &amp; Worksheets:</strong> Organize and enhance your journey to a more satisfying relationship with practical tools and resources.</li>
+</ul>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">With this bundle, you'll receive a comprehensive library of resources designed to enhance your intimate life. From building confidence and improving communication to exploring new techniques and scenarios, this bundle has everything you need to keep the spark alive and satisfy your partner's deepest desires. Don't miss out on this incredible offer—elevate your connection and pleasure today at an unbeatable price!</p>
 `,
     category: 'Bundle',
     stripePaymentLink: 'https://youtube.com',
