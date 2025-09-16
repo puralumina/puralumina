@@ -43,7 +43,7 @@ const sampleProducts: Product[] = [
   {
     id: '2',
     name: 'Dirty Talks to make her 100x wet during Sex',
-    price: 6.99,
+    price: 9.99,
     originalPrice: 19.99,
     isOnSale: true,
     saleLabel: 'LIMITED TIME',
