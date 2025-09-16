@@ -125,7 +125,7 @@ const SettingsTab: React.FC<SettingsTabProps> = ({ data, setData }) => {
               <img 
                 src={convertToDirectImageUrl(data.profile.imageUrl)} 
                 alt="Profile" 
-                className="!w-40 !h-40 rounded-full object-cover border-2 border-gray-300"
+                className="!w-40 !h-40 rounded-full object-cover"
                 crossOrigin="anonymous"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
