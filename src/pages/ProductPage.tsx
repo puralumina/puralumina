@@ -11,6 +11,13 @@ const sampleProducts: Product[] = [
     id: '1',
     name: 'The Richest Habit',
     price: 19.99,
+    originalPrice: 24.99,
+    discountPercentage: 20,
+    isOnSale: true,
+    saleLabel: 'SALE',
+    rating: 4.8,
+    reviewCount: 127,
+    stockCount: 15,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -28,6 +35,13 @@ const sampleProducts: Product[] = [
     id: '2',
     name: 'The Compound Engine',
     price: 14.99,
+    originalPrice: 17.99,
+    discountPercentage: 17,
+    isOnSale: true,
+    saleLabel: 'LIMITED TIME',
+    rating: 4.6,
+    reviewCount: 89,
+    stockCount: 23,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -44,6 +58,9 @@ const sampleProducts: Product[] = [
     id: '3',
     name: 'Money is a Language',
     price: 11.99,
+    rating: 4.9,
+    reviewCount: 203,
+    stockCount: 8,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -62,6 +79,13 @@ const sampleProducts: Product[] = [
     id: '4',
     name: 'The Delayed Dividend',
     price: 11.99,
+    originalPrice: 13.99,
+    discountPercentage: 14,
+    isOnSale: true,
+    saleLabel: 'SALE',
+    rating: 4.4,
+    reviewCount: 156,
+    stockCount: 31,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -78,6 +102,9 @@ const sampleProducts: Product[] = [
     id: '5',
     name: 'The 7 Financial Rooms',
     price: 13.99,
+    rating: 4.7,
+    reviewCount: 94,
+    stockCount: 12,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -95,6 +122,13 @@ const sampleProducts: Product[] = [
     id: '6',
     name: 'Professional Camera',
     price: 250,
+    originalPrice: 299.99,
+    discountPercentage: 17,
+    isOnSale: true,
+    saleLabel: 'CLEARANCE',
+    rating: 4.5,
+    reviewCount: 78,
+    stockCount: 5,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
     images: [
@@ -112,6 +146,9 @@ const sampleProducts: Product[] = [
     id: '7',
     name: 'Camera Lens',
     price: 150,
+    rating: 4.3,
+    reviewCount: 45,
+    stockCount: 18,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
     images: [
@@ -128,6 +165,13 @@ const sampleProducts: Product[] = [
     id: '8',
     name: 'Photography Kit',
     price: 300,
+    originalPrice: 399.99,
+    discountPercentage: 25,
+    isOnSale: true,
+    saleLabel: 'MEGA SALE',
+    rating: 4.8,
+    reviewCount: 112,
+    stockCount: 7,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
     images: [
@@ -146,6 +190,9 @@ const sampleProducts: Product[] = [
     id: '9',
     name: 'Vintage Camera',
     price: 180,
+    rating: 4.2,
+    reviewCount: 67,
+    stockCount: 3,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -187,6 +234,32 @@ const ProductPage: React.FC = () => {
   
   useBackgroundMusic(getMusicForProduct(id), { volume: 0.2 });
 
+  // Helper function to render star rating
+  const renderStarRating = (rating: number) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+    
+    for (let i = 0; i < 5; i++) {
+      if (i < fullStars) {
+        stars.push(
+          <span key={i} className="text-yellow-400 text-xl">★</span>
+        );
+      } else if (i === fullStars && hasHalfStar) {
+        stars.push(
+          <span key={i} className="text-yellow-400 text-xl relative">
+            <span className="absolute inset-0">☆</span>
+            <span className="absolute inset-0 overflow-hidden w-1/2">★</span>
+          </span>
+        );
+      } else {
+        stars.push(
+          <span key={i} className="text-gray-300 text-xl">☆</span>
+        );
+      }
+    }
+    return stars;
+  };
   useEffect(() => {
     const foundProduct = sampleProducts.find(p => p.id === id);
     setProduct(foundProduct || null);
@@ -325,15 +398,58 @@ const ProductPage: React.FC = () => {
 
           {/* Product Details */}
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+            {/* Product Title */}
+            <div className="flex items-start justify-between mb-4">
+              <h1 className="text-3xl font-bold text-gray-900 flex-1">{product.name}</h1>
+              {product.isOnSale && product.saleLabel && (
+                <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium ml-4">
+                  {product.saleLabel} -{product.discountPercentage}%
+                </span>
+              )}
+            </div>
+
+            {/* Rating and Reviews */}
+            {product.rating && (
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center">
+                  {renderStarRating(product.rating)}
+                </div>
+                <span className="text-gray-600 text-sm">
+                  ({product.reviewCount || 0} avis)
+                </span>
+                {product.stockCount !== undefined && (
+                  <span className="text-gray-600 text-sm">
+                    Stock: {product.stockCount} disponibles
+                  </span>
+                )}
+              </div>
+            )}
             
+            {/* Pricing */}
             <div className="mb-6">
-              <span className="text-3xl font-bold text-blue-600">
-                {product.currency === 'USD' && '$'}
-                {product.currency === 'EUR' && '€'}
-                {product.currency === 'GBP' && '£'}
-                {product.price}
-              </span>
+              {product.originalPrice && product.isOnSale ? (
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl text-gray-400 line-through">
+                    {product.currency === 'USD' && '$'}
+                    {product.currency === 'EUR' && '€'}
+                    {product.currency === 'GBP' && '£'}
+                    {product.originalPrice.toFixed(2)}
+                  </span>
+                  <span className="text-3xl font-bold text-green-600">
+                    {product.currency === 'USD' && '$'}
+                    {product.currency === 'EUR' && '€'}
+                    {product.currency === 'GBP' && '£'}
+                    {product.price}
+                  </span>
+                </div>
+              ) : (
+                <span className="text-3xl font-bold text-blue-600">
+                  {product.currency === 'USD' && '$'}
+                  {product.currency === 'EUR' && '€'}
+                  {product.currency === 'GBP' && '£'}
+                  {product.price}
+                </span>
+              )}
             </div>
 
             <div className="mb-6">
@@ -341,14 +457,22 @@ const ProductPage: React.FC = () => {
               <p className="text-gray-600 leading-relaxed">{product.description}</p>
             </div>
 
+            {/* Stock Status */}
             <div className="mb-6">
-              <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                product.inStock 
-                  ? 'bg-green-100 text-green-800' 
-                  : 'bg-red-100 text-red-800'
-              }`}>
-                {product.inStock ? 'In Stock' : 'Out of Stock'}
-              </span>
+              <div className="flex items-center gap-4">
+                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
+                  product.inStock 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-red-100 text-red-800'
+                }`}>
+                  {product.inStock ? 'In Stock' : 'Out of Stock'}
+                </span>
+                {product.stockCount !== undefined && product.stockCount <= 10 && product.inStock && (
+                  <span className="text-orange-600 text-sm font-medium">
+                    Only {product.stockCount} left!
+                  </span>
+                )}
+              </div>
             </div>
 
             {product.inStock && (
@@ -356,9 +480,19 @@ const ProductPage: React.FC = () => {
                 {/* Pay Now Button */}
                 <button
                   onClick={handleAddToCart}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                  className={`w-full py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${
+                    product.isOnSale 
+                      ? 'bg-green-600 hover:bg-green-700 text-white' 
+                      : 'bg-blue-600 hover:bg-blue-700 text-white'
+                  }`}
                 >
-                  <span>Pay Now - {product.currency === 'USD' && '$'}{product.currency === 'EUR' && '€'}{product.currency === 'GBP' && '£'}{product.price}</span>
+                  <span>
+                    {product.isOnSale ? 'Buy Now - Save ' + product.discountPercentage + '%' : 'Pay Now'} - 
+                    {product.currency === 'USD' && '$'}
+                    {product.currency === 'EUR' && '€'}
+                    {product.currency === 'GBP' && '£'}
+                    {product.price}
+                  </span>
                 </button>
               </div>
             )}
