@@ -197,7 +197,7 @@ const sampleProducts: Product[] = [
     description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
 `,
     category: 'Cards',
-    stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_9',
+    stripePaymentLink: '',
   },
 ];
 
