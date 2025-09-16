@@ -223,7 +223,7 @@ const ShopPage: React.FC = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 text-sm font-medium transition-all duration-300 ${
+                className={`px-6 py-3 text-sm font-medium transition-all duration-300 rounded-xl ${
                   selectedCategory === category.id
                     ? 'bg-black text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
