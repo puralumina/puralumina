@@ -199,6 +199,108 @@ const sampleProducts: Product[] = [
     category: 'Cards',
     stripePaymentLink: 'https://youtube.com',
   },
+  {
+    id: '10',
+    name: 'Vintage Camera',
+    price: 180,
+    currency: 'USD',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+    images: [
+      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
+      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
+      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
+    ],
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+`,
+    category: 'Cards',
+    stripePaymentLink: 'https://youtube.com',
+  },
+  {
+    id: '11',
+    name: 'Vintage Camera',
+    price: 180,
+    currency: 'USD',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+    images: [
+      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
+      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
+      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
+    ],
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+`,
+    category: 'Cards',
+    stripePaymentLink: 'https://youtube.com',
+  },
+  {
+    id: '12',
+    name: 'Vintage Camera',
+    price: 180,
+    currency: 'USD',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+    images: [
+      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
+      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
+      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
+    ],
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+`,
+    category: 'Cards',
+    stripePaymentLink: 'https://youtube.com',
+  },
+  {
+    id: '13',
+    name: 'Vintage Camera',
+    price: 180,
+    currency: 'USD',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+    images: [
+      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
+      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
+      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
+    ],
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+`,
+    category: 'Cards',
+    stripePaymentLink: 'https://youtube.com',
+  },
+  {
+    id: '14',
+    name: 'Vintage Camera',
+    price: 180,
+    currency: 'USD',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+    images: [
+      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
+      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
+      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
+    ],
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+`,
+    category: 'Cards',
+    stripePaymentLink: 'https://youtube.com',
+  },
+  {
+    id: '15',
+    name: 'Vintage Camera',
+    price: 180,
+    currency: 'USD',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+    images: [
+      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
+      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
+      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
+    ],
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+`,
+    category: 'Cards',
+    stripePaymentLink: 'https://youtube.com',
+  },
 ];
 
 const ProductPage: React.FC = () => {
