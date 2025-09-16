@@ -8,7 +8,7 @@ import { Product, Category } from '../types';
 const sampleProducts: Product[] = [
   {
     id: '1',
-    name: 'Mastering Her Pleasure: The Ultimate Guide for Men.',
+    name: 'Mastering Her Pleasure: The Ultimate Guide for Men',
     price: 19.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
