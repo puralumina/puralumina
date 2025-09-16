@@ -310,7 +310,7 @@ const ProductPage: React.FC = () => {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Product Not Found</h2>
-          <Link to="/shop" className="text-blue-600 hover:text-blue-700">
+          <Link to="/links" className="text-blue-600 hover:text-blue-700">
             Back to Shop
           </Link>
         </div>
