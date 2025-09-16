@@ -1289,7 +1289,7 @@ const BioPage: React.FC = () => {
         }
         
         // Update page title
-        document.title = data.profile.name || 'Soulmates Desires';
+        document.title = data.profile.name || 'Pura Lumina';
         
         // Only track page view if we successfully loaded data
         if (data) {
@@ -1514,7 +1514,7 @@ const BioPage: React.FC = () => {
 
           <footer className="mt-16 mb-8 text-center">
             <p className="text-white/60 text-sm">
-              Copyright © 2025 Soulmates Desires. All rights reserved.
+              Copyright © 2025 Pura Lumina. All rights reserved.
             </p>
           </footer>
         </div>

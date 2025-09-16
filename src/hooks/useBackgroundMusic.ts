@@ -102,9 +102,6 @@ export const useBackgroundMusic = (
   useEffect(() => {
     if (!musicPath) return;
 
-    // Skip if the audio file doesn't exist or path is invalid
-    if (!musicPath || musicPath.trim() === '') return;
-
     // Reset flags
     isCleaningUpRef.current = false;
     isMountedRef.current = true;
@@ -114,15 +111,6 @@ export const useBackgroundMusic = (
     audio.loop = true;
     audio.preload = 'auto';
     audioRef.current = audio;
-
-    // Handle audio loading errors
-    const handleLoadError = (error: Event) => {
-      console.warn(`Audio file not found or unsupported: ${musicPath}`);
-      // Silently fail - don't throw error to user
-      return;
-    };
-
-    audio.addEventListener('error', handleLoadError);
 
     // Mobile-specific audio settings
     if (isMobile) {
@@ -222,11 +210,6 @@ export const useBackgroundMusic = (
       if (fadeIntervalRef.current) {
         clearInterval(fadeIntervalRef.current);
         fadeIntervalRef.current = null;
-      }
-      
-      // Remove error event listener
-      if (audioRef.current) {
-        audioRef.current.removeEventListener('error', handleLoadError);
       }
       
       // Clean up event listeners if they exist

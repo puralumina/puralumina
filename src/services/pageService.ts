@@ -6,7 +6,7 @@ const pageDocRef = doc(db, 'pages', 'main');
 
 const defaultPageData: PageData = {
   profile: {
-    name: 'Soulmates Desires',
+    name: 'Pura Lumina',
     subtitle: 'Pro BMX Athlete | Content Creator',
     location: 'Douala, Cameroon',
     bio: 'I create captivating visuals and user experiences. Let\'s collaborate!',
