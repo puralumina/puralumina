@@ -14,11 +14,6 @@ export const useBackgroundMusic = (
   const fadeIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const isCleaningUpRef = useRef(false);
   const isMountedRef = useRef(true);
-  const { volume = 0.3, fadeInDuration = 1000, fadeOutDuration = 500 } = options;
-
-  // Detect mobile devices
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
   const stopAudio = (audio: HTMLAudioElement) => {
     try {
       // Clear any ongoing fade intervals
@@ -111,12 +106,6 @@ export const useBackgroundMusic = (
     audio.loop = true;
     audio.preload = 'auto';
     audioRef.current = audio;
-
-    // Mobile-specific audio settings
-    if (isMobile) {
-      audio.setAttribute('playsinline', 'true');
-      audio.setAttribute('webkit-playsinline', 'true');
-    }
 
     // Handle user interaction requirement for autoplay
     const playAudio = async () => {
