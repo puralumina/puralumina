@@ -129,7 +129,7 @@ const sampleProducts: Product[] = [
   {
     id: '13',
     name: 'The Ultimate Date Night Planner',
-    price: 180,
+    price: 6.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
@@ -139,7 +139,7 @@ const sampleProducts: Product[] = [
   {
     id: '14',
     name: '"State of the Union" Meeting Guide',
-    price: 180,
+    price: 6.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Beautiful vintage camera with classic design',
