@@ -112,7 +112,8 @@ const sampleProducts: Product[] = [
   {
     id: '5',
     name: 'Couples Games - The Spicy Edition',
-    price: 13.99,
+    price: 7.99,
+    originalPrice: 14.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -129,8 +130,8 @@ const sampleProducts: Product[] = [
   {
     id: '6',
     name: 'Couples Games - The Connection Edition',
-    price: 250,
-    originalPrice: 299.99,
+    price: 7.99,
+    originalPrice: 14.99,
     isOnSale: true,
     saleLabel: 'CLEARANCE',
     currency: 'USD',
@@ -148,7 +149,8 @@ const sampleProducts: Product[] = [
   {
     id: '7',
     name: 'Couples Games - The Laughs & Giggles Edition',
-    price: 150,
+    price: 7.99,
+    originalPrice: 14.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
     images: [
@@ -163,8 +165,8 @@ const sampleProducts: Product[] = [
   {
     id: '8',
     name: 'Couples Games - The 5-Minute Connector Edition',
-    price: 300,
-    originalPrice: 399.99,
+    price: 7.99,
+    originalPrice: 14.99,
     isOnSale: true,
     saleLabel: 'MEGA SALE',
     currency: 'USD',
