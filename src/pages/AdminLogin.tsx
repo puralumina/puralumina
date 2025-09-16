@@ -15,9 +15,8 @@ const AdminLogin: React.FC = () => {
   const navigate = useNavigate();
   
   // Background music for admin login page
-  // Background music for admin login page - using existing biopage music as fallback
-  // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
-  useBackgroundMusic('/biopage-music.mp3', { volume: 0.15 });
+  // EDIT THIS PATH: Change '/admin-login-music.mp3' to your desired music file
+  useBackgroundMusic('/admin-login-music.mp3', { volume: 0.15 });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

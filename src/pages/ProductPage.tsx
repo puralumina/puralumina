@@ -118,17 +118,17 @@ const ProductPage: React.FC = () => {
   // EDIT THESE PATHS: Add music files for each product ID
   const getMusicForProduct = (productId: string | undefined) => {
     const musicMap: { [key: string]: string } = {
-      '1': '/biopage-music.mp3',  // The Richest Habit
-      '2': '/biopage-music.mp3',  // The Compound Engine
-      '3': '/biopage-music.mp3',  // Money is a Language
-      '4': '/biopage-music.mp3',  // The Delayed Dividend
-      '5': '/biopage-music.mp3',  // The 7 Financial Rooms
-      '6': '/biopage-music.mp3',  // Professional Camera
-      '7': '/biopage-music.mp3',  // Camera Lens
-      '8': '/biopage-music.mp3',  // Photography Kit
-      '9': '/biopage-music.mp3',  // Vintage Camera
+      '1': '/product-1-music.mp3',  // The Richest Habit
+      '2': '/product-2-music.mp3',  // The Compound Engine
+      '3': '/product-3-music.mp3',  // Money is a Language
+      '4': '/product-4-music.mp3',  // The Delayed Dividend
+      '5': '/product-5-music.mp3',  // The 7 Financial Rooms
+      '6': '/product-6-music.mp3',  // Professional Camera
+      '7': '/product-7-music.mp3',  // Camera Lens
+      '8': '/product-8-music.mp3',  // Photography Kit
+      '9': '/product-9-music.mp3',  // Vintage Camera
     };
-    return productId ? musicMap[productId] || '/biopage-music.mp3' : '/biopage-music.mp3';
+    return productId ? musicMap[productId] || '/default-product-music.mp3' : '/default-product-music.mp3';
   };
   
   useBackgroundMusic(getMusicForProduct(id), { volume: 0.2 });
