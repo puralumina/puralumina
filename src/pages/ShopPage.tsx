@@ -73,7 +73,7 @@ const sampleProducts: Product[] = [
     currency: 'USD',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
     description: 'Premium camera lens with excellent optical quality',
-    category: 'Planners & Worksheets',
+    category: 'planners',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_7',
   },
   {
@@ -124,7 +124,7 @@ const sampleCategories: Category[] = [
     image: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
   },
   {
-    id: 'Planners & Worksheets',
+    id: 'planners',
     name: 'Planners & Worksheets',
     description: 'Camera lenses and optical equipment',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
