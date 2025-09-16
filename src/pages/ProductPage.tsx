@@ -184,7 +184,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '9',
-    name: 'Vintage Camera',
+    name: '"Truth or Dare" for Couples Cards',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
