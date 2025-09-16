@@ -415,7 +415,7 @@ const ProductPage: React.FC = () => {
                   {renderStarRating(product.rating)}
                 </div>
                 <span className="text-gray-600 text-sm">
-                  ({product.reviewCount || 0} avis)
+                  ({product.reviewCount || 0} reviews)
                 </span>
                {/*  {product.stockCount !== undefined && (
                   <span className="text-gray-600 text-sm">
