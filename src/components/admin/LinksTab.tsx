@@ -38,7 +38,7 @@ const LinksTab: React.FC<LinksTabProps> = ({ data, setData }) => {
       id: uuidv4(),
       type: 'standardLink',
       title: 'New Link',
-      url: 'https://wisefossi.com',
+      url: 'https://.com',
       order: data.links.length,
       active: true,
       thumbnailUrl: '',
