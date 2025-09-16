@@ -18,7 +18,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '2',
-    name: 'The Compound Engine',
+    name: 'Dirty Talks to make her 100x wet during Sex',
     price: 14.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
