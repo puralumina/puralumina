@@ -28,7 +28,7 @@ const sampleProducts: Product[] = [
 
 <h1 style="font-family: 'Montserrat', sans-serif; color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin: 0 0 20px 0; font-weight: 700;">Mastering Her Pleasure: The Ultimate Guide for Men</h1>
 
-<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Unlock the secrets to becoming a master of pleasure with "Mastering Her Pleasure: The Ultimate Guide for Men." This comprehensive book is your roadmap to understanding and fulfilling your partner's deepest desires, creating an unbreakable bond and an unforgettable sex life. Filled with practical advice, innovative techniques, and real-life examples, this guide covers everything from communication and foreplay to advanced pleasure techniques.</p>
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">Unlock the secrets to becoming a master of pleasure with "Mastering Her Pleasure: The Ultimate Guide for Men." This comprehensive book is your roadmap to understanding and fulfilling your partner's deepest desires, creating an unbreakable bond and an unforgettable sex life. Filled with practical advice, innovative techniques, and real-life examples, this guide covers everything from communication and foreplay to advanced pleasure techniques.</p>
 
 <p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Inside, you'll find:</p>
 
