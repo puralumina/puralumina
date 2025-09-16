@@ -9,7 +9,7 @@ const sampleProducts: Product[] = [
   {
     id: '1',
     name: 'Mastering Her Pleasure: The Ultimate Guide for Men',
-    price: 9.99,
+    price: 11.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     //description: 'Learn to satisfy her deeply with expert techniques and insights.',
