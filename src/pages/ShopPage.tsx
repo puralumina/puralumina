@@ -323,7 +323,7 @@ const ShopPage: React.FC = () => {
                   className="group block"
                 >
                   <div className="transition-all duration-300">
-                    {/* Product Image */}
+                    {/* Product Image 
                     <div className="aspect-square bg-gray-100 overflow-hidden rounded-xl">
                       <img
                         src={product.image}
@@ -332,7 +332,7 @@ const ShopPage: React.FC = () => {
                       />
                     </div>
                     
-                    {/* Product Info */}
+                    {/* Product Info 
                     <div className="p-6">
                       <h3 className="font-bold text-gray-900 mb-2 text-sm leading-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                         {product.name}
@@ -350,7 +350,7 @@ const ShopPage: React.FC = () => {
                     </div>
                   </div>
                 </Link>
-              ))}
+              ))
             </div>
           </div>
         )} */}
