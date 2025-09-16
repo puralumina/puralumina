@@ -125,7 +125,7 @@ const SettingsTab: React.FC<SettingsTabProps> = ({ data, setData }) => {
               <img 
                 src={convertToDirectImageUrl(data.profile.imageUrl)} 
                 alt="Profile" 
-                className="!w-40 !h-40 rounded-full object-cover"
+                className="!w-40 !h-40 rounded-full object-cover border-2 border-gray-300"
                 crossOrigin="anonymous"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
@@ -159,7 +159,7 @@ const SettingsTab: React.FC<SettingsTabProps> = ({ data, setData }) => {
                 type="text" 
                 value={data.profile.subtitle} 
                 onChange={(e) => handleUpdate('profile', 'subtitle', e.target.value)} 
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-xs focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
               />
             </div>
           </div>
