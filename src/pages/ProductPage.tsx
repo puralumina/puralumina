@@ -10,7 +10,7 @@ import IndividualPixelInjector from '../components/IndividualPixelInjector';
 const sampleProducts: Product[] = [
   {
     id: '1',
-    name: 'Mastering Her Pleasure: The Ultimate Guide for Men.',
+    name: 'Mastering Her Pleasure: The Ultimate Guide for Men',
     price: 9.99,
     originalPrice: 24.99,
     discountPercentage: 20,
