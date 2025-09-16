@@ -6,9 +6,9 @@ const pageDocRef = doc(db, 'pages', 'main');
 
 const defaultPageData: PageData = {
   profile: {
-    name: 'Pura Lumina',
-    subtitle: 'Pro BMX Athlete | Content Creator',
-    location: 'Douala, Cameroon',
+    name: 'Soulmates Desires',
+    subtitle: 'Couples Therapy',
+    location: 'Worldwide',
     bio: 'I create captivating visuals and user experiences. Let\'s collaborate!',
     imageUrl: 'https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-1/526285757_122248344026224158_2650356844423284755_n.jpg',
     nameColor: '#ffffff',
