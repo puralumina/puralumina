@@ -534,7 +534,7 @@ const ProductPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Product Image Gallery */}
-          <div className="rounded-lg shadow-md overflow-hidden">
+          <div className="rounded-lg overflow-hidden">
             {/* Main Image */}
             <div className="aspect-square relative bg-gray-100">
               <img
@@ -596,7 +596,7 @@ const ProductPage: React.FC = () => {
           </div>
 
           {/* Product Details */}
-          <div className="rounded-lg shadow-md p-6">
+          <div className="rounded-lg p-6">
             {/* Product Title */}
             <div className="flex items-start justify-between mb-4">
               <h1 className="text-3xl font-bold text-gray-900 flex-1">{product.name}</h1>
