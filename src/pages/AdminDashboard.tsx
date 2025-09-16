@@ -35,9 +35,8 @@ const AdminDashboard: React.FC = () => {
   const navigate = useNavigate();
   
   // Background music for admin dashboard
-  // Background music for admin dashboard - using existing biopage music as fallback
-  // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
-  useBackgroundMusic('/biopage-music.mp3', { volume: 0.15 });
+  // EDIT THIS PATH: Change '/admin-dashboard-music.mp3' to your desired music file
+  useBackgroundMusic('/admin-dashboard-music.mp3', { volume: 0.15 });
 
   const [draftData, setDraftData] = useState<PageData | null>(null);
   const [liveData, setLiveData] = useState<PageData | null>(null);

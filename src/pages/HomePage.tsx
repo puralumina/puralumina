@@ -8,9 +8,8 @@ const HomePage = () => {
   const navigate = useNavigate();
   
   // Background music for homepage
-  // Background music for homepage - using existing biopage music as fallback
-  // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
-  useBackgroundMusic('/biopage-music.mp3', { volume: 0.2 });
+  // EDIT THIS PATH: Change '/homepage-music.mp3' to your desired music file
+  useBackgroundMusic('/homepage-music.mp3', { volume: 0.2 });
 
   const handleImageClick = () => {
     navigate('/links');

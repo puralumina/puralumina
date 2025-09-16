@@ -149,9 +149,8 @@ const ShopPage: React.FC = () => {
   const { addToCart } = useCart();
   
   // Background music for shop page
-  // Background music for shop page - using existing biopage music as fallback
-  // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
-  useBackgroundMusic('/biopage-music.mp3', { volume: 0.2 });
+  // EDIT THIS PATH: Change '/shop-music.mp3' to your desired music file
+  useBackgroundMusic('/shop-music.mp3', { volume: 0.2 });
 
   useEffect(() => {
     if (selectedCategory === 'all') {
