@@ -92,7 +92,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '4',
-    name: 'The Delayed Dividend',
+    name: 'Make Him Craving You: The Ultimate Guide to Teasing and Pleasing',
     price: 11.99,
     originalPrice: 13.99,
     discountPercentage: 14,
