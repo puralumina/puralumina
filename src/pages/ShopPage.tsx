@@ -106,6 +106,12 @@ const sampleCategories: Category[] = [
     image: '',
   },
   {
+    id: 'books',
+    name: 'Books',
+    description: 'Photography accessories and kits',
+    image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
+  },
+  {
     id: 'Couples Games',
     name: 'Couples Games',
     description: 'Professional and vintage cameras',
@@ -122,12 +128,6 @@ const sampleCategories: Category[] = [
     name: 'Lenses',
     description: 'Camera lenses and optical equipment',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-  },
-  {
-    id: 'books',
-    name: 'Books',
-    description: 'Photography accessories and kits',
-    image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
   },
 ];
 
