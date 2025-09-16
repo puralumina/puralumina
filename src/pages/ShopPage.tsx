@@ -83,7 +83,7 @@ const sampleProducts: Product[] = [
     currency: 'USD',
     image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
     description: 'Complete photography kit for beginners and professionals',
-    category: 'books',
+    category: 'Cards',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_8',
   },
   {
