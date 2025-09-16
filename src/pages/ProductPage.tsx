@@ -218,7 +218,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '11',
-    name: 'Vintage Camera',
+    name: 'Couples\' Affirmation Cards',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
