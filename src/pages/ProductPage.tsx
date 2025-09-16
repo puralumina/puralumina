@@ -13,7 +13,6 @@ const sampleProducts: Product[] = [
     name: 'Mastering Her Pleasure: The Ultimate Guide for Men',
     price: 9.99,
     originalPrice: 24.99,
-    discountPercentage: 20,
     isOnSale: true,
     saleLabel: 'SALE',
     currency: 'USD',
@@ -46,7 +45,6 @@ const sampleProducts: Product[] = [
     name: 'Dirty Talks to make her 100x wet during Sex',
     price: 6.99,
     originalPrice: 19.99,
-    discountPercentage: 17,
     isOnSale: true,
     saleLabel: 'LIMITED TIME',
     currency: 'USD',
@@ -78,7 +76,6 @@ const sampleProducts: Product[] = [
     name: 'Seducing His Senses: A Woman\'s Guide to Pleasuring Her Man',
     price: 11.99,
     originalPrice: 29.99,
-    discountPercentage: 14,
     isOnSale: true,
     saleLabel: 'SALE',
     currency: 'USD',
@@ -99,7 +96,6 @@ const sampleProducts: Product[] = [
     name: 'Make Him Craving You: The Ultimate Guide to Teasing and Pleasing',
     price: 14.99,
     originalPrice: 29.99,
-    discountPercentage: 14,
     isOnSale: true,
     saleLabel: 'SALE',
     currency: 'USD',
@@ -135,7 +131,6 @@ const sampleProducts: Product[] = [
     name: 'Professional Camera',
     price: 250,
     originalPrice: 299.99,
-    discountPercentage: 17,
     isOnSale: true,
     saleLabel: 'CLEARANCE',
     currency: 'USD',
@@ -170,7 +165,6 @@ const sampleProducts: Product[] = [
     name: 'Photography Kit',
     price: 300,
     originalPrice: 399.99,
-    discountPercentage: 25,
     isOnSale: true,
     saleLabel: 'MEGA SALE',
     currency: 'USD',
@@ -211,6 +205,14 @@ const ProductPage: React.FC = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useCart();
+  
+  // Calculate discount percentage automatically
+  const calculateDiscountPercentage = (price: number, originalPrice?: number): number => {
+    if (!originalPrice || originalPrice <= price) return 0;
+    return Math.round(((originalPrice - price) / originalPrice) * 100);
+  };
+  
+  const discountPercentage = product ? calculateDiscountPercentage(product.price, product.originalPrice) : 0;
   
   // INDIVIDUAL PRODUCT PIXEL TRACKING
   // Add your tracking pixels for specific products here
@@ -465,7 +467,7 @@ const ProductPage: React.FC = () => {
               <h1 className="text-3xl font-bold text-gray-900 flex-1">{product.name}</h1>
               {product.isOnSale && product.saleLabel && (
                 <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium ml-4">
-                  {product.saleLabel} -{product.discountPercentage}%
+                  {product.saleLabel} -{discountPercentage}%
                 </span>
               )}
             </div>
@@ -518,10 +520,7 @@ const ProductPage: React.FC = () => {
                 <span>
                   Buy Now
                   {/*
-                  {(
-                    (product.isOnSale && `Buy Now - Save ${product.discountPercentage}%`) ||
-                    'Buy Now'
-                  )} - 
+                  {product.isOnSale ? `Buy Now - Save ${discountPercentage}%` : 'Buy Now'} - 
                   {product.currency === 'USD' && '$'}
                   {product.currency === 'EUR' && '€'}
                   {product.currency === 'GBP' && '£'}

@@ -162,7 +162,6 @@ export interface Product {
   stripePaymentLink?: string;
   // Enhanced product information
   originalPrice?: number; // For showing discounts
-  discountPercentage?: number;
   isOnSale?: boolean;
   saleLabel?: string; // e.g., "SOLDE", "SALE", "LIMITED TIME"
 }
