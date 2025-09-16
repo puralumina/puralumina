@@ -225,7 +225,7 @@ const ShopPage: React.FC = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${
                   selectedCategory === category.id
-                    ? 'bg-black text-white'
+                    ? 'bg-red text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                 }`}
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
