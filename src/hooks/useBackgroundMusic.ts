@@ -11,14 +11,12 @@ export const useBackgroundMusic = (
   options: UseBackgroundMusicOptions = {}
 ) => {
   const { volume = 0.5, fadeInDuration = 1000, fadeOutDuration = 1000 } = options;
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  
-  
-  
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const fadeIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const isCleaningUpRef = useRef(false);
   const isMountedRef = useRef(true);
+  const hasStartedRef = useRef(false);
+
   const stopAudio = (audio: HTMLAudioElement) => {
     try {
       // Clear any ongoing fade intervals
@@ -32,11 +30,9 @@ export const useBackgroundMusic = (
       audio.currentTime = 0;
       audio.volume = 0;
       
-      // On mobile, also try to unload the audio
-      if (isMobile) {
-        audio.src = '';
-        audio.load();
-      }
+      // Try to unload the audio
+      audio.src = '';
+      audio.load();
     } catch (error) {
       console.warn('Error stopping audio:', error);
     }
@@ -70,33 +66,65 @@ export const useBackgroundMusic = (
     }, stepTime);
   };
 
-  const fadeOut = (audio: HTMLAudioElement, duration: number) => {
-    if (isCleaningUpRef.current || !isMountedRef.current) return;
+  const playAudio = async (audio: HTMLAudioElement) => {
+    if (isCleaningUpRef.current || !isMountedRef.current || hasStartedRef.current) return;
     
-    const startVolume = audio.volume;
-    const steps = 50;
-    const stepTime = duration / steps;
-    const volumeStep = startVolume / steps;
-    let currentStep = 0;
-
-    fadeIntervalRef.current = setInterval(() => {
-      if (isCleaningUpRef.current || !isMountedRef.current) {
-        if (fadeIntervalRef.current) {
-          clearInterval(fadeIntervalRef.current);
-          fadeIntervalRef.current = null;
+    try {
+      // Reset audio to beginning
+      audio.currentTime = 0;
+      audio.volume = 0;
+      
+      await audio.play();
+      hasStartedRef.current = true;
+      
+      if (isMountedRef.current && !isCleaningUpRef.current) {
+        fadeIn(audio, volume, fadeInDuration);
+      }
+    } catch (error) {
+      console.log('Audio autoplay prevented, setting up user interaction listeners');
+      
+      // Create interaction handler
+      const handleUserInteraction = async (event: Event) => {
+        if (isCleaningUpRef.current || !isMountedRef.current || hasStartedRef.current) return;
+        
+        try {
+          audio.currentTime = 0;
+          audio.volume = 0;
+          await audio.play();
+          hasStartedRef.current = true;
+          
+          if (isMountedRef.current && !isCleaningUpRef.current) {
+            fadeIn(audio, volume, fadeInDuration);
+          }
+          
+          // Remove all listeners after successful play
+          removeInteractionListeners();
+        } catch (err) {
+          console.warn('Failed to play audio after user interaction:', err);
         }
-        return;
-      }
+      };
+
+      // List of events to listen for
+      const events = ['click', 'touchstart', 'touchend', 'keydown', 'scroll', 'mousemove'];
       
-      currentStep++;
-      audio.volume = Math.max(startVolume - (volumeStep * currentStep), 0);
-      
-      if (currentStep >= steps && fadeIntervalRef.current) {
-        clearInterval(fadeIntervalRef.current);
-        fadeIntervalRef.current = null;
-        stopAudio(audio);
-      }
-    }, stepTime);
+      // Add listeners
+      events.forEach(eventType => {
+        document.addEventListener(eventType, handleUserInteraction, { 
+          once: true, 
+          passive: true 
+        });
+      });
+
+      // Store cleanup function
+      const removeInteractionListeners = () => {
+        events.forEach(eventType => {
+          document.removeEventListener(eventType, handleUserInteraction);
+        });
+      };
+
+      // Store cleanup in audio element for later use
+      (audio as any)._eventCleanup = removeInteractionListeners;
+    }
   };
 
   useEffect(() => {
@@ -105,87 +133,62 @@ export const useBackgroundMusic = (
     // Reset flags
     isCleaningUpRef.current = false;
     isMountedRef.current = true;
+    hasStartedRef.current = false;
 
     // Create audio element
-    const audio = new Audio(musicPath);
+    const audio = new Audio();
+    audio.src = musicPath;
     audio.loop = true;
     audio.preload = 'auto';
+    audio.crossOrigin = 'anonymous';
     audioRef.current = audio;
 
-    // Handle user interaction requirement for autoplay
-    const playAudio = async () => {
-      try {
-        if (isCleaningUpRef.current || !isMountedRef.current) return;
-        await audio.play();
-        if (isMountedRef.current && !isCleaningUpRef.current) {
-          fadeIn(audio, volume, fadeInDuration);
-        }
-      } catch (error) {
-        console.log('Autoplay prevented or audio file not found, waiting for user interaction');
-        
-        // Add click listener to start music on first user interaction
-        const handleFirstInteraction = async () => {
-          try {
-            if (isCleaningUpRef.current || !isMountedRef.current) return;
-            await audio.play();
-            if (isMountedRef.current && !isCleaningUpRef.current) {
-              fadeIn(audio, volume, fadeInDuration);
-            }
-            document.removeEventListener('click', handleFirstInteraction);
-            document.removeEventListener('keydown', handleFirstInteraction);
-            document.removeEventListener('touchstart', handleFirstInteraction);
-            document.removeEventListener('touchend', handleFirstInteraction);
-          } catch (err) {
-            console.warn('Audio file not available or failed to play:', musicPath);
-          }
-        };
+    // Add error handler
+    const handleError = (error: Event) => {
+      console.warn(`Audio file not found or failed to load: ${musicPath}`);
+    };
 
-        document.addEventListener('click', handleFirstInteraction, { passive: true });
-        document.addEventListener('keydown', handleFirstInteraction, { passive: true });
-        document.addEventListener('touchstart', handleFirstInteraction, { passive: true });
-        document.addEventListener('touchend', handleFirstInteraction, { passive: true });
-        
-        // Store cleanup function for event listeners
-        const cleanup = () => {
-          document.removeEventListener('click', handleFirstInteraction);
-          document.removeEventListener('keydown', handleFirstInteraction);
-          document.removeEventListener('touchstart', handleFirstInteraction);
-          document.removeEventListener('touchend', handleFirstInteraction);
-        };
-        
-        // Store cleanup in audio element for later use
-        (audio as any)._eventCleanup = cleanup;
+    audio.addEventListener('error', handleError);
+
+    // Add loaded handler to attempt immediate play
+    const handleCanPlay = () => {
+      if (!isCleaningUpRef.current && isMountedRef.current) {
+        playAudio(audio);
       }
     };
 
-    playAudio();
+    audio.addEventListener('canplay', handleCanPlay);
 
-    // Add visibility change listener for mobile browsers
+    // Attempt to load and play
+    audio.load();
+
+    // Mobile-specific handlers
     const handleVisibilityChange = () => {
       if (document.hidden && audioRef.current && !isCleaningUpRef.current) {
         stopAudio(audioRef.current);
+        hasStartedRef.current = false;
+      } else if (!document.hidden && audioRef.current && !hasStartedRef.current) {
+        playAudio(audioRef.current);
       }
     };
 
-    // Add page hide listener for mobile browsers
     const handlePageHide = () => {
       if (audioRef.current && !isCleaningUpRef.current) {
         stopAudio(audioRef.current);
+        hasStartedRef.current = false;
       }
     };
 
-    // Add beforeunload listener for mobile browsers
     const handleBeforeUnload = () => {
       if (audioRef.current && !isCleaningUpRef.current) {
         stopAudio(audioRef.current);
       }
     };
 
-    if (isMobile) {
-      document.addEventListener('visibilitychange', handleVisibilityChange);
-      window.addEventListener('pagehide', handlePageHide);
-      window.addEventListener('beforeunload', handleBeforeUnload);
-    }
+    // Add mobile event listeners
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('pagehide', handlePageHide);
+    window.addEventListener('beforeunload', handleBeforeUnload);
 
     // Cleanup function
     return () => {
@@ -193,12 +196,10 @@ export const useBackgroundMusic = (
       isCleaningUpRef.current = true;
       isMountedRef.current = false;
       
-      // Remove mobile-specific event listeners
-      if (isMobile) {
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
-        window.removeEventListener('pagehide', handlePageHide);
-        window.removeEventListener('beforeunload', handleBeforeUnload);
-      }
+      // Remove event listeners
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('pagehide', handlePageHide);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
       
       // Clear any ongoing fade intervals
       if (fadeIntervalRef.current) {
@@ -206,29 +207,27 @@ export const useBackgroundMusic = (
         fadeIntervalRef.current = null;
       }
       
-      // Clean up event listeners if they exist
+      // Clean up interaction event listeners if they exist
       if (audioRef.current && (audioRef.current as any)._eventCleanup) {
         (audioRef.current as any)._eventCleanup();
       }
       
       if (audioRef.current) {
+        // Remove audio event listeners
+        audioRef.current.removeEventListener('error', handleError);
+        audioRef.current.removeEventListener('canplay', handleCanPlay);
+        
         // Stop audio immediately
         stopAudio(audioRef.current);
         
         // Remove the audio element reference
         audioRef.current = null;
       }
+      
+      // Reset flags
+      hasStartedRef.current = false;
     };
-  }, [musicPath, volume, fadeInDuration, fadeOutDuration, isMobile]);
-
-  // Additional cleanup effect that runs on every render
-  useEffect(() => {
-    return () => {
-      if (audioRef.current && !isCleaningUpRef.current) {
-        stopAudio(audioRef.current);
-      }
-    };
-  });
+  }, [musicPath, volume, fadeInDuration, fadeOutDuration]);
 
   return audioRef.current;
 };
