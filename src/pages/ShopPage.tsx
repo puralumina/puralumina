@@ -276,10 +276,10 @@ const ShopPage: React.FC = () => {
         {/* Recently Viewed Products */}
         {recentlyViewed.length > 0 && (
           <div className="mb-16">
-            <h2 className="text-xl font-medium text-gray-900 mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+            <h2 className="text-xl font-medium text-center text-gray-900 mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Recently Viewed
             </h2>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-3 lg:grid-cols-6 gap-8">
               {recentlyViewed.map((product) => (
                 <Link
                   key={product.id}
