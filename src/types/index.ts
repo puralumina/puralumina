@@ -154,11 +154,13 @@ export interface Product {
   price: number;
   currency: string;
   image: string;
+  images?: string[];
   description: string;
   category: string;
   inStock: boolean;
   stripeProductId?: string;
   stripePriceId?: string;
+  stripePaymentLink?: string;
 }
 
 export interface CartItem {
