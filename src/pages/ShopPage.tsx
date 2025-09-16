@@ -13,7 +13,7 @@ const sampleProducts: Product[] = [
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Unlock the secrets to becoming a master of her pleasure with this comprehensive guide filled with techniques and insights to satisfy her like never before.',
-    category: 'Couples Games',
+    category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_1',
   },
   {
@@ -23,7 +23,7 @@ const sampleProducts: Product[] = [
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Discover over 200 dirty talk ideas and techniques to ignite her passion and make her 100x wetter than ever before, transforming your sex life with the power of words.',
-    category: 'Couples Games',
+    category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_2',
   },
   {
@@ -33,7 +33,7 @@ const sampleProducts: Product[] = [
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Become Fluent and Start Speaking Wealth.',
-    category: 'Couples Games',
+    category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_3',
   },
   {
@@ -43,7 +43,7 @@ const sampleProducts: Product[] = [
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Why the Best Returns Come from Patience, Not Pressure.',
-    category: 'Couples Games',
+    category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_4',
   },
   {
