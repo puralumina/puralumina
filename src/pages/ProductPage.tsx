@@ -77,6 +77,10 @@ const sampleProducts: Product[] = [
     id: '3',
     name: 'Seducing His Senses: A Woman\'s Guide to Pleasuring Her Man',
     price: 11.99,
+    originalPrice: 29.99,
+    discountPercentage: 14,
+    isOnSale: true,
+    saleLabel: 'SALE',
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -93,8 +97,8 @@ const sampleProducts: Product[] = [
   {
     id: '4',
     name: 'Make Him Craving You: The Ultimate Guide to Teasing and Pleasing',
-    price: 11.99,
-    originalPrice: 13.99,
+    price: 14.99,
+    originalPrice: 29.99,
     discountPercentage: 14,
     isOnSale: true,
     saleLabel: 'SALE',
