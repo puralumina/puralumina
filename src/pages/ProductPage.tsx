@@ -397,7 +397,7 @@ const ProductPage: React.FC = () => {
             </div>
 
             <div className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Description</h3>
+              {/* <h3 className="text-lg font-semibold text-gray-900 mb-2">Description</h3>*/}
               <div 
                 className="text-gray-600 leading-relaxed prose prose-sm max-w-none"
                 dangerouslySetInnerHTML={{ __html: product.description }}
