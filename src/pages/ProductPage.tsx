@@ -23,7 +23,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg',
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg'
     ],
-    description: 'Forget the noise of complex financial advice. After analyzing the patterns of the world's most successful people, one simple truth emerges: wealth isn\'t determined by a secret investment strategy, but by a single, non-negotiable daily habit. "The Richest Habit" cuts through the clutter to reveal this one core action that separates the financially independent from everyone else. This book is a short, powerful guide to understanding, adopting, and perfecting the single most profitable behavior you can implement in the next 48 hours.',
+    description: `Forget the noise of complex financial advice. After analyzing the patterns of the world's most successful people, one simple truth emerges: wealth isn't determined by a secret investment strategy, but by a single, non-negotiable daily habit. "The Richest Habit" cuts through the clutter to reveal this one core action that separates the financially independent from everyone else. This book is a short, powerful guide to understanding, adopting, and perfecting the single most profitable behavior you can implement in the next 48 hours.`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/cNi00j0ga7MYeDV1kP7wA05',
   },
@@ -42,7 +42,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg'
     ],
-    description: 'We all understand the power of compound interest for our money, but what about for our habits? This book reveals how to build your own "Compound Engine". This is a personal system where small acts of daily discipline don\'t just add up, they multiply exponentially. Learn to transform discipline from a struggle into an unstoppable force that generates momentum in your finances, career, and life. Stop trying to muscle your way to success and start building the engine that will drive you there automatically.',
+    description: `We all understand the power of compound interest for our money, but what about for our habits? This book reveals how to build your own "Compound Engine". This is a personal system where small acts of daily discipline don't just add up, they multiply exponentially. Learn to transform discipline from a struggle into an unstoppable force that generates momentum in your finances, career, and life. Stop trying to muscle your way to success and start building the engine that will drive you there automatically.`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
@@ -59,7 +59,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg',
       'https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg'
     ],
-    description: 'Money isn't just numbers. It's a language you can learn. This book teaches you how to read, write, and think in financial fluency, turning confusion into clarity and fear into strategy. Discover how to "speak" saving, investing, and earning with purpose, so you can finally understand what your money is trying to tell you—and respond with power.',
+    description: `Money isn't just numbers. It's a language you can learn. This book teaches you how to read, write, and think in financial fluency, turning confusion into clarity and fear into strategy. Discover how to "speak" saving, investing, and earning with purpose, so you can finally understand what your money is trying to tell you—and respond with power.`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
@@ -78,7 +78,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg'
     ],
-    description: 'Forget instant gratification! Real wealth is earned through the quiet power of patience. The Delayed Dividend reveals how small, consistent choices today create outsized rewards tomorrow. From compounding investments to emotional discipline and long-term systems, this book reframes waiting not as sacrifice, but as strategy. The best returns don't rush; they arrive when you're ready.',
+    description: `Forget instant gratification! Real wealth is earned through the quiet power of patience. The Delayed Dividend reveals how small, consistent choices today create outsized rewards tomorrow. From compounding investments to emotional discipline and long-term systems, this book reframes waiting not as sacrifice, but as strategy. The best returns don't rush; they arrive when you're ready.`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E28r0gaebm53le7B7wA02',
   },
@@ -94,7 +94,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg',
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg'
     ],
-    description: 'Your financial life isn't a spreadsheet, it's a house with seven essential rooms. From the Foundation (emergency savings) to the Engine Room (passive income), each space plays a vital role in stability and growth. This book walks you through building, organizing, and maintaining your personal "Wealth Home," so you're not just making money. Rather you're creating a safe, sustainable, and scalable financial life.',
+    description: `Your financial life isn't a spreadsheet, it's a house with seven essential rooms. From the Foundation (emergency savings) to the Engine Room (passive income), each space plays a vital role in stability and growth. This book walks you through building, organizing, and maintaining your personal "Wealth Home," so you're not just making money. Rather you're creating a safe, sustainable, and scalable financial life.`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/7sY6oH9QKd7igM39Rl7wA01',
   },
@@ -114,7 +114,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
       'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg'
     ],
-    description: 'High-quality professional camera perfect for photography enthusiasts and professionals alike. Features advanced autofocus, excellent low-light performance, and durable construction that can withstand various shooting conditions.',
+    description: `High-quality professional camera perfect for photography enthusiasts and professionals alike. Features advanced autofocus, excellent low-light performance, and durable construction that can withstand various shooting conditions.`,
     category: 'Cards',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_6',
   },
@@ -129,7 +129,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
       'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
     ],
-    description: 'Premium camera lens with excellent optical quality and superior build. Perfect for portrait photography, landscape shots, and professional work. Features fast autofocus and weather sealing.',
+    description: `Premium camera lens with excellent optical quality and superior build. Perfect for portrait photography, landscape shots, and professional work. Features fast autofocus and weather sealing.`,
     category: 'Planners & Worksheets',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_7',
   },
@@ -150,7 +150,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg'
     ],
-    description: 'Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.',
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_8',
   },
