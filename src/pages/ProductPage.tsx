@@ -94,16 +94,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg',
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg'
     ],
-    description: `Your financial life isn't a spreadsheet, it's a house with seven essential rooms. From the Foundation (emergency savings) to the Engine Room (passive income), each space plays a vital role in stability and growth. This book walks you through building, organizing, and maintaining your personal "Wealth Home," so you're not just making money. Rather you're creating a safe, sustainable, and scalable financial life.<p>This is a paragraph with <strong>bold text</strong> and <em>italic text</em>.</p>
-<div style="background: #f0f0f0; padding: 16px; border-radius: 8px;">
-  <h4>Special Note</h4>
-  <p>This is a highlighted section.</p>
-</div>
-<img src="https://example.com/image.jpg" alt="Product feature" />
-<ul>
-  <li>Feature 1</li>
-  <li>Feature 2</li>
-</ul>
+    description: `Your financial life isn't a spreadsheet, it's a house with seven essential rooms. From the Foundation (emergency savings) to the Engine Room (passive income), each space plays a vital role in stability and growth. This book walks you through building, organizing, and maintaining your personal "Wealth Home," so you're not just making money. Rather you're creating a safe, sustainable, and scalable financial life.
 `,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/7sY6oH9QKd7igM39Rl7wA01',
