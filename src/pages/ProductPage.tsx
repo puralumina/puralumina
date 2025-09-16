@@ -151,7 +151,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg'
     ],
     description: 'Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.',
-    category: 'accessories',
+    category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_8',
   },
   {
