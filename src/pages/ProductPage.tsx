@@ -15,7 +15,7 @@ const sampleProducts: Product[] = [
     discountPercentage: 20,
     isOnSale: true,
     saleLabel: 'SALE',
-    rating: 4.8,
+    rating: 4, // Add whole numbers
     reviewCount: 127,
     stockCount: 15,
     currency: 'USD',
