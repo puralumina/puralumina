@@ -56,7 +56,23 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg'
     ],
-    description: `We all understand the power of compound interest for our money, but what about for our habits? This book reveals how to build your own "Compound Engine". This is a personal system where small acts of daily discipline don't just add up, they multiply exponentially. Learn to transform discipline from a struggle into an unstoppable force that generates momentum in your finances, career, and life. Stop trying to muscle your way to success and start building the engine that will drive you there automatically.`,
+    description: `
+<h1 style="font-family: 'Montserrat', sans-serif; color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin: 0 0 20px 0; font-weight: 700;">Dirty Talks to Make Her 100x Wet During Sex</h1>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Discover the power of words to ignite passion with "Dirty Talks to make her 100x wet during Sex." This book is your ultimate guide to mastering the art of erotic communication, teaching you how to use dirty talk to heighten arousal and make her wetter than ever before. Packed with techniques, phrases, and scenarios, this book will help you build anticipation, express your desires, and create an intimate connection that transcends the bedroom.</p>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Inside, you'll find:</p>
+
+<ul style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin: 20px 0; padding-left: 20px;">
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">The Psychology of Erotic Talk:</strong> Learn how to tap into her deepest desires with the right words. Understand the science behind what makes her wet and how to use it to your advantage.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Step-by-Step Guide to Dirty Talk:</strong> From subtle hints to explicit whispers, master the art of building anticipation and heightening her arousal. Learn when and how to use different types of dirty talk for maximum effect.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Over 200 Dirty Talk Ideas:</strong> Explore a vast collection of over 200 dirty talk ideas, ranging from playful and teasing to intense and explicit. Each idea is designed to ignite her passion and leave her craving more.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Scene-Setting Scenarios:</strong> Discover how to create a narrative that keeps her engaged and eager for more. Explore a variety of scripts and adapt them to your own style, making each encounter unique and exciting.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Real-Life Examples:</strong> See how other couples have successfully incorporated dirty talk into their sex lives, with tips and advice from those who've mastered the art.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Confidence-Boosting Exercises:</strong> Build your confidence in using erotic talk with exercises and practices that help you become a master of your own words.</li>
+</ul>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">With "Dirty Talks to make her 100x wet during Sex," you'll unlock the secret to a more satisfying and exciting sex life. Transform your bedroom dynamic and make every moment together sizzling hot and unforgettable.</p>`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
