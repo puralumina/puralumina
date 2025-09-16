@@ -6,13 +6,13 @@ import { Product, Category } from '../types';
 
 // Sample products - you can modify these manually
 const sampleProducts: Product[] = [
-  { {/* Categories */}
+  {
     id: '1',
     name: 'Mastering Her Pleasure: The Ultimate Guide for Men',
     price: 9.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    {/*description: 'Learn to satisfy her deeply with expert techniques and insights.',*/}
+    //description: 'Learn to satisfy her deeply with expert techniques and insights.',
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_1',
   },
