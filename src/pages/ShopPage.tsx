@@ -229,7 +229,7 @@ const ShopPage: React.FC = () => {
 
         
         {/* Products Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredProducts.map((product) => (
             <Link
               key={product.id}
