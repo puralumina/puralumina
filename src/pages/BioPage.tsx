@@ -62,7 +62,7 @@ const SafeImage: React.FC<{
         setImageSrc(fallbackSrc);
       } else {
         // Use a default placeholder image
-        setImageSrc('https://d1yei2z3i6k35z.cloudfront.net/4704293/68933153d7ea4_wise3.jpg');
+        setImageSrc('https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg');
       }
     }
   };
