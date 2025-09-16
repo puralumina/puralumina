@@ -289,7 +289,7 @@ const ShopPage: React.FC = () => {
                 >
                   <div className="transition-all duration-300">
                     {/* Product Image */}
-                    <div className="aspect-square bg-gray-100 overflow-hidden">
+                    <div className="aspect-square bg-gray-100 overflow-hidden rounded-lg">
                       <img
                         src={product.image}
                         alt={product.name}
