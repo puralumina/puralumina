@@ -13,6 +13,8 @@ export const useBackgroundMusic = (
   const { volume = 0.5, fadeInDuration = 1000, fadeOutDuration = 1000 } = options;
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
+  
+  
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const fadeIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const isCleaningUpRef = useRef(false);
@@ -119,7 +121,7 @@ export const useBackgroundMusic = (
           fadeIn(audio, volume, fadeInDuration);
         }
       } catch (error) {
-        console.log('Autoplay prevented, waiting for user interaction');
+        console.log('Autoplay prevented or audio file not found, waiting for user interaction');
         
         // Add click listener to start music on first user interaction
         const handleFirstInteraction = async () => {
@@ -134,7 +136,7 @@ export const useBackgroundMusic = (
             document.removeEventListener('touchstart', handleFirstInteraction);
             document.removeEventListener('touchend', handleFirstInteraction);
           } catch (err) {
-            console.error('Failed to play audio:', err);
+            console.warn('Audio file not available or failed to play:', musicPath);
           }
         };
 
