@@ -12,7 +12,7 @@ const sampleProducts: Product[] = [
     price: 19.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'The single daily action that separates the wealthy.',
+    description: 'Unlock the secrets to becoming a master of her pleasure with this comprehensive guide filled with techniques and insights to satisfy her like never before.',
     category: 'Couples Games',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_1',
   },
