@@ -190,7 +190,7 @@ const sampleProducts: Product[] = [
     id: '9',
     name: 'Vintage Camera',
     price: 180,
-    rating: 4.2,
+    rating: 4,
     reviewCount: 67,
     stockCount: 3,
     currency: 'USD',
