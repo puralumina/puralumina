@@ -11,7 +11,7 @@ const sampleProducts: Product[] = [
   {
     id: '1',
     name: 'Mastering Her Pleasure: The Ultimate Guide for Men.',
-    price: 19.99,
+    price: 9.99,
     originalPrice: 24.99,
     discountPercentage: 20,
     isOnSale: true,
