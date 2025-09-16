@@ -9,7 +9,7 @@ const sampleProducts: Product[] = [
   {
     id: '1',
     name: 'Mastering Her Pleasure: The Ultimate Guide for Men',
-    price: 19.99,
+    price: 9.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Unlock the secrets to becoming a master of her pleasure with this comprehensive guide filled with techniques and insights to satisfy her like never before.',
@@ -19,7 +19,7 @@ const sampleProducts: Product[] = [
   {
     id: '2',
     name: 'Dirty Talks to make her 100x wet during Sex',
-    price: 14.99,
+    price: 6.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Fuel your wealth with the power of discipline.',
