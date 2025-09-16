@@ -534,7 +534,7 @@ const ProductPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Product Image Gallery */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="rounded-lg shadow-md overflow-hidden">
             {/* Main Image */}
             <div className="aspect-square relative bg-gray-100">
               <img
