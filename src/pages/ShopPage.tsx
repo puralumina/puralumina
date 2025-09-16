@@ -236,6 +236,43 @@ const ShopPage: React.FC = () => {
           </div>
         </div>
 
+        
+        {/* Products Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {filteredProducts.map((product) => (
+            <Link
+              key={product.id}
+              to={`/product/${product.id}`}
+              onClick={() => handleProductClick(product.id)}
+              className="group block"
+            >
+              <div className="transition-all duration-300 hover:shadow-lg">
+                {/* Product Image */}
+                <div className="aspect-square bg-gray-100 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                  />
+                </div>
+                
+                {/* Product Info */}
+                <div className="p-6">
+                  <h3 className="font-bold text-gray-900 mb-2 text-sm leading-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                    {product.name}
+                  </h3>
+                  <p className="font-normal text-gray-700 text-sm" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                    {product.currency === 'USD' && '$'}
+                    {product.currency === 'EUR' && '€'}
+                    {product.currency === 'GBP' && '£'}
+                    {product.price}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
         {/* Recently Viewed Products */}
         {recentlyViewed.length > 0 && (
           <div className="mb-16">
@@ -279,41 +316,6 @@ const ShopPage: React.FC = () => {
           </div>
         )}
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {filteredProducts.map((product) => (
-            <Link
-              key={product.id}
-              to={`/product/${product.id}`}
-              onClick={() => handleProductClick(product.id)}
-              className="group block"
-            >
-              <div className="bg-white transition-all duration-300 hover:shadow-lg">
-                {/* Product Image */}
-                <div className="aspect-square bg-gray-100 overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-                  />
-                </div>
-                
-                {/* Product Info */}
-                <div className="p-6">
-                  <h3 className="font-bold text-gray-900 mb-2 text-sm leading-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                    {product.name}
-                  </h3>
-                  <p className="font-normal text-gray-700 text-sm" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                    {product.currency === 'USD' && '$'}
-                    {product.currency === 'EUR' && '€'}
-                    {product.currency === 'GBP' && '£'}
-                    {product.price}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
 
         {filteredProducts.length === 0 && (
           <div className="text-center py-16">
