@@ -4,6 +4,7 @@ import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { Link as LinkType, PageData } from '../types';
 import { getPageData, trackLinkClick, trackPageView } from '../services/pageService';
 import PixelInjector from '../components/PixelInjector';
+import IndividualPixelInjector from '../components/IndividualPixelInjector';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import ProductCarousel from '../components/ProductCarousel';
 import { handleEmailLink, createEmailClickHandler } from '../utils/emailDeepLinks';
@@ -1271,6 +1272,47 @@ const BioPage: React.FC = () => {
   const [pageData, setPageData] = useState<PageData | null>(null);
   const [loading, setLoading] = useState(true);
   
+  // BIO PAGE PIXEL TRACKING
+  // Add your tracking pixels for the bio page here
+  const bioPagePixels = {
+    // metaPixel: `<!-- Meta Pixel Code for Bio Page -->
+    // <script>
+    // !function(f,b,e,v,n,t,s)
+    // {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    // n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    // if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    // n.queue=[];t=b.createElement(e);t.async=!0;
+    // t.src=v;s=b.getElementsByTagName(e)[0];
+    // s.parentNode.insertBefore(t,s)}(window, document,'script',
+    // 'https://connect.facebook.net/en_US/fbevents.js');
+    // fbq('init', 'YOUR_PIXEL_ID');
+    // fbq('track', 'PageView');
+    // </script>`,
+    
+    // googleTag: `<!-- Google Analytics for Bio Page -->
+    // <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    // <script>
+    //   window.dataLayer = window.dataLayer || [];
+    //   function gtag(){dataLayer.push(arguments);}
+    //   gtag('js', new Date());
+    //   gtag('config', 'GA_MEASUREMENT_ID');
+    //   gtag('event', 'page_view', {
+    //     page_title: 'Bio Page - Pura Lumina',
+    //     page_location: window.location.href,
+    //     content_group1: 'Bio Pages'
+    //   });
+    // </script>`,
+    
+    // tiktokPixel: `<!-- TikTok Pixel for Bio Page -->
+    // <script>
+    // !function (w, d, t) {
+    //   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+    //   ttq.load('YOUR_TIKTOK_PIXEL_ID');
+    //   ttq.page();
+    // }(window, document, 'ttq');
+    // </script>`
+  };
+  
   // Background music for bio/links page
   // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
   useBackgroundMusic('/biopage-music.mp3', { volume: 0.1 });
@@ -1351,6 +1393,12 @@ const BioPage: React.FC = () => {
 
   return (
     <>
+      {/* Bio Page Pixel Tracking */}
+      <IndividualPixelInjector 
+        pixels={bioPagePixels} 
+        pageId="bio-page" 
+      />
+      
       <PixelInjector pixels={pixels} />
       <main 
         style={getBackgroundStyle()} 
