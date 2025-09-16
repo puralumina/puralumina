@@ -388,6 +388,8 @@ const ProductPage: React.FC = () => {
                 }`}
               >
                 <span>
+                  Buy Now
+                  {/*
                   {(
                     (product.isOnSale && `Buy Now - Save ${product.discountPercentage}%`) ||
                     'Buy Now'
@@ -395,7 +397,7 @@ const ProductPage: React.FC = () => {
                   {product.currency === 'USD' && '$'}
                   {product.currency === 'EUR' && '€'}
                   {product.currency === 'GBP' && '£'}
-                  {product.price}
+                  {product.price}*/}
                 </span>
               </button>
             </div>
