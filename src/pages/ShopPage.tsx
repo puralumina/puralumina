@@ -148,7 +148,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '15',
-    name: 'Vintage Camera',
+    name: 'All Products Bundle',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
