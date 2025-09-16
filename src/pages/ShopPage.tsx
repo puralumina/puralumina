@@ -49,7 +49,7 @@ const sampleProducts: Product[] = [
   {
     id: '5',
     name: 'Couples Games - The Spicy Edition',
-    price: 13.99,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Design your wealth like a living, breathing home.',
@@ -59,7 +59,7 @@ const sampleProducts: Product[] = [
   {
     id: '6',
     name: 'Couples Games - The Connection Edition',
-    price: 250,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'High-quality professional camera for photography enthusiasts',
@@ -69,7 +69,7 @@ const sampleProducts: Product[] = [
   {
     id: '7',
     name: 'Couples Games - The Laughs & Giggles Edition',
-    price: 150,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
     description: 'Premium camera lens with excellent optical quality',
@@ -79,7 +79,7 @@ const sampleProducts: Product[] = [
   {
     id: '8',
     name: 'Couples Games - The 5-Minute Connector Edition',
-    price: 300,
+    price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Complete photography kit for beginners and professionals',
