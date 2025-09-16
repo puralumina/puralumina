@@ -37,7 +37,7 @@ const sampleProducts: Product[] = [
     <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-family: 'Montserrat', sans-serif; font-weight: 600;">Real-Life Scenarios and Solutions:</strong> See how other couples have successfully incorporated these techniques into their lives, with tips and insights from those who've mastered the art of pleasure.</li>
 </ul>
 
-<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">Whether you're a novice or an experienced lover, "Mastering Her Pleasure" offers the insights and skills you need to satisfy her in ways that will leave her craving more. Transform your intimate life and become the partner she's always dreamed of with this indispensable guide.</p>`,
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">Whether you're a novice or an experienced lover, mastering her pleasure offers the insights and skills you need to satisfy her in ways that will leave her craving more. Transform your intimate life and become the partner she's always dreamed of with this indispensable guide.</p>`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/cNi00j0ga7MYeDV1kP7wA05',
   },
