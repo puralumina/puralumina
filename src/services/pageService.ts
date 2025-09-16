@@ -55,7 +55,7 @@ const defaultPageData: PageData = {
       id: '2',
       type: 'standard',
       title: 'Official Facebook Page',
-      url: 'https://facebook.com/fossiwise',
+      url: 'https://facebook.com/puralumina',
       order: 1,
       active: true,
     },
