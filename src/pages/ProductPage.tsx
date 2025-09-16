@@ -23,7 +23,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg',
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg'
     ],
-    description: 'Forget the noise of complex financial advice. After analyzing the patterns of the world’s most successful people, one simple truth emerges: wealth isn\'t determined by a secret investment strategy, but by a single, non-negotiable daily habit. "The Richest Habit" cuts through the clutter to reveal this one core action that separates the financially independent from everyone else. This book is a short, powerful guide to understanding, adopting, and perfecting the single most profitable behavior you can implement in the next 48 hours.',
+    description: 'Forget the noise of complex financial advice. After analyzing the patterns of the world's most successful people, one simple truth emerges: wealth isn\'t determined by a secret investment strategy, but by a single, non-negotiable daily habit. "The Richest Habit" cuts through the clutter to reveal this one core action that separates the financially independent from everyone else. This book is a short, powerful guide to understanding, adopting, and perfecting the single most profitable behavior you can implement in the next 48 hours.',
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/cNi00j0ga7MYeDV1kP7wA05',
   },
@@ -59,7 +59,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg',
       'https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg'
     ],
-    description: 'Money isn’t just numbers. It’s a language you can learn. This book teaches you how to read, write, and think in financial fluency, turning confusion into clarity and fear into strategy. Discover how to "speak" saving, investing, and earning with purpose, so you can finally understand what your money is trying to tell you—and respond with power.',
+    description: 'Money isn't just numbers. It's a language you can learn. This book teaches you how to read, write, and think in financial fluency, turning confusion into clarity and fear into strategy. Discover how to "speak" saving, investing, and earning with purpose, so you can finally understand what your money is trying to tell you—and respond with power.',
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
@@ -78,7 +78,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg'
     ],
-    description: 'Forget instant gratification! Real wealth is earned through the quiet power of patience. The Delayed Dividend reveals how small, consistent choices today create outsized rewards tomorrow. From compounding investments to emotional discipline and long-term systems, this book reframes waiting not as sacrifice, but as strategy. The best returns don’t rush; they arrive when you’re ready.',
+    description: 'Forget instant gratification! Real wealth is earned through the quiet power of patience. The Delayed Dividend reveals how small, consistent choices today create outsized rewards tomorrow. From compounding investments to emotional discipline and long-term systems, this book reframes waiting not as sacrifice, but as strategy. The best returns don't rush; they arrive when you're ready.',
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E28r0gaebm53le7B7wA02',
   },
@@ -94,7 +94,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg',
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg'
     ],
-    description: 'Your financial life isn’t a spreadsheet, it’s a house with seven essential rooms. From the Foundation (emergency savings) to the Engine Room (passive income), each space plays a vital role in stability and growth. This book walks you through building, organizing, and maintaining your personal "Wealth Home," so you’re not just making money. Rather you’re creating a safe, sustainable, and scalable financial life.',
+    description: 'Your financial life isn't a spreadsheet, it's a house with seven essential rooms. From the Foundation (emergency savings) to the Engine Room (passive income), each space plays a vital role in stability and growth. This book walks you through building, organizing, and maintaining your personal "Wealth Home," so you're not just making money. Rather you're creating a safe, sustainable, and scalable financial life.',
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/7sY6oH9QKd7igM39Rl7wA01',
   },
@@ -166,21 +166,21 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
       'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
     ],
-    description: '
+    description: `
             
-      <p>À long terme, cet appareil vous permet de protéger votre sol, <strong>d’économiser temps et argent</strong>, tout en évitant l’usage excessif d’intrants chimiques.</p>
+      <p>À long terme, cet appareil vous permet de protéger votre sol, <strong>d'économiser temps et argent</strong>, tout en évitant l'usage excessif d'intrants chimiques.</p>
       <br>
-      <p>Compact et facile à utiliser, il deviendra vite l’outil essentiel de votre réussite agricole durable.</p><br>
+      <p>Compact et facile à utiliser, il deviendra vite l'outil essentiel de votre réussite agricole durable.</p><br>
 
       <div style="background: #eef2e1; padding: 16px; border-radius: 8px; margin: 16px 0;">
         <h4 style="color: #000; margin-top: 0;">💡 <strong>CONSIGNES D'UTILISATION</strong></h4><br/>
         <p style="margin-bottom: 0; color: #000;">- Assurez-vous d'enfoncer l'appareil dans un sol perméable. Si le sol est trop dur, remuez-le avant de procéder. Puis mouillez le sol avant d'insérer la sonde à 10cm du sol (le sol doit être humide)</p><br/>
         <p style="margin-bottom: 0; color: #000;">- Nettoyez soigneusement l'appareil avant chaque utilisation ainsi qu'après l'avoir utilisé. (une lingette est plus pratique).</p><br/>
         <p style="margin-bottom: 0; color: #000;">-  Nettoyez également la sonde avant chaque mesure pour éviter que les résultats des analyses précédentes influence les résultats actuels.</p><br/>
-        <p style="margin-bottom: 0; color: #000;">- Si vous prévoyez de ne pas l'utiliser pendant une longue période, pensez à retirer la pile de l'appareil.</p><br/>
+        <p style="margin-bottom: 0; color: #000;">- Si vous prévoyez de ne pas l'utiliser pendant une longue période, pensez à retirer la pile de l'appareil.</p><br/>
       </div>
-      <p><strong>Garantie 1 mois</strong> Bien que nous garantissions l’appareil pendant un mois, si vous respectez les consignes d’utilisation ci-dessus, il peut durer pendant des années sans se détériorer.</p>
-',
+      <p><strong>Garantie 1 mois</strong> Bien que nous garantissions l'appareil pendant un mois, si vous respectez les consignes d'utilisation ci-dessus, il peut durer pendant des années sans se détériorer.</p>
+`,
     category: 'Cards',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_9',
   },
