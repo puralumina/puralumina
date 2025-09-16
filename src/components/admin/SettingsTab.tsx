@@ -130,8 +130,8 @@ const SettingsTab: React.FC<SettingsTabProps> = ({ data, setData }) => {
                 referrerPolicy="no-referrer"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  if (target.src !== 'https://d1yei2z3i6k35z.cloudfront.net/4704293/68933153d7ea4_wise3.jpg') {
-                    target.src = 'https://d1yei2z3i6k35z.cloudfront.net/4704293/68933153d7ea4_wise3.jpg';
+                  if (target.src !== 'https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg') {
+                    target.src = 'https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg';
                   }
                 }}
               />
