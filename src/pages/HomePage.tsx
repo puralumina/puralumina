@@ -38,7 +38,7 @@ const HomePage = () => {
             <div className="w-full max-w-[32rem] aspect-square flex items-center justify-center mx-auto">
               <img
                 src={logoImage}
-                alt="Pura Lumina Logo"
+                alt="Soulmates Desires Logo"
                 className="object-contain max-w-full max-h-full rounded-full animate-smooth-pulse"
               />
             </div>

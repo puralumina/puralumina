@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="bg-orange-600 rounded-lg p-2">
-            <span className="text-white font-bold text-sm">Pura Lumina</span>
+            <span className="text-white font-bold text-sm">Soulmates Desires</span>
           </div>
           <h1 className="text-xl font-semibold text-gray-900">Admin Dashboard</h1>
         </div>
