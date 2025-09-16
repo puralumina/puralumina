@@ -55,7 +55,7 @@ const defaultPageData: PageData = {
       id: '2',
       type: 'standard',
       title: 'Official Facebook Page',
-      url: 'https://facebook.com/puralumina',
+      url: 'https://facebook.com/soulmatesdesires',
       order: 1,
       active: true,
     },
