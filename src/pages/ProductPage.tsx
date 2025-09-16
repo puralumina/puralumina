@@ -286,7 +286,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '15',
-    name: 'Vintage Camera',
+    name: 'All Products Bundle',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
@@ -306,7 +306,7 @@ const sampleProducts: Product[] = [
     <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Planners &amp; Worksheets:</strong> Organize and enhance your journey to a more satisfying relationship with practical tools and resources.</li>
 </ul>
 
-<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">With this bundle, you'll receive a comprehensive library of resources designed to enhance your intimate life. From building confidence and improving communication to exploring new techniques and scenarios, this bundle has everything you need to keep the spark alive and satisfy your partner's deepest desires. Don't miss out on this incredible offer—elevate your connection and pleasure today at an unbeatable price!</p>
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">With this bundle, you'll receive a comprehensive library of resources designed to enhance your intimate life. From building confidence and improving communication to exploring new techniques and scenarios, this bundle has everything you need to keep the spark alive and satisfy your partner's deepest desires. Don't miss out on this incredible offer. Elevate your connection and pleasure today at an unbeatable price!</p>
 `,
     category: 'Bundle',
     stripePaymentLink: 'https://youtube.com',
