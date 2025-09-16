@@ -308,7 +308,7 @@ const ShopPage: React.FC = () => {
           ))}
         </div><br/><br/><br/>
 
-        {/* Recently Viewed Products */}
+        {/* Recently Viewed Products
         {recentlyViewed.length > 0 && (
           <div className="mb-16">
             <h2 className="text-xl font-medium text-center text-gray-900 mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>
@@ -353,7 +353,7 @@ const ShopPage: React.FC = () => {
               ))}
             </div>
           </div>
-        )}
+        )} */}
 
 
         {filteredProducts.length === 0 && (
@@ -362,7 +362,7 @@ const ShopPage: React.FC = () => {
               No products found in this category.
             </p>
           </div>
-        )}
+        )} 
       </div>
 
       {/* Custom Styles */}
