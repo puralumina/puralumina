@@ -118,7 +118,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '12',
-    name: 'Vintage Camera',
+    name: 'The 30-Day Relationship Challenge',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
@@ -128,7 +128,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '13',
-    name: 'Vintage Camera',
+    name: 'The Ultimate Date Night Planner',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
