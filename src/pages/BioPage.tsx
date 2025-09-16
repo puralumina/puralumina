@@ -1331,7 +1331,7 @@ const BioPage: React.FC = () => {
         }
         
         // Update page title
-        document.title = data.profile.name || 'Pura Lumina';
+        document.title = data.profile.name || 'Soulmates Desires';
         
         // Only track page view if we successfully loaded data
         if (data) {
