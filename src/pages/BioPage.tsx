@@ -1562,7 +1562,7 @@ const BioPage: React.FC = () => {
 
           <footer className="mt-16 mb-8 text-center">
             <p className="text-white/60 text-sm">
-              Copyright © 2025 Pura Lumina. All rights reserved.
+              Copyright © 2025 Soulmates Desires. All rights reserved.
             </p>
           </footer>
         </div>
