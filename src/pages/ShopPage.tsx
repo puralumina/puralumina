@@ -88,7 +88,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '9',
-    name: 'Vintage Camera',
+    name: '"Truth or Dare" for Couples Cards',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
@@ -98,7 +98,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '10',
-    name: 'Vintage Camera',
+    name: 'Date Night Idea Cards',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
@@ -108,7 +108,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '11',
-    name: 'Vintage Camera',
+    name: 'Couples\' Affirmation Cards',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
