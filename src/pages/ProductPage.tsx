@@ -130,7 +130,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
     ],
     description: 'Premium camera lens with excellent optical quality and superior build. Perfect for portrait photography, landscape shots, and professional work. Features fast autofocus and weather sealing.',
-    category: 'lenses',
+    category: 'Planners & Worksheets',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_7',
   },
   {
