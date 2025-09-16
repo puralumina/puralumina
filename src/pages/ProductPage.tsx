@@ -417,11 +417,11 @@ const ProductPage: React.FC = () => {
                 <span className="text-gray-600 text-sm">
                   ({product.reviewCount || 0} avis)
                 </span>
-                {product.stockCount !== undefined && (
+               {/*  {product.stockCount !== undefined && (
                   <span className="text-gray-600 text-sm">
                     Stock: {product.stockCount} disponibles
                   </span>
-                )}
+                )}*/}
               </div>
             )}
             
