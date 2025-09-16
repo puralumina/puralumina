@@ -111,7 +111,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '5',
-    name: 'The 7 Financial Rooms',
+    name: 'Couples Games - The Spicy Edition',
     price: 13.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
@@ -128,7 +128,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '6',
-    name: 'Professional Camera',
+    name: 'Couples Games - The Connection Edition',
     price: 250,
     originalPrice: 299.99,
     isOnSale: true,
@@ -147,7 +147,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '7',
-    name: 'Camera Lens',
+    name: 'Couples Games - The Laughs & Giggles Edition',
     price: 150,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
@@ -162,7 +162,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '8',
-    name: 'Photography Kit',
+    name: 'Couples Games - The 5-Minute Connector Edition',
     price: 300,
     originalPrice: 399.99,
     isOnSale: true,
