@@ -8,6 +8,7 @@ import { Product, Category } from '../types';
 const sampleProducts: Product[] = [
   {
     id: '1',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'Mastering Her Pleasure: The Ultimate Guide for Men',
     price: 9.99,
     currency: 'USD',
@@ -17,6 +18,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '2',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'Dirty Talks to make her 100x wet during Sex',
     price: 6.99,
     currency: 'USD',
@@ -26,6 +28,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '3',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'Seducing His Senses: A Woman\'s Guide to Pleasuring Her Man',
     price: 11.99,
     currency: 'USD',
@@ -35,6 +38,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '4',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'Make Him Craving You: The Ultimate Guide to Teasing and Pleasing',
     price: 11.99,
     currency: 'USD',
@@ -44,6 +48,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '5',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'The 7 Financial Rooms',
     price: 13.99,
     currency: 'USD',
@@ -54,6 +59,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '6',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'Professional Camera',
     price: 250,
     currency: 'USD',
@@ -63,6 +69,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '7',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'Camera Lens',
     price: 150,
     currency: 'USD',
@@ -73,6 +80,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '8',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'Photography Kit',
     price: 300,
     currency: 'USD',
@@ -82,6 +90,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '9',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'Vintage Camera',
     price: 180,
     currency: 'USD',
@@ -92,6 +101,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '10',
+    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     name: 'Vintage Camera',
     price: 180,
     currency: 'USD',
