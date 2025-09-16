@@ -10,6 +10,9 @@ export const useBackgroundMusic = (
   musicPath: string,
   options: UseBackgroundMusicOptions = {}
 ) => {
+  const { volume = 0.5, fadeInDuration = 1000, fadeOutDuration = 1000 } = options;
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const fadeIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const isCleaningUpRef = useRef(false);
