@@ -596,7 +596,7 @@ const ProductPage: React.FC = () => {
           </div>
 
           {/* Product Details */}
-          <div className="rounded-lg p-6">
+          <div className="rounded-x p-6">
             {/* Product Title */}
             <div className="flex items-start justify-between mb-4">
               <h1 className="text-3xl font-bold text-gray-900 flex-1">{product.name}</h1>
