@@ -1297,7 +1297,7 @@ const BioPage: React.FC = () => {
     //   gtag('js', new Date());
     //   gtag('config', 'GA_MEASUREMENT_ID');
     //   gtag('event', 'page_view', {
-    //     page_title: 'Bio Page - Pura Lumina',
+    //     page_title: 'Bio Page - Soulmates Desires',
     //     page_location: window.location.href,
     //     content_group1: 'Bio Pages'
     //   });
