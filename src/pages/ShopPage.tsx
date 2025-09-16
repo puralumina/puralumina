@@ -14,7 +14,6 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'The single daily action that separates the wealthy.',
     category: 'Couples Games',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_1',
   },
   {
@@ -25,7 +24,6 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Fuel your wealth with the power of discipline.',
     category: 'Couples Games',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_2',
   },
   {
@@ -36,7 +34,6 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Become Fluent and Start Speaking Wealth.',
     category: 'Couples Games',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_3',
   },
   {
@@ -47,7 +44,6 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Why the Best Returns Come from Patience, Not Pressure.',
     category: 'Couples Games',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_4',
   },
   {
@@ -58,7 +54,6 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Design your wealth like a living, breathing home.',
     category: 'Couples Games',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_5',
   },
   {
@@ -69,7 +64,6 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
     description: 'High-quality professional camera for photography enthusiasts',
     category: 'Cards',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_6',
   },
   {
@@ -80,7 +74,6 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
     description: 'Premium camera lens with excellent optical quality',
     category: 'lenses',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_7',
   },
   {
@@ -91,7 +84,6 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
     description: 'Complete photography kit for beginners and professionals',
     category: 'accessories',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_8',
   },
   {
@@ -102,7 +94,6 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Beautiful vintage camera with classic design',
     category: 'Cards',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_9',
   },
 ];

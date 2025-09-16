@@ -15,9 +15,6 @@ const sampleProducts: Product[] = [
     discountPercentage: 20,
     isOnSale: true,
     saleLabel: 'SALE',
-    rating: 4, // Add whole numbers
-    reviewCount: 127,
-    stockCount: 15,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -28,7 +25,6 @@ const sampleProducts: Product[] = [
     ],
     description: 'Forget the noise of complex financial advice. After analyzing the patterns of the world’s most successful people, one simple truth emerges: wealth isn\'t determined by a secret investment strategy, but by a single, non-negotiable daily habit. "The Richest Habit" cuts through the clutter to reveal this one core action that separates the financially independent from everyone else. This book is a short, powerful guide to understanding, adopting, and perfecting the single most profitable behavior you can implement in the next 48 hours.',
     category: 'books',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/cNi00j0ga7MYeDV1kP7wA05',
   },
   {
@@ -39,9 +35,6 @@ const sampleProducts: Product[] = [
     discountPercentage: 17,
     isOnSale: true,
     saleLabel: 'LIMITED TIME',
-    rating: 5,  // Add whole numbers
-    reviewCount: 89,
-    stockCount: 23,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -51,16 +44,12 @@ const sampleProducts: Product[] = [
     ],
     description: 'We all understand the power of compound interest for our money, but what about for our habits? This book reveals how to build your own "Compound Engine". This is a personal system where small acts of daily discipline don\'t just add up, they multiply exponentially. Learn to transform discipline from a struggle into an unstoppable force that generates momentum in your finances, career, and life. Stop trying to muscle your way to success and start building the engine that will drive you there automatically.',
     category: 'books',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
   {
     id: '3',
     name: 'Money is a Language',
     price: 11.99,
-    rating: 5, // Add whole numbers
-    reviewCount: 203,
-    stockCount: 8,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -72,7 +61,6 @@ const sampleProducts: Product[] = [
     ],
     description: 'Money isn’t just numbers. It’s a language you can learn. This book teaches you how to read, write, and think in financial fluency, turning confusion into clarity and fear into strategy. Discover how to "speak" saving, investing, and earning with purpose, so you can finally understand what your money is trying to tell you—and respond with power.',
     category: 'books',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
   {
@@ -83,9 +71,6 @@ const sampleProducts: Product[] = [
     discountPercentage: 14,
     isOnSale: true,
     saleLabel: 'SALE',
-    rating: 5,  // Add whole numbers
-    reviewCount: 156,
-    stockCount: 31,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -95,16 +80,12 @@ const sampleProducts: Product[] = [
     ],
     description: 'Forget instant gratification! Real wealth is earned through the quiet power of patience. The Delayed Dividend reveals how small, consistent choices today create outsized rewards tomorrow. From compounding investments to emotional discipline and long-term systems, this book reframes waiting not as sacrifice, but as strategy. The best returns don’t rush; they arrive when you’re ready.',
     category: 'books',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/28E28r0gaebm53le7B7wA02',
   },
   {
     id: '5',
     name: 'The 7 Financial Rooms',
     price: 13.99,
-    rating: 4, // Add whole numbers
-    reviewCount: 94,
-    stockCount: 12,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -115,7 +96,6 @@ const sampleProducts: Product[] = [
     ],
     description: 'Your financial life isn’t a spreadsheet, it’s a house with seven essential rooms. From the Foundation (emergency savings) to the Engine Room (passive income), each space plays a vital role in stability and growth. This book walks you through building, organizing, and maintaining your personal "Wealth Home," so you’re not just making money. Rather you’re creating a safe, sustainable, and scalable financial life.',
     category: 'books',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/7sY6oH9QKd7igM39Rl7wA01',
   },
   {
@@ -126,9 +106,6 @@ const sampleProducts: Product[] = [
     discountPercentage: 17,
     isOnSale: true,
     saleLabel: 'CLEARANCE',
-    rating: 5,
-    reviewCount: 78,
-    stockCount: 5,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
     images: [
@@ -139,16 +116,12 @@ const sampleProducts: Product[] = [
     ],
     description: 'High-quality professional camera perfect for photography enthusiasts and professionals alike. Features advanced autofocus, excellent low-light performance, and durable construction that can withstand various shooting conditions.',
     category: 'Cards',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_6',
   },
   {
     id: '7',
     name: 'Camera Lens',
     price: 150,
-    rating: 4.3,
-    reviewCount: 45,
-    stockCount: 18,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
     images: [
@@ -158,7 +131,6 @@ const sampleProducts: Product[] = [
     ],
     description: 'Premium camera lens with excellent optical quality and superior build. Perfect for portrait photography, landscape shots, and professional work. Features fast autofocus and weather sealing.',
     category: 'lenses',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_7',
   },
   {
@@ -169,9 +141,6 @@ const sampleProducts: Product[] = [
     discountPercentage: 25,
     isOnSale: true,
     saleLabel: 'MEGA SALE',
-    rating: 4.8,
-    reviewCount: 112,
-    stockCount: 7,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
     images: [
@@ -183,16 +152,12 @@ const sampleProducts: Product[] = [
     ],
     description: 'Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.',
     category: 'accessories',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_8',
   },
   {
     id: '9',
     name: 'Vintage Camera',
     price: 180,
-    rating: 4,
-    reviewCount: 67,
-    stockCount: 3,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -203,7 +168,6 @@ const sampleProducts: Product[] = [
     ],
     description: 'Beautiful vintage camera with classic design and timeless appeal. Fully functional with manual controls that provide an authentic photography experience. Perfect for collectors and film photography enthusiasts.',
     category: 'Cards',
-    inStock: true,
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_9',
   },
 ];
@@ -233,33 +197,6 @@ const ProductPage: React.FC = () => {
   };
   
   useBackgroundMusic(getMusicForProduct(id), { volume: 0.2 });
-
-  // Helper function to render star rating
-  const renderStarRating = (rating: number) => {
-    const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
-    
-    for (let i = 0; i < 5; i++) {
-      if (i < fullStars) {
-        stars.push(
-          <span key={i} className="text-yellow-400 text-xl">★</span>
-        );
-      } else if (i === fullStars && hasHalfStar) {
-        stars.push(
-          <span key={i} className="text-yellow-400 text-xl relative">
-            <span className="absolute inset-0">☆</span>
-            <span className="absolute inset-0 overflow-hidden w-1/2">★</span>
-          </span>
-        );
-      } else {
-        stars.push(
-          <span key={i} className="text-gray-300 text-xl">☆</span>
-        );
-      }
-    }
-    return stars;
-  };
   useEffect(() => {
     const foundProduct = sampleProducts.find(p => p.id === id);
     setProduct(foundProduct || null);
@@ -408,23 +345,6 @@ const ProductPage: React.FC = () => {
               )}
             </div>
 
-            {/* Rating and Reviews */}
-            {product.rating && (
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center">
-                  {renderStarRating(product.rating)}
-                </div>
-                <span className="text-gray-600 text-sm">
-                  ({product.reviewCount || 0} reviews)
-                </span>
-               {/*  {product.stockCount !== undefined && (
-                  <span className="text-gray-600 text-sm">
-                    Stock: {product.stockCount} disponibles
-                  </span>
-                )}*/}
-              </div>
-            )}
-            
             {/* Pricing */}
             <div className="mb-6">
               {product.originalPrice && product.isOnSale ? (
@@ -457,48 +377,28 @@ const ProductPage: React.FC = () => {
               <p className="text-gray-600 leading-relaxed">{product.description}</p>
             </div>
 
-            {/* Stock Status */}
-            <div className="mb-6">
-              <div className="flex items-center gap-4">
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                  product.inStock 
-                    ? 'bg-green-100 text-green-800' 
-                    : 'bg-red-100 text-red-800'
-                }`}>
-                  {product.inStock ? 'In Stock' : 'Out of Stock'}
+            <div className="space-y-4">
+              {/* Pay Now Button */}
+              <button
+                onClick={handleAddToCart}
+                className={`w-full py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${
+                  product.isOnSale 
+                    ? 'bg-green-600 hover:bg-green-700 text-white' 
+                    : 'bg-blue-600 hover:bg-blue-700 text-white'
+                }`}
+              >
+                <span>
+                  {(
+                    (product.isOnSale && `Buy Now - Save ${product.discountPercentage}%`) ||
+                    'Buy Now'
+                  )} - 
+                  {product.currency === 'USD' && '$'}
+                  {product.currency === 'EUR' && '€'}
+                  {product.currency === 'GBP' && '£'}
+                  {product.price}
                 </span>
-                {product.stockCount !== undefined && product.stockCount <= 10 && product.inStock && (
-                  <span className="text-orange-600 text-sm font-medium">
-                    Only {product.stockCount} left!
-                  </span>
-                )}
-              </div>
+              </button>
             </div>
-
-            {product.inStock && (
-              <div className="space-y-4">
-                {/* Pay Now Button */}
-                <button
-                  onClick={handleAddToCart}
-                  className={`w-full py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${
-                    product.isOnSale 
-                      ? 'bg-green-600 hover:bg-green-700 text-white' 
-                      : 'bg-blue-600 hover:bg-blue-700 text-white'
-                  }`}
-                >
-                  <span>
-                    {(
-                      (product.isOnSale && `Buy Now - Save ${product.discountPercentage}%`) ||
-                      'Buy Now'
-                    )} - 
-                    {product.currency === 'USD' && '$'}
-                    {product.currency === 'EUR' && '€'}
-                    {product.currency === 'GBP' && '£'}
-                    {product.price}
-                  </span>
-                </button>
-              </div>
-            )}
           </div>
         </div>
       </div>

@@ -157,14 +157,10 @@ export interface Product {
   images?: string[];
   description: string;
   category: string;
-  inStock: boolean;
   stripeProductId?: string;
   stripePriceId?: string;
   stripePaymentLink?: string;
   // Enhanced product information
-  rating?: number; // 1-5 stars
-  reviewCount?: number;
-  stockCount?: number;
   originalPrice?: number; // For showing discounts
   discountPercentage?: number;
   isOnSale?: boolean;
