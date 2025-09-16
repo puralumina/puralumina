@@ -6,13 +6,13 @@ import { Product, Category } from '../types';
 
 // Sample products - you can modify these manually
 const sampleProducts: Product[] = [
-  {
+  { {/* Categories */}
     id: '1',
     name: 'Mastering Her Pleasure: The Ultimate Guide for Men',
     price: 9.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Learn to satisfy her deeply with expert techniques and insights.',
+    {/*description: 'Learn to satisfy her deeply with expert techniques and insights.',*/}
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_1',
   },
@@ -22,7 +22,7 @@ const sampleProducts: Product[] = [
     price: 6.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Explore over 200 dirty talk ideas to ignite her passion.',
+    {/*description: 'Explore over 200 dirty talk ideas to ignite her passion.',*/}
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_2',
   },
@@ -32,7 +32,7 @@ const sampleProducts: Product[] = [
     price: 11.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Discover how to engage all his senses for ultimate pleasure.',
+    {/*description: 'Discover how to engage all his senses for ultimate pleasure.',*/}
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_3',
   },
@@ -42,7 +42,7 @@ const sampleProducts: Product[] = [
     price: 11.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Master the art of teasing to keep him wanting more.',
+    {/*description: 'Master the art of teasing to keep him wanting more.',*/}
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_4',
   },
@@ -52,7 +52,7 @@ const sampleProducts: Product[] = [
     price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Design your wealth like a living, breathing home.',
+    {/*description: 'Design your wealth like a living, breathing home.',*/}
     category: 'Couples Games',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_5',
   },
@@ -62,7 +62,7 @@ const sampleProducts: Product[] = [
     price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'High-quality professional camera for photography enthusiasts',
+    {/*description: 'High-quality professional camera for photography enthusiasts',*/}
     category: 'Couples Games',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_6',
   },
@@ -72,7 +72,7 @@ const sampleProducts: Product[] = [
     price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-    description: 'Premium camera lens with excellent optical quality',
+    {/*description: 'Premium camera lens with excellent optical quality',*/}
     category: 'Couples Games',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_7',
   },
@@ -82,7 +82,7 @@ const sampleProducts: Product[] = [
     price: 7.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Complete photography kit for beginners and professionals',
+    {/*description: 'Complete photography kit for beginners and professionals',*/}
     category: 'Cards',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_8',
   },
@@ -92,7 +92,7 @@ const sampleProducts: Product[] = [
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Beautiful vintage camera with classic design',
+    {/*description: 'Beautiful vintage camera with classic design',*/}
     category: 'Cards',
     stripePaymentLink: 'https://youtube.com',
   },
@@ -102,7 +102,7 @@ const sampleProducts: Product[] = [
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Beautiful vintage camera with classic design',
+    {/*description: 'Beautiful vintage camera with classic design',*/}
     category: 'Cards',
     stripePaymentLink: 'https://youtube.com',
   },
@@ -112,7 +112,7 @@ const sampleProducts: Product[] = [
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Beautiful vintage camera with classic design',
+    {/*description: 'Beautiful vintage camera with classic design',*/}
     category: 'Cards',
     stripePaymentLink: 'https://youtube.com',
   },
@@ -122,7 +122,7 @@ const sampleProducts: Product[] = [
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Beautiful vintage camera with classic design',
+    {/*description: 'Beautiful vintage camera with classic design',*/}
     category: 'Cards',
     stripePaymentLink: 'https://youtube.com',
   },
@@ -132,7 +132,7 @@ const sampleProducts: Product[] = [
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Beautiful vintage camera with classic design',
+    {/*description: 'Beautiful vintage camera with classic design',*/}
     category: 'Cards',
     stripePaymentLink: 'https://youtube.com',
   },
@@ -350,7 +350,7 @@ const ShopPage: React.FC = () => {
                     </div>
                   </div>
                 </Link>
-              ))
+              ))}
             </div>
           </div>
         )} */}
