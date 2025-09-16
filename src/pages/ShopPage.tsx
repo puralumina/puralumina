@@ -83,7 +83,7 @@ const sampleProducts: Product[] = [
     currency: 'USD',
     image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
     description: 'Complete photography kit for beginners and professionals',
-    category: 'accessories',
+    category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_8',
   },
   {
@@ -124,8 +124,8 @@ const sampleCategories: Category[] = [
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
   },
   {
-    id: 'accessories',
-    name: 'Accessories',
+    id: 'books',
+    name: 'Books',
     description: 'Photography accessories and kits',
     image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
   },
