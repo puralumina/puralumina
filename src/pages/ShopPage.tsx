@@ -252,6 +252,10 @@ const ShopPage: React.FC = () => {
                   <h3 className="font-bold text-gray-900 mb-2 text-sm leading-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                     {product.name}
                   </h3>
+                  <div 
+                    className="text-gray-600 text-xs mb-2 line-clamp-2"
+                    dangerouslySetInnerHTML={{ __html: product.description }}
+                  />
                   <p className="font-normal text-gray-700 text-sm" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                     {product.currency === 'USD' && '$'}
                     {product.currency === 'EUR' && '€'}
@@ -293,6 +297,10 @@ const ShopPage: React.FC = () => {
                       <h3 className="font-bold text-gray-900 mb-2 text-sm leading-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                         {product.name}
                       </h3>
+                      <div 
+                        className="text-gray-600 text-xs mb-2 line-clamp-2"
+                        dangerouslySetInnerHTML={{ __html: product.description }}
+                      />
                       <p className="font-normal text-gray-700 text-sm" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                         {product.currency === 'USD' && '$'}
                         {product.currency === 'EUR' && '€'}

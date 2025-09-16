@@ -388,7 +388,10 @@ const ProductPage: React.FC = () => {
 
             <div className="mb-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Description</h3>
-              <p className="text-gray-600 leading-relaxed">{product.description}</p>
+              <div 
+                className="text-gray-600 leading-relaxed prose prose-sm max-w-none"
+                dangerouslySetInnerHTML={{ __html: product.description }}
+              />
             </div>
 
             <div className="space-y-4">
