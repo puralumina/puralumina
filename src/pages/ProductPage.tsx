@@ -39,7 +39,7 @@ const sampleProducts: Product[] = [
     discountPercentage: 17,
     isOnSale: true,
     saleLabel: 'LIMITED TIME',
-    rating: 4.6,
+    rating: 5,  // Add whole numbers
     reviewCount: 89,
     stockCount: 23,
     currency: 'USD',
@@ -58,7 +58,7 @@ const sampleProducts: Product[] = [
     id: '3',
     name: 'Money is a Language',
     price: 11.99,
-    rating: 4.9,
+    rating: 5, // Add whole numbers
     reviewCount: 203,
     stockCount: 8,
     currency: 'USD',
@@ -83,7 +83,7 @@ const sampleProducts: Product[] = [
     discountPercentage: 14,
     isOnSale: true,
     saleLabel: 'SALE',
-    rating: 4.4,
+    rating: 5,  // Add whole numbers
     reviewCount: 156,
     stockCount: 31,
     currency: 'USD',
@@ -102,7 +102,7 @@ const sampleProducts: Product[] = [
     id: '5',
     name: 'The 7 Financial Rooms',
     price: 13.99,
-    rating: 4.7,
+    rating: 4, // Add whole numbers
     reviewCount: 94,
     stockCount: 12,
     currency: 'USD',
@@ -126,7 +126,7 @@ const sampleProducts: Product[] = [
     discountPercentage: 17,
     isOnSale: true,
     saleLabel: 'CLEARANCE',
-    rating: 4.5,
+    rating: 5,
     reviewCount: 78,
     stockCount: 5,
     currency: 'USD',
