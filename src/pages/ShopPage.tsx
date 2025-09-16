@@ -287,7 +287,7 @@ const ShopPage: React.FC = () => {
                   onClick={() => handleProductClick(product.id)}
                   className="group block"
                 >
-                  <div className="bg-white transition-all duration-300 hover:shadow-lg">
+                  <div className="transition-all duration-300">
                     {/* Product Image */}
                     <div className="aspect-square bg-gray-100 overflow-hidden">
                       <img
