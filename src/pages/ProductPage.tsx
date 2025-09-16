@@ -56,10 +56,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg'
     ],
-    description: `
-<h1 style="font-family: 'Montserrat', sans-serif; color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin: 0 0 20px 0; font-weight: 700;">Dirty Talks to Make Her 100x Wet During Sex</h1>
-
-<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Discover the power of words to ignite passion with "Dirty Talks to make her 100x wet during Sex." This book is your ultimate guide to mastering the art of erotic communication, teaching you how to use dirty talk to heighten arousal and make her wetter than ever before. Packed with techniques, phrases, and scenarios, this book will help you build anticipation, express your desires, and create an intimate connection that transcends the bedroom.</p>
+    description: ` <p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Discover the power of words to ignite passion with "Dirty Talks to make her 100x wet during Sex." This book is your ultimate guide to mastering the art of erotic communication, teaching you how to use dirty talk to heighten arousal and make her wetter than ever before. Packed with techniques, phrases, and scenarios, this book will help you build anticipation, express your desires, and create an intimate connection that transcends the bedroom.</p>
 
 <p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Inside, you'll find:</p>
 
@@ -72,7 +69,7 @@ const sampleProducts: Product[] = [
     <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Confidence-Boosting Exercises:</strong> Build your confidence in using erotic talk with exercises and practices that help you become a master of your own words.</li>
 </ul>
 
-<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">With "Dirty Talks to make her 100x wet during Sex," you'll unlock the secret to a more satisfying and exciting sex life. Transform your bedroom dynamic and make every moment together sizzling hot and unforgettable.</p>`,
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">With <strong>"Dirty Talks to make her 100x wet during Sex"</strong>, you'll unlock the secret to a more satisfying and exciting sex life. Transform your bedroom dynamic and make every moment together sizzling hot and unforgettable.</p>`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
