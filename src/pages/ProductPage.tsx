@@ -24,7 +24,23 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg',
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg'
     ],
-    description: `Forget the noise of complex financial advice. After analyzing the patterns of the world's most successful people, one simple truth emerges: wealth isn't determined by a secret investment strategy, but by a single, non-negotiable daily habit. "The Richest Habit" cuts through the clutter to reveal this one core action that separates the financially independent from everyone else. This book is a short, powerful guide to understanding, adopting, and perfecting the single most profitable behavior you can implement in the next 48 hours.`,
+    description: `<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<h1 style="font-family: 'Montserrat', sans-serif; color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin: 0 0 20px 0; font-weight: 700;">Mastering Her Pleasure: The Ultimate Guide for Men</h1>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Unlock the secrets to becoming a master of pleasure with "Mastering Her Pleasure: The Ultimate Guide for Men." This comprehensive book is your roadmap to understanding and fulfilling your partner's deepest desires, creating an unbreakable bond and an unforgettable sex life. Filled with practical advice, innovative techniques, and real-life examples, this guide covers everything from communication and foreplay to advanced pleasure techniques.</p>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Inside, you'll find:</p>
+
+<ul style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin: 20px 0; padding-left: 20px;">
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-family: 'Montserrat', sans-serif; font-weight: 600;">The Psychology of Her Pleasure:</strong> Dive deep into the female psyche and learn what truly drives her desires. Understand her needs and preferences to create a connection that goes beyond the physical.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-family: 'Montserrat', sans-serif; font-weight: 600;">Communication Mastery:</strong> Learn how to talk to her about your desires and hers. Discover the art of asking the right questions and listening to her responses to enhance your intimacy.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-family: 'Montserrat', sans-serif; font-weight: 600;">Foreplay Techniques:</strong> Explore a variety of foreplay techniques that will have her begging for more. From sensual touch to erotic massage, you'll learn how to build anticipation and pleasure.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-family: 'Montserrat', sans-serif; font-weight: 600;">Advanced Pleasure Techniques:</strong> Take your skills to the next level with advanced techniques that will satisfy her in ways she never thought possible. Learn about G-spot stimulation, multiple orgasms, and more.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-family: 'Montserrat', sans-serif; font-weight: 600;">Real-Life Scenarios and Solutions:</strong> See how other couples have successfully incorporated these techniques into their lives, with tips and insights from those who've mastered the art of pleasure.</li>
+</ul>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Whether you're a novice or an experienced lover, "Mastering Her Pleasure" offers the insights and skills you need to satisfy her in ways that will leave her craving more. Transform your intimate life and become the partner she's always dreamed of with this indispensable guide.</p>`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/cNi00j0ga7MYeDV1kP7wA05',
   },
