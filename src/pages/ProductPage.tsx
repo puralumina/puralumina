@@ -269,7 +269,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: '14',
-    name: 'Vintage Camera',
+    name: '"State of the Union" Meeting Guide',
     price: 180,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
