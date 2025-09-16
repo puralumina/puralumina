@@ -247,7 +247,7 @@ const sampleProducts: Product[] = [
     ],
     description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
 `,
-    category: 'Cards',
+    category: 'Planners & Worksheets',
     stripePaymentLink: 'https://youtube.com',
   },
   {
@@ -264,7 +264,7 @@ const sampleProducts: Product[] = [
     ],
     description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
 `,
-    category: 'Cards',
+    category: 'Planners & Worksheets',
     stripePaymentLink: 'https://youtube.com',
   },
   {
@@ -281,7 +281,7 @@ const sampleProducts: Product[] = [
     ],
     description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
 `,
-    category: 'Cards',
+    category: 'Planners & Worksheets',
     stripePaymentLink: 'https://youtube.com',
   },
   {
@@ -298,7 +298,7 @@ const sampleProducts: Product[] = [
     ],
     description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
 `,
-    category: 'Cards',
+    category: 'Bundle',
     stripePaymentLink: 'https://youtube.com',
   },
 ];
