@@ -167,20 +167,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
       'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
     ],
-    description: `
-            
-      <p>À long terme, cet appareil vous permet de protéger votre sol, <strong>d'économiser temps et argent</strong>, tout en évitant l'usage excessif d'intrants chimiques.</p>
-      <br>
-      <p>Compact et facile à utiliser, il deviendra vite l'outil essentiel de votre réussite agricole durable.</p><br>
-
-      <div style="background: #eef2e1; padding: 16px; border-radius: 8px; margin: 16px 0;">
-        <h4 style="color: #000; margin-top: 0;">💡 <strong>CONSIGNES D'UTILISATION</strong></h4><br/>
-        <p style="margin-bottom: 0; color: #000;">- Assurez-vous d'enfoncer l'appareil dans un sol perméable. Si le sol est trop dur, remuez-le avant de procéder. Puis mouillez le sol avant d'insérer la sonde à 10cm du sol (le sol doit être humide)</p><br/>
-        <p style="margin-bottom: 0; color: #000;">- Nettoyez soigneusement l'appareil avant chaque utilisation ainsi qu'après l'avoir utilisé. (une lingette est plus pratique).</p><br/>
-        <p style="margin-bottom: 0; color: #000;">-  Nettoyez également la sonde avant chaque mesure pour éviter que les résultats des analyses précédentes influence les résultats actuels.</p><br/>
-        <p style="margin-bottom: 0; color: #000;">- Si vous prévoyez de ne pas l'utiliser pendant une longue période, pensez à retirer la pile de l'appareil.</p><br/>
-      </div>
-      <p><strong>Garantie 1 mois</strong> Bien que nous garantissions l'appareil pendant un mois, si vous respectez les consignes d'utilisation ci-dessus, il peut durer pendant des années sans se détériorer.</p>
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
 `,
     category: 'Cards',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_9',
