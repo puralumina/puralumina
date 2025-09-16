@@ -271,7 +271,7 @@ const ShopPage: React.FC = () => {
               </div>
             </Link>
           ))}
-        </div>
+        </div><br/><br/><br/>
 
         {/* Recently Viewed Products */}
         {recentlyViewed.length > 0 && (
