@@ -63,7 +63,7 @@ const sampleProducts: Product[] = [
     currency: 'USD',
     image: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
     description: 'High-quality professional camera for photography enthusiasts',
-    category: 'Cards',
+    category: 'Couples Games',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_6',
   },
   {
@@ -73,7 +73,7 @@ const sampleProducts: Product[] = [
     currency: 'USD',
     image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
     description: 'Premium camera lens with excellent optical quality',
-    category: 'Planners & Worksheets',
+    category: 'Couples Games',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_7',
   },
   {
