@@ -185,7 +185,10 @@ const sampleProducts: Product[] = [
   {
     id: '9',
     name: '"Truth or Dare" for Couples Cards',
-    price: 180,
+    price: 7.99,
+    originalPrice: 19.99,
+    isOnSale: true,
+    saleLabel: 'MEGA SALE',
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -202,7 +205,10 @@ const sampleProducts: Product[] = [
   {
     id: '10',
     name: 'Date Night Idea Cards',
-    price: 180,
+    price: 7.99,
+    originalPrice: 19.99,
+    isOnSale: true,
+    saleLabel: 'MEGA SALE',
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -219,7 +225,10 @@ const sampleProducts: Product[] = [
   {
     id: '11',
     name: 'Couples\' Affirmation Cards',
-    price: 180,
+    price: 7.99,
+    originalPrice: 19.99,
+    isOnSale: true,
+    saleLabel: 'MEGA SALE',
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -236,7 +245,10 @@ const sampleProducts: Product[] = [
   {
     id: '12',
     name: 'Vintage Camera',
-    price: 180,
+    price: 7.99,
+    originalPrice: 19.99,
+    isOnSale: true,
+    saleLabel: 'MEGA SALE',
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -253,7 +265,10 @@ const sampleProducts: Product[] = [
   {
     id: '13',
     name: 'The Ultimate Date Night Planner',
-    price: 180,
+    price: 7.99,
+    originalPrice: 19.99,
+    isOnSale: true,
+    saleLabel: 'MEGA SALE',
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -270,7 +285,10 @@ const sampleProducts: Product[] = [
   {
     id: '14',
     name: '"State of the Union" Meeting Guide',
-    price: 180,
+    price: 7.99,
+    originalPrice: 19.99,
+    isOnSale: true,
+    saleLabel: 'MEGA SALE',
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
@@ -287,7 +305,10 @@ const sampleProducts: Product[] = [
   {
     id: '15',
     name: 'All Products Bundle',
-    price: 180,
+    price: 69.99,
+    originalPrice: 149.99,
+    isOnSale: true,
+    saleLabel: 'MEGA SALE',
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     images: [
