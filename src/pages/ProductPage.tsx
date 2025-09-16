@@ -297,7 +297,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
     ],
     description: `
-<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">Discover the ultimate resource for enhancing your intimate life with our exclusive 15-Book Digital Bundle! This comprehensive package includes every book available on our website, spanning all categories, offering you a wealth of expert insights and techniques to transform your relationship and satisfy your deepest desires. Here's what you'll receive:</p>
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">Discover the ultimate resource for enhancing your intimate life with our exclusive 14 Digital Book Bundle! This comprehensive package includes every book available on our website, spanning all categories, offering you a wealth of expert insights and techniques to transform your relationship and satisfy your deepest desires. Here's what you'll receive:</p>
 
 <ul style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin: 20px 0; padding-left: 20px;">
     <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Books Category:</strong> Dive into expert guides on intimacy and pleasure with titles like "Mastering Her Pleasure" and "Seducing His Senses."</li>
