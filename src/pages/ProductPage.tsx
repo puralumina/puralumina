@@ -4,6 +4,7 @@ import { ArrowLeft, ShoppingCart, Plus, Minus, ChevronLeft, ChevronRight } from 
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { Product } from '../types';
 import { useCart } from '../contexts/CartContext';
+import IndividualPixelInjector from '../components/IndividualPixelInjector';
 
 // Sample products - you can modify these manually
 const sampleProducts: Product[] = [
@@ -181,6 +182,92 @@ const ProductPage: React.FC = () => {
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useCart();
   
+  // INDIVIDUAL PRODUCT PIXEL TRACKING
+  // Add your tracking pixels for specific products here
+  const getPixelsForProduct = (productId: string | undefined) => {
+    const pixelMap: { [key: string]: any } = {
+      '1': { // The Richest Habit
+        // metaPixel: `<!-- Meta Pixel Code for Product 1 -->
+        // <script>
+        // !function(f,b,e,v,n,t,s)
+        // {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        // n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        // if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        // n.queue=[];t=b.createElement(e);t.async=!0;
+        // t.src=v;s=b.getElementsByTagName(e)[0];
+        // s.parentNode.insertBefore(t,s)}(window, document,'script',
+        // 'https://connect.facebook.net/en_US/fbevents.js');
+        // fbq('init', 'YOUR_PIXEL_ID');
+        // fbq('track', 'PageView');
+        // fbq('track', 'ViewContent', {
+        //   content_name: 'The Richest Habit',
+        //   content_category: 'Books',
+        //   content_ids: ['1'],
+        //   content_type: 'product',
+        //   value: 19.99,
+        //   currency: 'USD'
+        // });
+        // </script>`,
+        
+        // googleTag: `<!-- Google Analytics for Product 1 -->
+        // <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        // <script>
+        //   window.dataLayer = window.dataLayer || [];
+        //   function gtag(){dataLayer.push(arguments);}
+        //   gtag('js', new Date());
+        //   gtag('config', 'GA_MEASUREMENT_ID');
+        //   gtag('event', 'page_view', {
+        //     page_title: 'The Richest Habit - Product Page',
+        //     page_location: window.location.href,
+        //     content_group1: 'Product Pages'
+        //   });
+        // </script>`,
+        
+        // tiktokPixel: `<!-- TikTok Pixel for Product 1 -->
+        // <script>
+        // !function (w, d, t) {
+        //   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+        //   ttq.load('YOUR_TIKTOK_PIXEL_ID');
+        //   ttq.page();
+        //   ttq.track('ViewContent', {
+        //     content_name: 'The Richest Habit',
+        //     content_category: 'Books',
+        //     content_id: '1',
+        //     content_type: 'product',
+        //     value: 19.99,
+        //     currency: 'USD'
+        //   });
+        // }(window, document, 'ttq');
+        // </script>`
+      },
+      '2': { // The Compound Engine
+        // Add pixels for product 2 here
+      },
+      '3': { // Money is a Language
+        // Add pixels for product 3 here
+      },
+      '4': { // The Delayed Dividend
+        // Add pixels for product 4 here
+      },
+      '5': { // The 7 Financial Rooms
+        // Add pixels for product 5 here
+      },
+      '6': { // Professional Camera
+        // Add pixels for product 6 here
+      },
+      '7': { // Camera Lens
+        // Add pixels for product 7 here
+      },
+      '8': { // Photography Kit
+        // Add pixels for product 8 here
+      },
+      '9': { // Vintage Camera
+        // Add pixels for product 9 here
+      }
+    };
+    return productId ? pixelMap[productId] || {} : {};
+  };
+  
   // Background music for individual products
   // EDIT THESE PATHS: Add music files for each product ID
   const getMusicForProduct = (productId: string | undefined) => {
@@ -259,6 +346,12 @@ const ProductPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Individual Product Pixel Tracking */}
+      <IndividualPixelInjector 
+        pixels={getPixelsForProduct(id)} 
+        pageId={`product-${id}`} 
+      />
+      
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 py-4">
