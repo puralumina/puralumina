@@ -22,7 +22,7 @@ const sampleProducts: Product[] = [
     price: 6.99,
     currency: 'USD',
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    description: 'Fuel your wealth with the power of discipline.',
+    description: 'Discover over 200 dirty talk ideas and techniques to ignite her passion and make her 100x wetter than ever before, transforming your sex life with the power of words.',
     category: 'Couples Games',
     stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_2',
   },
@@ -94,7 +94,7 @@ const sampleProducts: Product[] = [
     image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
     description: 'Beautiful vintage camera with classic design',
     category: 'Cards',
-    stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_9',
+    stripePaymentLink: 'https://youtube.com',
   },
 ];
 
