@@ -56,7 +56,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg'
     ],
-    description: ` <p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Discover the power of words to ignite passion with "Dirty Talks to make her 100x wet during Sex." This book is your ultimate guide to mastering the art of erotic communication, teaching you how to use dirty talk to heighten arousal and make her wetter than ever before. Packed with techniques, phrases, and scenarios, this book will help you build anticipation, express your desires, and create an intimate connection that transcends the bedroom.</p>
+    description: ` <p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">Discover the power of words to ignite passion with "Dirty Talks to make her 100x wet during Sex." This book is your ultimate guide to mastering the art of erotic communication, teaching you how to use dirty talk to heighten arousal and make her wetter than ever before. Packed with techniques, phrases, and scenarios, this book will help you build anticipation, express your desires, and create an intimate connection that transcends the bedroom.</p>
 
 <p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Inside, you'll find:</p>
 
