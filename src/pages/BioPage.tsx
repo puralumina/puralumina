@@ -842,7 +842,7 @@ const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }>
               }}
             >
               <SafeImage
-                src={link.thumbnailUrl || 'https://d1yei2z3i6k35z.cloudfront.net/5640649/688fe1f5c64cc_Signaturegold.png'}
+                src={link.thumbnailUrl || 'https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg'}
                 alt={link.title}
                 className="w-full h-full object-cover"
               />
