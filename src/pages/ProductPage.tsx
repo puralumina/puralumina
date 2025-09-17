@@ -117,7 +117,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg'
     ],
-    description: `<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Become the irresistible force in his life with "Make Him Craving You: The Ultimate Guide to Teasing and Pleasing." This book is your go-to resource for mastering the art of teasing and pleasing, teaching you how to drive him wild with desire and make him beg for more. Discover the secrets to understanding his needs, communicating effectively, and creating a connection that is both sensual and emotional.</p>
+    description: `<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Become the irresistible force in his life with <strong>"Make Him Craving You: The Ultimate Guide to Teasing and Pleasing."</strong> This book is your go-to resource for mastering the art of teasing and pleasing, teaching you how to drive him wild with desire and make him beg for more. Discover the secrets to understanding his needs, communicating effectively, and creating a connection that is both sensual and emotional.</p>
 
 <p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Inside, you'll find:</p>
 
