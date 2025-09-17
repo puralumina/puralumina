@@ -53,7 +53,7 @@ const SafeImage: React.FC<{
   const handleError = () => {
     if (!hasError) {
       setHasError(true);
-      setImageSrc('https://d1yei2z3i6k35z.cloudfront.net/5640649/688fe1f5c64cc_Signaturegold.png');
+      setImageSrc('https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg');
     }
   };
   
