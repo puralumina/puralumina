@@ -92,7 +92,7 @@ const defaultPageData: PageData = {
       type: 'imageBanner',
       title: 'Project Showcase',
       description: 'A collection of my latest design work',
-      thumbnailUrl: 'https://d1yei2z3i6k35z.cloudfront.net/5640649/688fe1f5c64cc_Signaturegold.png',
+      thumbnailUrl: 'https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg',
       url: 'https://portfolio.sophiacarter.com',
       order: 5,
       active: true,
@@ -102,7 +102,7 @@ const defaultPageData: PageData = {
       type: 'photoCarousel',
       title: 'Art Collection',
       images: [
-        'https://d1yei2z3i6k35z.cloudfront.net/5640649/688fe1f5c64cc_Signaturegold.png',
+        'https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg',
         'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg',
         'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg'
       ],
