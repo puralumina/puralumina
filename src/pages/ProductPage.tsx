@@ -117,7 +117,19 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
       'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg'
     ],
-    description: `Forget instant gratification! Real wealth is earned through the quiet power of patience. The Delayed Dividend reveals how small, consistent choices today create outsized rewards tomorrow. From compounding investments to emotional discipline and long-term systems, this book reframes waiting not as sacrifice, but as strategy. The best returns don't rush; they arrive when you're ready.`,
+    description: `<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Become the irresistible force in his life with "Make Him Craving You: The Ultimate Guide to Teasing and Pleasing." This book is your go-to resource for mastering the art of teasing and pleasing, teaching you how to drive him wild with desire and make him beg for more. Discover the secrets to understanding his needs, communicating effectively, and creating a connection that is both sensual and emotional.</p>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Inside, you'll find:</p>
+
+<ul style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin: 20px 0; padding-left: 20px;">
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">The Psychology of Male Desire:</strong> Learn what truly drives him and how to use that knowledge to your advantage. Understand his needs and preferences to create a connection that goes beyond the physical.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Teasing Techniques:</strong> Explore a variety of teasing techniques that will have him begging for more. From subtle hints to explicit whispers, you'll learn how to build anticipation and pleasure.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Pleasure Techniques:</strong> Discover advanced pleasure techniques that will satisfy him in ways he never thought possible. Learn about prostate stimulation, edging, and more.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Communication and Connection:</strong> Learn how to talk to him about your desires and his. Discover the art of asking the right questions and listening to his responses to enhance your intimacy.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Real-Life Scenarios and Solutions:</strong> See how other couples have successfully incorporated these techniques into their lives, with tips and insights from those who've mastered the art of teasing and pleasing.</li>
+</ul>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">With "Make Him Craving You," you'll become the woman he can't resist. Whether you're a beginner or an experienced lover, this guide offers the insights and skills you need to satisfy him and keep the spark alive.</p>`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E28r0gaebm53le7B7wA02',
   },
