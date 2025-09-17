@@ -87,7 +87,19 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg',
       'https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg'
     ],
-    description: `Money isn't just numbers. It's a language you can learn. This book teaches you how to read, write, and think in financial fluency, turning confusion into clarity and fear into strategy. Discover how to "speak" saving, investing, and earning with purpose, so you can finally understand what your money is trying to tell you—and respond with power.`,
+    description: `<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Unleash the power of sensuality with "Seducing His Senses: A Woman's Guide to Pleasuring Her Man." This guide offers women the tools and techniques to seduce and satisfy their partners, creating an unforgettable intimate experience. From the art of teasing to the science of his desires, this book covers it all.</p>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Inside, you'll discover:</p>
+
+<ul style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin: 20px 0; padding-left: 20px;">
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">The Art of Teasing:</strong> Learn how to tease him effectively, building anticipation and making him crave your touch. Discover the techniques that will drive him wild with desire.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Sensory Pleasure Techniques:</strong> Engage all his senses, from touch to taste, and create a holistic sensual experience. Learn how to use scent, sound, and sight to enhance his pleasure.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Communication and Connection:</strong> Understand the importance of communication in the bedroom. Learn how to express your desires and listen to his, creating a deeper emotional and physical connection.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Playful Ideas and Scenarios:</strong> Explore a variety of playful ideas and scenarios that will keep things fresh and exciting. From role-playing to erotic games, discover new ways to satisfy him.</li>
+    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Real-Life Success Stories:</strong> Gain insights from women who have successfully incorporated these techniques into their lives, with tips and advice from those who've mastered the art of seduction.</li>
+</ul>
+
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">"Seducing His Senses" is your roadmap to becoming the ultimate seductress and satisfying his deepest fantasies. Whether you're a beginner or an experienced lover, this guide will help you become the woman he can't resist.</p>`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
@@ -534,7 +546,7 @@ const ProductPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Product Image Gallery */}
-          <div className="rounded-lg overflow-hidden">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
             {/* Main Image */}
             <div className="aspect-square relative bg-gray-100">
               <img
@@ -596,7 +608,7 @@ const ProductPage: React.FC = () => {
           </div>
 
           {/* Product Details */}
-          <div className="rounded-x p-6">
+          <div className="bg-white rounded-lg shadow-md p-6">
             {/* Product Title */}
             <div className="flex items-start justify-between mb-4">
               <h1 className="text-3xl font-bold text-gray-900 flex-1">{product.name}</h1>
