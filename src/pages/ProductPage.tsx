@@ -87,7 +87,7 @@ const sampleProducts: Product[] = [
       'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg',
       'https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg'
     ],
-    description: `<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Unleash the power of sensuality with "Seducing His Senses: A Woman's Guide to Pleasuring Her Man." This guide offers women the tools and techniques to seduce and satisfy their partners, creating an unforgettable intimate experience. From the art of teasing to the science of his desires, this book covers it all.</p>
+    description: `<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Unleash the power of sensuality with <strong>"Seducing His Senses: A Woman's Guide to Pleasuring Her Man."</strong> This guide offers women the tools and techniques to seduce and satisfy their partners, creating an unforgettable intimate experience. From the art of teasing to the science of his desires, this book covers it all.</p>
 
 <p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Inside, you'll discover:</p>
 
@@ -99,7 +99,7 @@ const sampleProducts: Product[] = [
     <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Real-Life Success Stories:</strong> Gain insights from women who have successfully incorporated these techniques into their lives, with tips and advice from those who've mastered the art of seduction.</li>
 </ul>
 
-<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">"Seducing His Senses" is your roadmap to becoming the ultimate seductress and satisfying his deepest fantasies. Whether you're a beginner or an experienced lover, this guide will help you become the woman he can't resist.</p>`,
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Seducing His Senses is your roadmap to becoming the ultimate seductress and satisfying his deepest fantasies. Whether you're a beginner or an experienced lover, this guide will help you become the woman he can't resist.</p>`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
