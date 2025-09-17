@@ -129,7 +129,7 @@ const sampleProducts: Product[] = [
     <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Real-Life Scenarios and Solutions:</strong> See how other couples have successfully incorporated these techniques into their lives, with tips and insights from those who've mastered the art of teasing and pleasing.</li>
 </ul>
 
-<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">With "Make Him Craving You," you'll become the woman he can't resist. Whether you're a beginner or an experienced lover, this guide offers the insights and skills you need to satisfy him and keep the spark alive.</p>`,
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">You'll become the woman he can't resist. Whether you're a beginner or an experienced lover, this guide offers the insights and skills you need to satisfy him and keep the spark alive.</p>`,
     category: 'books',
     stripePaymentLink: 'https://buy.stripe.com/28E28r0gaebm53le7B7wA02',
   },
