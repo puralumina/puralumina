@@ -22,31 +22,6 @@ const stripHtmlTags = (html: string): string => {
              .replace(/&amp;/g, '&')
              .replace(/&lt;/g, '<')
              .replace(/&gt;/g, '>')
-             .replace(/&quot;/g, '"')
-             .replace(/&#39;/g, "'");
-  
-  // Remove extra whitespace
-  text = text.replace(/\s+/g, ' ').trim();
-  
-  return text || 'Untitled';
-};
-
-// Utility function to safely render HTML content
-const renderHtmlContent = (html: string): JSX.Element => {
-  if (!html) return <></>;
-  
-  // Clean the HTML content but preserve basic formatting
-  const cleanHtml = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-                        .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
-                        .replace(/javascript:/gi, '')
-                        .replace(/on\w+="[^"]*"/gi, '');
-  
-  return <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />;
-};
-
-import ProductCarousel from '../components/ProductCarousel';
-import { handleEmailLink, createEmailClickHandler } from '../utils/emailDeepLinks';
-
 // Function to strip HTML tags and return clean text
 const stripHtmlTags = (html: string): string => {
   if (!html) return '';
