@@ -1150,6 +1150,7 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
                     <option value="imageOnly">Image Only</option>
                     <option value="videoOnly">Video Only</option>
                     <option value="buttonBlock">Button Block</option>
+                    <option value="productBlock">Product Block</option>
                     <option value="musicBlock">Music Block</option>
                     <option value="youtubeEmbed">YouTube Embed</option>
                     <option value="youtubeExclusive">YouTube Exclusive</option>
