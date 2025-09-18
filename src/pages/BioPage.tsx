@@ -6,6 +6,36 @@ import { getPageData, trackLinkClick, trackPageView } from '../services/pageServ
 import PixelInjector from '../components/PixelInjector';
 import IndividualPixelInjector from '../components/IndividualPixelInjector';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+// Utility function to strip HTML tags and return clean text
+const stripHtmlTags = (html: string): string => {
+  if (!html) return '';
+  
+  // Create a temporary div element to parse HTML
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = html;
+  
+  // Get text content and clean up
+  let text = tempDiv.textContent || tempDiv.innerText || '';
+  
+  // Additional cleanup for common HTML entities
+  text = text
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .trim();
+  
+  return text;
+};
+
+// Utility function to safely render HTML content
+const renderHtmlContent = (html: string): { __html: string } => {
+  if (!html) return { __html: '' };
+  return { __html: html };
+};
+
 import ProductCarousel from '../components/ProductCarousel';
 import { handleEmailLink, createEmailClickHandler } from '../utils/emailDeepLinks';
 
@@ -1378,12 +1408,12 @@ const BioPage: React.FC = () => {
   const getBackgroundStyle = () => {
     if (theme.backgroundType === 'gradient') {
       const gradientColors = theme.gradientColors.join(', ');
-      return {
+                      alt={stripHtmlTags(link.title)} 
         background: `linear-gradient(${theme.gradientDirection}, ${gradientColors})`,
         fontFamily: theme.font,
       };
     } else {
-      return {
+                        <p className="text-white font-medium">{stripHtmlTags(link.title)}</p>
         backgroundColor: theme.backgroundColor,
         color: theme.primaryColor,
         fontFamily: theme.font,
@@ -1407,7 +1437,7 @@ const BioPage: React.FC = () => {
         {media.wallpaperUrl && (
           <div
             className="absolute inset-0 bg-cover bg-center z-0"
-            style={{ 
+                        alt={stripHtmlTags(link.title) || 'Image'} 
               backgroundImage: `url(${media.wallpaperUrl})`,
               opacity: media.wallpaperOpacity ? media.wallpaperOpacity / 100 : 1
             }}
@@ -1462,7 +1492,7 @@ const BioPage: React.FC = () => {
               {profile.subtitle}
             </p>
             {profile.location && (
-              <div className="flex items-center gap-1 mt-2">
+                      {stripHtmlTags(link.title) || 'Click Here'}
                 <MapPin 
                   className="w-4 h-4" 
                   style={{ color: profile.locationColor || 'rgba(255, 255, 255, 0.8)' }}
@@ -1478,9 +1508,9 @@ const BioPage: React.FC = () => {
             
             {/* Social Media Icons */}
             {profile.socialMedia && profile.socialMedia.filter(social => social.active).length > 0 && (
-              <div 
+                      <h3 className="font-semibold text-white text-lg mb-2">{stripHtmlTags(link.title) || 'Product'}</h3>
                 className="flex items-center justify-center mt-4"
-                style={{ gap: `${profile.socialMediaSpacing || 12}px` }}
+                        <p className="text-white/70 text-sm mb-3">{stripHtmlTags(link.description)}</p>
               >
                 {profile.socialMedia
                   .filter(social => social.active)
@@ -1517,7 +1547,7 @@ const BioPage: React.FC = () => {
             >
               {profile.bio}
             </p>
-          </header>
+                          <h3 className="font-semibold text-white text-lg">{stripHtmlTags(link.title) || 'Video'}</h3>
 
           <div className="w-full flex flex-col items-center space-y-4">
             {visibleLinks.map(link => {
@@ -1526,7 +1556,7 @@ const BioPage: React.FC = () => {
                 const currentIndex = visibleLinks.indexOf(link);
                 const nextLink = visibleLinks[currentIndex + 1];
                 
-                // Skip if this is the second link in a pair
+                            dangerouslySetInnerHTML={renderHtmlContent(content.content)}
                 if (currentIndex > 0 && visibleLinks[currentIndex - 1].layout === 'twoColumns') {
                   return null;
                 }
@@ -1541,9 +1571,9 @@ const BioPage: React.FC = () => {
                     }}
                   >
                     <div>
-                      <LinkBlock link={link} onClick={trackLinkClick} />
+                      <p className="font-semibold text-white text-lg">{stripHtmlTags(link.title) || 'Untitled Link'}</p>
                     </div>
-                    {nextLink && nextLink.layout === 'twoColumns' && (
+                            dangerouslySetInnerHTML={renderHtmlContent(content.content)}
                       <div>
                         <LinkBlock link={nextLink} onClick={trackLinkClick} />
                       </div>
