@@ -6,56 +6,8 @@ import { getPageData, trackLinkClick, trackPageView } from '../services/pageServ
 import PixelInjector from '../components/PixelInjector';
 import IndividualPixelInjector from '../components/IndividualPixelInjector';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-
-// Utility function to strip HTML tags and return clean text
-const stripHtmlTags = (html: string): string => {
-  if (!html) return '';
-  
-  // Create a temporary div element to parse HTML
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = html;
-  
-  // Get text content and clean it up
-  let text = tempDiv.textContent || tempDiv.innerText || '';
-  
-  // Clean up common HTML entities
-  text = text.replace(/&nbsp;/g, ' ')
-             .replace(/&amp;/g, '&')
-             .replace(/&lt;/g, '<')
-             .replace(/&gt;/g, '>')
-             .replace(/&quot;/g, '"')
-             .replace(/&#39;/g, "'");
-  
-  // Remove extra whitespace
-  text = text.replace(/\s+/g, ' ').trim();
-  
-  return text || 'Untitled';
-};
-
-// Function to strip HTML tags and return clean text
-const stripHtmlTags2 = (html: string): string => {
-  if (!html) return '';
-  
-  // Create a temporary div element to parse HTML
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = html;
-  
-  // Get text content and clean up
-  let text = tempDiv.textContent || tempDiv.innerText || '';
-  
-  // Clean up common HTML entities
-  text = text.replace(/&nbsp;/g, ' ')
-             .replace(/&amp;/g, '&')
-             .replace(/&lt;/g, '<')
-             .replace(/&gt;/g, '>')
-             .replace(/&quot;/g, '"')
-             .replace(/&#39;/g, "'");
-  
-  // Remove extra whitespace
-  text = text.replace(/\s+/g, ' ').trim();
-  
-  return text || 'Untitled';
-};
+import ProductCarousel from '../components/ProductCarousel';
+import { handleEmailLink, createEmailClickHandler } from '../utils/emailDeepLinks';
 
 // Utility to convert Google Drive URLs to direct image URLs
 const convertToDirectImageUrl = (url: string): string => {
@@ -268,39 +220,6 @@ const getDeepLinkUrl = (url: string): string => {
   return url;
 };
 
-const handleEmailLink = (emailUrl: string) => {
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  const isAndroid = /Android/i.test(navigator.userAgent);
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-  
-  if (isMobile) {
-    if (isIOS) {
-      // For iOS, try native mail app first
-      try {
-        window.location.href = emailUrl;
-        return;
-      } catch (e) {
-        console.log('iOS mail app failed, trying Gmail');
-      }
-    }
-    
-    if (isAndroid) {
-      // For Android, try Gmail app intent
-      try {
-        const email = emailUrl.replace('mailto:', '');
-        const gmailIntent = `intent://send?to=${encodeURIComponent(email)}#Intent;package=com.google.android.gm;scheme=mailto;end`;
-        window.location.href = gmailIntent;
-        return;
-      } catch (e) {
-        console.log('Android Gmail intent failed, trying default');
-      }
-    }
-  }
-  
-  // Fallback to default mailto behavior
-  window.location.href = emailUrl;
-};
-
 const handleDeepLink = (url: string, openInNewWindow: boolean = true) => {
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   const isAndroid = /Android/i.test(navigator.userAgent);
@@ -426,7 +345,6 @@ const handleDeepLink = (url: string, openInNewWindow: boolean = true) => {
     window.location.href = url;
   }
 };
-
 const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }> = ({ link, onClick }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -1489,7 +1407,7 @@ const BioPage: React.FC = () => {
         {media.wallpaperUrl && (
           <div
             className="absolute inset-0 bg-cover bg-center z-0"
-            style={{
+            style={{ 
               backgroundImage: `url(${media.wallpaperUrl})`,
               opacity: media.wallpaperOpacity ? media.wallpaperOpacity / 100 : 1
             }}
@@ -1544,7 +1462,7 @@ const BioPage: React.FC = () => {
               {profile.subtitle}
             </p>
             {profile.location && (
-              <div className="flex items-center justify-center gap-1 mt-2">
+              <div className="flex items-center gap-1 mt-2">
                 <MapPin 
                   className="w-4 h-4" 
                   style={{ color: profile.locationColor || 'rgba(255, 255, 255, 0.8)' }}
@@ -1562,7 +1480,7 @@ const BioPage: React.FC = () => {
             {profile.socialMedia && profile.socialMedia.filter(social => social.active).length > 0 && (
               <div 
                 className="flex items-center justify-center mt-4"
-                style={{ gap: '12px' }}
+                style={{ gap: `${profile.socialMediaSpacing || 12}px` }}
               >
                 {profile.socialMedia
                   .filter(social => social.active)

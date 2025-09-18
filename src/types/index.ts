@@ -69,7 +69,6 @@ export type LinkType =
  | 'videoOnly'
   | 'buttonBlock'
   | 'productBlock'
-  | 'productBlock'
   | 'musicBlock'
   | 'youtubeEmbed'
   | 'youtubeExclusive'
