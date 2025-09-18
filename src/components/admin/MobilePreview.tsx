@@ -207,7 +207,9 @@ const MobilePreview: React.FC<MobilePreviewProps> = ({ data }) => {
                       <p className="text-xs text-white/70 text-left">Button ({link.buttonAlignment || 'center'})</p>
                     )}
                     <div className="flex-grow">
-                      <p className="font-semibold text-white text-sm text-left">{link.title}</p>
+                      <p className="font-semibold text-white text-sm text-left">
+                        {link.title ? link.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim() || 'Untitled Link' : 'Untitled Link'}
+                      </p>
                       {link.type === 'musicBlock' && link.artist && (
                         <p className="text-xs text-white/70 text-left">{link.artist}</p>
                       )}

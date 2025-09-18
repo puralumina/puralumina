@@ -161,7 +161,9 @@ const LinkItem: React.FC<LinkItemProps> = ({
       )}
 
       <div className="flex-grow">
-        <p className="font-medium text-gray-800">{link.title}</p>
+        <p className="font-medium text-gray-800">
+          {link.title ? link.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim() || 'Untitled Link' : 'Untitled Link'}
+        </p>
         <p className="text-sm text-gray-500 truncate max-w-xs">{link.url || 'No URL'}</p>
       </div>
 

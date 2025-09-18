@@ -126,7 +126,7 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
     if (link) {
       setFormData({
         ...link,
-        title: link.title ? link.title.replace(/<[^>]*>/g, '') : '', // Strip HTML tags from title
+        title: link.title ? link.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim() || 'New Link' : 'New Link',
         styling: {
           backgroundColor: 'rgba(255, 255, 255, 0.1)',
           borderColor: 'rgba(255, 255, 255, 0.2)',
@@ -1107,23 +1107,12 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Link Title</label>
-              <ReactQuill
+              <input
+                type="text"
                 value={formData.title}
-                onChange={handleTitleChange}
-                placeholder="Enter link title (formatting will be converted to plain text)"
-                modules={{
-                  toolbar: [
-                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{ 'color': [] }, { 'background': [] }],
-                    [{ 'font': ['sans-serif', 'serif', 'monospace', 'montserrat'] }],
-                    ['clean'] // Only keep clean button for title
-                  ]
-                }}
-                formats={[
-                  'bold', 'italic', 'underline', 'strike', 'color', 'background', 'font'
-                ]}
-                className="bg-white"
+                onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
+                placeholder="Enter link title..."
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             
@@ -1141,28 +1130,35 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Description (Rich Text)</label>
               <ReactQuill
-                value={formData.description}
-                onChange={handleDescriptionChange}
-                placeholder="Enter description..."
+                value={formData.description || ''}
+                onChange={(value) => {
+                  // Clean up empty Quill content and ensure proper HTML handling
+                  const cleanValue = value === '<p><br></p>' || value === '<p></p>' ? '' : value;
+                  setFormData(prev => ({ ...prev, description: cleanValue }));
+                }}
                 modules={{
                   toolbar: [
-                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
                     ['bold', 'italic', 'underline', 'strike'],
+                    ['blockquote', 'code-block'],
+                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                    [{ 'font': [] }],
+                    [{ 'size': ['small', false, 'large', 'huge'] }],
                     [{ 'color': [] }, { 'background': [] }],
-                    [{ 'font': ['sans-serif', 'serif', 'monospace', 'montserrat'] }],
                     [{ 'align': [] }],
                     [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                    ['blockquote', 'code-block'],
                     ['link', 'image'],
                     ['clean']
                   ]
                 }}
                 formats={[
                   'header', 'font', 'size',
-                  'bold', 'italic', 'underline', 'strike', 'blockquote',
+                  'bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block',
                   'list', 'bullet', 'indent',
-                  'link', 'image', 'color', 'background', 'align'
+                  'link', 'image',
+                  'color', 'background',
+                  'align'
                 ]}
+                placeholder="Enter link description..."
                 className="bg-white"
               />
             </div>
