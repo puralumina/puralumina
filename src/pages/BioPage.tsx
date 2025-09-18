@@ -8,6 +8,44 @@ import IndividualPixelInjector from '../components/IndividualPixelInjector';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 // Utility function to strip HTML tags and return clean text
 const stripHtmlTags = (html: string): string => {
+// Utility function to strip HTML tags and return clean text
+const stripHtmlTags = (html: string): string => {
+  if (!html) return '';
+  
+  // Create a temporary div element to parse HTML
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = html;
+  
+  // Get text content and clean it up
+  let text = tempDiv.textContent || tempDiv.innerText || '';
+  
+  // Clean up common HTML entities
+  text = text.replace(/&nbsp;/g, ' ')
+             .replace(/&amp;/g, '&')
+             .replace(/&lt;/g, '<')
+             .replace(/&gt;/g, '>')
+             .replace(/&quot;/g, '"')
+             .replace(/&#39;/g, "'");
+  
+  // Remove extra whitespace
+  text = text.replace(/\s+/g, ' ').trim();
+  
+  return text || 'Untitled';
+};
+
+// Utility function to safely render HTML content
+const renderHtmlContent = (html: string): JSX.Element => {
+  if (!html) return <></>;
+  
+  // Clean the HTML content but preserve basic formatting
+  const cleanHtml = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+                        .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+                        .replace(/javascript:/gi, '')
+                        .replace(/on\w+="[^"]*"/gi, '');
+  
+  return <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />;
+};
+
   if (!html) return '';
   
   // Create a temporary div element to parse HTML
@@ -1567,20 +1605,20 @@ const BioPage: React.FC = () => {
                     className="w-full max-w-md grid grid-cols-2 gap-4"
                     style={{
                       marginTop: `${link.marginTop || 5}px`,
-                      marginBottom: `${link.marginBottom || 5}px`,
+                            {stripHtmlTags(link.title)}
                     }}
                   >
                     <div>
                       <LinkBlock link={link} onClick={trackLinkClick} />
-                    </div>
-                    {nextLink && nextLink.layout === 'twoColumns' && (
-                      <div>
+                            {stripHtmlTags(link.title)}
+                          {stripHtmlTags(link.title)}
+                          {stripHtmlTags(link.description)}
                         <LinkBlock link={nextLink} onClick={trackLinkClick} />
                       </div>
                     )}
                   </div>
                 );
-              }
+                          {renderHtmlContent(content.content)}
               
               return (
                 <div key={link.id} className="w-full max-w-md">
