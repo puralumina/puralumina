@@ -6,7 +6,6 @@ import { getPageData, trackLinkClick, trackPageView } from '../services/pageServ
 import PixelInjector from '../components/PixelInjector';
 import IndividualPixelInjector from '../components/IndividualPixelInjector';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-
 // Utility function to strip HTML tags and return clean text
 const stripHtmlTags = (html: string): string => {
   if (!html) return '';
@@ -32,8 +31,24 @@ const stripHtmlTags = (html: string): string => {
   return text || 'Untitled';
 };
 
+// Utility function to safely render HTML content
+const renderHtmlContent = (html: string): JSX.Element => {
+  if (!html) return <></>;
+  
+  // Clean the HTML content but preserve basic formatting
+  const cleanHtml = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+                        .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+                        .replace(/javascript:/gi, '')
+                        .replace(/on\w+="[^"]*"/gi, '');
+  
+  return <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />;
+};
+
+import ProductCarousel from '../components/ProductCarousel';
+import { handleEmailLink, createEmailClickHandler } from '../utils/emailDeepLinks';
+
 // Function to strip HTML tags and return clean text
-const stripHtmlTags2 = (html: string): string => {
+const stripHtmlTags = (html: string): string => {
   if (!html) return '';
   
   // Create a temporary div element to parse HTML
@@ -268,39 +283,6 @@ const getDeepLinkUrl = (url: string): string => {
   return url;
 };
 
-const handleEmailLink = (emailUrl: string) => {
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  const isAndroid = /Android/i.test(navigator.userAgent);
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-  
-  if (isMobile) {
-    if (isIOS) {
-      // For iOS, try native mail app first
-      try {
-        window.location.href = emailUrl;
-        return;
-      } catch (e) {
-        console.log('iOS mail app failed, trying Gmail');
-      }
-    }
-    
-    if (isAndroid) {
-      // For Android, try Gmail app intent
-      try {
-        const email = emailUrl.replace('mailto:', '');
-        const gmailIntent = `intent://send?to=${encodeURIComponent(email)}#Intent;package=com.google.android.gm;scheme=mailto;end`;
-        window.location.href = gmailIntent;
-        return;
-      } catch (e) {
-        console.log('Android Gmail intent failed, trying default');
-      }
-    }
-  }
-  
-  // Fallback to default mailto behavior
-  window.location.href = emailUrl;
-};
-
 const handleDeepLink = (url: string, openInNewWindow: boolean = true) => {
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   const isAndroid = /Android/i.test(navigator.userAgent);
@@ -426,7 +408,6 @@ const handleDeepLink = (url: string, openInNewWindow: boolean = true) => {
     window.location.href = url;
   }
 };
-
 const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }> = ({ link, onClick }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
