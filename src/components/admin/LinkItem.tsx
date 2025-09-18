@@ -77,6 +77,7 @@ const getLinkTypeLabel = (linkType: string) => {
    'imageOnly': 'Image Only',
     'buttonBlock': 'Button Block',
     'productBlock': 'Product Block',
+    'productBlock': 'Product Block',
     'musicBlock': 'Music Block',
     'youtubeEmbed': 'YouTube Embed',
     'youtubeExclusive': 'YouTube Exclusive',

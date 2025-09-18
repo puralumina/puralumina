@@ -114,7 +114,10 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
       backgroundColor: 'rgba(255, 255, 255, 0.1)',
       borderColor: 'rgba(255, 255, 255, 0.2)',
       opacity: 100,
+      borderRadius: 8,
     },
+    marginTop: 0,
+    marginBottom: 0,
   });
 
   const [showPassword, setShowPassword] = useState(false);
@@ -250,6 +253,39 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
     }));
   };
 
+  const addProduct = () => {
+    setFormData(prev => ({
+      ...prev,
+      products: [
+        ...(prev.products || []),
+        {
+          id: uuidv4(),
+          name: 'New Product',
+          price: 0,
+          currency: 'USD',
+          image: '',
+          description: '',
+          category: '',
+        }
+      ]
+    }));
+  };
+
+  const updateProduct = (index: number, field: string, value: any) => {
+    setFormData(prev => ({
+      ...prev,
+      products: prev.products?.map((product, i) => 
+        i === index ? { ...product, [field]: value } : product
+      ) || []
+    }));
+  };
+
+  const removeProduct = (index: number) => {
+    setFormData(prev => ({
+      ...prev,
+      products: prev.products?.filter((_, i) => i !== index) || []
+    }));
+  };
   const renderTypeSpecificFields = () => {
     switch (formData.type) {
       case 'textBlock':
@@ -900,6 +936,144 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
           </div>
         );
 
+      case 'productBlock':
+        return (
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Block Title (Rich Text)</label>
+              <ReactQuill
+                theme="snow"
+                value={formData.title}
+                onChange={(value) => handleInputChange('title', value)}
+                modules={quillModules}
+                formats={quillFormats}
+                className="bg-white"
+                placeholder="Enter block title..."
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Layout</label>
+              <select
+                value={formData.layout || 'fullWidth'}
+                onChange={(e) => handleInputChange('layout', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+              >
+                <option value="fullWidth">Full Width</option>
+                <option value="twoColumns">Two Columns</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Products</label>
+              {formData.products?.map((product, index) => (
+                <div key={index} className="border border-gray-200 rounded-lg p-4 mb-4">
+                  <div className="flex justify-between items-center mb-3">
+                    <h4 className="font-medium">Product {index + 1}</h4>
+                    <button
+                      type="button"
+                      onClick={() => removeProduct(index)}
+                      className="text-red-600 hover:text-red-800"
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-3 mb-3">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Product Name</label>
+                      <input
+                        type="text"
+                        value={product.name}
+                        onChange={(e) => updateProduct(index, 'name', e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                        placeholder="Product name"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Price</label>
+                      <div className="flex">
+                        <select
+                          value={product.currency}
+                          onChange={(e) => updateProduct(index, 'currency', e.target.value)}
+                          className="px-2 py-2 border border-gray-300 rounded-l-lg text-sm"
+                        >
+                          <option value="USD">$</option>
+                          <option value="EUR">€</option>
+                          <option value="GBP">£</option>
+                        </select>
+                        <input
+                          type="number"
+                          step="0.01"
+                          value={product.price}
+                          onChange={(e) => updateProduct(index, 'price', parseFloat(e.target.value) || 0)}
+                          className="flex-1 px-3 py-2 border border-gray-300 rounded-r-lg text-sm"
+                          placeholder="0.00"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-3">
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Product Image URL</label>
+                    <input
+                      type="url"
+                      value={product.image}
+                      onChange={(e) => updateProduct(index, 'image', e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                      placeholder="https://example.com/product-image.jpg"
+                    />
+                  </div>
+                  
+                  <div className="mb-3">
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                    <textarea
+                      value={product.description}
+                      onChange={(e) => updateProduct(index, 'description', e.target.value)}
+                      rows={2}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                      placeholder="Product description"
+                    />
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                      <input
+                        type="text"
+                        value={product.category}
+                        onChange={(e) => updateProduct(index, 'category', e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                        placeholder="Product category"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Stripe Payment Link</label>
+                      <input
+                        type="url"
+                        value={product.stripePaymentLink || ''}
+                        onChange={(e) => updateProduct(index, 'stripePaymentLink', e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                        placeholder="https://buy.stripe.com/..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+              
+              <button
+                type="button"
+                onClick={addProduct}
+                className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-blue-500 hover:text-blue-600"
+              >
+                + Add Product
+              </button>
+            </div>
+          </div>
+        );
+
       default:
         return (
           <div className="space-y-4">
@@ -1030,6 +1204,72 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
                   </div>
                 </div>
 
+                {/* Link Scheduling */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-medium text-gray-700 mb-2">Link Scheduling (Optional)</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Start Date & Time</label>
+                      <input
+                        type="datetime-local"
+                        value={formData.schedule?.start || ''}
+                        onChange={(e) => handleInputChange('schedule', {
+                          ...formData.schedule,
+                          start: e.target.value
+                        })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">End Date & Time</label>
+                      <input
+                        type="datetime-local"
+                        value={formData.schedule?.end || ''}
+                        onChange={(e) => handleInputChange('schedule', {
+                          ...formData.schedule,
+                          end: e.target.value
+                        })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                      />
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-1">Leave empty to show link permanently</p>
+                </div>
+
+                {/* Spacing Controls */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-medium text-gray-700 mb-2">Spacing</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">
+                        Top Margin: {formData.marginTop || 0}px
+                      </label>
+                      <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        step="5"
+                        value={formData.marginTop || 0}
+                        onChange={(e) => handleInputChange('marginTop', parseInt(e.target.value))}
+                        className="w-full"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">
+                        Bottom Margin: {formData.marginBottom || 0}px
+                      </label>
+                      <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        step="5"
+                        value={formData.marginBottom || 0}
+                        onChange={(e) => handleInputChange('marginBottom', parseInt(e.target.value))}
+                        className="w-full"
+                      />
+                    </div>
+                  </div>
+                </div>
                 {/* Password Protection */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">Password Protection (Optional)</label>
@@ -1054,7 +1294,7 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
                 {/* Styling */}
                 <div>
                   <h4 className="text-sm font-medium text-gray-700 mb-2">Block Styling</h4>
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-4 gap-3">
                     <div>
                       <label className="block text-xs text-gray-600 mb-1">Background Color</label>
                       <input
@@ -1084,6 +1324,21 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
                         }}
                         className="w-full h-8 border border-gray-300 rounded"
                       />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Border Radius</label>
+                      <select
+                        value={formData.styling?.borderRadius || 8}
+                        onChange={(e) => handleStylingChange('borderRadius', parseInt(e.target.value))}
+                        className="w-full px-2 py-1 border border-gray-300 rounded text-sm"
+                      >
+                        <option value={0}>None</option>
+                        <option value={4}>Small</option>
+                        <option value={8}>Medium</option>
+                        <option value={12}>Large</option>
+                        <option value={20}>Extra Large</option>
+                        <option value={50}>Pill</option>
+                      </select>
                     </div>
                     <div>
                       <label className="block text-xs text-gray-600 mb-1">
