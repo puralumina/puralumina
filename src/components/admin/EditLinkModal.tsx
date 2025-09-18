@@ -126,6 +126,7 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
     if (link) {
       setFormData({
         ...link,
+        title: link.title ? link.title.replace(/<[^>]*>/g, '') : '', // Strip HTML tags from title
         styling: {
           backgroundColor: 'rgba(255, 255, 255, 0.1)',
           borderColor: 'rgba(255, 255, 255, 0.2)',
@@ -154,11 +155,38 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSave(formData);
+    // Ensure title is plain text
+    const cleanTitle = formData.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim() || 'New Link';
+    
+    const updatedLink: Link = {
+      ...formData,
+      title: cleanTitle,
+      order: link?.order ?? 0,
+    };
+    onSave(updatedLink);
   };
 
   const handleInputChange = (field: keyof Link, value: any) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  // Handle rich text content for title
+  const handleTitleChange = (content: string) => {
+    // Convert HTML to plain text for title field
+    const plainText = content.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
+    setFormData(prev => ({
+      ...prev,
+      title: plainText || 'New Link'
+    }));
+  };
+
+  const handleDescriptionChange = (content: string) => {
+    // Clean up empty Quill content
+    const cleanContent = content === '<p><br></p>' ? '' : content;
+    setFormData(prev => ({
+      ...prev,
+      description: cleanContent
+    }));
   };
 
   const handleStylingChange = (field: string, value: any) => {
@@ -1078,15 +1106,24 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
         return (
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Link Title (Rich Text)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Link Title</label>
               <ReactQuill
-                theme="snow"
                 value={formData.title}
-                onChange={(value) => handleInputChange('title', value)}
-                modules={quillModules}
-                formats={quillFormats}
+                onChange={handleTitleChange}
+                placeholder="Enter link title (formatting will be converted to plain text)"
+                modules={{
+                  toolbar: [
+                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                    ['bold', 'italic', 'underline', 'strike'],
+                    [{ 'color': [] }, { 'background': [] }],
+                    [{ 'font': ['sans-serif', 'serif', 'monospace', 'montserrat'] }],
+                    ['clean'] // Only keep clean button for title
+                  ]
+                }}
+                formats={[
+                  'bold', 'italic', 'underline', 'strike', 'color', 'background', 'font'
+                ]}
                 className="bg-white"
-                placeholder="Enter link title..."
               />
             </div>
             
@@ -1104,13 +1141,29 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Description (Rich Text)</label>
               <ReactQuill
-                theme="snow"
-                value={formData.description || ''}
-                onChange={(value) => handleInputChange('description', value)}
-                modules={quillModules}
-                formats={quillFormats}
-                className="bg-white"
+                value={formData.description}
+                onChange={handleDescriptionChange}
                 placeholder="Enter description..."
+                modules={{
+                  toolbar: [
+                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                    ['bold', 'italic', 'underline', 'strike'],
+                    [{ 'color': [] }, { 'background': [] }],
+                    [{ 'font': ['sans-serif', 'serif', 'monospace', 'montserrat'] }],
+                    [{ 'align': [] }],
+                    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                    ['blockquote', 'code-block'],
+                    ['link', 'image'],
+                    ['clean']
+                  ]
+                }}
+                formats={[
+                  'header', 'font', 'size',
+                  'bold', 'italic', 'underline', 'strike', 'blockquote',
+                  'list', 'bullet', 'indent',
+                  'link', 'image', 'color', 'background', 'align'
+                ]}
+                className="bg-white"
               />
             </div>
           </div>
