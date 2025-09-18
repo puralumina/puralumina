@@ -1160,14 +1160,13 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">URL</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">URL (Optional)</label>
                   <input
                     type="url"
                     value={formData.url}
                     onChange={(e) => handleInputChange('url', e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg"
-                    placeholder="https://example.com"
-                    required
+                    placeholder="https://example.com (leave empty if not needed)"
                   />
                 </div>
               </div>
