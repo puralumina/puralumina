@@ -1408,12 +1408,12 @@ const BioPage: React.FC = () => {
   const getBackgroundStyle = () => {
     if (theme.backgroundType === 'gradient') {
       const gradientColors = theme.gradientColors.join(', ');
-                      alt={stripHtmlTags(link.title)} 
+      return {
         background: `linear-gradient(${theme.gradientDirection}, ${gradientColors})`,
         fontFamily: theme.font,
       };
     } else {
-                        <p className="text-white font-medium">{stripHtmlTags(link.title)}</p>
+      return {
         backgroundColor: theme.backgroundColor,
         color: theme.primaryColor,
         fontFamily: theme.font,
@@ -1437,7 +1437,7 @@ const BioPage: React.FC = () => {
         {media.wallpaperUrl && (
           <div
             className="absolute inset-0 bg-cover bg-center z-0"
-                        alt={stripHtmlTags(link.title) || 'Image'} 
+            style={{
               backgroundImage: `url(${media.wallpaperUrl})`,
               opacity: media.wallpaperOpacity ? media.wallpaperOpacity / 100 : 1
             }}
@@ -1492,7 +1492,7 @@ const BioPage: React.FC = () => {
               {profile.subtitle}
             </p>
             {profile.location && (
-                      {stripHtmlTags(link.title) || 'Click Here'}
+              <div className="flex items-center justify-center gap-1 mt-2">
                 <MapPin 
                   className="w-4 h-4" 
                   style={{ color: profile.locationColor || 'rgba(255, 255, 255, 0.8)' }}
@@ -1508,9 +1508,9 @@ const BioPage: React.FC = () => {
             
             {/* Social Media Icons */}
             {profile.socialMedia && profile.socialMedia.filter(social => social.active).length > 0 && (
-                      <h3 className="font-semibold text-white text-lg mb-2">{stripHtmlTags(link.title) || 'Product'}</h3>
+              <div 
                 className="flex items-center justify-center mt-4"
-                        <p className="text-white/70 text-sm mb-3">{stripHtmlTags(link.description)}</p>
+                style={{ gap: '12px' }}
               >
                 {profile.socialMedia
                   .filter(social => social.active)
@@ -1547,7 +1547,7 @@ const BioPage: React.FC = () => {
             >
               {profile.bio}
             </p>
-                          <h3 className="font-semibold text-white text-lg">{stripHtmlTags(link.title) || 'Video'}</h3>
+          </header>
 
           <div className="w-full flex flex-col items-center space-y-4">
             {visibleLinks.map(link => {
@@ -1556,7 +1556,7 @@ const BioPage: React.FC = () => {
                 const currentIndex = visibleLinks.indexOf(link);
                 const nextLink = visibleLinks[currentIndex + 1];
                 
-                            dangerouslySetInnerHTML={renderHtmlContent(content.content)}
+                // Skip if this is the second link in a pair
                 if (currentIndex > 0 && visibleLinks[currentIndex - 1].layout === 'twoColumns') {
                   return null;
                 }
@@ -1571,9 +1571,9 @@ const BioPage: React.FC = () => {
                     }}
                   >
                     <div>
-                      <p className="font-semibold text-white text-lg">{stripHtmlTags(link.title) || 'Untitled Link'}</p>
+                      <LinkBlock link={link} onClick={trackLinkClick} />
                     </div>
-                            dangerouslySetInnerHTML={renderHtmlContent(content.content)}
+                    {nextLink && nextLink.layout === 'twoColumns' && (
                       <div>
                         <LinkBlock link={nextLink} onClick={trackLinkClick} />
                       </div>
