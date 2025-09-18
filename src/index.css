@@ -5,17 +5,6 @@
 /* Quill Editor Styles */
 .ql-editor {
   min-height: 100px;
-  font-family: inherit;
-}
-
-.ql-editor p {
-  margin: 0;
-  padding: 0;
-}
-
-.ql-editor.ql-blank::before {
-  font-style: normal;
-  color: #9ca3af;
 }
 
 .ql-toolbar {
@@ -30,38 +19,15 @@
   border-right: 1px solid #ccc;
 }
 
-/* Fix Quill editor focus styles */
-.ql-container.ql-snow {
-  border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
+/* Quill Font Family Options */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="montserrat"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="montserrat"]::before {
+  content: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
-.ql-toolbar.ql-snow {
-  border: 1px solid #d1d5db;
-  border-bottom: none;
-  border-radius: 0.375rem 0.375rem 0 0;
-}
-
-.ql-container.ql-snow:focus-within {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 1px #3b82f6;
-}
-
-/* Ensure proper HTML rendering */
-.ql-editor strong {
-  font-weight: bold;
-}
-
-.ql-editor em {
-  font-style: italic;
-}
-
-.ql-editor u {
-  text-decoration: underline;
-}
-
-.ql-editor s {
-  text-decoration: line-through;
+.ql-font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Slick Carousel Custom Styles */
