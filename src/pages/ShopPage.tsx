@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Filter } from 'lucide-react';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { Product, Category } from '../types';
@@ -226,14 +226,25 @@ const addToRecentlyViewed = (productId: string) => {
 };
 
 const ShopPage: React.FC = () => {
+  const { category: urlCategory } = useParams<{ category: string }>();
+  const navigate = useNavigate();
   const [products] = useState<Product[]>(sampleProducts);
   const [categories] = useState<Category[]>(sampleCategories);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>(urlCategory || 'all');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const [recentlyViewed, setRecentlyViewed] = useState<Product[]>([]);
   
   // Background music for shop page
   useBackgroundMusic('/shop-music.mp3', { volume: 0.2 });
+
+  // Update selected category when URL parameter changes
+  useEffect(() => {
+    if (urlCategory && urlCategory !== selectedCategory) {
+      setSelectedCategory(urlCategory);
+    } else if (!urlCategory && selectedCategory !== 'all') {
+      setSelectedCategory('all');
+    }
+  }, [urlCategory, selectedCategory]);
 
   useEffect(() => {
     if (selectedCategory === 'all') {
@@ -246,6 +257,15 @@ const ShopPage: React.FC = () => {
   useEffect(() => {
     setRecentlyViewed(getRecentlyViewed());
   }, []);
+
+  const handleCategoryChange = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+    if (categoryId === 'all') {
+      navigate('/shop');
+    } else {
+      navigate(`/shop/${encodeURIComponent(categoryId)}`);
+    }
+  };
 
   const handleProductClick = (productId: string) => {
     addToRecentlyViewed(productId);
@@ -279,7 +299,7 @@ const ShopPage: React.FC = () => {
             {categories.map((category) => (
               <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={() => handleCategoryChange(category.id)}
                 className={`px-6 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${
                   selectedCategory === category.id
                     ? 'bg-[#C27006] text-white'
