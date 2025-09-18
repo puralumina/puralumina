@@ -6,71 +6,8 @@ import { getPageData, trackLinkClick, trackPageView } from '../services/pageServ
 import PixelInjector from '../components/PixelInjector';
 import IndividualPixelInjector from '../components/IndividualPixelInjector';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-// Utility function to strip HTML tags and return clean text
-const stripHtmlTags = (html: string): string => {
-  if (!html) return '';
-  
-  // Create a temporary div element to parse HTML
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = html;
-  
-  // Get text content and clean it up
-  let text = tempDiv.textContent || tempDiv.innerText || '';
-  
-  // Clean up common HTML entities
-  text = text.replace(/&nbsp;/g, ' ')
-             .replace(/&amp;/g, '&')
-             .replace(/&lt;/g, '<')
-             .replace(/&gt;/g, '>')
-             .replace(/&quot;/g, '"')
-             .replace(/&#39;/g, "'");
-  
-  // Remove extra whitespace
-  text = text.replace(/\s+/g, ' ').trim();
-  
-  return text || 'Untitled';
-};
-
-// Utility function to safely render HTML content
-const renderHtmlContent = (html: string): JSX.Element => {
-  if (!html) return <></>;
-  
-  // Clean the HTML content but preserve basic formatting
-  const cleanHtml = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-                        .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
-                        .replace(/javascript:/gi, '')
-                        .replace(/on\w+="[^"]*"/gi, '');
-  
-  return <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />;
-};
-
 import ProductCarousel from '../components/ProductCarousel';
 import { handleEmailLink, createEmailClickHandler } from '../utils/emailDeepLinks';
-
-// Function to strip HTML tags and return clean text
-const stripHtmlTags = (html: string): string => {
-  if (!html) return '';
-  
-  // Create a temporary div element to parse HTML
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = html;
-  
-  // Get text content and clean up
-  let text = tempDiv.textContent || tempDiv.innerText || '';
-  
-  // Clean up common HTML entities
-  text = text.replace(/&nbsp;/g, ' ')
-             .replace(/&amp;/g, '&')
-             .replace(/&lt;/g, '<')
-             .replace(/&gt;/g, '>')
-             .replace(/&quot;/g, '"')
-             .replace(/&#39;/g, "'");
-  
-  // Remove extra whitespace
-  text = text.replace(/\s+/g, ' ').trim();
-  
-  return text || 'Untitled';
-};
 
 // Utility to convert Google Drive URLs to direct image URLs
 const convertToDirectImageUrl = (url: string): string => {
@@ -1470,7 +1407,7 @@ const BioPage: React.FC = () => {
         {media.wallpaperUrl && (
           <div
             className="absolute inset-0 bg-cover bg-center z-0"
-            style={{
+            style={{ 
               backgroundImage: `url(${media.wallpaperUrl})`,
               opacity: media.wallpaperOpacity ? media.wallpaperOpacity / 100 : 1
             }}
@@ -1525,7 +1462,7 @@ const BioPage: React.FC = () => {
               {profile.subtitle}
             </p>
             {profile.location && (
-              <div className="flex items-center justify-center gap-1 mt-2">
+              <div className="flex items-center gap-1 mt-2">
                 <MapPin 
                   className="w-4 h-4" 
                   style={{ color: profile.locationColor || 'rgba(255, 255, 255, 0.8)' }}
@@ -1543,7 +1480,7 @@ const BioPage: React.FC = () => {
             {profile.socialMedia && profile.socialMedia.filter(social => social.active).length > 0 && (
               <div 
                 className="flex items-center justify-center mt-4"
-                style={{ gap: '12px' }}
+                style={{ gap: `${profile.socialMediaSpacing || 12}px` }}
               >
                 {profile.socialMedia
                   .filter(social => social.active)
