@@ -47,6 +47,31 @@ const renderHtmlContent = (html: string): JSX.Element => {
 import ProductCarousel from '../components/ProductCarousel';
 import { handleEmailLink, createEmailClickHandler } from '../utils/emailDeepLinks';
 
+// Function to strip HTML tags and return clean text
+const stripHtmlTags = (html: string): string => {
+  if (!html) return '';
+  
+  // Create a temporary div element to parse HTML
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = html;
+  
+  // Get text content and clean up
+  let text = tempDiv.textContent || tempDiv.innerText || '';
+  
+  // Clean up common HTML entities
+  text = text.replace(/&nbsp;/g, ' ')
+             .replace(/&amp;/g, '&')
+             .replace(/&lt;/g, '<')
+             .replace(/&gt;/g, '>')
+             .replace(/&quot;/g, '"')
+             .replace(/&#39;/g, "'");
+  
+  // Remove extra whitespace
+  text = text.replace(/\s+/g, ' ').trim();
+  
+  return text || 'Untitled';
+};
+
 // Utility to convert Google Drive URLs to direct image URLs
 const convertToDirectImageUrl = (url: string): string => {
   if (!url) return url;
