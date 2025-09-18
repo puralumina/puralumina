@@ -1581,7 +1581,7 @@ const BioPage: React.FC = () => {
                     <div>
                       <LinkBlock link={link} onClick={trackLinkClick} />
                     </div>
-                    {nextLink && (
+                    {nextLink && nextLink.layout === 'twoColumns' && (
                       <div>
                         <LinkBlock link={nextLink} onClick={trackLinkClick} />
                       </div>
