@@ -723,11 +723,9 @@ const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }>
             </div>
           )}
           <div className="flex-grow">
-            <p className="font-semibold text-white text-sm mb-1">
-              {stripHtmlTags(link.title)}
-            </p>
+            <p className="font-semibold text-white text-left">{link.title}</p>
             {link.artist && (
-              <p className="text-white/70 text-xs">{link.artist}</p>
+              <p className="text-sm text-white/70 text-left">{link.artist}</p>
             )}
           </div>
           <Play size={16} className="text-white/50 flex-shrink-0" />
@@ -750,14 +748,9 @@ const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }>
             />
             <div className="p-4">
               <h3 className="font-medium text-white mb-1">{link.title}</h3>
-              <div className="flex-grow">
-                <p className="font-semibold text-white text-sm mb-1">
-                  {stripHtmlTags(link.title)}
-                </p>
-                {link.description && (
-                  <p className="text-white/70 text-xs line-clamp-2">{stripHtmlTags(link.description)}</p>
-                )}
-              </div>
+              {link.description && (
+                <p className="text-sm text-white/70">{link.description}</p>
+              )}
             </div>
           </div>
         </div>
@@ -985,13 +978,13 @@ const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }>
               if (textItem.type === 'heading') {
                 return (
                   <h3 key={index} style={textStyles}>
-                    {textItem.content}
+                    {stripHtmlTags(textItem.content)}
                   </h3>
                 );
               } else {
                 return (
                   <p key={index} style={textStyles}>
-                    {textItem.content}
+                    {stripHtmlTags(textItem.content)}
                   </p>
                 );
               }
