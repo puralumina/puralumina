@@ -8,8 +8,6 @@ import IndividualPixelInjector from '../components/IndividualPixelInjector';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 // Utility function to strip HTML tags and return clean text
 const stripHtmlTags = (html: string): string => {
-// Utility function to strip HTML tags and return clean text
-const stripHtmlTags = (html: string): string => {
   if (!html) return '';
   
   // Create a temporary div element to parse HTML
@@ -44,34 +42,6 @@ const renderHtmlContent = (html: string): JSX.Element => {
                         .replace(/on\w+="[^"]*"/gi, '');
   
   return <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />;
-};
-
-  if (!html) return '';
-  
-  // Create a temporary div element to parse HTML
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = html;
-  
-  // Get text content and clean up
-  let text = tempDiv.textContent || tempDiv.innerText || '';
-  
-  // Additional cleanup for common HTML entities
-  text = text
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .trim();
-  
-  return text;
-};
-
-// Utility function to safely render HTML content
-const renderHtmlContent = (html: string): { __html: string } => {
-  if (!html) return { __html: '' };
-  return { __html: html };
 };
 
 import ProductCarousel from '../components/ProductCarousel';
@@ -1605,20 +1575,20 @@ const BioPage: React.FC = () => {
                     className="w-full max-w-md grid grid-cols-2 gap-4"
                     style={{
                       marginTop: `${link.marginTop || 5}px`,
-                            {stripHtmlTags(link.title)}
+                      marginBottom: `${link.marginBottom || 5}px`,
                     }}
                   >
                     <div>
                       <LinkBlock link={link} onClick={trackLinkClick} />
-                            {stripHtmlTags(link.title)}
-                          {stripHtmlTags(link.title)}
-                          {stripHtmlTags(link.description)}
+                    </div>
+                    {nextLink && nextLink.layout === 'twoColumns' && (
+                      <div>
                         <LinkBlock link={nextLink} onClick={trackLinkClick} />
                       </div>
                     )}
                   </div>
                 );
-                          {renderHtmlContent(content.content)}
+              }
               
               return (
                 <div key={link.id} className="w-full max-w-md">
