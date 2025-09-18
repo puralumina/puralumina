@@ -673,7 +673,7 @@ const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }>
               />
             )}
             <div className="flex-grow">
-              <p className="font-semibold text-white text-left">{link.title}</p>
+              <p className="font-semibold text-white text-left">{stripHtmlTags(link.title)}</p>
             </div>
             {link.password && <Lock size={16} className="text-white/50" />}
             {(link.url && link.url.trim() !== '') && <ExternalLink size={16} className="text-white/50 flex-shrink-0" />}
@@ -870,7 +870,7 @@ const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }>
           <div className="p-4">
             <h3 className="font-medium text-white mb-2">{link.title}</h3>
             {link.description && (
-              <p className="text-sm text-white/70 mb-3">{link.description}</p>
+              <p className="text-sm text-white/70 mb-3">{stripHtmlTags(link.description)}</p>
             )}
             <button
               onClick={handleStandardClick}
@@ -978,13 +978,13 @@ const LinkBlock: React.FC<{ link: LinkType, onClick: (linkId: string) => void }>
               if (textItem.type === 'heading') {
                 return (
                   <h3 key={index} style={textStyles}>
-                    {stripHtmlTags(textItem.content)}
+                    {textItem.content}
                   </h3>
                 );
               } else {
                 return (
                   <p key={index} style={textStyles}>
-                    {stripHtmlTags(textItem.content)}
+                    {textItem.content}
                   </p>
                 );
               }
