@@ -25,7 +25,7 @@ public/
 └── product-9-music.mp3  (Vintage Camera)
 ```
 
-## 🎵 Where to Edit Music Paths
+## 🎵 Where to Edit Your Music Paths
 
 ### 1. Homepage Music
 **File:** `src/pages/HomePage.tsx`
