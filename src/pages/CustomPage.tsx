@@ -397,6 +397,13 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
                     <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
                 </div>
+                <!-- Book Card -->
+                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mindful Moments</h3>
+                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                </div>
             </div>
             <!-- Add more categories and book cards as needed -->
         </div>
