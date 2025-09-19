@@ -706,7 +706,6 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Soulmates Desires</title>
-    <link rel="icon" type="image/png" href="https://d1yei2z3i6k35z.cloudfront.net/4704293/68cac865f3b8b_SoulmatesDesiresPPBrown.png">
     <!-- Importing Montserrat Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -714,8 +713,10 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 
     <!-- A small style block for button hover effect, which can't be done inline -->
     <style>
-        .submit-button:hover {
+        .contact-button:hover {
             background-color: #0b5ed7 !important;
+            box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4) !important;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -731,68 +732,34 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     </div>
 
     <!-- Main Content Container -->
-    <div style="max-width: 800px; margin: 40px auto; padding: 20px 20px 60px 20px;">
+    <div style="max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center;">
 
         <!-- Page Header -->
-        <div style="text-align: center; margin-bottom: 40px;">
-            <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 10px;">Get In Touch</h1>
-            <p style="font-size: 18px; color: #6c757d; max-width: 600px; margin: 0 auto;">We'd love to hear from you! Whether you have a question about our products, need assistance, or just want to share your story, please feel free to reach out.</p>
-        </div>
+        <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 15px;">We'd Love to Hear From You</h1>
+        
+        <!-- Main Message -->
+        <p style="font-size: 18px; color: #6c757d; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7;">
+            Whether you have a question about our products, need assistance with an order, or just want to share your thoughts, our inbox is always open. We do our best to respond to all inquiries within 24 hours.
+        </p>
 
-        <!-- Contact Form Wrapper -->
-        <div style="background-color: #ffffff; padding: 30px 40px; border-radius: 12px; border: 1px solid #dee2e6; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-            
-            <!-- 
-              IMPORTANT: Replace 'your.email@example.com' below with your actual email address.
-              The method="post" and enctype="text/plain" attributes help format the email body for some clients.
-            -->
-            <form action="mailto:soulmatesdesires@gmail.com" method="post" enctype="text/plain">
-                <!-- Name Field -->
-                <div style="margin-bottom: 20px;">
-                    <label for="name" style="display: block; font-weight: 700; margin-bottom: 8px;">Full Name</label>
-                    <input type="text" id="name" name="Name" placeholder="Enter your full name" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
-                </div>
-
-                <!-- Email Field -->
-                <div style="margin-bottom: 20px;">
-                    <label for="email" style="display: block; font-weight: 700; margin-bottom: 8px;">Email Address</label>
-                    <input type="email" id="email" name="Email" placeholder="Enter your email address" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
-                </div>
-
-                <!-- Subject Field -->
-                <div style="margin-bottom: 20px;">
-                    <label for="subject" style="display: block; font-weight: 700; margin-bottom: 8px;">Subject</label>
-                    <input type="text" id="subject" name="Subject" placeholder="What is your message about?" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
-                </div>
-
-                <!-- Message Field -->
-                <div style="margin-bottom: 30px;">
-                    <label for="message" style="display: block; font-weight: 700; margin-bottom: 8px;">Message</label>
-                    <textarea id="message" name="Message" rows="6" placeholder="Write your message here..." required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box; resize: vertical;"></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <div>
-                    <button type="submit" class="submit-button" style="background-color: #0d6efd; color: white; width: 100%; padding: 15px; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; border: none; cursor: pointer; transition: background-color 0.2s;">
-                        Send Message
-                    </button>
-                </div>
-            </form>
-        </div>
-
-        <!-- Alternative Contact Info -->
-        <div style="text-align: center; margin-top: 40px;">
-            <h3 style="font-size: 20px; font-weight: 700; color: #495057;">You can also reach us directly at:</h3>
-            <a href="mailto:soulmatesdesires@gmail.com" style="font-size: 18px; color: #0d6efd; text-decoration: none; font-weight: 700;">soulmatesdesires@gmail.com</a>
-        </div>
+        <!-- Email Button (Call to Action) -->
+        <a href="mailto:your.email@example.com" class="contact-button" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3); transition: all 0.2s ease-in-out;">
+            Email Us Directly
+        </a>
+        
+        <!-- Alternative Text Link -->
+        <p style="margin-top: 30px; font-size: 16px; color: #495057;">
+            Or, send us an email at: 
+            <a href="mailto:your.email@example.com" style="color: #0d6efd; font-weight: 700; text-decoration: none;">your.email@example.com</a>
+        </p>
 
     </div>
 
     <!-- FOOTER -->
     <div style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center; background-color: #ffffff;">
         <p style="color: #6c757d; font-size: 14px; margin-bottom: 15px;">
-            <a href="/privacy" style="text-decoration: none; color: #495057; margin: 0 10px;">Privacy Policy</a> |
-            <a href="/terms" style="text-decoration: none; color: #495057; margin: 0 10px;">Terms of Service</a>
+            <a href="/privacy-policy.html" style="text-decoration: none; color: #495057; margin: 0 10px;">Privacy Policy</a> |
+            <a href="/terms-of-service.html" style="text-decoration: none; color: #495057; margin: 0 10px;">Terms of Service</a>
         </p>
         <p style="color: #6c757d; font-size: 14px; margin: 0;">© 2025 Soulmates Desires. All rights reserved.</p>
     </div>
