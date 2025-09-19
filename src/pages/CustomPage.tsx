@@ -663,8 +663,11 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 
         <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
 
-        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">6. Children's Privacy</h2>
-        <p style="font-size: 16px;">Our Service is not intended for individuals under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">6. Children's Privacy and Age Limitation</h2>
+
+<p style="font-size: 16px;">Our Service is not intended for or directed to individuals under the age of 18 ("Minors").</p>
+
+<p style="font-size: 16px; font-weight: 700; background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 4px;">By accessing and using this website, you represent and warrant that you are at least 18 years of age and have the full legal capacity to enter into a binding agreement. Your use of the Service constitutes your full acknowledgment and agreement to this age requirement.</p>
 
         <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
 
