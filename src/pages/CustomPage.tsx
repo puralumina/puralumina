@@ -237,413 +237,197 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Our Collection of Books</title>
+    <title>The Ultimate Growth Hacker's Digital Library</title>
+    <!-- Importing Montserrat Font (Regular, Bold, Extra-Bold) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #1a202c;
-            color: #ffffff;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 15px;
-        }
-        .hero, .section, .offer, .faq, .final-cta {
-            text-align: center;
-            padding: 40px 10px;
-        }
-        .hero h1, .section h2, .offer h2, .faq h2, .final-cta h2 {
-            font-size: 44px;
-            font-weight: 900;
-            margin-bottom: 16px;
-            line-height: 1.2;
-            color: #ff6f61;
-        }
-        .hero p, .section p, .offer p, .faq p, .final-cta p {
-            font-size: 20px;
-            color: #ffffff;
-            margin-bottom: 32px;
-            line-height: 1.7;
-        }
-        .hero img, .section img, .offer img, .faq img, .final-cta img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 32px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        .hero button, .offer button, .final-cta button {
-            background-color: #ff6f61;
-            color: white;
-            padding: 18px 36px;
-            text-decoration: none;
-            font-size: 22px;
-            font-weight: 700;
-            border-radius: 10px;
-            display: inline-block;
-            box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4);
-        }
-        .urgency-bar {
-            background-color: #ffc107;
-            color: #1a202c;
-            text-align: center;
-            padding: 12px;
-            font-weight: 700;
-            font-size: 16px;
-        }
-        .trust-bar {
-            text-align: center;
-            padding: 20px 10px;
-            border-top: 1px solid #e9ecef;
-            border-bottom: 1px solid #e9ecef;
-        }
-        .trust-bar span {
-            font-weight: 700;
-            color: #6c757d;
-            margin-right: 20px;
-        }
-        .trust-bar img {
-            height: 30px;
-            vertical-align: middle;
-            margin: 5px 10px;
-        }
-        .problem, .solution, .features, .testimonials, .offer, .faq, .final-cta {
-            padding: 60px 25px;
-            margin-top: 40px;
-            text-align: center;
-        }
-        .problem, .solution, .features, .testimonials, .offer, .faq, .final-cta h2 {
-            font-size: 36px;
-            font-weight: 900;
-            margin-bottom: 24px;
-            margin-top: 0;
-        }
-        .problem, .solution, .features, .testimonials, .offer, .faq, .final-cta p {
-            font-size: 18px;
-            color: #ffffff;
-            line-height: 1.7;
-        }
-        .features ul {
-            list-style: none;
-            padding: 0;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-        .features li {
-            margin-bottom: 24px;
-        }
-        .testimonials {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .testimonials img {
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .testimonials p {
-            font-style: italic;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .offer ul {
-            list-style: none;
-            padding: 0;
-            font-size: 18px;
-            line-height: 2;
-        }
-        .offer li {
-            margin-bottom: 10px;
-        }
-        .faq p {
-            font-size: 18px;
-            color: #ffffff;
-            line-height: 1.7;
-        }
-        .countdown {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .countdown div {
-            background-color: #ffffff;
-            color: #1a202c;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 0 10px;
-            font-size: 24px;
-            font-weight: 700;
-        }
-        .book-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .book-item {
-            background-color: #2c3e50;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        .book-item:hover {
-            transform: scale(1.05);
-        }
-        .book-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .book-item p {
-            padding: 15px;
-            margin: 0;
-            font-size: 16px;
-            color: #ffffff;
-            text-align: center;
-        }
-    </style>
 </head>
-<body>
-    <!-- URGENCY BAR -->
-    <div class="urgency-bar">
-        ⚠️ Limited Time Offer: Get the "Seducing His Senses" Bonus FREE when you order in the next 24 hours!
+<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #212529; line-height: 1.6;">
+
+    <!-- HEADER -->
+    <div style="background-color: #ffffff; border-bottom: 1px solid #dee2e6;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 700; font-size: 20px;">
+                💎 [YourBrand]
+            </div>
+            <div style="display: none; md-display: flex; gap: 20px;"> <!-- Hide on mobile for simplicity -->
+                <a href="#" style="text-decoration: none; color: #495057;">Home</a>
+                <a href="#" style="text-decoration: none; color: #495057;">About</a>
+                <a href="#" style="text-decoration: none; color: #495057;">Contact</a>
+            </div>
+            <a href="#cta" style="background-color: #0d6efd; color: white; padding: 10px 20px; text-decoration: none; font-weight: 700; border-radius: 6px;">Buy Now</a>
+        </div>
     </div>
 
-    <!-- Main Container for content centering -->
-    <div class="container">
+    <!-- Main Container -->
+    <div style="max-width: 1100px; margin: 0 auto; padding: 20px;">
+
         <!-- HERO SECTION -->
-        <div class="hero">
-            <h1>Discover Our Collection of Books</h1>
-            <p>Dive into a world of captivating stories and profound insights. Our curated selection of books is designed to inspire and enrich your mind.</p>
-            <img src="https://via.placeholder.com/600x400.png?text=Showcase+Your+Books" alt="Book Collection">
-            <a href="#offer">Explore Our Books →</a>
-            <p>Join 1,500+ avid readers!</p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; padding: 40px 0;">
+            <!-- Left Column: Image -->
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <div style="background-color: #fff3cd; border-radius: 12px; padding: 20px; display: inline-block;">
+                     <img src="https://via.placeholder.com/350x450/008080/FFFFFF?text=DIGITAL+BOOK" alt="Digital Book Bundle" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+                </div>
+            </div>
+            <!-- Right Column: Details -->
+            <div style="flex: 2; min-width: 300px;">
+                <h1 style="font-size: 48px; font-weight: 900; margin-bottom: 16px; line-height: 1.2;">The Ultimate Growth Hacker's Digital Library</h1>
+                <p style="font-size: 18px; color: #495057; margin-bottom: 24px;">Supercharge your personal and professional development with this curated bundle of 14 essential digital books. Master new skills, cultivate a growth mindset, and unlock your full potential.</p>
+                <div style="display: flex; align-items: center; gap: 15px; font-size: 14px; color: #6c757d; margin-bottom: 24px;">
+                    <span>⭐⭐⭐⭐⭐ Rated 4.8/5 stars</span>
+                    <span>|</span>
+                    <a href="#" style="color: #0d6efd; text-decoration: none; font-weight: 700;">Join 1,500+ happy students!</a>
+                </div>
+
+                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px;">
+                    <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px;">
+                        <span style="font-size: 48px; font-weight: 900; color: #0d6efd;">$47</span>
+                        <span style="font-size: 24px; color: #6c757d; text-decoration: line-through;">$279</span>
+                    </div>
+                    <p style="margin: 0 0 20px 0; color: #495057;">Get the entire 14-book bundle and <strong>save over 80%!</strong></p>
+                    <a href="#cta" style="background-color: #0d6efd; color: white; padding: 15px; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; display: block; text-align: center;">Get The Bundle Now</a>
+                </div>
+                <div style="background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 8px; padding: 15px; margin-top: 20px; text-align: center; font-size: 14px; color: #856404;">
+                    ⚡ Hurry! The price will increase to <strong>$60</strong> next week.
+                </div>
+            </div>
         </div>
 
-        <!-- AS SEEN ON / TRUST BAR -->
-        <div class="trust-bar">
-            <span>AS FEATURED IN</span>
-            <img src="https://via.placeholder.com/100x40.png?text=Logo+1" alt="As Seen On Logo 1">
-            <img src="https://via.placeholder.com/100x40.png?text=Logo+2" alt="As Seen On Logo 2">
-            <img src="https://via.placeholder.com/100x40.png?text=Logo+3" alt="As Seen On Logo 3">
+        <!-- AS FEATURED ON -->
+        <div style="text-align: center; padding: 40px 0; border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6; margin-top: 20px;">
+            <p style="margin: 0 0 20px 0; color: #6c757d; font-weight: 700; letter-spacing: 1px;">AS FEATURED ON</p>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+                <span style="font-size: 24px; color: #adb5bd;">◎ LOGO</span>
+                <span style="font-size: 24px; color: #adb5bd;">❖ BRAND</span>
+                <span style="font-size: 24px; color: #adb5bd;">◎ COMPANY</span>
+                <span style="font-size: 24px; color: #adb5bd;">❖ TRUST</span>
+                <span style="font-size: 24px; color: #adb5bd;">◎ MARK</span>
+            </div>
         </div>
 
         <!-- COUNTDOWN TIMER -->
-        <div class="countdown">
-            <div id="days">00</div>
-            <div id="hours">00</div>
-            <div id="minutes">00</div>
-            <div id="seconds">00</div>
-        </div>
-
-        <!-- PROBLEM SECTION -->
-        <div class="problem">
-            <h2>Are You Tired of Ordinary Reading?</h2>
-            <p>Do you yearn for stories that truly captivate your imagination and leave you craving more? Our collection is crafted to satisfy even the most discerning readers, offering a blend of genres and styles to suit every taste.</p>
-        </div>
-
-        <!-- SOLUTION SECTION -->
-        <div class="solution">
-            <h2>The Solution You've Been Waiting For</h2>
-            <p>Introducing our curated collection of books, each selected for its unique ability to transport you to new worlds and challenge your perspectives. Whether you're into mystery, romance, or self-improvement, we have something that will resonate with you.</p>
-            <p>This collection is for you if...</p>
-            <ul>
-                <li>✓ You're a passionate reader seeking new adventures</li>
-                <li>✓ You want to expand your literary horizons</li>
-                <li>✓ You're ready to dive into stories that matter</li>
-            </ul>
-        </div>
-
-        <!-- FEATURES & BENEFITS SECTION (2-Column on Desktop, 1 on Mobile) -->
-        <div class="features">
-            <h2>What You'll Discover Inside</h2>
-            <ul>
-                <li>✔️ <strong>Diverse Genres:</strong> From thrilling mysteries to heartwarming romances, our collection spans a wide range of genres to cater to every reader's taste.</li>
-                <li>✔️ <strong>Quality Content:</strong> Each book is carefully vetted to ensure high-quality writing and engaging narratives that keep you hooked from start to finish.</li>
-                <li>✔️ <strong>Expert Recommendations:</strong> Our team of literary experts handpicks each book, ensuring that you only get the best of the best.</li>
-            </ul>
-        </div>
-
-        <!-- BOOK GRID -->
-        <div class="book-grid">
-            <div class="book-item">
-                <img src="https://via.placeholder.com/200x300.png?text=Book+1" alt="Book 1">
-                <p>Title: "The Enigmatic Enchantress"</p>
-                <p>Genre: Fantasy</p>
-                <p>Description: Embark on a magical journey with a young sorceress as she uncovers ancient secrets and battles dark forces.</p>
-            </div>
-            <div class="book-item">
-                <img src="https://via.placeholder.com/200x300.png?text=Book+2" alt="Book 2">
-                <p>Title: "Whispers of the Past"</p>
-                <p>Genre: Historical Fiction</p>
-                <p>Description: Travel back in time to the roaring 1920s, where secrets and scandals lurk in every shadow.</p>
-            </div>
-            <div class="book-item">
-                <img src="https://via.placeholder.com/200x300.png?text=Book+3" alt="Book 3">
-                <p>Title: "Echoes of Love"</p>
-                <p>Genre: Romance</p>
-                <p>Description: A heartwarming tale of two souls destined to find each other, overcoming obstacles to be together.</p>
-            </div>
-            <!-- Add more books as needed -->
-        </div>
-
-        <!-- SOCIAL PROOF SECTION -->
-        <div class="testimonials">
-            <h2>Don't Just Take Our Word For It...</h2>
-            <!-- Testimonial 1 -->
-            <div>
-                <p>"I've been an avid reader for years, but this collection has truly expanded my horizons. Each book is a gem!"</p>
+        <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 30px; margin: 60px auto; max-width: 700px;">
+            <h3 style="text-align: center; font-size: 20px; margin: 0 0 20px 0;">Limited Time Offer Ends In:</h3>
+            <div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
                 <div>
-                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer A">
-                    <div>
-                        <p>Emma Thompson</p>
-                        <p>Book Enthusiast</p>
-                    </div>
+                    <div style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">02</div>
+                    <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Days</div>
+                </div>
+                <div>
+                    <div style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">18</div>
+                    <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Hours</div>
+                </div>
+                <div>
+                    <div style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">45</div>
+                    <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Mins</div>
+                </div>
+                <div>
+                    <div style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">33</div>
+                    <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Secs</div>
                 </div>
             </div>
-            <!-- Testimonial 2 -->
-            <div>
-                <p>"The diversity of genres and the quality of the writing are unparalleled. I can't get enough!"</p>
-                <div>
-                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer B">
-                    <div>
-                        <p>Michael Brown</p>
-                        <p>Literary Critic</p>
-                    </div>
-                </div>
+            <p style="font-size: 12px; color: #6c757d; margin: 20px 0 5px 0;">382 of 500 bundles sold!</p>
+            <div style="background-color: #e9ecef; border-radius: 10px; height: 10px; overflow: hidden;">
+                <div style="width: 76%; height: 10px; background-color: #0d6efd; border-radius: 10px;"></div>
             </div>
+             <p style="font-size: 12px; color: #6c757d; margin: 5px 0 0 0; text-align: right;">Hurry up! Almost gone!</p>
         </div>
-
-        <!-- THE OFFER & CTA SECTION -->
-        <div id="offer" class="offer">
-            <h2>Get Instant Access to Our Book Collection Today</h2>
-            <div>
-                <h3>Here's What You'll Receive:</h3>
-                <ul>
-                    <li>✔️ Access to our entire collection of curated books (Value: $199)</li>
-                    <li>✔️ Exclusive member-only discounts on new releases (Value: $49)</li>
-                    <li>✔️ Personalized book recommendations from our experts (Value: $29)</li>
+        
+        <!-- PROBLEM/SOLUTION SECTION -->
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; padding: 40px 0;">
+            <!-- Left Column -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 32px; font-weight: 900; margin: 0 0 20px 0;">Are You Feeling Stuck in a Rut?</h2>
+                <p style="color: #495057;">Does the weight of unfulfilled potential press down on you? You yearn for more—<strong>more growth, more success, more purpose</strong>.</p>
+                <p style="color: #495057;">But the days blur into a monotonous cycle, leaving you drained and disconnected from your dreams. Each morning, you wake up with a fleeting spark of ambition, only to have it extinguished by the overwhelming demands of the day.</p>
+                <p style="color: #495057;">The frustration gnaws at you, a constant reminder that you're capable of so much more, yet you're trapped in a state of stagnation.</p>
+            </div>
+            <!-- Right Column -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 32px; font-weight: 900; margin: 0 0 20px 0;">Imagine a New You, Unburdened and Empowered</h2>
+                <p style="color: #495057;">Now, picture a life where you wake up energized, driven by a clear sense of purpose. This bundle is your key to unlocking that reality. It's not just about reading books; it's about a profound <strong style="color: #0d6efd;">transformation.</strong></p>
+                <ul style="list-style: none; padding: 0; margin-top: 20px;">
+                    <li style="display: flex; align-items: start; gap: 10px; margin-bottom: 15px;">
+                        <span style="color: #0d6efd; font-weight: 700; font-size: 20px;">✓</span>
+                        <span>Feel the thrill of <strong>mastering new skills.</strong></span>
+                    </li>
+                    <li style="display: flex; align-items: start; gap: 10px; margin-bottom: 15px;">
+                        <span style="color: #0d6efd; font-weight: 700; font-size: 20px;">✓</span>
+                        <span>Gain the confidence of a <strong>growth mindset.</strong></span>
+                    </li>
+                    <li style="display: flex; align-items: start; gap: 10px; margin-bottom: 15px;">
+                        <span style="color: #0d6efd; font-weight: 700; font-size: 20px;">✓</span>
+                        <span>Embrace the freedom of <strong>financial wisdom.</strong></span>
+                    </li>
                 </ul>
-                <p>### Total Value: $277</p>
-                <p>### Your Price Today: Only $49</p>
-                <p><strong>My 100% Risk-Free Guarantee</strong></p>
-                <p>If you're not completely satisfied with your reading experience, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
-                <a href="#offer">Get Instant Access Now</a>
+                <p style="color: #495057;">This is more than a purchase; it's an investment in the person you were always meant to be. <a href="#cta" style="color: #0d6efd; font-weight: 700;">Step into this new chapter</a> and watch your life blossom in ways you never thought possible.</p>
             </div>
         </div>
 
-        <!-- FAQ SECTION -->
-        <div class="faq">
-            <h2>Frequently Asked Questions</h2>
-            <p><strong>Q: How do I access the books?</strong></p>
-            <p>A: Once you sign up, you'll receive instant access to our digital library, where you can read or download your favorite books.</p>
-            <p><strong>Q: Can I cancel my membership anytime?</strong></p>
-            <p>A: Yes, you can cancel your membership at any time with no questions asked. Your access will remain active until the end of your current billing cycle.</p>
+        <!-- BOOKS GRID -->
+        <div style="padding: 40px 0;">
+            <!-- Category -->
+            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Category: Personal Growth</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                <!-- Book Card -->
+                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                    <img src="https://via.placeholder.com/150x200/008080/FFFFFF?text=Book" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Growth Mindset</h3>
+                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                </div>
+                <!-- Book Card -->
+                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                    <img src="https://via.placeholder.com/150x200/F4A460/FFFFFF?text=Book" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Atomic Habits</h3>
+                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                </div>
+                <!-- Book Card -->
+                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                    <img src="https://via.placeholder.com/150x200/FFC0CB/000000?text=Book" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mindful Moments</h3>
+                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                </div>
+            </div>
+            <!-- Add more categories and book cards as needed -->
         </div>
 
-        <!-- FINAL CTA SECTION -->
-        <div class="final-cta">
-            <h2>Ready to Embark on a Literary Journey?</h2>
-            <p>Don't wait another day to dive into a world of captivating stories. Click the button below to get started.</p>
-            <a href="#offer">Get Instant Access for $49</a>
+
+        <!-- FINAL CTA -->
+        <div id="cta" style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 40px 25px; margin: 60px auto; max-width: 800px; text-align: center;">
+            <h2 style="font-size: 36px; font-weight: 900; margin: 0 0 15px 0;">Get the Entire 14-Book Bundle Today!</h2>
+            <p style="font-size: 18px; color: #495057; margin-bottom: 30px;">Unlock a world of knowledge and save big. Get instant access to all 14 digital books for a one-time payment.</p>
+            <div style="display: flex; justify-content: center; align-items: baseline; gap: 15px; margin-bottom: 30px;">
+                <span style="font-size: 64px; font-weight: 900; color: #0d6efd;">$47</span>
+                <span style="font-size: 32px; color: #6c757d; text-decoration: line-through;">$279</span>
+            </div>
+            <a href="#" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);">Yes, I Want The Bundle!</a>
+            <p style="margin: 20px 0 0 0;"><a href="#" style="color: #0d6efd; text-decoration: none; font-weight: 700; font-size: 14px;">The 'Confident Creator' 30-Day Guarantee</a></p>
+            <p style="font-size: 12px; color: #6c757d; margin-top: 5px;">If you're not 100% satisfied, we'll refund your payment, no questions asked.</p>
         </div>
+
     </div>
 
-    <script>
-        async function startTimer() {
-            const response = await fetch('/start-timer');
-            if (response.ok) {
-                console.log('Timer started');
-            } else {
-                console.error('Failed to start timer');
-            }
-        }
+    <!-- FOOTER -->
+    <div style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center;">
+        <div style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <a href="#" style="text-decoration: none; color: #495057;">Privacy Policy</a>
+            <a href="#" style="text-decoration: none; color: #495057;">Terms of Service</a>
+            <div>
+                <!-- Placeholder for social icons -->
+                <a href="#" style="text-decoration: none; color: #495057; margin: 0 10px;">Twitter</a>
+                <a href="#" style="text-decoration: none; color: #495057; margin: 0 10px;">Facebook</a>
+                <a href="#" style="text-decoration: none; color: #495057; margin: 0 10px;">Instagram</a>
+            </div>
+            <a href="#" style="text-decoration: none; color: #495057;">Contact Us</a>
+        </div>
+        <p style="color: #6c757d; font-size: 14px; margin-top: 30px;">© 2024 [YourBrand]. All rights reserved.</p>
+    </div>
 
-        async function getRemainingTime() {
-            const response = await fetch('/get-timer');
-            if (response.ok) {
-                const data = await response.json();
-                return data.remainingTime;
-            } else {
-                console.error('Failed to get timer data');
-                return null;
-            }
-        }
-
-        function updateTimerDisplay(remainingTime) {
-$const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));$
-$const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));$
-$const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));$
-            const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-            document.getElementById('days').innerText = days.toString().padStart(2, '0');
-            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
-        }
-
-        async function initTimer() {
-            await startTimer();
-            const remainingTime = await getRemainingTime();
-            if (remainingTime !== null) {
-                updateTimerDisplay(remainingTime);
-                const interval = setInterval(() => {
-                    remainingTime -= 1000;
-                    if (remainingTime <= 0) {
-                        clearInterval(interval);
-                        document.getElementById('days').innerText = '00';
-                        document.getElementById('hours').innerText = '00';
-                        document.getElementById('minutes').innerText = '00';
-                        document.getElementById('seconds').innerText = '00';
-                    } else {
-                        updateTimerDisplay(remainingTime);
-                    }
-                }, 1000);
-            }
-        }
-
-        initTimer();
-    </script>
-
-    <script>
-        const express = require('express');
-        const app = express();
-        const bodyParser = require('body-parser');
-        const cookieParser = require('cookie-parser');
-        const fs = require('fs');
-
-        app.use(bodyParser.json());
-        app.use(cookieParser());
-
-        let timerData = {};
-
-        app.get('/start-timer', (req, res) => {
-            const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-            const startTime = Date.now();
-$timerData[ip] = { startTime, duration: 24 * 60 * 60 * 1000 }; // 24 hours in milliseconds$
-            res.cookie('timerStart', startTime, { httpOnly: true });
-            res.send('Timer started!');
-        });
-
-        app.get('/get-timer', (req, res) => {
-            const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-            const timerInfo = timerData[ip];
-            if (timerInfo) {
-                const remainingTime = timerInfo.duration - (Date.now() - timerInfo.startTime);
-                res.json({ remainingTime });
-            } else {
-                res.status(404).send('No timer data found');
-            }
-        });
-
-        app.listen(3000, () => {
-            console.log('Server is running on port 3000');
-        });
-    </script>
 </body>
 </html>
     `
