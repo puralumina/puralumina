@@ -430,7 +430,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <!-- JAVASCRIPT FOR COUNTDOWN TIMER -->
     <script>
         // --- ⬇️ EDIT THIS LINE TO SET YOUR OFFER END DATE ⬇️ ---
-        const countDownDate = new Date("Sept 20, 2025 15:30:00").getTime();
+        const countDownDate = new Date("Sep 20, 2025 15:30:00").getTime();
 
         // Update the count down every 1 second
         const x = setInterval(function() {
