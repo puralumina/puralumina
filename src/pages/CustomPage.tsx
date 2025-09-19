@@ -741,29 +741,33 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <!-- Contact Form Wrapper -->
         <div style="background-color: #ffffff; padding: 30px 40px; border-radius: 12px; border: 1px solid #dee2e6; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
             
-            <form id="contact-form">
+            <!-- 
+              IMPORTANT: Replace 'your.email@example.com' below with your actual email address.
+              The method="post" and enctype="text/plain" attributes help format the email body for some clients.
+            -->
+            <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
                 <!-- Name Field -->
                 <div style="margin-bottom: 20px;">
                     <label for="name" style="display: block; font-weight: 700; margin-bottom: 8px;">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
+                    <input type="text" id="name" name="Name" placeholder="Enter your full name" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
                 </div>
 
                 <!-- Email Field -->
                 <div style="margin-bottom: 20px;">
                     <label for="email" style="display: block; font-weight: 700; margin-bottom: 8px;">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
+                    <input type="email" id="email" name="Email" placeholder="Enter your email address" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
                 </div>
 
                 <!-- Subject Field -->
                 <div style="margin-bottom: 20px;">
                     <label for="subject" style="display: block; font-weight: 700; margin-bottom: 8px;">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="What is your message about?" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
+                    <input type="text" id="subject" name="Subject" placeholder="What is your message about?" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
                 </div>
 
                 <!-- Message Field -->
                 <div style="margin-bottom: 30px;">
                     <label for="message" style="display: block; font-weight: 700; margin-bottom: 8px;">Message</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box; resize: vertical;"></textarea>
+                    <textarea id="message" name="Message" rows="6" placeholder="Write your message here..." required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box; resize: vertical;"></textarea>
                 </div>
 
                 <!-- Submit Button -->
@@ -791,43 +795,6 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         </p>
         <p style="color: #6c757d; font-size: 14px; margin: 0;">© 2025 Soulmates Desires. All rights reserved.</p>
     </div>
-
-    <!-- JAVASCRIPT FOR FUNCTIONAL MAILTO FORM -->
-    <script>
-        const contactForm = document.getElementById('contact-form');
-
-        contactForm.addEventListener('submit', function(event) {
-            // Prevent the default form submission
-            event.preventDefault();
-
-            // --- ⬇️ IMPORTANT: REPLACE WITH YOUR EMAIL ADDRESS ⬇️ ---
-            const yourEmail = 'your.email@example.com';
-            
-            // Get the form field values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // Construct the mailto link with URL encoding for spaces and new lines
-            const mailtoBody = `
-Hello,
-
-You have a new message from your website contact form:
-
-Name: ${name}
-Email: ${email}
-            
-Message:
-${message}
-            `.trim();
-
-            const mailtoLink = `mailto:${yourEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
-
-            // Open the user's default email client
-            window.location.href = mailtoLink;
-        });
-    </script>
 
 </body>
 </html>
