@@ -353,7 +353,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                 <p style="font-size: 20px; color: #4a5568; line-height: 1.7; margin-bottom: 32px;">### Your Price Today: Only $49</p>
                 <p><strong>My 100% Risk-Free Guarantee</strong></p>
                 <p style="font-size: 18px; color: #4a5568; line-height: 1.7;">If you're not completely satisfied with the results, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
-                <a href="#offer" style="background-color: #0d6efd; color: white; padding: 18px 36px; text-decoration: none; font-size: 22px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);">Get Instant Access Now</a>
+                <a href="/product/15" style="background-color: #0d6efd; color: white; padding: 18px 36px; text-decoration: none; font-size: 22px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);">Get Instant Access Now</a>
             </div>
         </div>
 
