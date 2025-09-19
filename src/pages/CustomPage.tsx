@@ -249,7 +249,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <div style="background-color: #ffffff; border-bottom: 1px solid #dee2e6;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
             <div style="font-weight: 700; font-size: 20px;">
-                💎 [YourBrand]
+                SOULMATES DESIRES
             </div>
             <div style="display: none; md-display: flex; gap: 20px;"> <!-- Hide on mobile for simplicity -->
                 <a href="#" style="text-decoration: none; color: #495057;">Home</a>
