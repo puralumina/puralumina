@@ -676,7 +676,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">8. Contact Us</h2>
         <p style="font-size: 16px;">If you have any questions about this Privacy Policy, please contact us:</p>
         <ul style="padding-left: 20px; font-size: 16px;">
-            <li>By email: <strong><a href="mailto:[your.email@example.com]" style="color: #0d6efd; font-weight: 700;">[your.email@example.com]</a></strong></li>
+            <li>By email: <strong><a href="mailto:soulmatesdesires@gmail.com" style="color: #0d6efd; font-weight: 700;">soulmatesdesires@gmail.com</a></strong></li>
             <li>By visiting this page on our website: <strong><a href="[Link to your Contact Us page]" style="color: #0d6efd; font-weight: 700;">[Your Website URL]/contact</a></strong></li>
         </ul>
 
