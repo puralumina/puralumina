@@ -711,27 +711,29 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <!-- NEW: STYLES FOR STICKY FOOTER AND HOVER EFFECTS -->
+    <!-- CRITICAL FIX: STYLES FOR ROBUST STICKY FOOTER AND HOVER EFFECTS -->
     <style>
-        /* This is essential for the sticky footer to work */
-        html, body {
+        html {
             height: 100%;
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f8f9fa;
         }
 
-        /* This turns the body into a flex container that arranges children vertically */
         body {
             display: flex;
             flex-direction: column;
+            min-height: 100vh; /* This is the key: Body must be at least the height of the viewport */
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa; 
             color: #212529; 
             line-height: 1.6;
         }
 
-        /* This is the magic rule: it tells our wrapper to grow and take up all available space */
         .page-wrapper {
-            flex: 1 0 auto;
+            flex: 1 0 auto; /* This makes the main content area grow to fill available space */
+        }
+
+        .footer {
+            flex-shrink: 0; /* Prevents the footer from shrinking if content is too long */
         }
 
         .contact-button:hover {
@@ -743,7 +745,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 </head>
 <body>
 
-    <!-- NEW: WRAPPER DIV STARTS HERE. It wraps the Header and Main Content. -->
+    <!-- This wrapper contains everything EXCEPT the footer -->
     <div class="page-wrapper">
 
         <!-- HEADER -->
@@ -779,12 +781,11 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 
         </div>
 
-    </div>
-    <!-- NEW: WRAPPER DIV ENDS HERE. The footer is OUTSIDE of it. -->
+    </div> <!-- End of .page-wrapper -->
 
 
     <!-- FOOTER -->
-    <div style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center; background-color: #ffffff;">
+    <div class="footer" style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center; background-color: #ffffff;">
         <p style="color: #6c757d; font-size: 14px; margin-bottom: 15px;">
             <a href="/privacy-policy.html" style="text-decoration: none; color: #495057; margin: 0 10px;">Privacy Policy</a> |
             <a href="/terms-of-service.html" style="text-decoration: none; color: #495057; margin: 0 10px;">Terms of Service</a>
