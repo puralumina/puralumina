@@ -737,7 +737,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 
         <a href="soulmatesdesires@gmail.com" class="contact-button" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3); transition: all 0.2s ease-in-out;">
             Email Us Directly
-        </a></br></br></br></br>
+        </a></br></br></br>
 
         <!-- NEW TEXT ADDED HERE -->
         <div style="max-width: 650px; margin: 0 auto 40px auto; text-align: left; color: #495057;">
