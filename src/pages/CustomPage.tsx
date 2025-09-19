@@ -783,7 +783,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <!-- Alternative Contact Info -->
         <div style="text-align: center; margin-top: 40px;">
             <h3 style="font-size: 20px; font-weight: 700; color: #495057;">You can also reach us directly at:</h3>
-            <a href="mailto:your.email@example.com" style="font-size: 18px; color: #0d6efd; text-decoration: none; font-weight: 700;">your.email@example.com</a>
+            <a href="mailto:soulmatesdesires@gmail.com" style="font-size: 18px; color: #0d6efd; text-decoration: none; font-weight: 700;">soulmatesdesires@gmail.com</a>
         </div>
 
     </div>
@@ -791,8 +791,8 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <!-- FOOTER -->
     <div style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center; background-color: #ffffff;">
         <p style="color: #6c757d; font-size: 14px; margin-bottom: 15px;">
-            <a href="/privacy-policy.html" style="text-decoration: none; color: #495057; margin: 0 10px;">Privacy Policy</a> |
-            <a href="/terms-of-service.html" style="text-decoration: none; color: #495057; margin: 0 10px;">Terms of Service</a>
+            <a href="/privacy" style="text-decoration: none; color: #495057; margin: 0 10px;">Privacy Policy</a> |
+            <a href="/terms" style="text-decoration: none; color: #495057; margin: 0 10px;">Terms of Service</a>
         </p>
         <p style="color: #6c757d; font-size: 14px; margin: 0;">© 2025 Soulmates Desires. All rights reserved.</p>
     </div>
