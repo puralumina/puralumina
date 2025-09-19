@@ -229,8 +229,6 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     `
   },
   
-          <!-- COPY TEMPLATE FOR NEXT CUSTOM PAGE. Open page at /custom/template -->
-  
   'template': {
     title: 'Template',
     music: '/your-custom-music.mp3', // Optional
