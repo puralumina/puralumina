@@ -249,17 +249,19 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transform Your Intimate Life - Mastering Her Pleasure</title>
-    <!-- Importing Montserrat Font (Regular, Bold, Extra-Bold) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Countdown Timer</title>
     <style>
         body {
-            margin: 0;
             font-family: 'Montserrat', sans-serif;
             background-color: #1a202c;
             color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        #timer {
+            font-size: 2em;
+            color: #ff6f61;
+            margin-top: 20px;
         }
         .container {
             max-width: 800px;
@@ -381,7 +383,6 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     </style>
 </head>
 <body>
-    <!-- URGENCY BAR -->
     <div class="urgency-bar">
         ⚠️ Limited Time Offer: Get the "Seducing His Senses" Bonus FREE when you order in the next 24 hours!
     </div>
@@ -475,7 +476,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                 <p>### Your Price Today: Only $49</p>
                 <p><strong>My 100% Risk-Free Guarantee</strong></p>
                 <p>If you're not completely satisfied with the results, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
-                <a href="/product/15">Get Instant Access Now</a>
+                <a href="#offer">Get Instant Access Now</a>
             </div>
         </div>
 
@@ -492,8 +493,96 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <div class="final-cta">
             <h2>Ready to Achieve Intimacy Without Guesswork?</h2>
             <p>Don't wait another day to transform your relationship. Click the button below to get started.</p>
-            <a href="/product/15">Get Instant Access for $49</a>
+            <a href="#offer">Get Instant Access for $49</a>
         </div>
+
+        <!-- Countdown Timer -->
+        <div id="timer">Loading...</div>
+
+        <script>
+            async function startTimer() {
+                const response = await fetch('/start-timer');
+                if (response.ok) {
+                    console.log('Timer started');
+                } else {
+                    console.error('Failed to start timer');
+                }
+            }
+
+            async function getRemainingTime() {
+                const response = await fetch('/get-timer');
+                if (response.ok) {
+                    const data = await response.json();
+                    return data.remainingTime;
+                } else {
+                    console.error('Failed to get timer data');
+                    return null;
+                }
+            }
+
+            function updateTimerDisplay(remainingTime) {
+                const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+                document.getElementById('timer').innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+
+            async function initTimer() {
+                await startTimer();
+                const remainingTime = await getRemainingTime();
+                if (remainingTime !== null) {
+                    updateTimerDisplay(remainingTime);
+                    const interval = setInterval(() => {
+                        remainingTime -= 1000;
+                        if (remainingTime <= 0) {
+                            clearInterval(interval);
+                            document.getElementById('timer').innerText = 'EXPIRED';
+                        } else {
+                            updateTimerDisplay(remainingTime);
+                        }
+                    }, 1000);
+                }
+            }
+
+            initTimer();
+        </script>
+
+        <script>
+            const express = require('express');
+            const app = express();
+            const bodyParser = require('body-parser');
+            const cookieParser = require('cookie-parser');
+            const fs = require('fs');
+
+            app.use(bodyParser.json());
+            app.use(cookieParser());
+
+            let timerData = {};
+
+            app.get('/start-timer', (req, res) => {
+                const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+                const startTime = Date.now();
+                timerData[ip] = { startTime, duration: 24 * 60 * 60 * 1000 }; // 24 hours in milliseconds
+                res.cookie('timerStart', startTime, { httpOnly: true });
+                res.send('Timer started!');
+            });
+
+            app.get('/get-timer', (req, res) => {
+                const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+                const timerInfo = timerData[ip];
+                if (timerInfo) {
+                    const remainingTime = timerInfo.duration - (Date.now() - timerInfo.startTime);
+                    res.json({ remainingTime });
+                } else {
+                    res.status(404).send('No timer data found');
+                }
+            });
+
+            app.listen(3000, () => {
+                console.log('Server is running on port 3000');
+            });
+        </script>
     </div>
 </body>
 </html>
