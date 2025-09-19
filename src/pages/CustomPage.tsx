@@ -711,26 +711,27 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <!-- STYLES FOR LAYOUT AND HOVER EFFECTS -->
+    <!-- NEW: STYLES FOR STICKY FOOTER AND HOVER EFFECTS -->
     <style>
-        /* This ensures the body and html tags can fill the screen height */
+        /* This is essential for the sticky footer to work */
         html, body {
             height: 100%;
             margin: 0;
             font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
         }
 
-        /* This creates the sticky footer layout */
+        /* This turns the body into a flex container that arranges children vertically */
         body {
             display: flex;
             flex-direction: column;
-            background-color: #f8f9fa; 
             color: #212529; 
             line-height: 1.6;
         }
 
-        .main-content {
-            flex: 1 0 auto; /* This makes the main content area grow to fill available space */
+        /* This is the magic rule: it tells our wrapper to grow and take up all available space */
+        .page-wrapper {
+            flex: 1 0 auto;
         }
 
         .contact-button:hover {
@@ -740,40 +741,47 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         }
     </style>
 </head>
-<body style="/* The body styles are now in the <style> block above */">
+<body>
 
-    <!-- HEADER -->
-    <div style="background-color: #ffffff; border-bottom: 1px solid #dee2e6;">
-        <div style="max-width: 1100px; margin: 0 auto; padding: 15px 20px;">
-            <a href="/" style="text-decoration: none; color: #212529; font-weight: 700; font-size: 20px;">
-                SOULMATES DESIRES
-            </a>
+    <!-- NEW: WRAPPER DIV STARTS HERE. It wraps the Header and Main Content. -->
+    <div class="page-wrapper">
+
+        <!-- HEADER -->
+        <div style="background-color: #ffffff; border-bottom: 1px solid #dee2e6;">
+            <div style="max-width: 1100px; margin: 0 auto; padding: 15px 20px;">
+                <a href="/" style="text-decoration: none; color: #212529; font-weight: 700; font-size: 20px;">
+                    SOULMATES DESIRES
+                </a>
+            </div>
         </div>
+
+        <!-- Main Content Container -->
+        <div style="max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center;">
+
+            <!-- Page Header -->
+            <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 15px;">We'd Love to Hear From You</h1>
+            
+            <!-- Main Message -->
+            <p style="font-size: 18px; color: #6c757d; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7;">
+                Whether you have a question about our products, need assistance with an order, or just want to share your thoughts, our inbox is always open. We do our best to respond to all inquiries within 24 hours.
+            </p>
+
+            <!-- Email Button (Call to Action) -->
+            <a href="mailto:your.email@example.com" class="contact-button" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3); transition: all 0.2s ease-in-out;">
+                Email Us Directly
+            </a>
+            
+            <!-- Alternative Text Link -->
+            <p style="margin-top: 30px; font-size: 16px; color: #495057;">
+                Or, send us an email at: 
+                <a href="mailto:your.email@example.com" style="color: #0d6efd; font-weight: 700; text-decoration: none;">your.email@example.com</a>
+            </p>
+
+        </div>
+
     </div>
+    <!-- NEW: WRAPPER DIV ENDS HERE. The footer is OUTSIDE of it. -->
 
-    <!-- Main Content Container - NOW WITH A CLASS -->
-    <div class="main-content" style="max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center;">
-
-        <!-- Page Header -->
-        <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 15px;">We'd Love to Hear From You</h1>
-        
-        <!-- Main Message -->
-        <p style="font-size: 18px; color: #6c757d; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7;">
-            Whether you have a question about our products, need assistance with an order, or just want to share your thoughts, our inbox is always open. We do our best to respond to all inquiries within 24 hours.
-        </p>
-
-        <!-- Email Button (Call to Action) -->
-        <a href="mailto:your.email@example.com" class="contact-button" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3); transition: all 0.2s ease-in-out;">
-            Email Us Directly
-        </a>
-        
-        <!-- Alternative Text Link -->
-        <p style="margin-top: 30px; font-size: 16px; color: #495057;">
-            Or, send us an email at: 
-            <a href="mailto:your.email@example.com" style="color: #0d6efd; font-weight: 700; text-decoration: none;">your.email@example.com</a>
-        </p>
-
-    </div>
 
     <!-- FOOTER -->
     <div style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center; background-color: #ffffff;">
