@@ -229,8 +229,8 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     `
   },
   
-  'template': {
-    title: 'Template',
+  'bundle-deal': {
+    title: 'Save your couple',
     music: '/your-custom-music.mp3', // Optional
     content: `<!DOCTYPE html>
 <html lang="en">
