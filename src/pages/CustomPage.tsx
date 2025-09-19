@@ -318,8 +318,8 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 
                 <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px;">
                     <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px;">
-                        <span style="font-size: 48px; font-weight: 900; color: #0d6efd;">$47</span>
-                        <span style="font-size: 24px; color: #6c757d; text-decoration: line-through;">$279</span>
+                        <span style="font-size: 48px; font-weight: 900; color: #0d6efd;">$39.99</span>
+                        <span style="font-size: 24px; color: #6c757d; text-decoration: line-through;">$499</span>
                     </div>
                     <p style="margin: 0 0 20px 0; color: #495057;">Get the entire 14-book bundle and <strong>save over 80%!</strong></p>
                     <a href="#cta" style="background-color: #0d6efd; color: white; padding: 15px; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; display: block; text-align: center;">Get The Bundle Now</a>
