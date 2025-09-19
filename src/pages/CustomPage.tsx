@@ -310,23 +310,28 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <!-- COUNTDOWN TIMER -->
         <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 30px; margin: 60px auto; max-width: 700px;">
             <h3 style="text-align: center; font-size: 20px; margin: 0 0 20px 0;">Limited Time Offer Ends In:</h3>
-            <div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
+            <!-- This div will be controlled by JavaScript -->
+            <div id="countdown-container" style="display: flex; justify-content: center; gap: 20px; text-align: center;">
                 <div>
-                    <div style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">02</div>
+                    <div id="days" style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">00</div>
                     <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Days</div>
                 </div>
                 <div>
-                    <div style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">18</div>
+                    <div id="hours" style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">00</div>
                     <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Hours</div>
                 </div>
                 <div>
-                    <div style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">45</div>
+                    <div id="minutes" style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">00</div>
                     <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Mins</div>
                 </div>
                 <div>
-                    <div style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">33</div>
+                    <div id="seconds" style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">00</div>
                     <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Secs</div>
                 </div>
+            </div>
+            <!-- This message will appear when the timer ends -->
+            <div id="expired-message" style="display: none; text-align: center; font-size: 24px; font-weight: 700; color: #dc3545;">
+                Sorry, this offer has expired!
             </div>
             <p style="font-size: 12px; color: #6c757d; margin: 20px 0 5px 0;">382 of 500 bundles sold!</p>
             <div style="background-color: #e9ecef; border-radius: 10px; height: 10px; overflow: hidden;">
@@ -421,6 +426,46 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         </div>
         <p style="color: #6c757d; font-size: 14px; margin-top: 30px;">© 2025 Soulmates Desires. All rights reserved.</p>
     </div>
+
+    <!-- JAVASCRIPT FOR COUNTDOWN TIMER -->
+    <script>
+        // --- ⬇️ EDIT THIS LINE TO SET YOUR OFFER END DATE ⬇️ ---
+        const countDownDate = new Date("Dec 25, 2024 15:30:00").getTime();
+
+        // Update the count down every 1 second
+        const x = setInterval(function() {
+
+            // Get today's date and time
+            const now = new Date().getTime();
+            
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Function to add a leading zero if number is less than 10
+            function formatTime(time) {
+                return time < 10 ? "0" + time : time;
+            }
+
+            // Display the result in the elements with their respective IDs
+            document.getElementById("days").innerHTML = formatTime(days);
+            document.getElementById("hours").innerHTML = formatTime(hours);
+            document.getElementById("minutes").innerHTML = formatTime(minutes);
+            document.getElementById("seconds").innerHTML = formatTime(seconds);
+            
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown-container").style.display = "none";
+                document.getElementById("expired-message").style.display = "block";
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
