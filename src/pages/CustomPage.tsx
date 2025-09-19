@@ -741,7 +741,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <h1 style="font-size: 36px; font-weight: 700; margin-top: 20px; margin-bottom: 10px;">Terms of Service</h1>
         <p style="color: #6c757d; margin-top: 0;"><strong>Last Updated:</strong> <strong>January 2025</strong></p>
 
-        <p style="font-size: 16px;">Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the <strong>[Your Website URL]</strong> website (the "Service") operated by Soulmates Desires ("us", "we", or "our").</p>
+        <p style="font-size: 16px;">Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the <strong>soulmatesdesires.com</strong> website operated by Soulmates Desires ("us", "we", or "our").</p>
         <p style="font-size: 16px;">Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who wish to access or use the Service.</p>
         <p style="font-size: 16px;"><strong>By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you do not have permission to access the Service.</strong></p>
 
@@ -753,7 +753,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
 
         <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">2. Intellectual Property and Digital Product License</h2>
-        <p style="font-size: 16px;">The Service and its original content, features, and functionality are and will remain the exclusive property of Soulmates Desires. Our content is protected by copyright, trademark, and other laws of both the <strong>[Your Country]</strong> and foreign countries.</p>
+        <p style="font-size: 16px;">The Service and its original content, features, and functionality are and will remain the exclusive property of Soulmates Desires.</p>
         
         <div style="font-size: 16px; background-color: #e7f1ff; border-left: 4px solid #0d6efd; padding: 15px; border-radius: 4px; margin-top: 20px;">
             <h3 style="margin-top: 0; font-size: 20px;">Your License to Use Our Products</h3>
