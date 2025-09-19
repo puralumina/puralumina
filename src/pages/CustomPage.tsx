@@ -450,7 +450,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <h2 style="text-align: center; font-size: 2.5em; margin-top: 0;">Introducing: The Ultimate Relationship Spark Bundle</h2>
             <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px;">Your complete, all-in-one digital library for passion, connection, and fun. You get instant access to all 14 books, guides, and card decks.</p>
             
-             <img src="https://i.ibb.co/6PzQyq8/bundle-image.png" alt="A professional and appealing image of all 14 book covers spread out" style="max-width: 100%; height: auto; margin-bottom: 30px; border-radius: 10px;">
+             <img src="https://images.unsplash.com/photo-1593696954577-ab3d39317b97?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZyZWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="A professional and appealing image of all 14 book covers spread out" style="max-width: 100%; height: auto; margin-bottom: 30px; border-radius: 10px;">
             
              <!-- Content list remains the same... -->
 
