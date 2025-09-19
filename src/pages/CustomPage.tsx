@@ -266,7 +266,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <!-- HERO SECTION -->
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; padding: 40px 0;">
             <!-- Left Column: Image -->
-            <div style="flex: 1; min-width: 300px; text-align: center;">
+            <div style="flex: 2; min-width: 300px; text-align: center;">
                 <div style="background-color: #fff3cd; border-radius: 12px; padding: 20px; display: inline-block;">
                      <img src="https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg" alt="Digital Book Bundle" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
                 </div>
