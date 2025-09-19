@@ -700,12 +700,137 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
   'contact-us': {
     title: 'Contact - Soulmates Desires',
     music: '/your-custom-music.mp3', // Optional
-    content: `
-      <!-- Your full HTML content here -->
-      <div style="min-height: 100vh; background: #f0f0f0; padding: 40px;">
-        <h1 style="text-align: center; color: #333;">Your Custom Page</h1>
-        <!-- Add any HTML, CSS, and JavaScript you want -->
-      </div>
+    content: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Soulmates Desires</title>
+    <!-- Importing Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- A small style block for button hover effect, which can't be done inline -->
+    <style>
+        .submit-button:hover {
+            background-color: #0b5ed7 !important;
+        }
+    </style>
+</head>
+<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #212529; line-height: 1.6;">
+
+    <!-- HEADER -->
+    <div style="background-color: #ffffff; border-bottom: 1px solid #dee2e6;">
+        <div style="max-width: 1100px; margin: 0 auto; padding: 15px 20px;">
+            <a href="/" style="text-decoration: none; color: #212529; font-weight: 700; font-size: 20px;">
+                SOULMATES DESIRES
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div style="max-width: 800px; margin: 40px auto; padding: 20px 20px 60px 20px;">
+
+        <!-- Page Header -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 10px;">Get In Touch</h1>
+            <p style="font-size: 18px; color: #6c757d; max-width: 600px; margin: 0 auto;">We'd love to hear from you! Whether you have a question about our products, need assistance, or just want to share your story, please feel free to reach out.</p>
+        </div>
+
+        <!-- Contact Form Wrapper -->
+        <div style="background-color: #ffffff; padding: 30px 40px; border-radius: 12px; border: 1px solid #dee2e6; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            
+            <form id="contact-form">
+                <!-- Name Field -->
+                <div style="margin-bottom: 20px;">
+                    <label for="name" style="display: block; font-weight: 700; margin-bottom: 8px;">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
+                </div>
+
+                <!-- Email Field -->
+                <div style="margin-bottom: 20px;">
+                    <label for="email" style="display: block; font-weight: 700; margin-bottom: 8px;">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
+                </div>
+
+                <!-- Subject Field -->
+                <div style="margin-bottom: 20px;">
+                    <label for="subject" style="display: block; font-weight: 700; margin-bottom: 8px;">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What is your message about?" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box;">
+                </div>
+
+                <!-- Message Field -->
+                <div style="margin-bottom: 30px;">
+                    <label for="message" style="display: block; font-weight: 700; margin-bottom: 8px;">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; font-family: 'Montserrat', sans-serif; box-sizing: border-box; resize: vertical;"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="submit-button" style="background-color: #0d6efd; color: white; width: 100%; padding: 15px; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; border: none; cursor: pointer; transition: background-color 0.2s;">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Alternative Contact Info -->
+        <div style="text-align: center; margin-top: 40px;">
+            <h3 style="font-size: 20px; font-weight: 700; color: #495057;">You can also reach us directly at:</h3>
+            <a href="mailto:your.email@example.com" style="font-size: 18px; color: #0d6efd; text-decoration: none; font-weight: 700;">your.email@example.com</a>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center; background-color: #ffffff;">
+        <p style="color: #6c757d; font-size: 14px; margin-bottom: 15px;">
+            <a href="/privacy-policy.html" style="text-decoration: none; color: #495057; margin: 0 10px;">Privacy Policy</a> |
+            <a href="/terms-of-service.html" style="text-decoration: none; color: #495057; margin: 0 10px;">Terms of Service</a>
+        </p>
+        <p style="color: #6c757d; font-size: 14px; margin: 0;">© 2025 Soulmates Desires. All rights reserved.</p>
+    </div>
+
+    <!-- JAVASCRIPT FOR FUNCTIONAL MAILTO FORM -->
+    <script>
+        const contactForm = document.getElementById('contact-form');
+
+        contactForm.addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // --- ⬇️ IMPORTANT: REPLACE WITH YOUR EMAIL ADDRESS ⬇️ ---
+            const yourEmail = 'your.email@example.com';
+            
+            // Get the form field values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Construct the mailto link with URL encoding for spaces and new lines
+            const mailtoBody = `
+Hello,
+
+You have a new message from your website contact form:
+
+Name: ${name}
+Email: ${email}
+            
+Message:
+${message}
+            `.trim();
+
+            const mailtoLink = `mailto:${yourEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
+
+            // Open the user's default email client
+            window.location.href = mailtoLink;
+        });
+    </script>
+
+</body>
+</html>
     `
   },
   
