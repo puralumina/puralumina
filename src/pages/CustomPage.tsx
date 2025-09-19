@@ -242,6 +242,41 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- STYLES FOR RESPONSIVE CARD GRID -->
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* This creates the space between cards */
+        }
+
+        .book-card {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+        }
+
+        /* --- MOBILE STYLES (Default: 2 columns) --- */
+        /* Each card takes up half the space, minus half the gap */
+        .book-card {
+            flex-basis: calc(50% - 10px); 
+        }
+
+        /* --- DESKTOP STYLES (4 columns) --- */
+        /* This media query applies styles ONLY when the screen is 992px or wider */
+        @media (min-width: 992px) {
+            .book-card {
+                /* Each card takes up a quarter of the space, minus gap adjustments */
+                flex-basis: calc(25% - 15px);
+            }
+        }
+    </style>
+
 </head>
 <body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #212529; line-height: 1.6;">
 
@@ -310,7 +345,6 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <!-- COUNTDOWN TIMER -->
         <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 30px; margin: 60px auto; max-width: 700px;">
             <h3 style="text-align: center; font-size: 20px; margin: 0 0 20px 0;">Limited Time Offer Ends In:</h3>
-            <!-- This div will be controlled by JavaScript -->
             <div id="countdown-container" style="display: flex; justify-content: center; gap: 20px; text-align: center;">
                 <div>
                     <div id="days" style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">00</div>
@@ -329,7 +363,6 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                     <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Secs</div>
                 </div>
             </div>
-            <!-- This message will appear when the timer ends -->
             <div id="expired-message" style="display: none; text-align: center; font-size: 24px; font-weight: 700; color: #dc3545;">
                 Sorry, this offer has expired!
             </div>
@@ -342,14 +375,12 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         
         <!-- PROBLEM/SOLUTION SECTION -->
         <div style="display: flex; flex-wrap: wrap; gap: 40px; padding: 40px 0;">
-            <!-- Left Column -->
             <div style="flex: 1; min-width: 300px;">
                 <h2 style="font-size: 32px; font-weight: 900; margin: 0 0 20px 0;">Are You Feeling Stuck in a Rut?</h2>
                 <p style="color: #495057;">Does the weight of unfulfilled potential press down on you? You yearn for more—<strong>more growth, more success, more purpose</strong>.</p>
                 <p style="color: #495057;">But the days blur into a monotonous cycle, leaving you drained and disconnected from your dreams. Each morning, you wake up with a fleeting spark of ambition, only to have it extinguished by the overwhelming demands of the day.</p>
                 <p style="color: #495057;">The frustration gnaws at you, a constant reminder that you're capable of so much more, yet you're trapped in a state of stagnation.</p>
             </div>
-            <!-- Right Column -->
             <div style="flex: 1; min-width: 300px;">
                 <h2 style="font-size: 32px; font-weight: 900; margin: 0 0 20px 0;">Imagine a New You, Unburdened and Empowered</h2>
                 <p style="color: #495057;">Now, picture a life where you wake up energized, driven by a clear sense of purpose. This bundle is your key to unlocking that reality. It's not just about reading books; it's about a profound <strong style="color: #0d6efd;">transformation.</strong></p>
@@ -371,137 +402,118 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             </div>
         </div>
 
-        <!-- BOOKS GRID -->
+        <!-- BOOKS GRID - EPHEMERA -->
         <div style="padding: 40px 0;">
-            <!-- Category -->
             <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Ephemera</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div class="card-container">
                 <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Growth Mindset</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mastering Her Pleasure: The Ultimate Guide for Men</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$11.99</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Atomic Habits</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Dirty Talks to make her 100x wet during Sex</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$11.99</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mindful Moments</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Seducing His Senses: A Woman's Guide to Pleasuring Her Man</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$11.99</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mindful Moments</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Make Him Craving You: The Ultimate Guide to Teasing and Pleasing</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$11.99</span>
                 </div>
             </div>
-            <!-- Add more categories and book cards as needed -->
         </div>
         
+        <!-- BOOKS GRID - COUPLES GAMES -->
         <div style="padding: 40px 0;">
-            <!-- Category -->
             <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Couples Games</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+            <div class="card-container">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Growth Mindset</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples Games - The Spicy Edition</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Atomic Habits</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples Games - The Connection Edition</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mindful Moments</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples Games - The Laughs & Giggles Edition</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mindful Moments</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples Games - The 5-Minute Connector Edition</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
             </div>
-            <!-- Add more categories and book cards as needed -->
         </div>
         
+        <!-- BOOKS GRID - CARDS -->
         <div style="padding: 40px 0;">
-            <!-- Category -->
             <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Cards</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+            <div class="card-container">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Growth Mindset</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">"Truth or Dare" for Couples Cards</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
                     <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Atomic Habits</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Date Night Idea Cards</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
                     <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mindful Moments</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples' Affirmation Cards</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
                     <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
                 </div>
             </div>
-            <!-- Add more categories and book cards as needed -->
         </div>
         
+        <!-- BOOKS GRID - PLANNERS -->
         <div style="padding: 40px 0;">
-            <!-- Category -->
             <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Planners & Worksheets</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+            <div class="card-container">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
                     <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Growth Mindset</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
                     <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Atomic Habits</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Ultimate Date Night Planner</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
                     <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
                 </div>
-                <!-- Book Card -->
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
+                <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mindful Moments</h3>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">"State of the Union" Meeting Guide</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
                     <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
                 </div>
             </div>
-            <!-- Add more categories and book cards as needed -->
         </div>
-
 
         <!-- FINAL CTA -->
         <div id="cta" style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 40px 25px; margin: 60px auto; max-width: 800px; text-align: center;">
@@ -511,7 +523,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                 <span style="font-size: 64px; font-weight: 900; color: #0d6efd;">$47</span>
                 <span style="font-size: 32px; color: #6c757d; text-decoration: line-through;">$279</span>
             </div>
-            <a href="#" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);">Yes, I Want The Bundle!</a>
+            <a href="/product/15" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);">Yes, I Want The Bundle!</a>
             <p style="margin: 20px 0 0 0;"><a href="#" style="color: #0d6efd; text-decoration: none; font-weight: 700; font-size: 14px;">The 'Confident Creator' 30-Day Guarantee</a></p>
             <p style="font-size: 12px; color: #6c757d; margin-top: 5px;">If you're not 100% satisfied, we'll refund your payment, no questions asked.</p>
         </div>
@@ -536,30 +548,23 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         // Update the count down every 1 second
         const x = setInterval(function() {
 
-            // Get today's date and time
             const now = new Date().getTime();
-            
-            // Find the distance between now and the count down date
             const distance = countDownDate - now;
             
-            // Time calculations for days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
-            // Function to add a leading zero if number is less than 10
             function formatTime(time) {
                 return time < 10 ? "0" + time : time;
             }
 
-            // Display the result in the elements with their respective IDs
             document.getElementById("days").innerHTML = formatTime(days);
             document.getElementById("hours").innerHTML = formatTime(hours);
             document.getElementById("minutes").innerHTML = formatTime(minutes);
             document.getElementById("seconds").innerHTML = formatTime(seconds);
             
-            // If the count down is finished, write some text 
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("countdown-container").style.display = "none";
