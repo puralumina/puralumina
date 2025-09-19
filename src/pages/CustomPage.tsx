@@ -738,10 +738,6 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <a href="mailto:your.email@example.com" class="contact-button" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3); transition: all 0.2s ease-in-out;">
             Email Us Directly
         </a>
-        <p style="margin-top: 30px; font-size: 16px; color: #495057;">
-            Or, send us an email at: 
-            <a href="mailto:your.email@example.com" style="color: #0d6efd; font-weight: 700; text-decoration: none;">your.email@example.com</a>
-        </p>
 
         <!-- NEW TEXT ADDED HERE -->
         <div style="max-width: 650px; margin: 0 auto 40px auto; text-align: left; color: #495057;">
@@ -750,6 +746,10 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <p style="font-size: 15px; color: #6c757d; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7;"">For technical support, please include your order number and the name of the product you are having trouble with so we can assist you as quickly as possible. For general inquiries, we look forward to connecting with you.</p>
         </div>
         <!-- END OF NEW TEXT -->
+        <p style="margin-top: 30px; font-size: 16px; color: #495057;">
+            Or, send us an email at: 
+            <a href="mailto:your.email@example.com" style="color: #0d6efd; font-weight: 700; text-decoration: none;">your.email@example.com</a>
+        </p>
     </div>
 
     <!-- FOOTER -->
