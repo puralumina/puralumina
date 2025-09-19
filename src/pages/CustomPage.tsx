@@ -325,7 +325,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                     <a href="#cta" style="background-color: #0d6efd; color: white; padding: 15px; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; display: block; text-align: center;">Get The Bundle Now</a>
                 </div>
                 <div style="background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 8px; padding: 15px; margin-top: 20px; text-align: center; font-size: 14px; color: #856404;">
-                    ⚡ Hurry! The price will increase to <strong>$60</strong> next week.
+                    ⚡ Hurry! The price will increase by <strong>$100</strong> every 3 days.
                 </div>
             </div>
         </div>
