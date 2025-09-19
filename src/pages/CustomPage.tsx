@@ -232,6 +232,378 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
   'template': {
     title: 'Template',
     music: '/your-custom-music.mp3', // Optional
+    content: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Intimate Life - Mastering Her Pleasure</title>
+    <!-- Importing Montserrat Font (Regular, Bold, Extra-Bold) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a202c;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        .hero, .section, .offer, .faq, .final-cta {
+            text-align: center;
+            padding: 40px 10px;
+        }
+        .hero h1, .section h2, .offer h2, .faq h2, .final-cta h2 {
+            font-size: 44px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            color: #ff6f61;
+        }
+        .hero p, .section p, .offer p, .faq p, .final-cta p {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .hero img, .section img, .offer img, .faq img, .final-cta img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .hero button, .offer button, .final-cta button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 18px 36px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 700;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4);
+        }
+        .urgency-bar {
+            background-color: #ffc107;
+            color: #1a202c;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .trust-bar {
+            text-align: center;
+            padding: 20px 10px;
+            border-top: 1px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .trust-bar span {
+            font-weight: 700;
+            color: #6c757d;
+            margin-right: 20px;
+        }
+        .trust-bar img {
+            height: 30px;
+            vertical-align: middle;
+            margin: 5px 10px;
+        }
+        .problem, .solution, .features, .testimonials, .offer, .faq, .final-cta {
+            padding: 60px 25px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .problem, .solution, .features, .testimonials, .offer, .faq, .final-cta h2 {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            margin-top: 0;
+        }
+        .problem, .solution, .features, .testimonials, .offer, .faq, .final-cta p {
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .features li {
+            margin-bottom: 24px;
+        }
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .testimonials img {
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .testimonials p {
+            font-style: italic;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .offer ul {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+            line-height: 2;
+        }
+        .offer li {
+            margin-bottom: 10px;
+        }
+        .faq p {
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .countdown div {
+            background-color: #ffffff;
+            color: #1a202c;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 0 10px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!-- URGENCY BAR -->
+    <div class="urgency-bar">
+        ⚠️ Limited Time Offer: Get the "Seducing His Senses" Bonus FREE when you order in the next 24 hours!
+    </div>
+
+    <!-- Main Container for content centering -->
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <h1>Achieve Intimacy Without Guesswork</h1>
+            <p>Discover expert techniques to enhance your relationship and satisfy your partner's deepest desires.</p>
+            <img src="https://via.placeholder.com/600x400.png?text=Showcase+Your+Product" alt="Mastering Her Pleasure Mockup">
+            <a href="#offer">Get Instant Access for $49 →</a>
+            <p>Join 1,500+ satisfied customers!</p>
+        </div>
+
+        <!-- AS SEEN ON / TRUST BAR -->
+        <div class="trust-bar">
+            <span>AS FEATURED IN</span>
+            <img src="https://via.placeholder.com/100x40.png?text=Logo+1" alt="As Seen On Logo 1">
+            <img src="https://via.placeholder.com/100x40.png?text=Logo+2" alt="As Seen On Logo 2">
+            <img src="https://via.placeholder.com/100x40.png?text=Logo+3" alt="As Seen On Logo 3">
+        </div>
+
+        <!-- COUNTDOWN TIMER -->
+        <div class="countdown">
+            <div id="days">00</div>
+            <div id="hours">00</div>
+            <div id="minutes">00</div>
+            <div id="seconds">00</div>
+        </div>
+
+        <!-- PROBLEM SECTION -->
+        <div class="problem">
+            <h2>Are You Feeling Stuck in a Rut?</h2>
+            <p>Does the weight of unfulfilled potential press down on you? Does every new morning—more growth, more success, more purpose—leave you feeling drained and disconnected from your dreams?</p>
+        </div>
+
+        <!-- SOLUTION SECTION -->
+        <div class="solution">
+            <h2>The Solution You've Been Waiting For</h2>
+            <p>Introducing "Mastering Her Pleasure: The Ultimate Guide for Men."</p>
+            <p>This comprehensive guide will transform your intimate life, helping you understand and satisfy your partner's deepest desires. Imagine the joy and fulfillment of a deeply connected relationship where both of you are completely satisfied.</p>
+            <p>This is for you if...</p>
+            <ul>
+                <li>✓ You're a man looking to enhance your intimate skills</li>
+                <li>✓ You want to understand your partner's desires better</li>
+                <li>✓ You're ready to take your relationship to the next level</li>
+            </ul>
+        </div>
+
+        <!-- FEATURES & BENEFITS SECTION (2-Column on Desktop, 1 on Mobile) -->
+        <div class="features">
+            <h2>What You'll Master Inside</h2>
+            <ul>
+                <li>✔️ <strong>Expert Techniques:</strong> Learn innovative and effective techniques to satisfy her so you can build a stronger connection.</li>
+                <li>✔️ <strong>Communication Mastery:</strong> Discover how to talk to her about your desires and hers so you can enhance your intimacy.</li>
+                <li>✔️ <strong>Advanced Pleasure:</strong> Explore advanced techniques to take your skills to the next level so you can leave her feeling fulfilled and wanted.</li>
+            </ul>
+        </div>
+
+        <!-- SOCIAL PROOF SECTION -->
+        <div class="testimonials">
+            <h2>Don't Just Take Our Word For It...</h2>
+            <!-- Testimonial 1 -->
+            <div>
+                <p>"Before this course, I was clueless. After completing Module 3, I designed a logo for my first freelance client and was paid $300! This course paid for itself 3x over in the first week."</p>
+                <div>
+                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer A">
+                    <div>
+                        <p>Sarah Johnson</p>
+                        <p>Freelance Designer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div>
+                <p>"I finally feel like I'm in control of Illustrator instead of the other way around. The project files were a game-changer. This is the most practical and straightforward course I've ever taken."</p>
+                <div>
+                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer B">
+                    <div>
+                        <p>Mike Williams</p>
+                        <p>Small Business Owner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE OFFER & CTA SECTION -->
+        <div id="offer" class="offer">
+            <h2>Get Instant Access to "Mastering Her Pleasure" Today</h2>
+            <div>
+                <h3>Here's What You'll Receive:</h3>
+                <ul>
+                    <li>✔️ "Mastering Her Pleasure: The Ultimate Guide for Men" (Value: $99)</li>
+                    <li>✔️ Bonus: "Dirty Talks to make her 100x Wet during Intimacy" (Value: $29)</li>
+                    <li>✔️ Bonus: "Seducing His Senses: A Woman's Guide to Pleasuring Her Man" (Value: $29)</li>
+                </ul>
+                <p>### Total Value: $157</p>
+                <p>### Your Price Today: Only $49</p>
+                <p><strong>My 100% Risk-Free Guarantee</strong></p>
+                <p>If you're not completely satisfied with the results, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
+                <a href="#offer">Get Instant Access Now</a>
+            </div>
+        </div>
+
+        <!-- FAQ SECTION -->
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Q: Will this work for me even if I'm not experienced?</strong></p>
+            <p>A: Absolutely! This guide is designed for men of all experience levels, from beginners to experienced lovers.</p>
+            <p><strong>Q: How soon will I see results?</strong></p>
+            <p>A: Many of our customers report seeing significant improvements in their intimate life within the first week of applying the techniques.</p>
+        </div>
+
+        <!-- FINAL CTA SECTION -->
+        <div class="final-cta">
+            <h2>Ready to Achieve Intimacy Without Guesswork?</h2>
+            <p>Don't wait another day to transform your relationship. Click the button below to get started.</p>
+            <a href="#offer">Get Instant Access for $49</a>
+        </div>
+    </div>
+
+    <script>
+        async function startTimer() {
+            const response = await fetch('/start-timer');
+            if (response.ok) {
+                console.log('Timer started');
+            } else {
+                console.error('Failed to start timer');
+            }
+        }
+
+        async function getRemainingTime() {
+            const response = await fetch('/get-timer');
+            if (response.ok) {
+                const data = await response.json();
+                return data.remainingTime;
+            } else {
+                console.error('Failed to get timer data');
+                return null;
+            }
+        }
+
+        function updateTimerDisplay(remainingTime) {
+            const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        }
+
+        async function initTimer() {
+            await startTimer();
+            const remainingTime = await getRemainingTime();
+            if (remainingTime !== null) {
+                updateTimerDisplay(remainingTime);
+                const interval = setInterval(() => {
+                    remainingTime -= 1000;
+                    if (remainingTime <= 0) {
+                        clearInterval(interval);
+                        document.getElementById('days').innerText = '00';
+                        document.getElementById('hours').innerText = '00';
+                        document.getElementById('minutes').innerText = '00';
+                        document.getElementById('seconds').innerText = '00';
+                    } else {
+                        updateTimerDisplay(remainingTime);
+                    }
+                }, 1000);
+            }
+        }
+
+        initTimer();
+    </script>
+
+    <script>
+        const express = require('express');
+        const app = express();
+        const bodyParser = require('body-parser');
+        const cookieParser = require('cookie-parser');
+        const fs = require('fs');
+
+        app.use(bodyParser.json());
+        app.use(cookieParser());
+
+        let timerData = {};
+
+        app.get('/start-timer', (req, res) => {
+            const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+            const startTime = Date.now();
+            timerData[ip] = { startTime, duration: 24 * 60 * 60 * 1000 }; // 24 hours in milliseconds
+            res.cookie('timerStart', startTime, { httpOnly: true });
+            res.send('Timer started!');
+        });
+
+        app.get('/get-timer', (req, res) => {
+            const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+            const timerInfo = timerData[ip];
+            if (timerInfo) {
+                const remainingTime = timerInfo.duration - (Date.now() - timerInfo.startTime);
+                res.json({ remainingTime });
+            } else {
+                res.status(404).send('No timer data found');
+            }
+        });
+
+        app.listen(3000, () => {
+            console.log('Server is running on port 3000');
+        });
+    </script>
+</body>
+</html>
+    `
+  },
+  
+  'template': {
+    title: 'Template',
+    music: '/your-custom-music.mp3', // Optional
     content: `
       <!-- Your full HTML content here -->
       <div style="min-height: 100vh; background: #f0f0f0; padding: 40px;">
