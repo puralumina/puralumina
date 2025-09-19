@@ -746,7 +746,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
               IMPORTANT: Replace 'your.email@example.com' below with your actual email address.
               The method="post" and enctype="text/plain" attributes help format the email body for some clients.
             -->
-            <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+            <form action="mailto:soulmatesdesires@gmail.com" method="post" enctype="text/plain">
                 <!-- Name Field -->
                 <div style="margin-bottom: 20px;">
                     <label for="name" style="display: block; font-weight: 700; margin-bottom: 8px;">Full Name</label>
