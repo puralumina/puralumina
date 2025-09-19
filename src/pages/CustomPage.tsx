@@ -707,6 +707,119 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     `
   },
   
+  'terms': {
+    title: 'Terms of service',
+    music: '/your-custom-music.mp3', // Optional
+    content: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Soulmates Desires</title>
+    <!-- Importing Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #212529; line-height: 1.7;">
+
+    <!-- HEADER (Optional but recommended for consistency) -->
+    <div style="background-color: #ffffff; border-bottom: 1px solid #dee2e6;">
+        <div style="max-width: 900px; margin: 0 auto; padding: 15px 20px;">
+            <a href="/" style="text-decoration: none; color: #212529; font-weight: 700; font-size: 20px;">
+                SOULMATES DESIRES
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div style="max-width: 900px; margin: 0 auto; padding: 20px 20px 60px 20px; background-color: #ffffff;">
+
+        <h1 style="font-size: 36px; font-weight: 700; margin-top: 20px; margin-bottom: 10px;">Terms of Service</h1>
+        <p style="color: #6c757d; margin-top: 0;"><strong>Last Updated:</strong> <strong>[Date]</strong></p>
+
+        <p style="font-size: 16px;">Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the <strong>[Your Website URL]</strong> website (the "Service") operated by Soulmates Desires ("us", "we", or "our").</p>
+        <p style="font-size: 16px;">Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who wish to access or use the Service.</p>
+        <p style="font-size: 16px;"><strong>By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you do not have permission to access the Service.</strong></p>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">1. Age Requirement</h2>
+        <p style="font-size: 16px; font-weight: 700; background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 4px;">This website and its products are intended solely for users who are eighteen (18) years of age or older. Any registration by, use of, or access to the Service by anyone under 18 is unauthorized, unlicensed, and in violation of these Terms of Service. By using this Service, you represent and warrant that you are 18 or older and that you agree to and to abide by all of the terms and conditions of this Agreement.</p>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">2. Intellectual Property and Digital Product License</h2>
+        <p style="font-size: 16px;">The Service and its original content, features, and functionality are and will remain the exclusive property of Soulmates Desires. Our content is protected by copyright, trademark, and other laws of both the <strong>[Your Country]</strong> and foreign countries.</p>
+        
+        <div style="font-size: 16px; background-color: #e7f1ff; border-left: 4px solid #0d6efd; padding: 15px; border-radius: 4px; margin-top: 20px;">
+            <h3 style="margin-top: 0; font-size: 20px;">Your License to Use Our Products</h3>
+            <p style="margin-bottom: 0;">When you purchase a digital product (e.g., e-book, planner, game, worksheets) from us, you are granted one (1) revocable, non-exclusive, non-transferable license for personal, non-commercial use only. You are expressly prohibited from:</p>
+            <ul style="padding-left: 20px;">
+                <li style="margin-bottom: 5px;">Reselling, sharing, relicensing, or redistributing the files in any way.</li>
+                <li style="margin-bottom: 5px;">Using the products for any commercial purpose.</li>
+                <li style="margin-bottom: 5px;">Modifying or creating derivative works from the content.</li>
+            </ul>
+            <p style="margin-bottom: 0;">This license is granted to the single individual who made the purchase. Sharing your access or the files with others is a breach of these Terms.</p>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">3. Purchases, Payments, and Refunds</h2>
+        <p style="font-size: 16px;">If you wish to purchase any product made available through the Service ("Purchase"), you may be asked to supply certain information relevant to your Purchase including, without limitation, your name, email, and payment information.</p>
+        <p style="font-size: 16px;">All payments are processed through secure third-party payment processors (e.g., Stripe, Paddle, PayPal). We do not store your credit card information. You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Service.</p>
+        
+        <h3 style="font-size: 20px; font-weight: 700; margin-top: 25px;">Refund Policy</h3>
+        <p style="font-size: 16px;">Due to the instant, digital nature of our products, all sales are final and non-refundable. Once a file is delivered to you, it cannot be returned. We encourage you to review the product description carefully before making a purchase. If you encounter a technical issue with a file, please contact us at <strong><a href="mailto:[your.email@example.com]" style="color: #0d6efd;">[your.email@example.com]</a></strong> for assistance.</p>
+        
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">4. Prohibited Uses</h2>
+        <p style="font-size: 16px;">You may use the Service only for lawful purposes. You agree not to use the Service:</p>
+        <ul style="padding-left: 20px; font-size: 16px;">
+            <li style="margin-bottom: 10px;">In any way that violates any applicable national or international law or regulation.</li>
+            <li style="margin-bottom: 10px;">To transmit, or procure the sending of, any advertising or promotional material, including any "junk mail", "chain letter," "spam," or any other similar solicitation.</li>
+            <li style="margin-bottom: 10px;">To impersonate or attempt to impersonate Soulmates Desires, an employee, another user, or any other person or entity.</li>
+            <li style="margin-bottom: 10px;">To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Service.</li>
+        </ul>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+        
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">5. Disclaimer of Warranties & Limitation of Liability</h2>
+        <p style="font-size: 16px;">The Service and its products are provided on an "AS IS" and "AS AVAILABLE" basis. Soulmates Desires makes no warranties, expressed or implied, and hereby disclaims all other warranties, including without limitation, implied warranties of merchantability, fitness for a particular purpose, or non-infringement of intellectual property.</p>
+        <p style="font-size: 16px;">Our products are intended for informational and entertainment purposes only. We make no guarantees about the results you will achieve from using our products.</p>
+        <p style="font-size: 16px;">In no event shall Soulmates Desires or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website.</p>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">6. Governing Law</h2>
+        <p style="font-size: 16px;">These Terms shall be governed and construed in accordance with the laws of <strong>[Your Country/State]</strong>, without regard to its conflict of law provisions.</p>
+        
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+        
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">7. Changes to Terms</h2>
+        <p style="font-size: 16px;">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide notice of any changes by posting the new Terms of Service on this page and updating the "Last Updated" date. By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms.</p>
+        
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">8. Contact Us</h2>
+        <p style="font-size: 16px;">If you have any questions about these Terms, please contact us:</p>
+        <ul style="padding-left: 20px; font-size: 16px;">
+            <li>By email: <strong><a href="mailto:[your.email@example.com]" style="color: #0d6efd; font-weight: 700;">[your.email@example.com]</a></strong></li>
+        </ul>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center; background-color: #ffffff;">
+        <p style="color: #6c757d; font-size: 14px; margin: 0;">© 2025 Soulmates Desires. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
+    `
+  },
+  
   'template': {
     title: 'Template',
     music: '/your-custom-music.mp3', // Optional
