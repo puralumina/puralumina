@@ -578,6 +578,132 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     `
   },
   
+  'privacy-policy': {
+    title: 'Privacy Policy - Soulmates Desires',
+    music: '/your-custom-music.mp3', // Optional
+    content: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Soulmates Desires</title>
+    <!-- Importing Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #212529; line-height: 1.7;">
+
+    <!-- HEADER (Optional but recommended for consistency) -->
+    <div style="background-color: #ffffff; border-bottom: 1px solid #dee2e6;">
+        <div style="max-width: 900px; margin: 0 auto; padding: 15px 20px;">
+            <a href="/" style="text-decoration: none; color: #212529; font-weight: 700; font-size: 20px;">
+                SOULMATES DESIRES
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div style="max-width: 900px; margin: 0 auto; padding: 20px 20px 60px 20px; background-color: #ffffff;">
+
+        <h1 style="font-size: 36px; font-weight: 700; margin-top: 20px; margin-bottom: 10px;">Privacy Policy</h1>
+        <p style="color: #6c757d; margin-top: 0;"><strong>Effective Date:</strong> <strong>[Date]</strong></p>
+
+        <p style="font-size: 16px;">Welcome to Soulmates Desires. Your privacy is critically important to us. This Privacy Policy describes how Soulmates Desires ("we", "us", or "our") collects, uses, and discloses your information when you visit our website <strong>[Your Website URL]</strong> (the "Service"), purchase our digital products, or otherwise interact with us.</p>
+        <p style="font-size: 16px;">By using our Service, you agree to the collection and use of information in accordance with this policy.</p>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">1. Information We Collect</h2>
+        <p style="font-size: 16px;">We collect information in a few different ways to provide and improve our Service to you.</p>
+
+        <h3 style="font-size: 20px; font-weight: 700; margin-top: 25px;">a) Information You Provide to Us Directly:</h3>
+        <ul style="padding-left: 20px; font-size: 16px;">
+            <li style="margin-bottom: 10px;"><strong>Purchase Information:</strong> When you purchase a digital product, we collect information necessary to process your order. This includes your name, email address, and billing information. <strong>Please note: We do not directly store your full credit card information. All payments are securely processed by our third-party payment processors (e.g., Stripe, Paddle, PayPal).</strong></li>
+            <li style="margin-bottom: 10px;"><strong>Contact Information:</strong> When you contact us with questions or for support, we collect your name and email address.</li>
+            <li style="margin-bottom: 10px;"><strong>Communications:</strong> We may keep a record of any correspondence you have with us.</li>
+        </ul>
+
+        <h3 style="font-size: 20px; font-weight: 700; margin-top: 25px;">b) Information We Collect Automatically:</h3>
+        <ul style="padding-left: 20px; font-size: 16px;">
+            <li style="margin-bottom: 10px;"><strong>Log and Usage Data:</strong> Like most websites, we automatically collect information that your browser sends whenever you visit our Service. This may include your computer's Internet Protocol (IP) address, browser type and version, the pages you visit on our site, the time and date of your visit, and other statistics.</li>
+            <li style="margin-bottom: 10px;"><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar tracking technologies to track activity on our Service. Cookies are files with a small amount of data. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</li>
+        </ul>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">2. How We Use Your Information</h2>
+        <p style="font-size: 16px;">We use the information we collect for various purposes, including:</p>
+        <ul style="padding-left: 20px; font-size: 16px;">
+            <li style="margin-bottom: 10px;">To fulfill your orders, process your payments, and deliver the digital products you have purchased.</li>
+            <li style="margin-bottom: 10px;">To provide, maintain, and improve our Service.</li>
+            <li style="margin-bottom: 10px;">To communicate with you, respond to your inquiries, and provide customer support.</li>
+            <li style="margin-bottom: 10px;">For marketing purposes, such as sending newsletters or special offers, only if you have opted-in to receive such communications. You can opt-out at any time.</li>
+        </ul>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">3. How We Share Your Information</h2>
+        <p style="font-size: 16px;">We do not sell your personal information. We may share your information with trusted third-party service providers only in the following circumstances:</p>
+        <ul style="padding-left: 20px; font-size: 16px;">
+            <li style="margin-bottom: 10px;"><strong>Payment Processors:</strong> We share your purchase information with our payment processors (e.g., Stripe, Paddle) to securely handle transactions. Their use of your personal information is governed by their own privacy policies.</li>
+            <li style="margin-bottom: 10px;"><strong>Service Providers:</strong> We may share information with vendors who perform services on our behalf, such as website hosting and analytics.</li>
+            <li style="margin-bottom: 10px;"><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
+        </ul>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">4. Data Security</h2>
+        <p style="font-size: 16px;">We take the security of your data seriously and use reasonable administrative, technical, and physical security measures to help protect your personal information. However, please remember that no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">5. Your Data Protection Rights</h2>
+        <p style="font-size: 16px;">Depending on your location, you may have rights regarding your personal information, such as the right to access, correct, or delete your data. To exercise any of these rights, please contact us at <strong><a href="mailto:[your.email@example.com]" style="color: #0d6efd;">[your.email@example.com]</a></strong>.</p>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">6. Children's Privacy</h2>
+        <p style="font-size: 16px;">Our Service is not intended for individuals under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">7. Changes to This Privacy Policy</h2>
+        <p style="font-size: 16px;">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
+
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">8. Contact Us</h2>
+        <p style="font-size: 16px;">If you have any questions about this Privacy Policy, please contact us:</p>
+        <ul style="padding-left: 20px; font-size: 16px;">
+            <li>By email: <strong><a href="mailto:[your.email@example.com]" style="color: #0d6efd; font-weight: 700;">[your.email@example.com]</a></strong></li>
+            <li>By visiting this page on our website: <strong><a href="[Link to your Contact Us page]" style="color: #0d6efd; font-weight: 700;">[Your Website URL]/contact</a></strong></li>
+        </ul>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center; background-color: #ffffff;">
+        <p style="color: #6c757d; font-size: 14px; margin: 0;">© 2025 Soulmates Desires. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
+    `
+  },
+  
+  'contact-us': {
+    title: 'Contact - Soulmates Desires',
+    music: '/your-custom-music.mp3', // Optional
+    content: `
+      <!-- Your full HTML content here -->
+      <div style="min-height: 100vh; background: #f0f0f0; padding: 40px;">
+        <h1 style="text-align: center; color: #333;">Your Custom Page</h1>
+        <!-- Add any HTML, CSS, and JavaScript you want -->
+      </div>
+    `
+  },
+  
   'template': {
     title: 'Template',
     music: '/your-custom-music.mp3', // Optional
