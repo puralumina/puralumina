@@ -388,7 +388,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <div class="hero">
             <h1>Achieve Intimacy Without Guesswork</h1>
             <p>Discover expert techniques to enhance your relationship and satisfy your partner's deepest desires.</p>
-            <img src="product-mockup.jpg" alt="Product Mockup">
+            <img src="https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg" alt="Product Mockup">
             <button>Get Instant Access for $49</button>
         </div>
         <div class="section problem">
