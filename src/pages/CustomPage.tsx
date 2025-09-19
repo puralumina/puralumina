@@ -735,9 +735,9 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             Whether you have a question about our products, need assistance with an order, or just want to share your thoughts, our inbox is always open. We do our best to respond to all inquiries within 24 hours.
         </p>
 
-        <a href="mailto:your.email@example.com" class="contact-button" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3); transition: all 0.2s ease-in-out;">
+        <a href="soulmatesdesires@gmail.com" class="contact-button" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3); transition: all 0.2s ease-in-out;">
             Email Us Directly
-        </a></br></br>
+        </a></br></br></br></br>
 
         <!-- NEW TEXT ADDED HERE -->
         <div style="max-width: 650px; margin: 0 auto 40px auto; text-align: left; color: #495057;">
@@ -747,8 +747,8 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         </div>
         <!-- END OF NEW TEXT -->
         <p style="margin-top: 30px; font-size: 16px; color: #495057;">
-            Or, send us an email at: 
-            <a href="mailto:your.email@example.com" style="color: #0d6efd; font-weight: 700; text-decoration: none;">your.email@example.com</a>
+            Send us an email at: 
+            <a href="mailto:soulmatesdesires@gmail.com" style="color: #0d6efd; font-weight: 700; text-decoration: none;">soulmatesdesires@gmail.com</a>
         </p>
     </div>
 
