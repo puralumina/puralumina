@@ -268,7 +268,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <!-- Left Column: Image -->
             <div style="flex: 2; min-width: 300px; text-align: center;">
                 <div style="background-color: #fff3cd; border-radius: 12px; padding: 20px; display: inline-block;">
-                     <img src="https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg" alt="Digital Book Bundle" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+                     <img src="https://images.unsplash.com/photo-1593696954577-ab3d39317b97?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZyZWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="Digital Book Bundle" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
                 </div>
             </div>
             <!-- Right Column: Details -->
