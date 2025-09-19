@@ -417,15 +417,9 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <div style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
             <a href="#" style="text-decoration: none; color: #495057;">Privacy Policy</a>
             <a href="#" style="text-decoration: none; color: #495057;">Terms of Service</a>
-            <div>
-                <!-- Placeholder for social icons -->
-                <a href="#" style="text-decoration: none; color: #495057; margin: 0 10px;">Twitter</a>
-                <a href="#" style="text-decoration: none; color: #495057; margin: 0 10px;">Facebook</a>
-                <a href="#" style="text-decoration: none; color: #495057; margin: 0 10px;">Instagram</a>
-            </div>
             <a href="#" style="text-decoration: none; color: #495057;">Contact Us</a>
         </div>
-        <p style="color: #6c757d; font-size: 14px; margin-top: 30px;">© 2024 [YourBrand]. All rights reserved.</p>
+        <p style="color: #6c757d; font-size: 14px; margin-top: 30px;">© 2025 Soulmates Desires. All rights reserved.</p>
     </div>
 
 </body>
