@@ -473,19 +473,19 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
                     <h3 style="margin: 0 0 5px 0; font-size: 18px;">"Truth or Dare" for Couples Cards</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
                 <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
                     <h3 style="margin: 0 0 5px 0; font-size: 18px;">Date Night Idea Cards</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
                 <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
                     <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples' Affirmation Cards</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
             </div>
         </div>
@@ -498,19 +498,19 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
                     <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Growth Mindset</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
                 <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
                     <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Ultimate Date Night Planner</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
                 <div class="book-card">
                     <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
                     <h3 style="margin: 0 0 5px 0; font-size: 18px;">"State of the Union" Meeting Guide</h3>
                     <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$19</span>
+                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
                 </div>
             </div>
         </div>
@@ -520,8 +520,8 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <h2 style="font-size: 36px; font-weight: 900; margin: 0 0 15px 0;">Get the Entire 14-Book Bundle Today!</h2>
             <p style="font-size: 18px; color: #495057; margin-bottom: 30px;">Unlock a world of knowledge and save big. Get instant access to all 14 digital books for a one-time payment.</p>
             <div style="display: flex; justify-content: center; align-items: baseline; gap: 15px; margin-bottom: 30px;">
-                <span style="font-size: 64px; font-weight: 900; color: #0d6efd;">$47</span>
-                <span style="font-size: 32px; color: #6c757d; text-decoration: line-through;">$279</span>
+                <span style="font-size: 64px; font-weight: 900; color: #0d6efd;">$39.99</span>
+                <span style="font-size: 32px; color: #6c757d; text-decoration: line-through;">$499</span>
             </div>
             <a href="/product/15" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);">Yes, I Want The Bundle!</a>
             <p style="margin: 20px 0 0 0;"><a href="#" style="color: #0d6efd; text-decoration: none; font-weight: 700; font-size: 14px;">The 'Confident Creator' 30-Day Guarantee</a></p>
