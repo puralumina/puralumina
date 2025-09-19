@@ -730,7 +730,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 
     <!-- Main Content Container with More Text -->
     <div style="max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center;">
-        <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 15px;">We'd Love to Hear From You</h1>
+        <h1 style="font-size: 25px; text-align: center; font-weight: 900; margin-bottom: 15px;">We'd Love to Hear From You</h1>
         <p style="font-size: 18px; color: #6c757d; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7;">
             Whether you have a question about our products, need assistance with an order, or just want to share your thoughts, our inbox is always open. We do our best to respond to all inquiries within 24 hours.
         </p>
