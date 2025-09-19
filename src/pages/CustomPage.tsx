@@ -227,6 +227,18 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         </div>
       </div>
     `
+  },
+  
+  'save-your-couple': {
+    title: 'Save Your Couple',
+    music: '/your-custom-music.mp3', // Optional
+    content: `
+      <!-- Your full HTML content here -->
+      <div style="min-height: 100vh; background: #f0f0f0; padding: 40px;">
+        <h1 style="text-align: center; color: #333;">Your Custom Page</h1>
+        <!-- Add any HTML, CSS, and JavaScript you want -->
+      </div>
+    `
   }
 };
 
