@@ -773,7 +773,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <p style="font-size: 16px;">All payments are processed through secure third-party payment processors (e.g., Stripe, Paddle, PayPal). We do not store your credit card information. You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Service.</p>
         
         <h3 style="font-size: 20px; font-weight: 700; margin-top: 25px;">Refund Policy</h3>
-        <p style="font-size: 16px;">Due to the instant, digital nature of our products, all sales are final and non-refundable. Once a file is delivered to you, it cannot be returned. We encourage you to review the product description carefully before making a purchase. If you encounter a technical issue with a file, please contact us at <strong><a href="mailto:[your.email@example.com]" style="color: #0d6efd;">[your.email@example.com]</a></strong> for assistance.</p>
+        <p style="font-size: 16px;">Due to the instant, digital nature of our products, all sales are final and non-refundable. Once a file is delivered to you, it cannot be returned. We encourage you to review the product description carefully before making a purchase. If you encounter a technical issue with a file, please contact us at <strong><a href="mailto:soulmatesdesires@gmail.com" style="color: #0d6efd;">soulmatesdesires@gmail.com</a></strong> for assistance.</p>
         
         <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
 
