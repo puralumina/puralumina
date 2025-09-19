@@ -475,7 +475,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                 <p>### Your Price Today: Only $49</p>
                 <p><strong>My 100% Risk-Free Guarantee</strong></p>
                 <p>If you're not completely satisfied with the results, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
-                <a href="#offer">Get Instant Access Now</a>
+                <a href="/product/15">Get Instant Access Now</a>
             </div>
         </div>
 
@@ -492,7 +492,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <div class="final-cta">
             <h2>Ready to Achieve Intimacy Without Guesswork?</h2>
             <p>Don't wait another day to transform your relationship. Click the button below to get started.</p>
-            <a href="#offer">Get Instant Access for $49</a>
+            <a href="/product/15">Get Instant Access for $49</a>
         </div>
     </div>
 </body>
