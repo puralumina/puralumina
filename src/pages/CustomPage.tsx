@@ -609,7 +609,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <h1 style="font-size: 36px; font-weight: 700; margin-top: 20px; margin-bottom: 10px;">Privacy Policy</h1>
         <p style="color: #6c757d; margin-top: 0;"><strong>Effective Date:</strong> <strong>[Date]</strong></p>
 
-        <p style="font-size: 16px;">Welcome to Soulmates Desires. Your privacy is critically important to us. This Privacy Policy describes how Soulmates Desires ("we", "us", or "our") collects, uses, and discloses your information when you visit our website <strong>[Your Website URL]</strong> (the "Service"), purchase our digital products, or otherwise interact with us.</p>
+        <p style="font-size: 16px;">Welcome to Soulmates Desires. Your privacy is critically important to us. This Privacy Policy describes how Soulmates Desires ("we", "us", or "our") collects, uses, and discloses your information when you visit our website, purchase our digital products, or otherwise interact with us.</p>
         <p style="font-size: 16px;">By using our Service, you agree to the collection and use of information in accordance with this policy.</p>
 
         <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
