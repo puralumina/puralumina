@@ -250,122 +250,209 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Product Name] - [A Short Benefit]</title>
-    <!-- Importing Montserrat Font from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Transform Your Intimate Life</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') no-repeat center center/cover;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .features {
+            text-align: left;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            margin-bottom: 20px;
+        }
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .testimonials img {
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .testimonials p {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .offer {
+            background-color: #fff;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .offer h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .offer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .offer li {
+            margin-bottom: 10px;
+        }
+        .offer button {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .faq {
+            background-color: #fff;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .faq p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .final-cta {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .final-cta button {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #212529;">
-
-    <!-- Main Container for content centering -->
-    <div style="max-width: 800px; margin: 0 auto; padding: 15px;">
-
-        <!-- HERO SECTION -->
-        <div style="text-align: center; padding: 40px 10px;">
-            <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 16px; line-height: 1.2;">[Achieve Desired Outcome] without [Common Pain Point]</h1>
-            <p style="font-size: 18px; color: #495057; margin-bottom: 32px; line-height: 1.7;">[A quick sentence explaining what your product is and who it is for.]</p>
-            <img src="https://via.placeholder.com/600x400.png?text=Your+Product+Mockup" alt="[Your Product Name] Mockup" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 32px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
-            <a href="#" style="background-color: #007bff; color: white; padding: 16px 32px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);">Get Instant Access for $[XX]</a>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Achieve Intimacy Without Guesswork</h1>
+            <p>Discover expert techniques to enhance your relationship and satisfy your partner's deepest desires.</p>
+            <img src="product-mockup.jpg" alt="Product Mockup">
+            <button>Get Instant Access for $49</button>
         </div>
-
-        <!-- PROBLEM SECTION -->
-        <div style="background-color: #ffffff; padding: 40px 25px; border-radius: 8px; margin-top: 40px; border: 1px solid #dee2e6;">
-            <h2 style="font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 24px; margin-top: 0;">Is This You?</h2>
-            <p style="font-size: 18px; color: #495057; line-height: 1.7; text-align: center;">[Describe the pain points in 2-3 sentences. Use question format to talk about their frustrations. Make them feel understood.]</p>
+        <div class="section problem">
+            <h2>Is This You?</h2>
+            <p>Do you feel like you're not connecting with your partner on a deeper level? Are you frustrated with the lack of intimacy and desire in your relationship? Do you want to spice things up but don't know where to start?</p>
         </div>
-
-        <!-- SOLUTION SECTION -->
-        <div style="padding: 60px 10px; text-align: center;">
-            <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 24px;">The Solution You've Been Waiting For</h2>
-            <p style="font-size: 18px; color: #495057; line-height: 1.7; margin-bottom: 16px;">Introducing <strong>[Your Product Name]</strong>.</p>
-            <p style="font-size: 18px; color: #495057; line-height: 1.7; margin-bottom: 32px;">[Explain the transformation. Focus on the positive outcome and feeling. Paint a vivid picture of their successful future.]</p>
-            <div style="text-align: left; max-width: 500px; margin: 0 auto; background-color: #e9ecef; padding: 25px; border-radius: 8px;">
-                <h3 style="margin-top: 0; font-weight: 700;">This is for you if...</h3>
-                <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 1.8;">
-                    <li style="margin-bottom: 10px;">✔️ [Ideal customer #1]</li>
-                    <li style="margin-bottom: 10px;">✔️ [Ideal customer #2]</li>
-                    <li style="margin-bottom: 10px;">✔️ [Ideal customer #3]</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- FEATURES & BENEFITS SECTION -->
-        <div style="background-color: #ffffff; padding: 40px 25px; border-radius: 8px; margin-top: 40px; border: 1px solid #dee2e6;">
-            <h2 style="font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 32px; margin-top: 0;">Here's What You'll Get Inside</h2>
-            <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 1.8;">
-                <li style="margin-bottom: 24px;"><strong>Feature 1:</strong> [Describe the feature] so you can [achieve this benefit].</li>
-                <li style="margin-bottom: 24px;"><strong>Feature 2:</strong> [Describe the feature] so you can [achieve this benefit].</li>
-                <li style="margin-bottom: 24px;"><strong>Feature 3:</strong> [Describe the feature] so you can [achieve this benefit].</li>
+        <div class="section solution">
+            <h2>The Solution You've Been Waiting For</h2>
+            <p>Introducing "Mastering Her Pleasure: The Ultimate Guide for Men." This comprehensive guide will transform your intimate life, helping you understand and satisfy your partner's deepest desires. Imagine the joy and fulfillment of a deeply connected relationship where both of you are completely satisfied.</p>
+            <p>This is for you if...</p>
+            <ul>
+                <li>✓ You're a man looking to enhance your intimate skills</li>
+                <li>✓ You want to understand your partner's desires better</li>
+                <li>✓ You're ready to take your relationship to the next level</li>
             </ul>
         </div>
-        
-        <!-- SOCIAL PROOF SECTION -->
-        <div style="padding: 60px 10px;">
-            <h2 style="font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 40px;">What Our Customers Are Saying</h2>
-            <div style="background-color: #ffffff; padding: 25px; border-radius: 8px; margin-bottom: 24px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #dee2e6;">
-                <p style="font-size: 18px; color: #495057; line-height: 1.7; margin-top: 0; font-style: italic;">"[Amazing testimonial from Customer A that highlights a key benefit.]"</p>
-                <div style="display: flex; align-items: center; margin-top: 20px;">
-                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer A" style="border-radius: 50%; margin-right: 15px;">
-                    <p style="margin: 0; font-weight: 700;">[Customer A's Full Name]</p>
-                </div>
+        <div class="section features">
+            <h2>Here's What You'll Get Inside</h2>
+            <ul>
+                <li><strong>Expert Techniques:</strong> Learn innovative and effective techniques to satisfy her so you can build a stronger connection.</li>
+                <li><strong>Communication Mastery:</strong> Discover how to talk to her about your desires and hers so you can enhance your intimacy.</li>
+                <li><strong>Advanced Pleasure:</strong> Explore advanced techniques to take your skills to the next level so you can leave her feeling fulfilled and wanted.</li>
+            </ul>
+        </div>
+        <div class="section testimonials">
+            <h2>What Our Customers Are Saying</h2>
+            <div>
+                <img src="customer-a.jpg" alt="Customer A">
+                <p>"This book completely changed our relationship. My partner and I are closer than ever!"</p>
+                <p>- John Doe, Satisfied Customer</p>
             </div>
-            <div style="background-color: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #dee2e6;">
-                <p style="font-size: 18px; color: #495057; line-height: 1.7; margin-top: 0; font-style: italic;">"[Amazing testimonial from Customer B that overcomes an objection.]"</p>
-                <div style="display: flex; align-items: center; margin-top: 20px;">
-                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer B" style="border-radius: 50%; margin-right: 15px;">
-                    <p style="margin: 0; font-weight: 700;">[Customer B's Full Name]</p>
-                </div>
+            <div>
+                <img src="customer-b.jpg" alt="Customer B">
+                <p>"I never knew how to satisfy her until I read this. Now, she can't get enough!"</p>
+                <p>- Jane Smith, Happy Reader</p>
             </div>
         </div>
-
-        <!-- THE OFFER & CTA SECTION -->
-        <div style="background-color: #e9ecef; border: 2px solid #ced4da; border-radius: 8px; padding: 40px 25px; margin-top: 40px; text-align: center;">
-            <h2 style="font-size: 32px; font-weight: 700; margin-top: 0; margin-bottom: 32px;">Get Instant Access to [Your Product Name] Today</h2>
-            <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; text-align: left; max-width: 500px; margin: 0 auto 32px auto;">
-                <h3 style="margin-top: 0; font-weight: 700;">Here's a recap of everything you get:</h3>
-                <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 1.8;">
-                    <li style="margin-bottom: 10px;">✔️ [Your Core Product] (Value: $[XXX])</li>
-                    <li style="margin-bottom: 10px;">✔️ [Bonus #1] (Value: $[XX])</li>
-                    <li style="margin-bottom: 10px;">✔️ [Bonus #2] (Value: $[XX])</li>
-                </ul>
-                <hr style="border: 0; border-top: 1px solid #e9ecef; margin: 20px 0;">
-                <p style="font-size: 18px; text-align: right;"><strong>Total Value: <span style="text-decoration: line-through;">$[XXX]</span></strong></p>
-                <p style="font-size: 24px; text-align: center; font-weight: 700;">Your Price Today: Only $[XX]</p>
-            </div>
-
-            <div style="margin-bottom: 32px;">
-                <h3 style="font-weight: 700;">My 100% Risk-Free Guarantee</h3>
-                <p style="font-size: 16px; color: #495057; line-height: 1.7;">[Explain your 30-day (or similar) money-back guarantee here. Be clear and confident.]</p>
-            </div>
-            
-            <a href="#" style="background-color: #007bff; color: white; padding: 16px 32px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);">Get Instant Access Now</a>
+        <div class="section offer">
+            <h2>Get Instant Access to "Mastering Her Pleasure" Today</h2>
+            <p>Here's a recap of everything you get:</p>
+            <ul>
+                <li>✓ "Mastering Her Pleasure: The Ultimate Guide for Men" (Value: $99)</li>
+                <li>✓ Bonus: "Dirty Talks to make her 100x Wet during Intimacy" (Value: $29)</li>
+                <li>✓ Bonus: "Seducing His Senses: A Woman's Guide to Pleasuring Her Man" (Value: $29)</li>
+            </ul>
+            <p>### Total Value: $157</p>
+            <p>### Your Price Today: Only $49</p>
+            <p><strong>My 100% Risk-Free Guarantee</strong></p>
+            <p>If you're not completely satisfied with the results, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
+            <button>Get Instant Access Now</button>
         </div>
-
-        <!-- FAQ SECTION -->
-        <div style="padding: 60px 10px;">
-            <h2 style="font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
-            <div style="max-width: 600px; margin: 0 auto; text-align: left;">
-                <div style="margin-bottom: 20px;">
-                    <h3 style="font-size: 20px; margin-bottom: 8px; font-weight: 700;">[Common Question 1?]</h3>
-                    <p style="font-size: 16px; color: #495057; line-height: 1.7; margin-top: 0;">[Clear and concise answer.]</p>
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <h3 style="font-size: 20px; margin-bottom: 8px; font-weight: 700;">[Common Question 2?]</h3>
-                    <p style="font-size: 16px; color: #495057; line-height: 1.7; margin-top: 0;">[Clear and concise answer.]</p>
-                </div>
-            </div>
+        <div class="section faq">
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Q: Will this work for me even if I'm not experienced?</strong></p>
+            <p>A: Absolutely! This guide is designed for men of all experience levels, from beginners to experienced lovers.</p>
+            <p><strong>Q: How soon will I see results?</strong></p>
+            <p>A: Many of our customers report seeing significant improvements in their intimate life within the first week of applying the techniques.</p>
         </div>
-        
-        <!-- FINAL CTA SECTION -->
-        <div style="background-color: #343a48; color: white; padding: 40px 25px; border-radius: 8px; margin-top: 40px; text-align: center;">
-            <h2 style="font-size: 32px; font-weight: 700; margin-top: 0; margin-bottom: 16px;">Ready to [Achieve the Main Benefit]?</h2>
-            <p style="font-size: 18px; color: #ced4da; line-height: 1.7; margin-bottom: 32px;">[Don't wait another day to solve their problem. Click the button below to get started.]</p>
-            <a href="#" style="background-color: #007bff; color: white; padding: 16px 32px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);">Get Instant Access for $[XX]</a>
+        <div class="final-cta">
+            <h2>Ready to Achieve Intimacy Without Guesswork?</h2>
+            <p>Don't wait another day to transform your relationship. Click the button below to get started.</p>
+            <button>Get Instant Access for $49</button>
         </div>
-
     </div>
-
 </body>
 </html>
     `
