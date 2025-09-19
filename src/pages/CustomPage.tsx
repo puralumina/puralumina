@@ -439,7 +439,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <p><strong>My 100% Risk-Free Guarantee</strong></p>
             <p>If you're not completely satisfied with the results, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
             <button>Get Instant Access Now</button>
-        </div>
+        </div><br/><br/><br/>
         <div class="section faq">
             <h2>Frequently Asked Questions</h2>
             <p><strong>Q: Will this work for me even if I'm not experienced?</strong></p>
