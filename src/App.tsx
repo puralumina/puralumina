@@ -8,6 +8,7 @@ import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import ShopPage from './pages/ShopPage';
 import ProductPage from './pages/ProductPage';
+import CustomPage from './pages/CustomPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/shop/:category" element={<ShopPage />} />
             <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/custom/:pageId" element={<CustomPage />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route 
               path="/admin" 
