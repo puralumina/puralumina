@@ -711,8 +711,28 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <!-- A small style block for button hover effect, which can't be done inline -->
+    <!-- STYLES FOR LAYOUT AND HOVER EFFECTS -->
     <style>
+        /* This ensures the body and html tags can fill the screen height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* This creates the sticky footer layout */
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f9fa; 
+            color: #212529; 
+            line-height: 1.6;
+        }
+
+        .main-content {
+            flex: 1 0 auto; /* This makes the main content area grow to fill available space */
+        }
+
         .contact-button:hover {
             background-color: #0b5ed7 !important;
             box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4) !important;
@@ -720,7 +740,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         }
     </style>
 </head>
-<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #212529; line-height: 1.6;">
+<body style="/* The body styles are now in the <style> block above */">
 
     <!-- HEADER -->
     <div style="background-color: #ffffff; border-bottom: 1px solid #dee2e6;">
@@ -731,8 +751,8 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         </div>
     </div>
 
-    <!-- Main Content Container -->
-    <div style="max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center;">
+    <!-- Main Content Container - NOW WITH A CLASS -->
+    <div class="main-content" style="max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center;">
 
         <!-- Page Header -->
         <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 15px;">We'd Love to Hear From You</h1>
