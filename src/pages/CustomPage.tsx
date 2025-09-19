@@ -229,8 +229,10 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     `
   },
   
-  'save-your-couple': {
-    title: 'Save Your Couple',
+          <!-- COPY TEMPLATE FOR NEXT CUSTOM PAGE. Open page at /custom/template -->
+  
+  'template': {
+    title: 'Template',
     music: '/your-custom-music.mp3', // Optional
     content: `
       <!-- Your full HTML content here -->
@@ -238,6 +240,136 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <h1 style="text-align: center; color: #333;">Your Custom Page</h1>
         <!-- Add any HTML, CSS, and JavaScript you want -->
       </div>
+    `
+  },
+  
+  'save-your-couple': {
+    title: 'Save Your Couple',
+    music: '/your-custom-music.mp3', // Optional
+    content: `
+      <!-- Your full HTML content here -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Product Name] - [A Short Benefit]</title>
+    <!-- Importing Montserrat Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #212529;">
+
+    <!-- Main Container for content centering -->
+    <div style="max-width: 800px; margin: 0 auto; padding: 15px;">
+
+        <!-- HERO SECTION -->
+        <div style="text-align: center; padding: 40px 10px;">
+            <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 16px; line-height: 1.2;">[Achieve Desired Outcome] without [Common Pain Point]</h1>
+            <p style="font-size: 18px; color: #495057; margin-bottom: 32px; line-height: 1.7;">[A quick sentence explaining what your product is and who it is for.]</p>
+            <img src="https://via.placeholder.com/600x400.png?text=Your+Product+Mockup" alt="[Your Product Name] Mockup" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 32px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+            <a href="#" style="background-color: #007bff; color: white; padding: 16px 32px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);">Get Instant Access for $[XX]</a>
+        </div>
+
+        <!-- PROBLEM SECTION -->
+        <div style="background-color: #ffffff; padding: 40px 25px; border-radius: 8px; margin-top: 40px; border: 1px solid #dee2e6;">
+            <h2 style="font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 24px; margin-top: 0;">Is This You?</h2>
+            <p style="font-size: 18px; color: #495057; line-height: 1.7; text-align: center;">[Describe the pain points in 2-3 sentences. Use question format to talk about their frustrations. Make them feel understood.]</p>
+        </div>
+
+        <!-- SOLUTION SECTION -->
+        <div style="padding: 60px 10px; text-align: center;">
+            <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 24px;">The Solution You've Been Waiting For</h2>
+            <p style="font-size: 18px; color: #495057; line-height: 1.7; margin-bottom: 16px;">Introducing <strong>[Your Product Name]</strong>.</p>
+            <p style="font-size: 18px; color: #495057; line-height: 1.7; margin-bottom: 32px;">[Explain the transformation. Focus on the positive outcome and feeling. Paint a vivid picture of their successful future.]</p>
+            <div style="text-align: left; max-width: 500px; margin: 0 auto; background-color: #e9ecef; padding: 25px; border-radius: 8px;">
+                <h3 style="margin-top: 0; font-weight: 700;">This is for you if...</h3>
+                <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;">✔️ [Ideal customer #1]</li>
+                    <li style="margin-bottom: 10px;">✔️ [Ideal customer #2]</li>
+                    <li style="margin-bottom: 10px;">✔️ [Ideal customer #3]</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- FEATURES & BENEFITS SECTION -->
+        <div style="background-color: #ffffff; padding: 40px 25px; border-radius: 8px; margin-top: 40px; border: 1px solid #dee2e6;">
+            <h2 style="font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 32px; margin-top: 0;">Here's What You'll Get Inside</h2>
+            <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 1.8;">
+                <li style="margin-bottom: 24px;"><strong>Feature 1:</strong> [Describe the feature] so you can [achieve this benefit].</li>
+                <li style="margin-bottom: 24px;"><strong>Feature 2:</strong> [Describe the feature] so you can [achieve this benefit].</li>
+                <li style="margin-bottom: 24px;"><strong>Feature 3:</strong> [Describe the feature] so you can [achieve this benefit].</li>
+            </ul>
+        </div>
+        
+        <!-- SOCIAL PROOF SECTION -->
+        <div style="padding: 60px 10px;">
+            <h2 style="font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 40px;">What Our Customers Are Saying</h2>
+            <div style="background-color: #ffffff; padding: 25px; border-radius: 8px; margin-bottom: 24px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #dee2e6;">
+                <p style="font-size: 18px; color: #495057; line-height: 1.7; margin-top: 0; font-style: italic;">"[Amazing testimonial from Customer A that highlights a key benefit.]"</p>
+                <div style="display: flex; align-items: center; margin-top: 20px;">
+                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer A" style="border-radius: 50%; margin-right: 15px;">
+                    <p style="margin: 0; font-weight: 700;">[Customer A's Full Name]</p>
+                </div>
+            </div>
+            <div style="background-color: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #dee2e6;">
+                <p style="font-size: 18px; color: #495057; line-height: 1.7; margin-top: 0; font-style: italic;">"[Amazing testimonial from Customer B that overcomes an objection.]"</p>
+                <div style="display: flex; align-items: center; margin-top: 20px;">
+                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer B" style="border-radius: 50%; margin-right: 15px;">
+                    <p style="margin: 0; font-weight: 700;">[Customer B's Full Name]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE OFFER & CTA SECTION -->
+        <div style="background-color: #e9ecef; border: 2px solid #ced4da; border-radius: 8px; padding: 40px 25px; margin-top: 40px; text-align: center;">
+            <h2 style="font-size: 32px; font-weight: 700; margin-top: 0; margin-bottom: 32px;">Get Instant Access to [Your Product Name] Today</h2>
+            <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; text-align: left; max-width: 500px; margin: 0 auto 32px auto;">
+                <h3 style="margin-top: 0; font-weight: 700;">Here's a recap of everything you get:</h3>
+                <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;">✔️ [Your Core Product] (Value: $[XXX])</li>
+                    <li style="margin-bottom: 10px;">✔️ [Bonus #1] (Value: $[XX])</li>
+                    <li style="margin-bottom: 10px;">✔️ [Bonus #2] (Value: $[XX])</li>
+                </ul>
+                <hr style="border: 0; border-top: 1px solid #e9ecef; margin: 20px 0;">
+                <p style="font-size: 18px; text-align: right;"><strong>Total Value: <span style="text-decoration: line-through;">$[XXX]</span></strong></p>
+                <p style="font-size: 24px; text-align: center; font-weight: 700;">Your Price Today: Only $[XX]</p>
+            </div>
+
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-weight: 700;">My 100% Risk-Free Guarantee</h3>
+                <p style="font-size: 16px; color: #495057; line-height: 1.7;">[Explain your 30-day (or similar) money-back guarantee here. Be clear and confident.]</p>
+            </div>
+            
+            <a href="#" style="background-color: #007bff; color: white; padding: 16px 32px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);">Get Instant Access Now</a>
+        </div>
+
+        <!-- FAQ SECTION -->
+        <div style="padding: 60px 10px;">
+            <h2 style="font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+            <div style="max-width: 600px; margin: 0 auto; text-align: left;">
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 20px; margin-bottom: 8px; font-weight: 700;">[Common Question 1?]</h3>
+                    <p style="font-size: 16px; color: #495057; line-height: 1.7; margin-top: 0;">[Clear and concise answer.]</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 20px; margin-bottom: 8px; font-weight: 700;">[Common Question 2?]</h3>
+                    <p style="font-size: 16px; color: #495057; line-height: 1.7; margin-top: 0;">[Clear and concise answer.]</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FINAL CTA SECTION -->
+        <div style="background-color: #343a48; color: white; padding: 40px 25px; border-radius: 8px; margin-top: 40px; text-align: center;">
+            <h2 style="font-size: 32px; font-weight: 700; margin-top: 0; margin-bottom: 16px;">Ready to [Achieve the Main Benefit]?</h2>
+            <p style="font-size: 18px; color: #ced4da; line-height: 1.7; margin-bottom: 32px;">[Don't wait another day to solve their problem. Click the button below to get started.]</p>
+            <a href="#" style="background-color: #007bff; color: white; padding: 16px 32px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);">Get Instant Access for $[XX]</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
     `
   }
 };
