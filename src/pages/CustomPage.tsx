@@ -659,7 +659,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
 
         <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 15px;">5. Your Data Protection Rights</h2>
-        <p style="font-size: 16px;">Depending on your location, you may have rights regarding your personal information, such as the right to access, correct, or delete your data. To exercise any of these rights, please contact us at <strong><a href="mailto:[your.email@example.com]" style="color: #0d6efd;">[your.email@example.com]</a></strong>.</p>
+        <p style="font-size: 16px;">Depending on your location, you may have rights regarding your personal information, such as the right to access, correct, or delete your data. To exercise any of these rights, please contact us at <strong><a href="mailto:soulmatesdesires@gmail.com" style="color: #0d6efd;"> soulmatesdesires@gmail.com</a></strong>.</p>
 
         <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
 
