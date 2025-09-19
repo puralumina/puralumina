@@ -237,8 +237,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transform Your Intimate Life - Mastering Her Pleasure</title>
-    <!-- Importing Montserrat Font (Regular, Bold, Extra-Bold) -->
+    <title>Discover Our Collection of Books</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
@@ -380,6 +379,33 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             font-size: 24px;
             font-weight: 700;
         }
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .book-item {
+            background-color: #2c3e50;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .book-item:hover {
+            transform: scale(1.05);
+        }
+        .book-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .book-item p {
+            padding: 15px;
+            margin: 0;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -392,11 +418,11 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <div class="container">
         <!-- HERO SECTION -->
         <div class="hero">
-            <h1>Achieve Intimacy Without Guesswork</h1>
-            <p>Discover expert techniques to enhance your relationship and satisfy your partner's deepest desires.</p>
-            <img src="https://via.placeholder.com/600x400.png?text=Showcase+Your+Product" alt="Mastering Her Pleasure Mockup">
-            <a href="#offer">Get Instant Access for $49 →</a>
-            <p>Join 1,500+ satisfied customers!</p>
+            <h1>Discover Our Collection of Books</h1>
+            <p>Dive into a world of captivating stories and profound insights. Our curated selection of books is designed to inspire and enrich your mind.</p>
+            <img src="https://via.placeholder.com/600x400.png?text=Showcase+Your+Books" alt="Book Collection">
+            <a href="#offer">Explore Our Books →</a>
+            <p>Join 1,500+ avid readers!</p>
         </div>
 
         <!-- AS SEEN ON / TRUST BAR -->
@@ -417,31 +443,53 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 
         <!-- PROBLEM SECTION -->
         <div class="problem">
-            <h2>Are You Feeling Stuck in a Rut?</h2>
-            <p>Does the weight of unfulfilled potential press down on you? Does every new morning—more growth, more success, more purpose—leave you feeling drained and disconnected from your dreams?</p>
+            <h2>Are You Tired of Ordinary Reading?</h2>
+            <p>Do you yearn for stories that truly captivate your imagination and leave you craving more? Our collection is crafted to satisfy even the most discerning readers, offering a blend of genres and styles to suit every taste.</p>
         </div>
 
         <!-- SOLUTION SECTION -->
         <div class="solution">
             <h2>The Solution You've Been Waiting For</h2>
-            <p>Introducing "Mastering Her Pleasure: The Ultimate Guide for Men."</p>
-            <p>This comprehensive guide will transform your intimate life, helping you understand and satisfy your partner's deepest desires. Imagine the joy and fulfillment of a deeply connected relationship where both of you are completely satisfied.</p>
-            <p>This is for you if...</p>
+            <p>Introducing our curated collection of books, each selected for its unique ability to transport you to new worlds and challenge your perspectives. Whether you're into mystery, romance, or self-improvement, we have something that will resonate with you.</p>
+            <p>This collection is for you if...</p>
             <ul>
-                <li>✓ You're a man looking to enhance your intimate skills</li>
-                <li>✓ You want to understand your partner's desires better</li>
-                <li>✓ You're ready to take your relationship to the next level</li>
+                <li>✓ You're a passionate reader seeking new adventures</li>
+                <li>✓ You want to expand your literary horizons</li>
+                <li>✓ You're ready to dive into stories that matter</li>
             </ul>
         </div>
 
         <!-- FEATURES & BENEFITS SECTION (2-Column on Desktop, 1 on Mobile) -->
         <div class="features">
-            <h2>What You'll Master Inside</h2>
+            <h2>What You'll Discover Inside</h2>
             <ul>
-                <li>✔️ <strong>Expert Techniques:</strong> Learn innovative and effective techniques to satisfy her so you can build a stronger connection.</li>
-                <li>✔️ <strong>Communication Mastery:</strong> Discover how to talk to her about your desires and hers so you can enhance your intimacy.</li>
-                <li>✔️ <strong>Advanced Pleasure:</strong> Explore advanced techniques to take your skills to the next level so you can leave her feeling fulfilled and wanted.</li>
+                <li>✔️ <strong>Diverse Genres:</strong> From thrilling mysteries to heartwarming romances, our collection spans a wide range of genres to cater to every reader's taste.</li>
+                <li>✔️ <strong>Quality Content:</strong> Each book is carefully vetted to ensure high-quality writing and engaging narratives that keep you hooked from start to finish.</li>
+                <li>✔️ <strong>Expert Recommendations:</strong> Our team of literary experts handpicks each book, ensuring that you only get the best of the best.</li>
             </ul>
+        </div>
+
+        <!-- BOOK GRID -->
+        <div class="book-grid">
+            <div class="book-item">
+                <img src="https://via.placeholder.com/200x300.png?text=Book+1" alt="Book 1">
+                <p>Title: "The Enigmatic Enchantress"</p>
+                <p>Genre: Fantasy</p>
+                <p>Description: Embark on a magical journey with a young sorceress as she uncovers ancient secrets and battles dark forces.</p>
+            </div>
+            <div class="book-item">
+                <img src="https://via.placeholder.com/200x300.png?text=Book+2" alt="Book 2">
+                <p>Title: "Whispers of the Past"</p>
+                <p>Genre: Historical Fiction</p>
+                <p>Description: Travel back in time to the roaring 1920s, where secrets and scandals lurk in every shadow.</p>
+            </div>
+            <div class="book-item">
+                <img src="https://via.placeholder.com/200x300.png?text=Book+3" alt="Book 3">
+                <p>Title: "Echoes of Love"</p>
+                <p>Genre: Romance</p>
+                <p>Description: A heartwarming tale of two souls destined to find each other, overcoming obstacles to be together.</p>
+            </div>
+            <!-- Add more books as needed -->
         </div>
 
         <!-- SOCIAL PROOF SECTION -->
@@ -449,23 +497,23 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <h2>Don't Just Take Our Word For It...</h2>
             <!-- Testimonial 1 -->
             <div>
-                <p>"Before this course, I was clueless. After completing Module 3, I designed a logo for my first freelance client and was paid $300! This course paid for itself 3x over in the first week."</p>
+                <p>"I've been an avid reader for years, but this collection has truly expanded my horizons. Each book is a gem!"</p>
                 <div>
                     <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer A">
                     <div>
-                        <p>Sarah Johnson</p>
-                        <p>Freelance Designer</p>
+                        <p>Emma Thompson</p>
+                        <p>Book Enthusiast</p>
                     </div>
                 </div>
             </div>
             <!-- Testimonial 2 -->
             <div>
-                <p>"I finally feel like I'm in control of Illustrator instead of the other way around. The project files were a game-changer. This is the most practical and straightforward course I've ever taken."</p>
+                <p>"The diversity of genres and the quality of the writing are unparalleled. I can't get enough!"</p>
                 <div>
                     <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer B">
                     <div>
-                        <p>Mike Williams</p>
-                        <p>Small Business Owner</p>
+                        <p>Michael Brown</p>
+                        <p>Literary Critic</p>
                     </div>
                 </div>
             </div>
@@ -473,18 +521,18 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 
         <!-- THE OFFER & CTA SECTION -->
         <div id="offer" class="offer">
-            <h2>Get Instant Access to "Mastering Her Pleasure" Today</h2>
+            <h2>Get Instant Access to Our Book Collection Today</h2>
             <div>
                 <h3>Here's What You'll Receive:</h3>
                 <ul>
-                    <li>✔️ "Mastering Her Pleasure: The Ultimate Guide for Men" (Value: $99)</li>
-                    <li>✔️ Bonus: "Dirty Talks to make her 100x Wet during Intimacy" (Value: $29)</li>
-                    <li>✔️ Bonus: "Seducing His Senses: A Woman's Guide to Pleasuring Her Man" (Value: $29)</li>
+                    <li>✔️ Access to our entire collection of curated books (Value: $199)</li>
+                    <li>✔️ Exclusive member-only discounts on new releases (Value: $49)</li>
+                    <li>✔️ Personalized book recommendations from our experts (Value: $29)</li>
                 </ul>
-                <p>### Total Value: $157</p>
+                <p>### Total Value: $277</p>
                 <p>### Your Price Today: Only $49</p>
                 <p><strong>My 100% Risk-Free Guarantee</strong></p>
-                <p>If you're not completely satisfied with the results, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
+                <p>If you're not completely satisfied with your reading experience, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
                 <a href="#offer">Get Instant Access Now</a>
             </div>
         </div>
@@ -492,16 +540,16 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <!-- FAQ SECTION -->
         <div class="faq">
             <h2>Frequently Asked Questions</h2>
-            <p><strong>Q: Will this work for me even if I'm not experienced?</strong></p>
-            <p>A: Absolutely! This guide is designed for men of all experience levels, from beginners to experienced lovers.</p>
-            <p><strong>Q: How soon will I see results?</strong></p>
-            <p>A: Many of our customers report seeing significant improvements in their intimate life within the first week of applying the techniques.</p>
+            <p><strong>Q: How do I access the books?</strong></p>
+            <p>A: Once you sign up, you'll receive instant access to our digital library, where you can read or download your favorite books.</p>
+            <p><strong>Q: Can I cancel my membership anytime?</strong></p>
+            <p>A: Yes, you can cancel your membership at any time with no questions asked. Your access will remain active until the end of your current billing cycle.</p>
         </div>
 
         <!-- FINAL CTA SECTION -->
         <div class="final-cta">
-            <h2>Ready to Achieve Intimacy Without Guesswork?</h2>
-            <p>Don't wait another day to transform your relationship. Click the button below to get started.</p>
+            <h2>Ready to Embark on a Literary Journey?</h2>
+            <p>Don't wait another day to dive into a world of captivating stories. Click the button below to get started.</p>
             <a href="#offer">Get Instant Access for $49</a>
         </div>
     </div>
@@ -528,9 +576,9 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         }
 
         function updateTimerDisplay(remainingTime) {
-            const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+$const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));$
+$const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));$
+$const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));$
             const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
             document.getElementById('days').innerText = days.toString().padStart(2, '0');
             document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
@@ -576,7 +624,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         app.get('/start-timer', (req, res) => {
             const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
             const startTime = Date.now();
-            timerData[ip] = { startTime, duration: 24 * 60 * 60 * 1000 }; // 24 hours in milliseconds
+$timerData[ip] = { startTime, duration: 24 * 60 * 60 * 1000 }; // 24 hours in milliseconds$
             res.cookie('timerStart', startTime, { httpOnly: true });
             res.send('Timer started!');
         });
