@@ -237,342 +237,198 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Growth Hacker's Digital Library</title>
-    <link rel="icon" type="image/png" href="https://d1yei2z3i6k35z.cloudfront.net/4704293/68cac865f3b8b_SoulmatesDesiresPPBrown.png">
-    <!-- Importing Montserrat Font (Regular, Bold, Extra-Bold) -->
+    <title>The Ultimate Relationship Spark Bundle - Massive Sale!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <!-- STYLES FOR RESPONSIVE CARD GRID -->
     <style>
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* This creates the space between cards */
+        /* A little bit of non-inline style for base settings and responsiveness */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f6f2;
+            color: #333;
         }
-
-        .book-card {
-            background-color: #ffffff;
-            border: 1px solid #dee2e6;
-            border-radius: 12px;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: #fff !important;
+            padding: 20px 40px;
+            font-size: 22px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
             text-align: center;
-            box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
         }
-
-        /* --- MOBILE STYLES (Default: 2 columns) --- */
-        /* Each card takes up half the space, minus half the gap */
-        .book-card {
-            flex-basis: calc(50% - 10px); 
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
         }
-
-        /* --- DESKTOP STYLES (4 columns) --- */
-        /* This media query applies styles ONLY when the screen is 992px or wider */
-        @media (min-width: 992px) {
-            .book-card {
-                /* Each card takes up a quarter of the space, minus gap adjustments */
-                flex-basis: calc(25% - 15px);
-            }
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5em !important; }
+            .cta-button { font-size: 18px; padding: 15px 30px; }
         }
     </style>
-
 </head>
-<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #212529; line-height: 1.6;">
+<body>
 
-    <!-- HEADER -->
-    <div style="background-color: #ffffff; border-bottom: 1px solid #dee2e6;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-weight: 700; font-size: 20px;">
-                SOULMATES DESIRES
-            </div>
-            <div style="display: none; md-display: flex; gap: 20px;"> <!-- Hide on mobile for simplicity -->
-                <a href="#" style="text-decoration: none; color: #495057;">Home</a>
-                <a href="#" style="text-decoration: none; color: #495057;">About</a>
-                <a href="#" style="text-decoration: none; color: #495057;">Contact</a>
-            </div>
-            <a href="#cta" style="background-color: #0d6efd; color: white; padding: 10px 20px; text-decoration: none; font-weight: 700; border-radius: 6px;">Buy Now</a>
-        </div>
+    <!-- HERO SECTION -->
+    <div style="background-color: #1a1a1a; color: #fff; padding: 60px 20px; text-align: center;">
+        <h1 style="font-size: 3.5em; font-weight: 900; margin: 0; line-height: 1.1; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Ignite Unstoppable Passion & Deepen Your Connection</h1>
+        <p style="font-size: 1.4em; margin-top: 20px; color: #eee;">Get All 14 Of Our Bestselling Relationship & Intimacy Guides In One Ultimate Bundle.</p>
+        <img src="https://i.ibb.co/6PzQyq8/bundle-image.png" alt="Collection of all 14 books in a bundle" style="max-width: 100%; height: auto; margin: 30px 0; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
+        <a href="YOUR_CHECKOUT_LINK_HERE" class="cta-button">
+            YES! I Want The Bundle For Just $39.99!
+            <span style="display: block; font-size: 0.7em; font-weight: 400; margin-top: 5px;">(Save 69% Today!)</span>
+        </a>
     </div>
 
-    <!-- Main Container -->
-    <div style="max-width: 1100px; margin: 0 auto; padding: 20px;">
+    <div class="container">
 
-        <!-- HERO SECTION -->
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; padding: 40px 0;">
-            <!-- Left Column: Image -->
-            <div style="flex: 2; min-width: 300px; text-align: center;">
-                <div style="border-radius: 12px; padding: 20px; display: inline-block;">
-                     <img src="https://images.unsplash.com/photo-1593696954577-ab3d39317b97?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZyZWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="Digital Book Bundle" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
-                </div>
-            </div>
-            <!-- Right Column: Details -->
-            <div style="flex: 2; min-width: 300px;">
-                <h1 style="font-size: 48px; font-weight: 900; margin-bottom: 16px; line-height: 1.2;">The Ultimate Growth Hacker's Digital Library</h1>
-                <p style="font-size: 18px; color: #495057; margin-bottom: 24px;">Supercharge your personal and professional development with this curated bundle of 14 essential digital books. Master new skills, cultivate a growth mindset, and unlock your full potential.</p>
-                <div style="display: flex; align-items: center; gap: 15px; font-size: 14px; color: #6c757d; margin-bottom: 24px;">
-                    <span>⭐⭐⭐⭐⭐ Rated 4.8/5 stars</span>
-                    <span>|</span>
-                    <a href="#" style="color: #0d6efd; text-decoration: none; font-weight: 700;">Join 1,500+ happy students!</a>
-                </div>
-
-                <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px;">
-                    <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px;">
-                        <span style="font-size: 48px; font-weight: 900; color: #0d6efd;">$39.99</span>
-                        <span style="font-size: 24px; color: #6c757d; text-decoration: line-through;">$499</span>
-                    </div>
-                    <p style="margin: 0 0 20px 0; color: #495057;">Get the entire 14-book bundle and <strong>save over 80%!</strong></p>
-                    <a href="#cta" style="background-color: #0d6efd; color: white; padding: 15px; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; display: block; text-align: center;">Get The Bundle Now</a>
-                </div>
-                <div style="background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 8px; padding: 15px; margin-top: 20px; text-align: center; font-size: 14px; color: #856404;">
-                    ⚡ Hurry! The price will increase by <strong>$100</strong> every 3 days.
+        <!-- URGENCY & BONUS SECTION -->
+        <div style="background-color: #fff; border: 2px dashed #ff416c; padding: 30px; margin: 40px 0; border-radius: 10px; text-align: center;">
+            <h2 style="margin-top:0; font-size: 1.8em; color: #ff416c;">LIMITED TIME OFFER!</h2>
+            <p style="font-size: 1.1em;">The first <strong>50 buyers</strong> will receive our exclusive bonus:</p>
+            <p style="font-size: 1.2em; font-weight: 700; background-color: #fff3cd; padding: 10px; border-radius: 5px;">"The 5-Day Intimacy Challenge" Video Course (A $49 Value, Absolutely FREE!)</p>
+            <p style="font-weight: 700; margin-top: 30px;">Hurry, spots are filling up fast!</p>
+            
+            <!-- Progress Bar -->
+            <div style="background-color: #e9ecef; border-radius: 50px; padding: 3px; margin: 10px auto; max-width: 400px;">
+                <div style="background: linear-gradient(45deg, #ff416c, #ff4b2b); height: 25px; width: 68%; border-radius: 50px; text-align: center; color: white; line-height: 25px; font-weight: 700;">
+                    34 of 50 Claimed!
                 </div>
             </div>
         </div>
 
-        <!-- AS FEATURED ON -->
-        <div style="text-align: center; padding: 40px 0; border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6; margin-top: 20px;">
-            <p style="margin: 0 0 20px 0; color: #6c757d; font-weight: 700; letter-spacing: 1px;">AS FEATURED ON</p>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
-                <span style="font-size: 24px; color: #adb5bd;">◎ LOGO</span>
-                <span style="font-size: 24px; color: #adb5bd;">❖ BRAND</span>
-                <span style="font-size: 24px; color: #adb5bd;">◎ COMPANY</span>
-                <span style="font-size: 24px; color: #adb5bd;">❖ TRUST</span>
-                <span style="font-size: 24px; color: #adb5bd;">◎ MARK</span>
+        <!-- PROBLEM AGITATION -->
+        <div style="text-align: center; padding: 40px 0;">
+            <h2 style="font-size: 2.2em; margin-bottom: 20px;">Is the "Honeymoon Phase" Feeling Like a Distant Memory?</h2>
+            <p style="font-size: 1.2em; line-height: 1.6;">If you're feeling a little disconnected, stuck in a routine, or just want to bring back that exhilarating spark you once had, you're not alone. The daily grind can take its toll on any relationship. But what if you had the exact playbook to rediscover each other, communicate desires, and build a love that's more passionate and connected than ever before?</p>
+        </div>
+
+        <!-- WHAT'S INSIDE THE BUNDLE -->
+        <div style="background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <h2 style="text-align: center; font-size: 2.5em; margin-top: 0;">Introducing: The Ultimate Relationship Spark Bundle</h2>
+            <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px;">This is your complete, all-in-one library for passion, connection, and fun. You get instant access to all 14 digital books, guides, and card decks.</p>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                <!-- Column 1 -->
+                <div style="width: 100%; max-width: 350px; margin-bottom: 20px;">
+                    <h3 style="color: #ff416c; border-bottom: 2px solid #ff416c; padding-bottom: 5px;">🔥 Ephemera (Value $47.96)</h3>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Mastering Her Pleasure: The Ultimate Guide for Men</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Dirty Talks to make her 100x wet during Sex</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Seducing His Senses: A Woman's Guide</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Make Him Craving You: Teasing and Pleasing</li>
+                    </ul>
+
+                    <h3 style="color: #ff416c; border-bottom: 2px solid #ff416c; padding-bottom: 5px; margin-top: 30px;">🎲 Couples Games (Value $31.96)</h3>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Couples Games - The Spicy Edition</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Couples Games - The Connection Edition</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Couples Games - The Laughs & Giggles Edition</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Couples Games – The 5-Minute Connector Edition</li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div style="width: 100%; max-width: 350px;">
+                    <h3 style="color: #ff416c; border-bottom: 2px solid #ff416c; padding-bottom: 5px;">🃏 Cards (Value $23.97)</h3>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ "Truth or Dare" for Couples Cards</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Date Night Idea Cards</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ Couples' Affirmation Cards</li>
+                    </ul>
+
+                    <h3 style="color: #ff416c; border-bottom: 2px solid #ff416c; padding-bottom: 5px; margin-top: 30px;">📝 Planners & Worksheets (Value $23.97)</h3>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ The Growth Mindset</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ The Ultimate Date Night Planner</li>
+                        <li style="margin-bottom: 10px; font-size: 1.1em;">✓ "State of the Union" Meeting Guide</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- COUNTDOWN TIMER -->
-        <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 30px; margin: 60px auto; max-width: 700px;">
-            <h3 style="text-align: center; font-size: 20px; margin: 0 0 20px 0;">Limited Time Offer Ends In:</h3>
-            <div id="countdown-container" style="display: flex; justify-content: center; gap: 20px; text-align: center;">
-                <div>
-                    <div id="days" style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">00</div>
-                    <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Days</div>
-                </div>
-                <div>
-                    <div id="hours" style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">00</div>
-                    <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Hours</div>
-                </div>
-                <div>
-                    <div id="minutes" style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">00</div>
-                    <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Mins</div>
-                </div>
-                <div>
-                    <div id="seconds" style="background-color: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 42px; font-weight: 900;">00</div>
-                    <div style="font-size: 12px; color: #6c757d; margin-top: 5px;">Secs</div>
-                </div>
+        <!-- VISUALLY COMPELLING OFFER -->
+        <div style="background: #1a1a1a; color: white; padding: 40px; margin-top: 40px; border-radius: 10px; text-align: center;">
+            <h2 style="font-size: 2.5em; margin-top: 0;">Get Everything Today For One Insanely Low Price</h2>
+            <p style="font-size: 1.8em; margin: 20px 0;">Total Value: <span style="text-decoration: line-through; opacity: 0.7;">$127.86</span></p>
+            <p style="font-size: 1.2em;">Plus the "5-Day Intimacy Challenge" Bonus: <span style="font-weight: 700;">$49.00</span></p>
+            <p style="font-size: 1.8em; font-weight: 700; margin-bottom: 30px;">Grand Total Value: $176.86</p>
+            
+            <div style="background: #fff; color: #333; padding: 20px; border-radius: 10px; max-width: 400px; margin: 0 auto;">
+                <p style="margin: 0; font-size: 1.2em;">GET IT ALL TODAY FOR ONLY</p>
+                <p style="margin: 10px 0; font-size: 4em; font-weight: 900; color: #ff416c; line-height: 1;">$39.99</p>
+                <p style="margin: 0; font-size: 1.2em;">(This is a one-time payment)</p>
             </div>
-            <div id="expired-message" style="display: none; text-align: center; font-size: 24px; font-weight: 700; color: #dc3545;">
-                Sorry, this offer has expired!
-            </div>
-            <p style="font-size: 12px; color: #6c757d; margin: 20px 0 5px 0;">382 of 500 bundles sold!</p>
-            <div style="background-color: #e9ecef; border-radius: 10px; height: 10px; overflow: hidden;">
-                <div style="width: 76%; height: 10px; background-color: #0d6efd; border-radius: 10px;"></div>
-            </div>
-             <p style="font-size: 12px; color: #6c757d; margin: 5px 0 0 0; text-align: right;">Hurry up! Almost gone!</p>
+            
+            <a href="YOUR_CHECKOUT_LINK_HERE" class="cta-button" style="margin-top: 40px;">CLAIM MY 69% DISCOUNT NOW</a>
         </div>
         
-        <!-- PROBLEM/SOLUTION SECTION -->
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; padding: 40px 0;">
-            <div style="flex: 1; min-width: 300px;">
-                <h2 style="font-size: 32px; font-weight: 900; margin: 0 0 20px 0;">Are You Feeling Stuck in a Rut?</h2>
-                <p style="color: #495057;">Does the weight of unfulfilled potential press down on you? You yearn for more—<strong>more growth, more success, more purpose</strong>.</p>
-                <p style="color: #495057;">But the days blur into a monotonous cycle, leaving you drained and disconnected from your dreams. Each morning, you wake up with a fleeting spark of ambition, only to have it extinguished by the overwhelming demands of the day.</p>
-                <p style="color: #495057;">The frustration gnaws at you, a constant reminder that you're capable of so much more, yet you're trapped in a state of stagnation.</p>
+        <!-- SOCIAL PROOF / TESTIMONIALS -->
+        <div style="padding: 60px 0;">
+            <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 40px;">Thousands of Couples Have Reignited Their Spark...</h2>
+            
+            <div style="background: #fff; padding: 25px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <p style="font-size: 1.5em; margin: 0;">⭐⭐⭐⭐⭐</p>
+                <p style="font-style: italic; line-height: 1.6;">"I was skeptical, but wow! The 'Dirty Talks' guide alone was worth the price. We haven't felt this close or adventurous in years. It's like we're dating all over again."</p>
+                <p style="font-weight: 700;">- Jessica & Mark T.</p>
             </div>
-            <div style="flex: 1; min-width: 300px;">
-                <h2 style="font-size: 32px; font-weight: 900; margin: 0 0 20px 0;">Imagine a New You, Unburdened and Empowered</h2>
-                <p style="color: #495057;">Now, picture a life where you wake up energized, driven by a clear sense of purpose. This bundle is your key to unlocking that reality. It's not just about reading books; it's about a profound <strong style="color: #0d6efd;">transformation.</strong></p>
-                <ul style="list-style: none; padding: 0; margin-top: 20px;">
-                    <li style="display: flex; align-items: start; gap: 10px; margin-bottom: 15px;">
-                        <span style="color: #0d6efd; font-weight: 700; font-size: 20px;">✓</span>
-                        <span>Feel the thrill of <strong>mastering new skills.</strong></span>
-                    </li>
-                    <li style="display: flex; align-items: start; gap: 10px; margin-bottom: 15px;">
-                        <span style="color: #0d6efd; font-weight: 700; font-size: 20px;">✓</span>
-                        <span>Gain the confidence of a <strong>growth mindset.</strong></span>
-                    </li>
-                    <li style="display: flex; align-items: start; gap: 10px; margin-bottom: 15px;">
-                        <span style="color: #0d6efd; font-weight: 700; font-size: 20px;">✓</span>
-                        <span>Embrace the freedom of <strong>financial wisdom.</strong></span>
-                    </li>
-                </ul>
-                <p style="color: #495057;">This is more than a purchase; it's an investment in the person you were always meant to be. <a href="#cta" style="color: #0d6efd; font-weight: 700;">Step into this new chapter</a> and watch your life blossom in ways you never thought possible.</p>
+            
+            <div style="background: #fff; padding: 25px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <p style="font-size: 1.5em; margin: 0;">⭐⭐⭐⭐⭐</p>
+                <p style="font-style: italic; line-height: 1.6;">"The Date Night Idea Cards saved us from another night of 'I don't know, what do you want to do?'. We're actually having FUN together. This entire bundle is a must-have for any couple."</p>
+                <p style="font-weight: 700;">- Chloe R.</p>
+            </div>
+
+            <div style="background: #fff; padding: 25px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <p style="font-size: 1.5em; margin: 0;">⭐⭐⭐⭐⭐</p>
+                <p style="font-style: italic; line-height: 1.6;">"The 'State of the Union' meeting guide changed how we communicate. We're more honest and open, which has led to... well, let's just say the 'Mastering Her Pleasure' guide has been put to good use! Thank you!"</p>
+                <p style="font-weight: 700;">- Ben & Sarah</p>
             </div>
         </div>
 
-        <!-- BOOKS GRID - EPHEMERA -->
-        <div style="padding: 40px 0;">
-            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Ephemera</h2>
-            <div class="card-container">
-                <!-- Book Card -->
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Mastering Her Pleasure: The Ultimate Guide for Men</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$11.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Dirty Talks to make her 100x wet during Sex</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$11.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Seducing His Senses: A Woman's Guide to Pleasuring Her Man</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$11.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Make Him Craving You: The Ultimate Guide to Teasing and Pleasing</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$11.99</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- BOOKS GRID - COUPLES GAMES -->
-        <div style="padding: 40px 0;">
-            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Couples Games</h2>
-            <div class="card-container">
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples Games - The Spicy Edition</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples Games - The Connection Edition</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples Games - The Laughs & Giggles Edition</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples Games - The 5-Minute Connector Edition</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- BOOKS GRID - CARDS -->
-        <div style="padding: 40px 0;">
-            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Cards</h2>
-            <div class="card-container">
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">"Truth or Dare" for Couples Cards</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Date Night Idea Cards</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Couples' Affirmation Cards</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- BOOKS GRID - PLANNERS -->
-        <div style="padding: 40px 0;">
-            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Planners & Worksheets</h2>
-            <div class="card-container">
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="The Growth Mindset" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Growth Mindset</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Embrace challenges and see failure as a stepping stone.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Atomic Habits" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">The Ultimate Date Night Planner</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Build good habits and break bad ones with small, easy steps.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-                <div class="book-card">
-                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Mindful Moments" style="max-width: 100%; height: 200px; border-radius: 8px; margin-bottom: 15px; object-fit: cover;">
-                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">"State of the Union" Meeting Guide</h3>
-                    <p style="font-size: 14px; color: #6c757d; margin: 0 0 15px 0;">Practice mindfulness to reduce stress and improve focus.</p>
-                    <span style="background-color: #e7f1ff; color: #0d6efd; padding: 5px 15px; border-radius: 20px; font-weight: 700;">$7.99</span>
-                </div>
-            </div>
+        <!-- URGENCY SECTION 2 - PRICE INCREASE -->
+        <div style="background: #fff3cd; border: 2px solid #f9bf2d; padding: 30px; margin: 40px 0; border-radius: 10px; text-align: center;">
+             <h2 style="margin-top:0; font-size: 1.8em; color: #856404;">⚠️ Price Warning!</h2>
+             <p style="font-size: 1.2em;">To maintain the value for our customers, we cannot keep this bundle at $39.99 forever. The price will be increasing significantly in the next 7 days.</p>
+             <p style="font-weight: 700; font-size: 1.3em;">This is your only chance to lock in this huge discount.</p>
         </div>
 
         <!-- FINAL CTA -->
-        <div id="cta" style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 40px 25px; margin: 60px auto; max-width: 800px; text-align: center;">
-            <h2 style="font-size: 36px; font-weight: 900; margin: 0 0 15px 0;">Get the Entire 14-Book Bundle Today!</h2>
-            <p style="font-size: 18px; color: #495057; margin-bottom: 30px;">Unlock a world of knowledge and save big. Get instant access to all 14 digital books for a one-time payment.</p>
-            <div style="display: flex; justify-content: center; align-items: baseline; gap: 15px; margin-bottom: 30px;">
-                <span style="font-size: 64px; font-weight: 900; color: #0d6efd;">$39.99</span>
-                <span style="font-size: 32px; color: #6c757d; text-decoration: line-through;">$499</span>
-            </div>
-            <a href="/product/15" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 8px; display: inline-block; box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);">Yes, I Want The Bundle!</a>
-            <p style="margin: 20px 0 0 0;"><a href="#" style="color: #0d6efd; text-decoration: none; font-weight: 700; font-size: 14px;">The 'Confident Creator' 30-Day Guarantee</a></p>
-            <p style="font-size: 12px; color: #6c757d; margin-top: 5px;">If you're not 100% satisfied, we'll refund your payment, no questions asked.</p>
+        <div style="text-align: center; padding: 40px 20px;">
+            <h2 style="font-size: 2.5em;">You're At a Crossroads...</h2>
+            <p style="font-size: 1.2em; line-height: 1.6;">You can continue down the same path, letting routine and distance slowly creep in. Or you can make a small, one-time investment in your relationship that will pay dividends in passion, connection, laughter, and intimacy for years to come.</p>
+            <p style="font-size: 1.2em; line-height: 1.6; font-weight: 700;">The choice is yours.</p>
+            <img src="https://i.ibb.co/6PzQyq8/bundle-image.png" alt="Collection of all 14 books in a bundle" style="max-width: 80%; height: auto; margin: 30px 0; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <ul style="list-style-type: '✓ '; padding-left: 20px; text-align: left; max-width: 400px; margin: 20px auto; font-size: 1.1em; line-height: 1.8;">
+                <li>Get all 14 Bestselling Guides</li>
+                <li>Instant Digital Access</li>
+                <li>Bonus "Intimacy Challenge" Course (First 50)</li>
+                <li>One-Time Payment, Lifetime Access</li>
+            </ul>
+            <a href="YOUR_CHECKOUT_LINK_HERE" class="cta-button" style="margin-top: 20px;">
+                Yes, I'm Ready to Transform My Relationship!
+                <span style="display: block; font-size: 0.7em; font-weight: 400; margin-top: 5px;">Click Here To Get Instant Access for $39.99</span>
+            </a>
         </div>
-
+        
     </div>
 
     <!-- FOOTER -->
-    <div style="border-top: 1px solid #dee2e6; padding: 40px 20px; text-align: center;">
-        <div style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-            <a href="/privacy-policy" style="text-decoration: none; color: #495057;">Privacy Policy</a>
-            <a href="/terms" style="text-decoration: none; color: #495057;">Terms of Service</a>
-            <a href="/contact-us" style="text-decoration: none; color: #495057;">Contact Us</a>
-        </div>
-        <p style="color: #6c757d; font-size: 14px; margin-top: 30px;">© 2025 Soulmates Desires. All rights reserved.</p>
-    </div>
-
-    <!-- JAVASCRIPT FOR COUNTDOWN TIMER -->
-    <script>
-        // --- ⬇️ EDIT THIS LINE TO SET YOUR OFFER END DATE ⬇️ ---
-        const countDownDate = new Date("Sep 20, 2025 15:30:00").getTime();
-
-        // Update the count down every 1 second
-        const x = setInterval(function() {
-
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-            
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            function formatTime(time) {
-                return time < 10 ? "0" + time : time;
-            }
-
-            document.getElementById("days").innerHTML = formatTime(days);
-            document.getElementById("hours").innerHTML = formatTime(hours);
-            document.getElementById("minutes").innerHTML = formatTime(minutes);
-            document.getElementById("seconds").innerHTML = formatTime(seconds);
-            
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown-container").style.display = "none";
-                document.getElementById("expired-message").style.display = "block";
-            }
-        }, 1000);
-    </script>
+    <footer style="background-color: #1a1a1a; color: #aaa; text-align: center; padding: 20px;">
+        <p>&copy; 2024 Your Brand Name. All Rights Reserved.</p>
+        <p><a href="#" style="color: #aaa; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #aaa; text-decoration: none;">Terms of Service</a></p>
+    </footer>
 
 </body>
 </html>
