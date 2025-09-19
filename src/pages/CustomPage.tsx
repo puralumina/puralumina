@@ -746,8 +746,8 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <!-- NEW TEXT ADDED HERE -->
         <div style="max-width: 650px; margin: 0 auto 40px auto; text-align: left; color: #495057;">
             <h3 style="font-size: 42px; font-weight: 900; margin-bottom: 15px;">Our Commitment to You</h3>
-            <p>At Soulmates Desires, we are passionate about creating high-quality digital products that bring value and joy to your life. Your feedback is an essential part of our creative process and helps us improve every day. Please don't hesitate to reach out with suggestions or ideas!</p>
-            <p>For technical support, please include your order number and the name of the product you are having trouble with so we can assist you as quickly as possible. For general inquiries, we look forward to connecting with you.</p>
+            <p style="font-size: 18px; color: #6c757d; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7;"">At Soulmates Desires, we are passionate about creating high-quality digital products that bring value and joy to your life. Your feedback is an essential part of our creative process and helps us improve every day. Please don't hesitate to reach out with suggestions or ideas!</p>
+            <p style="font-size: 18px; color: #6c757d; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7;"">For technical support, please include your order number and the name of the product you are having trouble with so we can assist you as quickly as possible. For general inquiries, we look forward to connecting with you.</p>
         </div>
         <!-- END OF NEW TEXT -->
     </div>
