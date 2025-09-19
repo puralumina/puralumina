@@ -374,7 +374,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <!-- BOOKS GRID -->
         <div style="padding: 40px 0;">
             <!-- Category -->
-            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Category: Personal Growth</h2>
+            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Ephemera</h2>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
                 <!-- Book Card -->
                 <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
@@ -403,7 +403,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         
         <div style="padding: 40px 0;">
             <!-- Category -->
-            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Category: Personal Growth</h2>
+            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Couples Games</h2>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
                 <!-- Book Card -->
                 <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
@@ -432,7 +432,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         
         <div style="padding: 40px 0;">
             <!-- Category -->
-            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Category: Personal Growth</h2>
+            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Cards</h2>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
                 <!-- Book Card -->
                 <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
@@ -461,7 +461,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         
         <div style="padding: 40px 0;">
             <!-- Category -->
-            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Category: Personal Growth</h2>
+            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 30px;">Planners & Worksheets</h2>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
                 <!-- Book Card -->
                 <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 20px; text-align: center; flex: 1; min-width: 250px; max-width: 280px;">
