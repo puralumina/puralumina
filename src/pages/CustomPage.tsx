@@ -728,12 +728,13 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         </div>
     </div>
 
-    <!-- Main Content Container with Padding Fix -->
-    <div style="max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center; padding-bottom: 30vh;">
+    <!-- Main Content Container with More Text -->
+    <div style="max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center;">
         <h1 style="font-size: 42px; font-weight: 900; margin-bottom: 15px;">We'd Love to Hear From You</h1>
         <p style="font-size: 18px; color: #6c757d; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7;">
             Whether you have a question about our products, need assistance with an order, or just want to share your thoughts, our inbox is always open. We do our best to respond to all inquiries within 24 hours.
         </p>
+
         <a href="mailto:your.email@example.com" class="contact-button" style="background-color: #0d6efd; color: white; padding: 18px 40px; text-decoration: none; font-size: 20px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3); transition: all 0.2s ease-in-out;">
             Email Us Directly
         </a>
@@ -741,6 +742,14 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             Or, send us an email at: 
             <a href="mailto:your.email@example.com" style="color: #0d6efd; font-weight: 700; text-decoration: none;">your.email@example.com</a>
         </p>
+
+        <!-- NEW TEXT ADDED HERE -->
+        <div style="max-width: 650px; margin: 0 auto 40px auto; text-align: left; color: #495057;">
+            <h3 style="text-align: center;">Our Commitment to You</h3>
+            <p>At Soulmates Desires, we are passionate about creating high-quality digital products that bring value and joy to your life. Your feedback is an essential part of our creative process and helps us improve every day. Please don't hesitate to reach out with suggestions or ideas!</p>
+            <p>For technical support, please include your order number and the name of the product you are having trouble with so we can assist you as quickly as possible. For general inquiries, we look forward to connecting with you.</p>
+        </div>
+        <!-- END OF NEW TEXT -->
     </div>
 
     <!-- FOOTER -->
