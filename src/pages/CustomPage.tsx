@@ -682,7 +682,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <p style="font-size: 16px;">If you have any questions about this Privacy Policy, please contact us:</p>
         <ul style="padding-left: 20px; font-size: 16px;">
             <li>By email: <strong><a href="mailto:soulmatesdesires@gmail.com" style="color: #0d6efd; font-weight: 700;">soulmatesdesires@gmail.com</a></strong></li>
-            <li>By visiting this page on our website: <strong><a href="/contact-us" style="color: #0d6efd; font-weight: 700;">Contact us</a></strong></li>
+            <li>By visiting this page on our website: <strong><a href="/custom/contact-us" style="color: #0d6efd; font-weight: 700;">Contact us</a></strong></li>
         </ul>
 
     </div>
