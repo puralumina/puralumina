@@ -250,208 +250,129 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transform Your Intimate Life</title>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .hero {
-            text-align: center;
-            padding: 50px 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') no-repeat center center/cover;
-            color: #fff;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-        .hero img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        .hero button {
-            padding: 15px 30px;
-            font-size: 1em;
-            color: #fff;
-            background-color: #ff6f61;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .section {
-            padding: 40px 0;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .section p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-        .features {
-            text-align: left;
-        }
-        .features ul {
-            list-style: none;
-            padding: 0;
-        }
-        .features li {
-            margin-bottom: 20px;
-        }
-        .testimonials {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .testimonials img {
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .testimonials p {
-            font-style: italic;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-        .offer {
-            background-color: #fff;
-            padding: 40px 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .offer h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .offer ul {
-            list-style: none;
-            padding: 0;
-        }
-        .offer li {
-            margin-bottom: 10px;
-        }
-        .offer button {
-            padding: 15px 30px;
-            font-size: 1em;
-            color: #fff;
-            background-color: #ff6f61;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .faq {
-            background-color: #fff;
-            padding: 40px 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .faq h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .faq p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-        .final-cta {
-            text-align: center;
-            padding: 40px 0;
-        }
-        .final-cta button {
-            padding: 15px 30px;
-            font-size: 1em;
-            color: #fff;
-            background-color: #ff6f61;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Transform Your Intimate Life - Mastering Her Pleasure</title>
+    <!-- Importing Montserrat Font (Regular, Bold, Extra-Bold) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <div class="hero">
-            <h1>Achieve Intimacy Without Guesswork</h1>
-            <p>Discover expert techniques to enhance your relationship and satisfy your partner's deepest desires.</p>
-            <img src="https://d1yei2z3i6k35z.cloudfront.net/4704293/68c976f95af39_couple-1329349_1280.jpg" alt="Product Mockup">
-            <button>Get Instant Access for $49</button>
+<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #ffffff; color: #1a202c;">
+
+    <!-- URGENCY BAR -->
+    <div style="background-color: #ffc107; color: #1a202c; text-align: center; padding: 12px; font-weight: 700; font-size: 16px;">
+        ⚠️ Limited Time Offer: Get the "Seducing His Senses" Bonus FREE when you order in the next 24 hours!
+    </div>
+
+    <!-- Main Container for content centering -->
+    <div style="max-width: 800px; margin: 0 auto; padding: 15px;">
+
+        <!-- HERO SECTION -->
+        <div style="text-align: center; padding: 40px 10px;">
+            <h1 style="font-size: 44px; font-weight: 900; margin-bottom: 16px; line-height: 1.2;">Achieve Intimacy Without Guesswork</h1>
+            <p style="font-size: 20px; color: #4a5568; margin-bottom: 32px; line-height: 1.7;">Discover expert techniques to enhance your relationship and satisfy your partner's deepest desires.</p>
+            <img src="https://via.placeholder.com/600x400.png?text=Showcase+Your+Product" alt="Mastering Her Pleasure Mockup" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 32px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+            <a href="#offer" style="background-color: #0d6efd; color: white; padding: 18px 36px; text-decoration: none; font-size: 22px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);">Get Instant Access for $49 →</a>
+            <p style="margin-top: 12px; color: #6c757d; font-size: 14px;">Join 1,500+ satisfied customers!</p>
         </div>
-        <div class="section problem">
-            <h2>Is This You?</h2>
-            <p>Do you feel like you're not connecting with your partner on a deeper level? Are you frustrated with the lack of intimacy and desire in your relationship? Do you want to spice things up but don't know where to start?</p>
+
+        <!-- AS SEEN ON / TRUST BAR -->
+        <div style="text-align: center; padding: 20px 10px; border-top: 1px solid #e9ecef; border-bottom: 1px solid #e9ecef;">
+            <span style="font-weight: 700; color: #6c757d; margin-right: 20px;">AS FEATURED IN</span>
+            <img src="https://via.placeholder.com/100x40.png?text=Logo+1" alt="As Seen On Logo 1" style="height: 30px; vertical-align: middle; margin: 5px 10px;">
+            <img src="https://via.placeholder.com/100x40.png?text=Logo+2" alt="As Seen On Logo 2" style="height: 30px; vertical-align: middle; margin: 5px 10px;">
+            <img src="https://via.placeholder.com/100x40.png?text=Logo+3" alt="As Seen On Logo 3" style="height: 30px; vertical-align: middle; margin: 5px 10px;">
         </div>
-        <div class="section solution">
-            <h2>The Solution You've Been Waiting For</h2>
-            <p>Introducing "Mastering Her Pleasure: The Ultimate Guide for Men." This comprehensive guide will transform your intimate life, helping you understand and satisfy your partner's deepest desires. Imagine the joy and fulfillment of a deeply connected relationship where both of you are completely satisfied.</p>
+
+        <!-- PROBLEM SECTION -->
+        <div style="background-color: #f8f9fa; padding: 60px 25px; margin-top: 40px; text-align: center;">
+            <h2 style="font-size: 36px; font-weight: 900; margin-bottom: 24px; margin-top: 0;">Is This You?</h2>
+            <p style="font-size: 18px; color: #4a5568; line-height: 1.7;">Are you feeling disconnected from your partner? Do you struggle to satisfy her desires and leave her feeling fulfilled? Do you wish you had a clear path to enhancing your intimate life?</p>
+        </div>
+
+        <!-- SOLUTION SECTION -->
+        <div style="padding: 60px 10px; text-align: center;">
+            <h2 style="font-size: 36px; font-weight: 900; margin-bottom: 24px;">The Solution You've Been Waiting For</h2>
+            <p style="font-size: 18px; color: #4a5568; line-height: 1.7; margin-bottom: 16px;">Introducing "Mastering Her Pleasure: The Ultimate Guide for Men."</p>
+            <p style="font-size: 18px; color: #4a5568; line-height: 1.7; margin-bottom: 32px;">This comprehensive guide will transform your intimate life, helping you understand and satisfy your partner's deepest desires. Imagine the joy and fulfillment of a deeply connected relationship where both of you are completely satisfied.</p>
             <p>This is for you if...</p>
-            <ul>
-                <li>✓ You're a man looking to enhance your intimate skills</li>
-                <li>✓ You want to understand your partner's desires better</li>
-                <li>✓ You're ready to take your relationship to the next level</li>
+            <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 1.8;">
+                <li style="margin-bottom: 24px;">✓ You're a man looking to enhance your intimate skills</li>
+                <li style="margin-bottom: 24px;">✓ You want to understand your partner's desires better</li>
+                <li style="margin-bottom: 24px;">✓ You're ready to take your relationship to the next level</li>
             </ul>
         </div>
-        <div class="section features">
-            <h2>Here's What You'll Get Inside</h2>
-            <ul>
-                <li><strong>Expert Techniques:</strong> Learn innovative and effective techniques to satisfy her so you can build a stronger connection.</li>
-                <li><strong>Communication Mastery:</strong> Discover how to talk to her about your desires and hers so you can enhance your intimacy.</li>
-                <li><strong>Advanced Pleasure:</strong> Explore advanced techniques to take your skills to the next level so you can leave her feeling fulfilled and wanted.</li>
+
+        <!-- FEATURES & BENEFITS SECTION (2-Column on Desktop, 1 on Mobile) -->
+        <div style="background-color: #f8f9fa; padding: 40px 25px; border-radius: 8px;">
+            <h2 style="font-size: 36px; font-weight: 900; text-align: center; margin-bottom: 40px; margin-top: 0;">What You'll Master Inside</h2>
+            <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 1.8;">
+                <li style="margin-bottom: 24px;">✔️ <strong>Expert Techniques:</strong> Learn innovative and effective techniques to satisfy her so you can build a stronger connection.</li>
+                <li style="margin-bottom: 24px;">✔️ <strong>Communication Mastery:</strong> Discover how to talk to her about your desires and hers so you can enhance your intimacy.</li>
+                <li style="margin-bottom: 24px;">✔️ <strong>Advanced Pleasure:</strong> Explore advanced techniques to take your skills to the next level so you can leave her feeling fulfilled and wanted.</li>
             </ul>
         </div>
-        <div class="section testimonials">
-            <h2>What Our Customers Are Saying</h2>
-            <div>
-                <img src="customer-a.jpg" alt="Customer A">
-                <p>"This book completely changed our relationship. My partner and I are closer than ever!"</p>
-                <p>- John Doe, Satisfied Customer</p>
+
+        <!-- SOCIAL PROOF SECTION -->
+        <div style="padding: 60px 10px;">
+            <h2 style="font-size: 36px; font-weight: 900; text-align: center; margin-bottom: 40px;">Don't Just Take Our Word For It...</h2>
+            <!-- Testimonial 1 -->
+            <div style="background-color: #ffffff; padding: 25px; border-radius: 8px; margin-bottom: 24px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #dee2e6;">
+                <p style="font-size: 18px; color: #4a5568; line-height: 1.7; margin-top: 0; font-style: italic;">"Before this course, I was clueless. After completing Module 3, I designed a logo for my first freelance client and was paid $300! This course paid for itself 3x over in the first week."</p>
+                <div style="display: flex; align-items: center; margin-top: 20px;">
+                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer A" style="border-radius: 50%; margin-right: 15px;">
+                    <div>
+                        <p style="margin: 0; font-weight: 700;">Sarah Johnson</p>
+                        <p style="margin: 0; color: #6c757d; font-size: 14px;">Freelance Designer</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="customer-b.jpg" alt="Customer B">
-                <p>"I never knew how to satisfy her until I read this. Now, she can't get enough!"</p>
-                <p>- Jane Smith, Happy Reader</p>
+            <!-- Testimonial 2 -->
+            <div style="background-color: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #dee2e6;">
+                <p style="font-size: 18px; color: #4a5568; line-height: 1.7; margin-top: 0; font-style: italic;">"I finally feel like I'm in control of Illustrator instead of the other way around. The project files were a game-changer. This is the most practical and straightforward course I've ever taken."</p>
+                <div style="display: flex; align-items: center; margin-top: 20px;">
+                    <img src="https://via.placeholder.com/60x60.png?text=Photo" alt="Customer B" style="border-radius: 50%; margin-right: 15px;">
+                    <div>
+                        <p style="margin: 0; font-weight: 700;">Mike Williams</p>
+                        <p style="margin: 0; color: #6c757d; font-size: 14px;">Small Business Owner</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="section offer">
-            <h2>Get Instant Access to "Mastering Her Pleasure" Today</h2>
-            <p>Here's a recap of everything you get:</p>
-            <ul>
-                <li>✓ "Mastering Her Pleasure: The Ultimate Guide for Men" (Value: $99)</li>
-                <li>✓ Bonus: "Dirty Talks to make her 100x Wet during Intimacy" (Value: $29)</li>
-                <li>✓ Bonus: "Seducing His Senses: A Woman's Guide to Pleasuring Her Man" (Value: $29)</li>
-            </ul>
-            <p>### Total Value: $157</p>
-            <p>### Your Price Today: Only $49</p>
-            <p><strong>My 100% Risk-Free Guarantee</strong></p>
-            <p>If you're not completely satisfied with the results, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
-            <button>Get Instant Access Now</button>
-        </div><br/><br/><br/>
-        <div class="section faq">
-            <h2>Frequently Asked Questions</h2>
-            <p><strong>Q: Will this work for me even if I'm not experienced?</strong></p>
-            <p>A: Absolutely! This guide is designed for men of all experience levels, from beginners to experienced lovers.</p>
-            <p><strong>Q: How soon will I see results?</strong></p>
-            <p>A: Many of our customers report seeing significant improvements in their intimate life within the first week of applying the techniques.</p>
+
+        <!-- THE OFFER & CTA SECTION -->
+        <div id="offer" style="background-color: #f8f9fa; border: 2px solid #dee2e6; border-radius: 12px; padding: 30px 25px; margin-top: 40px; text-align: center;">
+            <h2 style="font-size: 36px; font-weight: 900; margin-top: 0; margin-bottom: 32px;">Get Instant Access to "Mastering Her Pleasure" Today</h2>
+            <div style="background-color: #ffffff; padding: 25px; border-radius: 8px; text-align: left; max-width: 550px; margin: 0 auto 32px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <h3 style="margin-top: 0; font-weight: 700; text-align: center; font-size: 24px;">Here's What You'll Receive:</h3>
+                <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 2;">
+                    <li style="margin-bottom: 10px;">✔️ "Mastering Her Pleasure: The Ultimate Guide for Men" (Value: $99)</li>
+                    <li style="margin-bottom: 10px;">✔️ Bonus: "Dirty Talks to make her 100x Wet during Intimacy" (Value: $29)</li>
+                    <li style="margin-bottom: 10px;">✔️ Bonus: "Seducing His Senses: A Woman's Guide to Pleasuring Her Man" (Value: $29)</li>
+                </ul>
+                <p style="font-size: 20px; color: #4a5568; line-height: 1.7; margin-bottom: 32px;">### Total Value: $157</p>
+                <p style="font-size: 20px; color: #4a5568; line-height: 1.7; margin-bottom: 32px;">### Your Price Today: Only $49</p>
+                <p><strong>My 100% Risk-Free Guarantee</strong></p>
+                <p style="font-size: 18px; color: #4a5568; line-height: 1.7;">If you're not completely satisfied with the results, simply let me know within 30 days, and I'll refund your purchase. No questions asked.</p>
+                <a href="#offer" style="background-color: #0d6efd; color: white; padding: 18px 36px; text-decoration: none; font-size: 22px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);">Get Instant Access Now</a>
+            </div>
         </div>
-        <div class="final-cta">
-            <h2>Ready to Achieve Intimacy Without Guesswork?</h2>
-            <p>Don't wait another day to transform your relationship. Click the button below to get started.</p>
-            <button>Get Instant Access for $49</button>
+
+        <!-- FAQ SECTION -->
+        <div style="background-color: #f8f9fa; padding: 40px 25px; border-radius: 8px; margin-top: 40px;">
+            <h2 style="font-size: 36px; font-weight: 900; text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+            <p style="font-size: 18px; color: #4a5568; line-height: 1.7;"><strong>Q: Will this work for me even if I'm not experienced?</strong></p>
+            <p style="font-size: 18px; color: #4a5568; line-height: 1.7;">Absolutely! This guide is designed for men of all experience levels, from beginners to experienced lovers.</p>
+            <p style="font-size: 18px; color: #4a5568; line-height: 1.7;"><strong>Q: How soon will I see results?</strong></p>
+            <p style="font-size: 18px; color: #4a5568; line-height: 1.7;">Many of our customers report seeing significant improvements in their intimate life within the first week of applying the techniques.</p>
         </div>
+
+        <!-- FINAL CTA SECTION -->
+        <div style="text-align: center; padding: 40px 0; background-color: #f8f9fa;">
+            <h2 style="font-size: 36px; font-weight: 900; margin-bottom: 24px;">Ready to Achieve Intimacy Without Guesswork?</h2>
+            <p style="font-size: 18px; color: #4a5568; line-height: 1.7;">Don't wait another day to transform your relationship. Click the button below to get started.</p>
+            <a href="#offer" style="background-color: #0d6efd; color: white; padding: 18px 36px; text-decoration: none; font-size: 22px; font-weight: 700; border-radius: 10px; display: inline-block; box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);">Get Instant Access for $49</a>
+        </div>
+
     </div>
 </body>
 </html>
