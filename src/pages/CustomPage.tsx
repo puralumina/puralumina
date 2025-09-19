@@ -285,7 +285,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     <div style="background-color: #1a1a1a; color: #fff; padding: 60px 20px; text-align: center;">
         <h1 style="font-size: 3.5em; font-weight: 900; margin: 0; line-height: 1.1; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Ignite Unstoppable Passion & Deepen Your Connection</h1>
         <p style="font-size: 1.4em; margin-top: 20px; color: #eee;">Get All 14 Of Our Bestselling Relationship & Intimacy Guides In One Ultimate Bundle.</p>
-        <img src="https://i.ibb.co/6PzQyq8/bundle-image.png" alt="Collection of all 14 books in a bundle" style="max-width: 100%; height: auto; margin: 30px 0; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
+        <img src="https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?cs=srgb&dl=pexels-hsapir-1054655.jpg&fm=jpg" alt="Collection of all 14 books in a bundle" style="max-width: 100%; height: auto; margin: 30px 0; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
         <a href="YOUR_CHECKOUT_LINK_HERE" class="cta-button">
             YES! I Want The Bundle For Just $39.99!
             <span style="display: block; font-size: 0.7em; font-weight: 400; margin-top: 5px;">(Save 69% Today!)</span>
