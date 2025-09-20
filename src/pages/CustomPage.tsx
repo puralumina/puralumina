@@ -233,253 +233,273 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     title: 'Save your couple',
     music: '/your-custom-music.mp3', // Optional
     content: `<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Ultimate Book Bundle</title>
-<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>The Ultimate Relationship & Seduction Bundle</title>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#ea2a33",
-                        "background-light": "#f8f6f6",
-                        "background-dark": "#211111",
+                        "primary": "#d90429", // A slightly more modern, vibrant red
+                        "secondary": "#2d3142", // A deep, contrasting secondary color
+                        "background-light": "#fdfdfd",
+                        "background-dark": "#1a1a1a",
+                        "text-light": "#fdfdfd",
+                        "text-dark": "#2d3142",
                     },
                     fontFamily: {
-                        "display": ["Newsreader"]
+                        "display": ["Newsreader", "serif"]
                     },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    borderRadius: { "DEFAULT": "0.375rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                    animation: {
+                        'pulse-slow': 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
                 },
             },
         }
     </script>
-<style>
-        .font-display {
-            font-family: 'Newsreader', serif;
+    <style>
+        body {
+            min-height: 100dvh;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-background-dark dark:text-background-light">
-<div class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root overflow-x-hidden">
-<div>
-<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-<div class="flex items-center p-4 justify-between">
-<h2 class="text-lg font-bold flex-1 text-center pl-12">The Ultimate Book Bundle</h2>
-<div class="flex w-12 items-center justify-end">
-<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
-</svg>
-</button>
-</div>
-</div>
-</header>
-<main>
-<div class="w-full h-80 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHYJRreCmZEjHELYapCpc_hUPfL0VzlscmgrlJkpoNAh1_MMpMDudvjlMrgdwPkVwic4dFjO7W8OV0s9fwLC7hV_vJMfEJtissqa4oe3S73Gd3OMYVGkOIwjRhpm2hLhrFgA9OiEb-0IhBYnRTwT_LkX0_dHghBw5oh_Y-q0jHAFTO442te4SjUzUdaymF4bjLa9QAmGM7fwsmyRbItYtNHTwOgFsZO2pWSmhIc8jp5Su2yY8_jvc0k63YUzT7wUp8-AVToChJ6Cw");'></div>
-<div class="p-6 text-center">
-<h1 class="text-3xl font-bold leading-tight tracking-tight">Unlock Your Potential with 14 Best-Selling Books</h1>
-<p class="mt-2 text-lg">For a limited time, get all 14 books for just <span class="text-primary font-bold">$39.99</span>! <span class="line-through text-background-dark/60 dark:text-background-light/60">Regular price: $199.99</span></p>
-</div>
-<div class="px-6 py-4">
-<div class="flex justify-between items-center mb-1">
-<p class="text-sm font-medium">Bundles Sold</p>
-<p class="text-sm font-medium text-background-dark/80 dark:text-background-light/80">750/1000</p>
-</div>
-<div class="w-full bg-primary/20 rounded-full h-2.5">
-<div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
-</div>
-</div>
-<div class="px-6 py-4">
-<button class="w-full bg-primary text-white text-lg font-bold h-14 rounded-lg shadow-lg hover:bg-opacity-90 transition-colors">
-                        Get Your Bundle Now
-                    </button>
-</div>
-<section class="py-8">
-    <h2 class="text-2xl font-bold px-6 mb-4">What's Included</h2>
-    <!-- 
-        This is the scroll container. Key classes:
-        - "flex": Lays out children horizontally.
-        - "overflow-x-auto": Allows horizontal scrolling if content overflows.
-        - The classes starting with [...] are for hiding the scrollbar for a cleaner look.
-    -->
-    <div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden pl-6 pr-3">
-        <!-- This inner flex container holds all the book items -->
-        <div class="flex items-stretch gap-4">
-            
-            <!-- Existing Book 1 -->
-            <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.jpg");'></div>
-                <p class="text-sm font-medium text-center">Mastering Her Pleasure: The Ultimate Guide for Men</p>
-            </div>
-            
-            <!-- Existing Book 2 -->
-            <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.jpg");'></div>
-                <p class="text-sm font-medium text-center">Dirty Talks to make her 100x wet during Sex</p>
-            </div>
-            
-            <!-- Existing Book 3 -->
-            <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.jpg");'></div>
-                <p class="text-sm font-medium text-center">Seducing His Senses: A Woman's Guide to Pleasuring Her Man</p>
-            </div>
+</head>
 
-            <!-- NEW BOOK 4 -->
-            <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://picsum.photos/300/400?random=1");'></div>
-                <p class="text-sm font-medium text-center">Make Him Craving You: The Ultimate Guide to Teasing and Pleasing</p>
-            </div>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-dark dark:text-text-light antialiased">
+<div class="relative flex min-h-screen w-full flex-col justify-between overflow-x-hidden">
+    
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-b border-black/5 dark:border-white/5">
+        <div class="container mx-auto flex items-center p-4 justify-between">
+            <h2 class="text-lg font-bold">The Seduction Library</h2>
+            <a href="#purchase" class="hidden sm:inline-flex items-center justify-center rounded-md h-10 px-6 bg-primary/10 text-primary font-bold hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                Get The Bundle
+            </a>
+        </div>
+    </header>
 
-            <!-- NEW BOOK 5 -->
-            <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://picsum.photos/300/400?random=2");'></div>
-                <p class="text-sm font-medium text-center">The Spicy Edition</p>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="relative text-center py-16 sm:py-24 px-6 overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Couple reading together" class="w-full h-full object-cover opacity-10 dark:opacity-5">
+                <div class="absolute inset-0 bg-gradient-to-t from-background-light via-background-light/80 to-transparent dark:from-background-dark dark:via-background-dark/80"></div>
             </div>
-
-            <!-- NEW BOOK 6 -->
-            <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://picsum.photos/300/400?random=3");'></div>
-                <p class="text-sm font-medium text-center">The Connection Edition</p>
-            </div>
-            
-            <!-- NEW BOOK 7 -->
-            <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://picsum.photos/300/400?random=4");'></div>
-                <p class="text-sm font-medium text-center">The Laughs & Giggles Edition</p>
-            </div>
-            
-            <!-- Existing "+ more" card -->
-            <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-primary/20 dark:bg-primary/30 rounded-lg flex items-center justify-center text-center p-2 text-primary">
-                    <p class="font-bold">+7 more books</p> <!-- Updated the count from 11 to 7 -->
+            <div class="relative z-10 max-w-3xl mx-auto">
+                <p class="font-bold text-primary uppercase tracking-widest">The Ultimate Relationship & Seduction Bundle</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mt-3">Ignite Passion, Master Seduction & Deepen Your Connection.</h1>
+                <p class="mt-6 text-lg sm:text-xl text-text-dark/70 dark:text-text-light/70 max-w-2xl mx-auto">Your complete library of 14 best-selling guides to irresistible confidence, unforgettable nights, and a love life you've only dreamed of.</p>
+                <div class="mt-10">
+                    <a href="#purchase" class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white text-xl font-bold h-16 px-12 rounded-lg shadow-2xl shadow-primary/30 hover:scale-105 transition-transform animate-pulse-slow">
+                        Get Instant Access - Only $39.99
+                    </a>
+                    <p class="mt-4 text-sm text-text-dark/60 dark:text-text-light/60">
+                        <span class="line-through">Regular Price: $199.99</span> &bull; 30-Day Money-Back Guarantee
+                    </p>
                 </div>
-                <p class="text-sm font-medium text-center">And many more...</p>
+            </div>
+        </section>
+
+        <!-- SCARCITY / SOCIAL PROOF BAR -->
+        <div class="px-6 py-6 sm:py-8 bg-secondary/5 dark:bg-secondary/20">
+            <div class="max-w-2xl mx-auto">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-sm sm:text-base font-bold text-primary">LIMITED BUNDLES AVAILABLE AT THIS PRICE</p>
+                    <p class="text-sm sm:text-base font-medium">812 / 1000 Sold</p>
+                </div>
+                <div class="w-full bg-black/10 dark:bg-white/10 rounded-full h-3.5">
+                    <div class="bg-primary h-3.5 rounded-full transition-all duration-500" style="width: 81.2%"></div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="px-6 py-8 bg-primary/5 dark:bg-primary/10">
-<h2 class="text-2xl font-bold text-center mb-2">Why You Need This</h2>
-<p class="text-center text-background-dark/80 dark:text-background-light/80 max-w-2xl mx-auto mb-8">These books offer practical advice and actionable strategies to help you achieve your goals.</p>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="flex flex-col items-center text-center p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm">
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary mb-4">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64Z"></path></svg>
-</div>
-<h3 class="text-lg font-bold">Learn from Experts</h3>
-<p class="text-background-dark/80 dark:text-background-light/80 mt-1">Access the wisdom of renowned authors and thought leaders.</p>
-</div>
-<div class="flex flex-col items-center text-center p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm">
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary mb-4">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"></path></svg>
-</div>
-<h3 class="text-lg font-bold">Gain New Insights</h3>
-<p class="text-background-dark/80 dark:text-background-light/80 mt-1">Discover innovative approaches to personal and professional growth.</p>
-</div>
-<div class="flex flex-col items-center text-center p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm">
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary mb-4">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path></svg>
-</div>
-<h3 class="text-lg font-bold">Join a Community</h3>
-<p class="text-background-dark/80 dark:text-background-light/80 mt-1">Connect with like-minded individuals on a similar journey.</p>
-</div>
-</div>
-</section>
-<section class="px-6 py-8">
-<h2 class="text-2xl font-bold text-center mb-8">Real Results from Real Readers</h2>
-<div class="space-y-8 max-w-3xl mx-auto">
-<div class="p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm border-l-4 border-primary">
-<div class="flex items-center gap-3 mb-3">
-<img alt="Sophia Carter" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3die4Y0NtCl7jPaIgpN3OINva5E1uqwZGZzq2LhZyaNkwuqqHV5ArU4GfY8LkAlw3VF-55SvzveHrXuOt_iJ-R-1JU7yeahMXYwd01vFAdeS32saHrzSr3ioILM_stXEz35Jo7tUmYt38bkm7uKdfhFPtTw1tkNaBzirrlgwwGf2dB7_1IN3j3W-wc-GE3X0X42ZgXH5inbvTENYRcpXjTkM2tBw_TWjcuFstCIDuqOfQZVhAnvCtlK4ulAm1imHm93YkCIQf5gs"/>
-<div>
-<p class="font-bold">Sophia Carter</p>
-<div class="flex items-center text-primary">
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-</div>
-</div>
-</div>
-<p class="italic text-background-dark/90 dark:text-background-light/90">"This bundle has been a game-changer for me! The variety of topics covered is incredible, and I've already implemented several strategies from the books."</p>
-</div>
-<div class="p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm border-l-4 border-primary">
-<div class="flex items-center gap-3 mb-3">
-<img alt="Ethan Bennett" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRcgZdT6RiylSdjt4nHzvBDd4KtdOdAVKF4zA0gOab5bx0Xz06pxr_o3wEU6-7j_BFlSQ0WImnLIiNqFS0FS3NrN_mfBaf7aT2rBqT3uI4-ACXU6AlqiXPt4xu9IiB4xa1jUN0DRWnCV8v_ycHnoAzQ-BTU1FqWmksjJ7RT8CuuFM3AfhjvIxhG1CfVM-Qs_C1UWv-qKLjh80ikydx5Nat6T6EzKh6LwnNRuwhcfI64qOjti-A4xKo3GKvbxkFA06e9xm436hq2rw"/>
-<div>
-<p class="font-bold">Ethan Bennett</p>
-<div class="flex items-center text-primary">
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
-</div>
-</div>
-</div>
-<p class="italic text-background-dark/90 dark:text-background-light/90">"I was skeptical at first, but the quality of these books exceeded my expectations. The value for the price is unbeatable."</p>
-</div>
-</div>
-</section>
-<section class="px-6 py-8 bg-primary/5 dark:bg-primary/10">
-<div class="max-w-4xl mx-auto space-y-6">
-<div class="text-center">
-<h2 class="text-2xl font-bold">Limited-Time Offer</h2>
-<p class="mt-1 text-background-dark/80 dark:text-background-light/80">Don't miss out on this incredible deal.</p>
-</div>
-<div class="flex flex-col md:flex-row gap-6">
-<div class="flex-1 p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm border border-primary/20 text-center">
-<h3 class="font-bold text-lg text-primary">Price Increasing Soon!</h3>
-<p class="mt-2 text-background-dark/80 dark:text-background-light/80">The price will increase to $59.99 after the first 1000 bundles are sold.</p>
-<button class="mt-4 w-full bg-primary text-white text-md font-bold h-10 rounded-lg shadow-md hover:bg-opacity-90 transition-colors">Secure Your Bundle</button>
-</div>
-<div class="flex-1 p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm border border-primary/20 text-center">
-<h3 class="font-bold text-lg text-primary">Special Bonus</h3>
-<p class="mt-2 text-background-dark/80 dark:text-background-light/80">The first 50 buyers will receive a complimentary audiobook version of one of the books.</p>
-<button class="mt-4 w-full bg-primary text-white text-md font-bold h-10 rounded-lg shadow-md hover:bg-opacity-90 transition-colors">Claim Your Bonus</button>
-</div>
-</div>
-</div>
-</section>
-<div class="px-6 py-8 text-center">
-<h2 class="text-3xl font-bold">Ready to Transform Your Life?</h2>
-<p class="mt-2 text-lg text-background-dark/80 dark:text-background-light/80">Get instant access to 14 best-selling books for an unbeatable price.</p>
-<button class="mt-6 w-full max-w-sm mx-auto bg-primary text-white text-xl font-bold h-16 rounded-lg shadow-xl hover:bg-opacity-90 transition-colors">
-                        Get Your Bundle Now for $39.99
-                    </button>
-</div>
-</main>
-</div>
-<footer class="bg-background-light dark:bg-background-dark border-t border-primary/10 dark:border-primary/20 mt-8">
-<div class="container mx-auto px-6 py-8 text-center text-background-dark/70 dark:text-background-light/70">
-<div class="flex justify-center gap-6 mb-4">
-<a class="hover:text-primary transition-colors" href="#">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"></path></svg>
-</a>
-<a class="hover:text-primary transition-colors" href="#">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg>
-</a>
-<a class="hover:text-primary transition-colors" href="#">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
-</a>
-</div>
-<p class="text-sm">© 2023 Book Bundle. All rights reserved.</p>
-</div>
-</footer>
+
+        <!-- WHAT'S INCLUDED SECTION -->
+        <section class="py-16 sm:py-24">
+            <div class="text-center px-6">
+                <h2 class="text-3xl sm:text-4xl font-bold">Here's Everything You'll Master</h2>
+                <p class="mt-3 max-w-2xl mx-auto text-text-dark/70 dark:text-text-light/70">A glimpse into your new library of seduction secrets and connection tools.</p>
+            </div>
+            <div class="relative mt-12">
+                <div class="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-background-light to-transparent dark:from-background-dark z-10 pointer-events-none"></div>
+                <div class="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background-light to-transparent dark:from-background-dark z-10 pointer-events-none"></div>
+                <div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-6">
+                    <div class="flex items-stretch gap-6 mx-auto">
+                        <!-- Book covers with thematic placeholders -->
+                        <div class="flex flex-col gap-3 w-44 flex-shrink-0 text-center"><img src="https://placehold.co/300x400/d90429/fdfdfd/png?text=Mastering\nHer\nPleasure" class="w-full aspect-[3/4] rounded-lg shadow-xl hover:scale-105 hover:-translate-y-2 transition-transform duration-300"/><p class="text-sm font-medium">Mastering Her Pleasure</p></div>
+                        <div class="flex flex-col gap-3 w-44 flex-shrink-0 text-center"><img src="https://placehold.co/300x400/2d3142/fdfdfd/png?text=Dirty\nTalks" class="w-full aspect-[3/4] rounded-lg shadow-xl hover:scale-105 hover:-translate-y-2 transition-transform duration-300"/><p class="text-sm font-medium">Dirty Talks Masterclass</p></div>
+                        <div class="flex flex-col gap-3 w-44 flex-shrink-0 text-center"><img src="https://placehold.co/300x400/d90429/fdfdfd/png?text=Seducing\nHis\nSenses" class="w-full aspect-[3/4] rounded-lg shadow-xl hover:scale-105 hover:-translate-y-2 transition-transform duration-300"/><p class="text-sm font-medium">Seducing His Senses</p></div>
+                        <div class="flex flex-col gap-3 w-44 flex-shrink-0 text-center"><img src="https://placehold.co/300x400/2d3142/fdfdfd/png?text=Make\nHim\nCrave You" class="w-full aspect-[3/4] rounded-lg shadow-xl hover:scale-105 hover:-translate-y-2 transition-transform duration-300"/><p class="text-sm font-medium">Make Him Crave You</p></div>
+                        <div class="flex flex-col gap-3 w-44 flex-shrink-0 text-center"><img src="https://placehold.co/300x400/d90429/fdfdfd/png?text=The\nSpicy\nEdition" class="w-full aspect-[3/4] rounded-lg shadow-xl hover:scale-105 hover:-translate-y-2 transition-transform duration-300"/><p class="text-sm font-medium">The Spicy Edition</p></div>
+                        <div class="flex flex-col gap-3 w-44 flex-shrink-0 text-center"><img src="https://placehold.co/300x400/2d3142/fdfdfd/png?text=The\nConnection\nEdition" class="w-full aspect-[3/4] rounded-lg shadow-xl hover:scale-105 hover:-translate-y-2 transition-transform duration-300"/><p class="text-sm font-medium">The Connection Edition</p></div>
+                        <div class="flex flex-col gap-3 w-44 flex-shrink-0 text-center"><div class="w-full aspect-[3/4] bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center text-center p-4 text-primary"><p class="font-bold text-2xl">+7 <br/> more titles</p></div><p class="text-sm font-medium">And so much more...</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS SECTION -->
+        <section class="px-6 py-16 sm:py-24 bg-primary/5 dark:bg-secondary/10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold">This Bundle Is Your Unfair Advantage</h2>
+                    <p class="mt-3 max-w-2xl mx-auto text-text-dark/70 dark:text-text-light/70">Stop guessing. Start connecting on a level you never thought possible.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M239.81,189.44A20,20,0,0,1,220,208H160a8,8,0,0,1,0-16h48.34l-48.2-48.2a8,8,0,0,1,11.32-11.32l48.2,48.2V136a8,8,0,0,1,16,0v52A19.85,19.85,0,0,1,239.81,189.44ZM96,32H47.66l48.2,48.2a8,8,0,0,1-11.32,11.32L36.34,43.34V88a8,8,0,0,1-16,0V36a20,20,0,0,1,20-20H88a8,8,0,0,1,0,16Zm123.66,23.34a8,8,0,0,0-11.32,0L160,103.54,111.82,55.34a8,8,0,0,0-11.32,11.32L148.69,115,35.34,228.34a8,8,0,0,0,11.32,11.32L152,135.25l48.18,48.2a8,8,0,0,0,11.32-11.32L163.31,126.3,219.66,70A8,8,0,0,0,219.66,55.34Z"></path></svg></div>
+                        <h3 class="text-xl font-bold mt-4">Become Irresistible</h3>
+                        <p class="mt-2 text-text-dark/70 dark:text-text-light/70">Master the art of attraction with proven techniques that build undeniable chemistry.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M239.9,136.21a8,8,0,0,1-8.21,7.79H152a8,8,0,0,1-8-8V56.39A88,88,0,1,0,56.39,144H136a8,8,0,0,1,8,8v79.61a8,8,0,0,1-13.66,5.66L96,192.49V160a8,8,0,0,1-8-8H16.21a8,8,0,0,1-7.79-8.21,128.2,128.2,0,0,1,23.6-71.62A128,128,0,0,1,239.9,136.21ZM128,24A112,112,0,1,0,240,136c0,1.48-.09,3-.15,4.42l-29-29A8,8,0,0,0,205.17,106,72,72,0,1,1,106,205.17a8,8,0,0,0,5.66-2.34l34,34A112.5,112.5,0,0,0,240,136,112.13,112.13,0,0,0,128,24Z"></path></svg></div>
+                        <h3 class="text-xl font-bold mt-4">Unlock Deeper Intimacy</h3>
+                        <p class="mt-2 text-text-dark/70 dark:text-text-light/70">Learn the secrets to emotional and physical connection that create an unbreakable bond.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M244.27,132.83,141.64,30.19a20,20,0,0,0-27.28,0L11.73,132.83a20,20,0,0,0,0,27.28l102.64,102.64a20,20,0,0,0,27.28,0l102.62-102.64a20,20,0,0,0,0-27.28ZM128,224.51,36.24,132.76,128,41.05l91.76,91.71Z"></path></svg></div>
+                        <h3 class="text-xl font-bold mt-4">Build Bulletproof Confidence</h3>
+                        <p class="mt-2 text-text-dark/70 dark:text-text-light/70">Gain the self-assurance to go after what you want, both in and out of the bedroom.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="px-6 py-16 sm:py-24">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold">Real Results from People Like You</h2>
+                    <p class="mt-3 text-text-dark/70 dark:text-text-light/70">This isn't just theory. This bundle changes lives.</p>
+                </div>
+                <div class="space-y-8 mt-12">
+                    <div class="p-6 bg-background-light dark:bg-background-dark rounded-xl shadow-lg border-l-4 border-primary">
+                        <div class="flex items-center gap-4 mb-3">
+                            <img alt="Sophia Carter" class="w-14 h-14 rounded-full" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop"/>
+                            <div>
+                                <p class="font-bold text-lg">Sophia C.</p>
+                                <p class="text-sm font-medium text-primary flex items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" class="text-yellow-500"><path d="M239.2,97.41a16,16,0,0,0-13.81-11L161.49,79,135.2,18.33a16,16,0,0,0-28.4,0L80.51,79,16.61,86.37a16,16,0,0,0-9.11,28.06l45.1,39.36L39.08,212.4a16,16,0,0,0,23.84,17.34l51.11-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.52-58.6,45.1-39.36A16,16,0,0,0,239.2,97.41Z"></path></svg>
+                                    <span class="font-bold">Verified Purchase</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="italic text-text-dark/90 dark:text-text-light/90">"A total game-changer for our marriage. We've been together 10 years and it feels like the honeymoon phase all over again. The 'Connection Edition' alone was worth the price."</p>
+                    </div>
+                    <div class="p-6 bg-background-light dark:bg-background-dark rounded-xl shadow-lg border-l-4 border-primary">
+                        <div class="flex items-center gap-4 mb-3">
+                            <img alt="Ethan Bennett" class="w-14 h-14 rounded-full" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=200&auto=format&fit=crop"/>
+                            <div>
+                                <p class="font-bold text-lg">Ethan B.</p>
+                                 <p class="text-sm font-medium text-primary flex items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" class="text-yellow-500"><path d="M239.2,97.41a16,16,0,0,0-13.81-11L161.49,79,135.2,18.33a16,16,0,0,0-28.4,0L80.51,79,16.61,86.37a16,16,0,0,0-9.11,28.06l45.1,39.36L39.08,212.4a16,16,0,0,0,23.84,17.34l51.11-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.52-58.6,45.1-39.36A16,16,0,0,0,239.2,97.41Z"></path></svg>
+                                    <span class="font-bold">Verified Purchase</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="italic text-text-dark/90 dark:text-text-light/90">"I was skeptical, but the advice in 'Mastering Her Pleasure' is practical and works. My confidence has skyrocketed. Best $40 I've ever spent on self-improvement."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- URGENCY SECTION / FINAL CTA -->
+        <section id="purchase" class="px-6 py-16 sm:py-24 bg-secondary text-text-light">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold">Your New Love Life Is One Click Away</h2>
+                <p class="mt-3 text-lg text-text-light/70 max-w-2xl mx-auto">This offer is ending soon. Don't let hesitation cost you the connection you deserve.</p>
+                
+                <!-- Countdown Timer -->
+                <div class="flex items-center justify-center gap-4 sm:gap-8 my-8">
+                    <div>
+                        <div id="days" class="text-4xl sm:text-6xl font-extrabold">02</div>
+                        <div class="text-sm uppercase tracking-widest text-text-light/60">Days</div>
+                    </div>
+                    <div class="text-4xl sm:text-6xl font-extrabold">:</div>
+                    <div>
+                        <div id="hours" class="text-4xl sm:text-6xl font-extrabold">18</div>
+                        <div class="text-sm uppercase tracking-widest text-text-light/60">Hours</div>
+                    </div>
+                    <div class="text-4xl sm:text-6xl font-extrabold">:</div>
+                    <div>
+                        <div id="minutes" class="text-4xl sm:text-6xl font-extrabold">46</div>
+                        <div class="text-sm uppercase tracking-widest text-text-light/60">Minutes</div>
+                    </div>
+                    <div class="text-4xl sm:text-6xl font-extrabold">:</div>
+                    <div>
+                        <div id="seconds" class="text-4xl sm:text-6xl font-extrabold">33</div>
+                        <div class="text-sm uppercase tracking-widest text-text-light/60">Seconds</div>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white text-xl font-bold h-16 px-12 rounded-lg shadow-2xl shadow-primary/40 hover:scale-105 transition-transform animate-pulse-slow">
+                        Claim My Bundle Now for $39.99
+                    </a>
+                    <p class="mt-4 text-sm text-text-light/60">
+                        Instant Digital Access &bull; 100% Secure Checkout &bull; 30-Day Money-Back Guarantee
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-background-light dark:bg-background-dark border-t border-black/5 dark:border-white/5">
+        <div class="container mx-auto px-6 py-8 text-center text-text-dark/70 dark:text-text-light/70">
+            <p class="font-bold text-lg mb-2">The Seduction Library</p>
+            <p class="text-sm">For educational purposes only. Results may vary.</p>
+            <p class="text-sm mt-4">© 2024 Book Bundle Co. All rights reserved.</p>
+        </div>
+    </footer>
 </div>
 
-</body></html>
+<script>
+    // Countdown Timer Logic
+    function startCountdown() {
+        // Set the date we're counting down to (e.g., 3 days from now)
+        const countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 3);
+
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in elements with corresponding IDs
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            // If the countdown is over, write some text
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        }, 1000);
+    }
+    
+    // Start the countdown when the page loads
+    document.addEventListener('DOMContentLoaded', startCountdown);
+</script>
+
+</body>
+</html>
     `
   },
   
