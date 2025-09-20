@@ -318,44 +318,44 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             
             <!-- Existing Book 1 -->
             <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbvOgppAybNgu7OlSRasJvZYCRHXPdSj8TCL0tmN3ZgKJAIQyrrHd-HQvNlsDgFsKJSJWFz6R0socpYX2X8A77FXV4P2KXFFHuvWwTtIfMSpvZiLcuCMRWur9M5l3gl0IBT-q4QTC-PCQ7sLyJQ-KDkLvO_Dd4bRgQUzSyFASC0HNSLbdIZMcJ6WWutniHHGTaZWacXARa21PdkorEQH8wioA9T2WBi7aG8zK3gGzsBPYqndtaS7DHgCuGXI6Myo81YaNFAbXXrlc");'></div>
-                <p class="text-sm font-medium text-center">The Power of Habit</p>
+                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.jpg");'></div>
+                <p class="text-sm font-medium text-center">Mastering Her Pleasure: The Ultimate Guide for Men</p>
             </div>
             
             <!-- Existing Book 2 -->
             <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBI2055HvoRsO7NYPtENXGRxbAiHVn2wokWWJRTxDqhX6_5BFQbuzgCn9exq24OV11ILBiXYXQL_1EdbTXBrIriJw4cM7EPquMpAUjMpPRhkR-wCLYa1V-0svwP3_iuiipUyRi8fTObb7tuS2jOkjZIbxSqNd1bifMSsyamJpzJC8Es9OqZm5XA3-iFGJuN8_tprS6cCOS-lmc5Gdz_JFE5vWYXoer50kJU4Ck0NMvhDX7mLOVbMZTnnn75En_UPZ2t83VHi9YfAmc");'></div>
-                <p class="text-sm font-medium text-center">Atomic Habits</p>
+                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.jpg");'></div>
+                <p class="text-sm font-medium text-center">Dirty Talks to make her 100x wet during Sex</p>
             </div>
             
             <!-- Existing Book 3 -->
             <div class="flex flex-col gap-2 w-40 flex-shrink-0">
-                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaoVNUXXgXpOdNeAfGEntxBB7Fh-29xFVwornBklyet7zA6JJdPimL04qEg467kYpaaRKHLdvj3vpZeaoSHJh3AYPBHHIV9b7-sDRFRJ7jmSMfh5r-aC6IGyT0MakCFw_Q8HxY0S0cH9ZFMBnZ6Af2XwnPjgouCv2w_TNHwvXchM97g92KAQmMyOleAw0rTen5BSGU8alATMWL2tUiQ5hqEVN23DbbiLSC90fJuPuu_Rr3l9_xcTT1pN-kzQ7ibKPItdBTm1GG5yI");'></div>
-                <p class="text-sm font-medium text-center">Mindset</p>
+                <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.jpg");'></div>
+                <p class="text-sm font-medium text-center">Seducing His Senses: A Woman's Guide to Pleasuring Her Man</p>
             </div>
 
             <!-- NEW BOOK 4 -->
             <div class="flex flex-col gap-2 w-40 flex-shrink-0">
                 <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://picsum.photos/300/400?random=1");'></div>
-                <p class="text-sm font-medium text-center">Deep Work</p>
+                <p class="text-sm font-medium text-center">Make Him Craving You: The Ultimate Guide to Teasing and Pleasing</p>
             </div>
 
             <!-- NEW BOOK 5 -->
             <div class="flex flex-col gap-2 w-40 flex-shrink-0">
                 <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://picsum.photos/300/400?random=2");'></div>
-                <p class="text-sm font-medium text-center">Grit</p>
+                <p class="text-sm font-medium text-center">The Spicy Edition</p>
             </div>
 
             <!-- NEW BOOK 6 -->
             <div class="flex flex-col gap-2 w-40 flex-shrink-0">
                 <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://picsum.photos/300/400?random=3");'></div>
-                <p class="text-sm font-medium text-center">Thinking, Fast and Slow</p>
+                <p class="text-sm font-medium text-center">The Connection Edition</p>
             </div>
             
             <!-- NEW BOOK 7 -->
             <div class="flex flex-col gap-2 w-40 flex-shrink-0">
                 <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://picsum.photos/300/400?random=4");'></div>
-                <p class="text-sm font-medium text-center">The 7 Habits</p>
+                <p class="text-sm font-medium text-center">The Laughs $ Giggles Edition</p>
             </div>
             
             <!-- Existing "+ more" card -->
