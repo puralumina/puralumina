@@ -233,200 +233,214 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
     title: 'Save your couple',
     music: '/your-custom-music.mp3', // Optional
     content: `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massive Book Bundle Offer</title>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Ultimate Book Bundle</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211111",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            text-align: center;
-            padding: 20px 0;
-            background: #fff;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        .offer {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            margin-bottom: 20px;
-        }
-        .offer h2 {
-            font-size: 28px;
-            color: #e74c3c;
-        }
-        .offer p {
-            font-size: 20px;
-            color: #333;
-        }
-        .books {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-        .book {
-            width: 200px;
-            margin: 10px;
-            text-align: center;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .book img {
-            max-width: 100%;
-            height: auto;
-        }
-        .book h3 {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-        .testimonials {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            margin-bottom: 20px;
-        }
-        .testimonial {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-        .urgency {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            margin-bottom: 20px;
-        }
-        .urgency p {
-            font-size: 20px;
-            color: #e74c3c;
-        }
-        .progress-bar {
-            width: 100%;
-            background: #ddd;
-            height: 20px;
-            margin: 20px 0;
-        }
-        .progress-bar div {
-            height: 100%;
-            background: #e74c3c;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-        }
-        .footer p {
-            margin: 0;
-            font-size: 14px;
+    </script>
+<style>
+        .font-display {
+            font-family: 'Newsreader', serif;
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Massive Book Bundle Offer</h1>
-        </div>
-        <div class="offer">
-            <h2>Get All 14 Books for Just $39.99!</h2>
-            <p>Limited Time Offer: Price Increases by $100 Every 7 Days!</p>
-        </div>
-        <div class="books">
-            <div class="book">
-                <img src="book1.jpg" alt="Mastering Her Pleasure">
-                <h3>Mastering Her Pleasure</h3>
-            </div>
-            <div class="book">
-                <img src="book2.jpg" alt="Dirty Talks">
-                <h3>Dirty Talks to make her 100x wet during Sex</h3>
-            </div>
-            <div class="book">
-                <img src="book3.jpg" alt="Seducing His Senses">
-                <h3>Seducing His Senses: A Woman's Guide to Pleasuring Her Man</h3>
-            </div>
-            <div class="book">
-                <img src="book4.jpg" alt="Make Him Craving You">
-                <h3>Make Him Craving You: The Ultimate Guide to Teasing and Pleasing</h3>
-            </div>
-            <div class="book">
-                <img src="book5.jpg" alt="Couples Games - The Spicy Edition">
-                <h3>Couples Games - The Spicy Edition</h3>
-            </div>
-            <div class="book">
-                <img src="book6.jpg" alt="Couples Games - The Connection Edition">
-                <h3>Couples Games - The Connection Edition</h3>
-            </div>
-            <div class="book">
-                <img src="book7.jpg" alt="Couples Games - The Laughs $ Giggles Edition">
-                <h3>Couples Games - The Laughs $ Giggles Edition</h3>
-            </div>
-            <div class="book">
-                <img src="book8.jpg" alt="Couples Games – The 5-Minute Connector Edition">
-                <h3>Couples Games – The 5-Minute Connector Edition</h3>
-            </div>
-            <div class="book">
-                <img src="book9.jpg" alt="Truth or Dare for Couples Cards">
-                <h3>"Truth or Dare" for Couples Cards</h3>
-            </div>
-            <div class="book">
-                <img src="book10.jpg" alt="Date Night Idea Cards">
-                <h3>Date Night Idea Cards</h3>
-            </div>
-            <div class="book">
-                <img src="book11.jpg" alt="Couples' Affirmation Cards">
-                <h3>Couples' Affirmation Cards</h3>
-            </div>
-            <div class="book">
-                <img src="book12.jpg" alt="The Growth Mindset">
-                <h3>The Growth Mindset</h3>
-            </div>
-            <div class="book">
-                <img src="book13.jpg" alt="The Ultimate Date Night Planner">
-                <h3>The Ultimate Date Night Planner</h3>
-            </div>
-            <div class="book">
-                <img src="book14.jpg" alt="State of the Union Meeting Guide">
-                <h3>"State of the Union" Meeting Guide</h3>
-            </div>
-        </div>
-        <div class="testimonials">
-            <h2>What Our Customers Say</h2>
-            <div class="testimonial">
-                <p>"These books have transformed our relationship!" - Jane D.</p>
-            </div>
-            <div class="testimonial">
-                <p>"Incredible insights and practical advice. Highly recommend!" - John S.</p>
-            </div>
-        </div>
-        <div class="urgency">
-            <p>Hurry! The first 50 buyers will receive a special bonus!</p>
-        </div>
-        <div class="progress-bar">
-            <div style="width: 20%;"></div>
-        </div>
-        <div class="footer">
-            <p>© 2025 Your Bookstore. All rights reserved.</p>
-        </div>
-    </div>
-</body>
-</html>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-background-dark dark:text-background-light">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root overflow-x-hidden">
+<div>
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4 justify-between">
+<h2 class="text-lg font-bold flex-1 text-center pl-12">The Ultimate Book Bundle</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<main>
+<div class="w-full h-80 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHYJRreCmZEjHELYapCpc_hUPfL0VzlscmgrlJkpoNAh1_MMpMDudvjlMrgdwPkVwic4dFjO7W8OV0s9fwLC7hV_vJMfEJtissqa4oe3S73Gd3OMYVGkOIwjRhpm2hLhrFgA9OiEb-0IhBYnRTwT_LkX0_dHghBw5oh_Y-q0jHAFTO442te4SjUzUdaymF4bjLa9QAmGM7fwsmyRbItYtNHTwOgFsZO2pWSmhIc8jp5Su2yY8_jvc0k63YUzT7wUp8-AVToChJ6Cw");'></div>
+<div class="p-6 text-center">
+<h1 class="text-3xl font-bold leading-tight tracking-tight">Unlock Your Potential with 14 Best-Selling Books</h1>
+<p class="mt-2 text-lg">For a limited time, get all 14 books for just <span class="text-primary font-bold">$39.99</span>! <span class="line-through text-background-dark/60 dark:text-background-light/60">Regular price: $199.99</span></p>
+</div>
+<div class="px-6 py-4">
+<div class="flex justify-between items-center mb-1">
+<p class="text-sm font-medium">Bundles Sold</p>
+<p class="text-sm font-medium text-background-dark/80 dark:text-background-light/80">750/1000</p>
+</div>
+<div class="w-full bg-primary/20 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div class="px-6 py-4">
+<button class="w-full bg-primary text-white text-lg font-bold h-14 rounded-lg shadow-lg hover:bg-opacity-90 transition-colors">
+                        Get Your Bundle Now
+                    </button>
+</div>
+<section class="py-8">
+<h2 class="text-2xl font-bold px-6 mb-4">What's Included</h2>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden pl-6 pr-3">
+<div class="flex items-stretch gap-4">
+<div class="flex flex-col gap-2 w-40 flex-shrink-0">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbvOgppAybNgu7OlSRasJvZYCRHXPdSj8TCL0tmN3ZgKJAIQyrrHd-HQvNlsDgFsKJSJWFz6R0socpYX2X8A77FXV4P2KXFFHuvWwTtIfMSpvZiLcuCMRWur9M5l3gl0IBT-q4QTC-PCQ7sLyJQ-KDkLvO_Dd4bRgQUzSyFASC0HNSLbdIZMcJ6WWutniHHGTaZWacXARa21PdkorEQH8wioA9T2WBi7aG8zK3gGzsBPYqndtaS7DHgCuGXI6Myo81YaNFAbXXrlc");'></div>
+<p class="text-sm font-medium text-center">The Power of Habit</p>
+</div>
+<div class="flex flex-col gap-2 w-40 flex-shrink-0">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBI2055HvoRsO7NYPtENXGRxbAiHVn2wokWWJRTxDqhX6_5BFQbuzgCn9exq24OV11ILBiXYXQL_1EdbTXBrIriJw4cM7EPquMpAUjMpPRhkR-wCLYa1V-0svwP3_iuiipUyRi8fTObb7tuS2jOkjZIbxSqNd1bifMSsyamJpzJC8Es9OqZm5XA3-iFGJuN8_tprS6cCOS-lmc5Gdz_JFE5vWYXoer50kJU4Ck0NMvhDX7mLOVbMZTnnn75En_UPZ2t83VHi9YfAmc");'></div>
+<p class="text-sm font-medium text-center">Atomic Habits</p>
+</div>
+<div class="flex flex-col gap-2 w-40 flex-shrink-0">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaoVNUXXgXpOdNeAfGEntxBB7Fh-29xFVwornBklyet7zA6JJdPimL04qEg467kYpaaRKHLdvj3vpZeaoSHJh3AYPBHHIV9b7-sDRFRJ7jmSMfh5r-aC6IGyT0MakCFw_Q8HxY0S0cH9ZFMBnZ6Af2XwnPjgouCv2w_TNHwvXchM97g92KAQmMyOleAw0rTen5BSGU8alATMWL2tUiQ5hqEVN23DbbiLSC90fJuPuu_Rr3l9_xcTT1pN-kzQ7ibKPItdBTm1GG5yI");'></div>
+<p class="text-sm font-medium text-center">Mindset</p>
+</div>
+<div class="flex flex-col gap-2 w-40 flex-shrink-0">
+<div class="w-full aspect-[3/4] bg-primary/20 dark:bg-primary/30 rounded-lg flex items-center justify-center text-center p-2 text-primary">
+<p class="font-bold">+11 more books</p>
+</div>
+<p class="text-sm font-medium text-center">And many more...</p>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 py-8 bg-primary/5 dark:bg-primary/10">
+<h2 class="text-2xl font-bold text-center mb-2">Why You Need This</h2>
+<p class="text-center text-background-dark/80 dark:text-background-light/80 max-w-2xl mx-auto mb-8">These books offer practical advice and actionable strategies to help you achieve your goals.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="flex flex-col items-center text-center p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary mb-4">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64Z"></path></svg>
+</div>
+<h3 class="text-lg font-bold">Learn from Experts</h3>
+<p class="text-background-dark/80 dark:text-background-light/80 mt-1">Access the wisdom of renowned authors and thought leaders.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary mb-4">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"></path></svg>
+</div>
+<h3 class="text-lg font-bold">Gain New Insights</h3>
+<p class="text-background-dark/80 dark:text-background-light/80 mt-1">Discover innovative approaches to personal and professional growth.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary mb-4">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path></svg>
+</div>
+<h3 class="text-lg font-bold">Join a Community</h3>
+<p class="text-background-dark/80 dark:text-background-light/80 mt-1">Connect with like-minded individuals on a similar journey.</p>
+</div>
+</div>
+</section>
+<section class="px-6 py-8">
+<h2 class="text-2xl font-bold text-center mb-8">Real Results from Real Readers</h2>
+<div class="space-y-8 max-w-3xl mx-auto">
+<div class="p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm border-l-4 border-primary">
+<div class="flex items-center gap-3 mb-3">
+<img alt="Sophia Carter" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3die4Y0NtCl7jPaIgpN3OINva5E1uqwZGZzq2LhZyaNkwuqqHV5ArU4GfY8LkAlw3VF-55SvzveHrXuOt_iJ-R-1JU7yeahMXYwd01vFAdeS32saHrzSr3ioILM_stXEz35Jo7tUmYt38bkm7uKdfhFPtTw1tkNaBzirrlgwwGf2dB7_1IN3j3W-wc-GE3X0X42ZgXH5inbvTENYRcpXjTkM2tBw_TWjcuFstCIDuqOfQZVhAnvCtlK4ulAm1imHm93YkCIQf5gs"/>
+<div>
+<p class="font-bold">Sophia Carter</p>
+<div class="flex items-center text-primary">
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+</div>
+</div>
+</div>
+<p class="italic text-background-dark/90 dark:text-background-light/90">"This bundle has been a game-changer for me! The variety of topics covered is incredible, and I've already implemented several strategies from the books."</p>
+</div>
+<div class="p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm border-l-4 border-primary">
+<div class="flex items-center gap-3 mb-3">
+<img alt="Ethan Bennett" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRcgZdT6RiylSdjt4nHzvBDd4KtdOdAVKF4zA0gOab5bx0Xz06pxr_o3wEU6-7j_BFlSQ0WImnLIiNqFS0FS3NrN_mfBaf7aT2rBqT3uI4-ACXU6AlqiXPt4xu9IiB4xa1jUN0DRWnCV8v_ycHnoAzQ-BTU1FqWmksjJ7RT8CuuFM3AfhjvIxhG1CfVM-Qs_C1UWv-qKLjh80ikydx5Nat6T6EzKh6LwnNRuwhcfI64qOjti-A4xKo3GKvbxkFA06e9xm436hq2rw"/>
+<div>
+<p class="font-bold">Ethan Bennett</p>
+<div class="flex items-center text-primary">
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+</div>
+</div>
+</div>
+<p class="italic text-background-dark/90 dark:text-background-light/90">"I was skeptical at first, but the quality of these books exceeded my expectations. The value for the price is unbeatable."</p>
+</div>
+</div>
+</section>
+<section class="px-6 py-8 bg-primary/5 dark:bg-primary/10">
+<div class="max-w-4xl mx-auto space-y-6">
+<div class="text-center">
+<h2 class="text-2xl font-bold">Limited-Time Offer</h2>
+<p class="mt-1 text-background-dark/80 dark:text-background-light/80">Don't miss out on this incredible deal.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-1 p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm border border-primary/20 text-center">
+<h3 class="font-bold text-lg text-primary">Price Increasing Soon!</h3>
+<p class="mt-2 text-background-dark/80 dark:text-background-light/80">The price will increase to $59.99 after the first 1000 bundles are sold.</p>
+<button class="mt-4 w-full bg-primary text-white text-md font-bold h-10 rounded-lg shadow-md hover:bg-opacity-90 transition-colors">Secure Your Bundle</button>
+</div>
+<div class="flex-1 p-6 bg-background-light dark:bg-background-dark rounded-lg shadow-sm border border-primary/20 text-center">
+<h3 class="font-bold text-lg text-primary">Special Bonus</h3>
+<p class="mt-2 text-background-dark/80 dark:text-background-light/80">The first 50 buyers will receive a complimentary audiobook version of one of the books.</p>
+<button class="mt-4 w-full bg-primary text-white text-md font-bold h-10 rounded-lg shadow-md hover:bg-opacity-90 transition-colors">Claim Your Bonus</button>
+</div>
+</div>
+</div>
+</section>
+<div class="px-6 py-8 text-center">
+<h2 class="text-3xl font-bold">Ready to Transform Your Life?</h2>
+<p class="mt-2 text-lg text-background-dark/80 dark:text-background-light/80">Get instant access to 14 best-selling books for an unbeatable price.</p>
+<button class="mt-6 w-full max-w-sm mx-auto bg-primary text-white text-xl font-bold h-16 rounded-lg shadow-xl hover:bg-opacity-90 transition-colors">
+                        Get Your Bundle Now for $39.99
+                    </button>
+</div>
+</main>
+</div>
+<footer class="bg-background-light dark:bg-background-dark border-t border-primary/10 dark:border-primary/20 mt-8">
+<div class="container mx-auto px-6 py-8 text-center text-background-dark/70 dark:text-background-light/70">
+<div class="flex justify-center gap-6 mb-4">
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"></path></svg>
+</a>
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg>
+</a>
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+</a>
+</div>
+<p class="text-sm">© 2023 Book Bundle. All rights reserved.</p>
+</div>
+</footer>
+</div>
+
+</body></html>
     `
   },
   
