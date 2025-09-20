@@ -286,7 +286,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surge - Crafting Digital Experiences</title>
+    <title>ALPHA - Digital Creative Agency</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -295,387 +295,228 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
+            background-color: #191C1E;
+            color: #ffffff;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        /* Style for FAQ marker */
-        summary::-webkit-details-marker {
-            display: none;
-        }
-        summary {
-            list-style: none;
+        a {
+            text-decoration: none;
         }
     </style>
 </head>
 
-<body style="background-color: #121212; color: #ffffff; background-image: url('data:image/svg+xml,%3Csvg width=\"100\" height=\"100\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noise\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\" stitchTiles=\"stitch\"/%3E%3CfeColorMatrix type=\"saturate\" values=\"0\"/%3E%3C/filter%3E%3Crect width=\"100\" height=\"100\" filter=\"url(%23noise)\" opacity=\"0.03\"/%3E%3C/svg%3E');">
+<body>
 
-    <!-- Main Container -->
-    <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px;">
+    <!-- Main Wrapper -->
+    <div style="width: 100%;">
 
         <!-- ============================================= -->
-        <!-- HEADER -->
+        <!-- TOP BAR -->
         <!-- ============================================= -->
-        <header style="padding: 24px 0;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <a href="#" style="text-decoration: none; color: #fff; font-size: 24px; font-weight: 700;">
-                    <span style="color: #FFC700;">◆</span> Surge
-                </a>
-                <nav style="display: flex; gap: 32px; align-items: center;">
-                    <a href="#" style="text-decoration: none; color: #cccccc; font-size: 16px; font-weight: 500;">About Us</a>
-                    <a href="#" style="text-decoration: none; color: #cccccc; font-size: 16px; font-weight: 500;">Services</a>
-                    <a href="#" style="text-decoration: none; color: #cccccc; font-size: 16px; font-weight: 500;">Capabilities</a>
-                    <a href="#" style="text-decoration: none; color: #cccccc; font-size: 16px; font-weight: 500;">Portfolio</a>
-                    <a href="#" style="text-decoration: none; color: #cccccc; font-size: 16px; font-weight: 500;">Testimonials</a>
-                </nav>
-                <a href="#" style="background-color: #FFC700; color: #121212; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 16px;">Let's Talk</a>
+        <div style="background-color: #1E2225; padding: 12px 0;">
+            <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                <div style="display: flex; align-items: center; gap: 24px; font-size: 14px; color: #BDBDBD;">
+                    <span style="display: flex; align-items: center; gap: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Los Angeles Gournadi, 1230 Bariasl
+                    </span>
+                    <span style="display: flex; align-items: center; gap: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        Monday - Friday : 9:00 - 18:00
+                    </span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 24px;">
+                    <div style="display: flex; gap: 16px;">
+                        <!-- Social Icons -->
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                    <a href="#" style="background-color: #27AE60; color: white; padding: 10px 20px; border-radius: 5px; font-size: 14px; font-weight: 600;">GET FREE QUOTES</a>
+                </div>
             </div>
-        </header>
+        </div>
 
         <!-- ============================================= -->
         <!-- HERO SECTION -->
         <!-- ============================================= -->
-        <section style="padding: 80px 0; text-align: center;">
-            <div style="max-width: 800px; margin: 0 auto; position: relative;">
-                <div style="position: absolute; top: -20px; left: -40px; color: #FFC700;">
-                    <svg width="60" height="60" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 0 L12.24 7.76 L20 10 L12.24 12.24 L10 20 L7.76 12.24 L0 10 L7.76 7.76 Z" /></svg>
-                </div>
-                <h1 style="font-size: 64px; line-height: 1.2; margin: 0 0 24px 0; font-weight: 700;">
-                    CRAFTING DIGITAL EXPERIENCES WITH IMPACT
-                </h1>
-                <p style="color: #cccccc; font-size: 18px; max-width: 450px; margin: 0 auto 32px auto; line-height: 1.6;">
-                    We Combine Creativity And Technology To Deliver Unique, High-Impact Solutions. Our Team Collaborates Closely With Clients To Bring Their Visions To Life, Creating Designs.
-                </p>
-                <a href="#" style="background-color: #ffffff; color: #121212; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
-                    WORK WITH US
-                    <span style="background-color: #FFC700; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </span>
-                </a>
-            </div>
+        <section style="background-image: linear-gradient(rgba(25, 28, 30, 0.85), rgba(25, 28, 30, 0.85)), url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; padding: 24px 0 120px 0; min-height: 600px; display: flex; flex-direction: column;">
+            <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; width: 100%; box-sizing: border-box;">
+                <!-- Header Navigation -->
+                <header style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="#" style="font-size: 32px; font-weight: 700; color: white;">A<span style="color: #27AE60;">LP</span>HA</a>
+                    <nav style="display: flex; gap: 32px; align-items: center; font-weight: 500; text-transform: uppercase; font-size: 14px;">
+                        <a href="#" style="color: #27AE60;">Home</a>
+                        <a href="#" style="color: white;">About Us</a>
+                        <a href="#" style="color: white;">Services</a>
+                        <a href="#" style="color: white;">Pages</a>
+                        <a href="#" style="color: white;">Blog</a>
+                        <a href="#" style="color: white;">Contact</a>
+                    </nav>
+                </header>
 
-            <div style="margin-top: 60px;">
-                <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A team collaborating in a modern office." style="width: 100%; max-width: 1000px; border-radius: 16px; display: block; margin: 0 auto;">
-            </div>
-        </section>
-
-    </div><!-- End Main Container -->
-
-    <!-- ============================================= -->
-    <!-- TICKER / MARQUEE -->
-    <!-- ============================================= -->
-    <section style="background-color: #FFC700; color: #121212; padding: 24px 0; overflow: hidden; white-space: nowrap; margin: 40px 0;">
-        <div style="font-size: 32px; font-weight: 700; display: inline-block;">
-            <!-- Repeated for marquee effect -->
-            Let's Talk <span style="font-size: 16px; font-weight: 500; opacity: 0.7; margin: 0 24px;">GET IN TOUCH</span>
-            Let's Talk <span style="font-size: 16px; font-weight: 500; opacity: 0.7; margin: 0 24px;">GET IN TOUCH</span>
-            Let's Talk <span style="font-size: 16px; font-weight: 500; opacity: 0.7; margin: 0 24px;">GET IN TOUCH</span>
-            Let's Talk <span style="font-size: 16px; font-weight: 500; opacity: 0.7; margin: 0 24px;">GET IN TOUCH</span>
-            Let's Talk <span style="font-size: 16px; font-weight: 500; opacity: 0.7; margin: 0 24px;">GET IN TOUCH</span>
-            Let's Talk <span style="font-size: 16px; font-weight: 500; opacity: 0.7; margin: 0 24px;">GET IN TOUCH</span>
-        </div>
-    </section>
-
-    <!-- Main Container Re-opens -->
-    <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px;">
-        
-        <!-- ============================================= -->
-        <!-- SERVICES SECTION -->
-        <!-- ============================================= -->
-        <section style="padding: 80px 0;">
-            <h2 style="text-align: center; font-size: 48px; margin-bottom: 60px;">WHAT DO WE <span style="color: #FFC700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 8px;">PROVIDE</span>?</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px;">
-                
-                <!-- Service Card 1 -->
-                <div style="background-color: #FFC700; color: #121212; padding: 32px; border-radius: 16px; flex: 1 1 30%; min-width: 300px; max-width: 380px;">
-                    <div style="width: 50px; height: 50px; background-color: #121212; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </div>
-                    <h3 style="font-size: 22px; margin: 0 0 12px 0;">Theme Development</h3>
-                    <p style="font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.8;">You Need To Get Positive Results When You Spend Hard Eamed Marketing And Promotions.</p>
-                </div>
-
-                <!-- Service Card 2 -->
-                <div style="background-color: #1E1E1E; padding: 32px; border-radius: 16px; flex: 1 1 30%; min-width: 300px; max-width: 380px;">
-                     <div style="width: 50px; height: 50px; background-color: #121212; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    </div>
-                    <h3 style="font-size: 22px; margin: 0 0 12px 0;">Plugin Development</h3>
-                    <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #cccccc;">You Need To Get Positive Results When You Spend Hard Eamed Marketing And Promotions.</p>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div style="background-color: #1E1E1E; padding: 32px; border-radius: 16px; flex: 1 1 30%; min-width: 300px; max-width: 380px;">
-                     <div style="width: 50px; height: 50px; background-color: #121212; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                    </div>
-                    <h3 style="font-size: 22px; margin: 0 0 12px 0;">Ecommerce Site</h3>
-                    <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #cccccc;">You Need To Get Positive Results When You Spend Hard Eamed Marketing And Promotions.</p>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div style="background-color: #1E1E1E; padding: 32px; border-radius: 16px; flex: 1 1 30%; min-width: 300px; max-width: 380px;">
-                     <div style="width: 50px; height: 50px; background-color: #121212; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
-                    </div>
-                    <h3 style="font-size: 22px; margin: 0 0 12px 0;">Business Site</h3>
-                    <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #cccccc;">You Need To Get Positive Results When You Spend Hard Eamed Marketing And Promotions.</p>
-                </div>
-
-                <!-- Service Card 5 -->
-                <div style="background-color: #1E1E1E; padding: 32px; border-radius: 16px; flex: 1 1 30%; min-width: 300px; max-width: 380px;">
-                     <div style="width: 50px; height: 50px; background-color: #121212; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2" ry="2"></rect><line x1="2" y1="9" x2="22" y2="9"></line></svg>
-                    </div>
-                    <h3 style="font-size: 22px; margin: 0 0 12px 0;">Custom Coding</h3>
-                    <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #cccccc;">You Need To Get Positive Results When You Spend Hard Eamed Marketing And Promotions.</p>
-                </div>
-
-                <!-- Service Card 6 -->
-                <div style="background-color: #1E1E1E; padding: 32px; border-radius: 16px; flex: 1 1 30%; min-width: 300px; max-width: 380px;">
-                     <div style="width: 50px; height: 50px; background-color: #121212; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    </div>
-                    <h3 style="font-size: 22px; margin: 0 0 12px 0;">UI/UX Design</h3>
-                    <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #cccccc;">You Need To Get Positive Results When You Spend Hard Eamed Marketing And Promotions.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ============================================= -->
-        <!-- CTA SECTION -->
-        <!-- ============================================= -->
-        <section style="padding: 80px 0;">
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px;">
-                <div style="flex: 1 1 50%; min-width: 300px; position: relative;">
-                    <div style="position: absolute; top: -10px; right: 0; color: #FFC700; transform: rotate(90deg);">
-                        <svg width="60" height="60" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 0 L12.24 7.76 L20 10 L12.24 12.24 L10 20 L7.76 12.24 L0 10 L7.76 7.76 Z" /></svg>
-                    </div>
-                    <h2 style="font-size: 48px; line-height: 1.3; margin: 0 0 24px 0;">TRANSFORM YOUR IDEAS INTO DIGITAL REALITY</h2>
-                    <p style="color: #cccccc; font-size: 18px; line-height: 1.6;">We Combine Creativity And Technology To Deliver Unique, High-Impact Solutions. Our Powerful Team Collaborates Closely With Clients To Bring Their Visions To Life, Creating Designs.</p>
-                </div>
-                <div style="flex-shrink: 0;">
-                    <a href="#" style="background-color: #ffffff; color: #121212; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
-                        WORK WITH US
-                        <span style="background-color: #FFC700; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================= -->
-        <!-- PROJECTS SECTION -->
-        <!-- ============================================= -->
-        <section style="padding: 80px 0;">
-            <h2 style="text-align: center; font-size: 48px; margin-bottom: 60px;">OUR <span style="color: #FFC700;">PROJECTS</span></h2>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 24px;">
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; width: 100%;">
-                    
-                    <!-- Project 1 -->
-                    <div style="background-color: #1E1E1E; padding: 20px; border-radius: 16px; flex: 1 1 30%; min-width: 300px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                            <div>
-                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Landing Page UI</h4>
-                                <p style="margin: 0; color: #cccccc;">Nike Landing Page</p>
-                            </div>
-                            <a href="#" style="background-color: #FFC700; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                            </a>
-                        </div>
-                        <img src="https://placehold.co/600x400/121212/FFC700?text=Project+1" alt="Project 1" style="width: 100%; border-radius: 8px;">
-                    </div>
-
-                    <!-- Project 2 (Taller) -->
-                    <div style="background-color: #1E1E1E; padding: 20px; border-radius: 16px; flex: 1 1 30%; min-width: 300px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                            <div>
-                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Landing Page UI</h4>
-                                <p style="margin: 0; color: #cccccc;">Website</p>
-                            </div>
-                            <a href="#" style="background-color: #FFC700; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                            </a>
-                        </div>
-                        <img src="https://placehold.co/600x800/121212/FFC700?text=Project+2" alt="Project 2" style="width: 100%; border-radius: 8px;">
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div style="background-color: #1E1E1E; padding: 20px; border-radius: 16px; flex: 1 1 30%; min-width: 300px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                            <div>
-                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Landing Page UI</h4>
-                                <p style="margin: 0; color: #cccccc;">Nike Landing Page</p>
-                            </div>
-                            <a href="#" style="background-color: #FFC700; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                            </a>
-                        </div>
-                        <img src="https://placehold.co/600x400/121212/FFC700?text=Project+3" alt="Project 3" style="width: 100%; border-radius: 8px;">
-                    </div>
-                </div>
-
-                <!-- Project 4 (Below middle) -->
-                <div style="background-color: #1E1E1E; padding: 20px; border-radius: 16px; width: 100%; max-width: 380px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                        <div>
-                            <h4 style="margin: 0 0 4px 0; font-size: 18px;">Landing Page UI</h4>
-                            <p style="margin: 0; color: #cccccc;">Nike Landing Page</p>
-                        </div>
-                        <a href="#" style="background-color: #FFC700; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                <!-- Hero Content -->
+                <div style="text-align: center; max-width: 700px; margin: 100px auto 0 auto;">
+                    <div style="margin-bottom: 30px;">
+                        <a href="#" style="width: 80px; height: 80px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; border: 2px solid #27AE60;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#27AE60" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                         </a>
                     </div>
-                    <img src="https://placehold.co/600x400/121212/FFC700?text=Project+4" alt="Project 4" style="width: 100%; border-radius: 8px;">
+                    <h1 style="font-size: 56px; line-height: 1.2; font-weight: 700; margin: 0 0 24px 0;">GROW YOUR DIGITAL CREATIVE <span style="color: #27AE60;">AGENCY</span></h1>
+                    <p style="font-size: 16px; color: #BDBDBD; line-height: 1.6; margin: 0 0 32px 0;">Pellentesque ac volutpat a, sed-vestibulum. Lacina, nonummy placeat wisi, morbi, fringilla aliquet mauris.</p>
+                    <div style="display: flex; justify-content: center; gap: 16px;">
+                        <a href="#" style="background-color: #27AE60; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600;">LEARN MORE</a>
+                        <a href="#" style="background-color: transparent; border: 2px solid white; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600;">HOW IT WORKS</a>
+                    </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- ============================================= -->
-        <!-- TESTIMONIALS SECTION -->
-        <!-- ============================================= -->
-        <section style="padding: 80px 0;">
-            <h2 style="text-align: center; font-size: 48px; margin-bottom: 60px;">WHAT OUR <span style="color: #FFC700;">CLIENTS SAY</span>?</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px;">
-
-                <!-- Testimonial Card 1 -->
-                <div style="background-color: #1E1E1E; padding: 40px; border-radius: 16px; flex: 1 1 45%; min-width: 300px; position: relative;">
-                    <div style="position: absolute; top: 20px; right: 20px; font-size: 100px; color: #FFC700; opacity: 0.2; line-height: 1; font-family: serif;">“</div>
-                    <p style="color: #cccccc; line-height: 1.8; font-size: 16px; margin: 0 0 24px 0;">Working with Webflow Studio has been an incredible experience. They have a talented team of designers and developers who went above and beyond our expectations. We couldn't be happier with the final product!</p>
-                    <div style="display: flex; align-items: center; gap: 16px;">
-                        <img src="https://placehold.co/60x60/FFC700/121212?text=AB" alt="Alan Baker" style="width: 60px; height: 60px; border-radius: 50%;">
-                        <div>
-                            <h4 style="margin: 0 0 4px 0; font-size: 18px;">Alan Baker</h4>
-                            <p style="margin: 0; color: #cccccc;">CEO of Red Bull Company</p>
-                        </div>
+        <!-- Container for remaining sections -->
+        <div style="max-width: 1280px; margin: 0 auto; padding: 80px 40px;">
+            
+            <!-- ============================================= -->
+            <!-- SERVICES SECTION -->
+            <!-- ============================================= -->
+            <section style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 80px;">
+                <!-- Services Intro -->
+                <div style="flex: 1 1 300px;">
+                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">Explore Our Best <span style="color: #27AE60; border-bottom: 3px solid #27AE60; padding-bottom: 4px;">Services</span></h2>
+                    <p style="color: #BDBDBD; line-height: 1.6; margin: 0 0 30px 0;">Duis sed-ante eu luctus ex umbra non, in tristique! Orci-fusce convallis lacinia leo, at.</p>
+                    <a href="#" style="background-color: #27AE60; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600; display: inline-block;">MORE SERVICES</a>
+                </div>
+                <!-- Services Grid -->
+                <div style="flex: 2 1 600px; display: flex; flex-wrap: wrap; gap: 20px;">
+                    <!-- Card 1 -->
+                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
+                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">01.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">Graphic Designer</h3>
+                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
+                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">02.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">Web Designing</h3>
+                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    </div>
+                     <!-- Card 3 -->
+                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
+                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">03.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">Digital Marketing</h3>
+                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    </div>
+                     <!-- Card 4 -->
+                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
+                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">04.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">App Develop</h3>
+                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    </div>
+                     <!-- Card 5 -->
+                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
+                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">05.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">Content Writing</h3>
+                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
+                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">06.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">SEO Creating</h3>
+                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
                     </div>
                 </div>
-
-                <!-- Testimonial Card 2 -->
-                <div style="background-color: #1E1E1E; padding: 40px; border-radius: 16px; flex: 1 1 45%; min-width: 300px; position: relative;">
-                     <div style="position: absolute; top: 20px; right: 20px; font-size: 100px; color: #FFC700; opacity: 0.2; line-height: 1; font-family: serif;">“</div>
-                    <p style="color: #cccccc; line-height: 1.8; font-size: 16px; margin: 0 0 24px 0;">Working with Webflow Studio has been an incredible experience. They have a talented team of designers and developers who went above and beyond our expectations. We couldn't be happier with the final product!</p>
-                    <div style="display: flex; align-items: center; gap: 16px;">
-                        <img src="https://placehold.co/60x60/FFC700/121212?text=TW" alt="Theresa Webb" style="width: 60px; height: 60px; border-radius: 50%;">
-                        <div>
-                            <h4 style="margin: 0 0 4px 0; font-size: 18px;">Theresa Webb</h4>
-                            <p style="margin: 0; color: #cccccc;">CEO of Red Bull Company</p>
-                        </div>
+            </section>
+            
+            <!-- ============================================= -->
+            <!-- ABOUT/GROW SECTION -->
+            <!-- ============================================= -->
+            <section style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 80px;">
+                <!-- Image Grid -->
+                <div style="flex: 1 1 500px; display: flex; flex-wrap: wrap; gap: 15px;">
+                    <img src="https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team meeting 1" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover; filter: grayscale(100%);">
+                    <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team meeting 2" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover; filter: grayscale(100%);">
+                    <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team meeting 3" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover; filter: grayscale(100%);">
+                    <div style="width: 48%; background-color: #27AE60; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; box-sizing: border-box;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        <p style="font-size: 40px; font-weight: 700; margin: 10px 0 0 0;">10+</p>
+                        <p style="margin: 0; font-size: 14px;">Years of experience in this field</p>
                     </div>
                 </div>
+                <!-- Content -->
+                <div style="flex: 1 1 500px;">
+                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">Are You Ready To Grow Your <span style="color: #27AE60; border-bottom: 3px solid #27AE60; padding-bottom: 4px;">Businesses</span></h2>
+                    <p style="color: #BDBDBD; line-height: 1.6; margin: 0 0 30px 0;">Integer tempor, id-venenatis quam pharetra. Euismod-risus vivamus, laboris-officia? Ligula-ullamcorper eget-eget consectetuer, ipsam.</p>
+                    <div style="display: flex; gap: 30px; margin-bottom: 24px;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#191C1E" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                            <span style="font-weight: 600;">Business Growth</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#191C1E" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                            <span style="font-weight: 600;">Marketing Solution</span>
+                        </div>
+                    </div>
+                     <ul style="color: #BDBDBD; line-height: 2; padding-left: 20px; margin: 0 0 30px 0;">
+                        <li>Euismod-magnam purus-porta minima blandit.</li>
+                        <li>Nullam-magni, minima lacinia platea donec.</li>
+                        <li>Nostrud viverra ansi assumenda volutpat-nunc.</li>
+                    </ul>
+                    <a href="#" style="background-color: #27AE60; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600; display: inline-block;">MORE ABOUT US</a>
+                </div>
+            </section>
 
-            </div>
-        </section>
+            <!-- ============================================= -->
+            <!-- CLIENTS TRUST SECTION -->
+            <!-- ============================================= -->
+            <section style="background-image: linear-gradient(rgba(25, 28, 30, 0.9), rgba(25, 28, 30, 0.9)), url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; border-radius: 12px; padding: 60px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 80px;">
+                <!-- Clients Intro -->
+                 <div style="flex: 1 1 300px;">
+                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">Hundreds of Clients Trust Our <span style="color: #27AE60;">Company</span></h2>
+                    <p style="color: #BDBDBD; line-height: 1.6; margin: 0 0 30px 0;">Integer tempor, id-venenatis quam pharetra. Euismod-risus vivamus, laboris-officia? Ligula-ullamcorper.</p>
+                    <a href="#" style="background-color: #27AE60; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600; display: inline-block;">FREE QUOTES</a>
+                </div>
+                <!-- Client Logos -->
+                <div style="flex: 1 1 400px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">✧ CREATIVE</div>
+                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">Ω CREATIVE</div>
+                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600; font-family: cursive;">Name</div>
+                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">ZA BRANDNAME</div>
+                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">✕ Express</div>
+                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">• Innovate</div>
+                </div>
+            </section>
+            
+            <!-- ============================================= -->
+            <!-- PROJECTS SECTION -->
+            <!-- ============================================= -->
+            <section>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 50px auto;">
+                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">Our Recently Completed <span style="color: #27AE60;">Projects</span></h2>
+                </div>
+                <!-- Filter Navigation -->
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-bottom: 40px; font-weight: 500;">
+                    <a href="#" style="color: #191C1E; background-color: #27AE60; padding: 8px 20px; border-radius: 5px;">ALL</a>
+                    <a href="#" style="color: #BDBDBD;">BUSINESS</a>
+                    <a href="#" style="color: #BDBDBD;">MARKETING</a>
+                    <a href="#" style="color: #BDBDBD;">FINANCE</a>
+                    <a href="#" style="color: #BDBDBD;">MANAGEMENT</a>
+                </div>
+                 <!-- Project Gallery -->
+                 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 1" style="width: 100%; max-width: 30%; min-width: 300px; border-radius: 8px; object-fit: cover;">
+                    <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 2" style="width: 100%; max-width: 30%; min-width: 300px; border-radius: 8px; object-fit: cover;">
+                    <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 3" style="width: 100%; max-width: 30%; min-width: 300px; border-radius: 8px; object-fit: cover;">
+                 </div>
+            </section>
 
-    </div><!-- End Main Container -->
-
-    <!-- ============================================= -->
-    <!-- CLIENT LOGOS -->
-    <!-- ============================================= -->
-    <div style="padding: 40px 0; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 40px;">
-            <span style="font-size: 24px; font-weight: 600; color: #555;">Qwave</span>
-            <span style="font-size: 24px; font-weight: 600; color: #555;">✓ SpecBee</span>
-            <span style="font-size: 24px; font-weight: 600; color: #555;">martino ▲</span>
-            <span style="font-size: 24px; font-weight: 600; color: #555;">▽ Virosgen</span>
-            <span style="font-size: 24px; font-weight: 600; color: #555;">7 VERTEX</span>
-            <span style="font-size: 24px; font-weight: 600; color: #555;">A Armis</span>
-            <span style="font-size: 24px; font-weight: 600; color: #555;">Natroma</span>
         </div>
     </div>
-    
-    <!-- Main Container Re-opens -->
-    <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px;">
-
-        <!-- ============================================= -->
-        <!-- FAQ SECTION -->
-        <!-- ============================================= -->
-        <section style="padding: 80px 0;">
-            <h2 style="text-align: center; font-size: 48px; margin-bottom: 60px;">Frequently Asked <span style="color: #FFC700;">Questions</span></h2>
-            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
-                
-                <!-- FAQ Item 1 -->
-                <details style="background-color: #FFC700; color: #121212; border-radius: 16px; padding: 24px; cursor: pointer;">
-                    <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 18px; font-weight: 600;">
-                        What services do you offer?
-                        <span style="background-color: #121212; color: #FFC700; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">−</span>
-                    </summary>
-                    <p style="font-size: 16px; line-height: 1.6; margin-top: 16px; opacity: 0.8;">We offer a full range of digital services, including web design, UX/UI, branding, and digital marketing. Our goal is to deliver a customized digital solution that helps you achieve your business goals.</p>
-                </details>
-
-                <!-- FAQ Item 2 -->
-                <details style="background-color: #1E1E1E; border-radius: 16px; padding: 24px; cursor: pointer;">
-                    <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 18px; font-weight: 600;">
-                        How long does a project typically take?
-                        <span style="background-color: #121212; color: #FFC700; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">+</span>
-                    </summary>
-                    <p style="color: #cccccc; font-size: 16px; line-height: 1.6; margin-top: 16px;">The timeline for a project varies depending on its scope and complexity. We will provide a detailed project timeline after our initial consultation.</p>
-                </details>
-
-                <!-- FAQ Item 3 -->
-                <details style="background-color: #1E1E1E; border-radius: 16px; padding: 24px; cursor: pointer;">
-                    <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 18px; font-weight: 600;">
-                        What is the cost of your services?
-                        <span style="background-color: #121212; color: #FFC700; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">+</span>
-                    </summary>
-                    <p style="color: #cccccc; font-size: 16px; line-height: 1.6; margin-top: 16px;">We provide custom quotes for each project based on your specific needs. Contact us for a detailed estimate.</p>
-                </details>
-
-                <!-- FAQ Item 4 -->
-                <details style="background-color: #1E1E1E; border-radius: 16px; padding: 24px; cursor: pointer;">
-                    <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 18px; font-weight: 600;">
-                        Can you redesign my existing website or app?
-                        <span style="background-color: #121212; color: #FFC700; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">+</span>
-                    </summary>
-                    <p style="color: #cccccc; font-size: 16px; line-height: 1.6; margin-top: 16px;">Absolutely. We specialize in redesigning and modernizing existing digital products to improve user experience and performance.</p>
-                </details>
-
-                 <!-- FAQ Item 5 -->
-                <details style="background-color: #1E1E1E; border-radius: 16px; padding: 24px; cursor: pointer;">
-                    <summary style="display: flex; justify-content: space-between; align-items: center; font-size: 18px; font-weight: 600;">
-                        How involved will I be in the design process?
-                        <span style="background-color: #121212; color: #FFC700; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">+</span>
-                    </summary>
-                    <p style="color: #cccccc; font-size: 16px; line-height: 1.6; margin-top: 16px;">We believe in a collaborative process. You will be involved at every key stage, from initial concept to final launch, to ensure the final product aligns perfectly with your vision.</p>
-                </details>
-            </div>
-        </section>
-
-        <!-- ============================================= -->
-        <!-- FINAL CTA -->
-        <!-- ============================================= -->
-        <section style="padding: 40px 0 80px 0;">
-             <div style="background-color: #FFC700; color: #121212; padding: 32px 40px; border-radius: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
-                <h3 style="font-size: 28px; font-weight: 600; margin: 0;">Ready to work with us ?</h3>
-                <a href="#" style="background-color: #121212; color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-flex; align-items: center; gap: 8px;">
-                    Get Started
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-             </div>
-        </section>
-
-
-        <!-- ============================================= -->
-        <!-- FOOTER -->
-        <!-- ============================================= -->
-        <footer style="padding: 80px 0 40px 0; text-align: center;">
-            <p style="color: #FFC700; font-weight: 600; margin: 0;">HAVE SOMETHING IN MIND?</p>
-            <h2 style="font-size: 48px; margin: 16px 0 32px 0;">GET <span style="color: #FFC700;">CONNECTED</span></h2>
-            <a href="#" style="background-color: #FFC700; color: #121212; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block; margin-bottom: 80px;">CONTACT US</a>
-            
-            <div style="border-top: 1px solid #2a2a2a; padding-top: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
-                <p style="color: #cccccc; margin: 0;">© 2023 Surge. All Rights Reserved.</p>
-                <div style="display: flex; gap: 24px;">
-                    <a href="#" style="color: #cccccc; text-decoration: none;">Privacy Policy</a>
-                    <a href="#" style="color: #cccccc; text-decoration: none;">Terms & Conditions</a>
-                </div>
-            </div>
-        </footer>
-
-    </div><!-- End Main Container -->
 
 </body>
 
