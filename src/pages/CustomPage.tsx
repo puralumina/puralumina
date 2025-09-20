@@ -3,6 +3,30 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 
+// Function to execute scripts in HTML content
+const executeScripts = (container: HTMLElement) => {
+  const scripts = container.querySelectorAll('script');
+  scripts.forEach((script) => {
+    const newScript = document.createElement('script');
+    if (script.src) {
+      newScript.src = script.src;
+    } else {
+      newScript.textContent = script.textContent;
+    }
+    // Copy all attributes
+    Array.from(script.attributes).forEach(attr => {
+      newScript.setAttribute(attr.name, attr.value);
+    });
+    document.head.appendChild(newScript);
+    // Remove the new script after execution to prevent memory leaks
+    setTimeout(() => {
+      if (newScript.parentNode) {
+        newScript.parentNode.removeChild(newScript);
+      }
+    }, 100);
+  });
+};
+
 // Sample custom pages data - you can modify these or add more
 const customPages: { [key: string]: { title: string; content: string; music?: string } } = {
   'funnel-1': {
@@ -82,9 +106,9 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
       <script>
         // Simple countdown timer
         function updateCountdown() {
-          const hours = document.getElementById('hours');
-          const minutes = document.getElementById('minutes');
-          const seconds = document.getElementById('seconds');
+          const hours = document.querySelector('#hours');
+          const minutes = document.querySelector('#minutes');
+          const seconds = document.querySelector('#seconds');
           
           if (hours && minutes && seconds) {
             let h = parseInt(hours.textContent);
@@ -110,7 +134,10 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
           }
         }
         
-        setInterval(updateCountdown, 1000);
+        setTimeout(() => {
+          updateCountdown();
+          setInterval(updateCountdown, 1000);
+        }, 100);
       </script>
     `
   },
@@ -185,6 +212,27 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
           </div>
         </section>
       </div>
+      
+      <script>
+        // Enhanced interactions
+        function addHoverEffects() {
+          const buttons = document.querySelectorAll('.hover-lift, .cta-button, .feature-card');
+          buttons.forEach(button => {
+            button.addEventListener('mouseenter', function() {
+              this.style.transform = 'translateY(-5px) scale(1.02)';
+              this.style.transition = 'all 0.3s ease';
+            });
+            button.addEventListener('mouseleave', function() {
+              this.style.transform = 'translateY(0) scale(1)';
+            });
+          });
+        }
+        
+        // Initialize when DOM is ready
+        setTimeout(() => {
+          addHoverEffects();
+        }, 100);
+      </script>
     `
   },
   
@@ -819,18 +867,33 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 
 const CustomPage: React.FC = () => {
   const { pageId } = useParams<{ pageId: string }>();
-  const [pageData, setPageData] = useState<{ title: string; content: string; music?: string } | null>(null);
+  const [pageContent, setPageContent] = useState<string>('');
+  const [contentRef, setContentRef] = useState<HTMLDivElement | null>(null);
   
-  useEffect(() => {
-    if (pageId && customPages[pageId]) {
-      setPageData(customPages[pageId]);
-    }
-  }, [pageId]);
+  const currentPage = pageId ? customPages[pageId] : null;
   
   // Background music for custom pages
-  useBackgroundMusic(pageData?.music || '/default-custom-page-music.mp3', { volume: 0.2 });
+  useBackgroundMusic(currentPage?.music || '/default-custom-page-music.mp3', { volume: 0.2 });
   
-  if (!pageData) {
+  useEffect(() => {
+    if (currentPage) {
+      setPageContent(currentPage.content);
+      
+      // Execute scripts after content is set and DOM is updated
+      setTimeout(() => {
+        if (contentRef) {
+          executeScripts(contentRef);
+        }
+      }, 100);
+    }
+  }, [currentPage, contentRef]);
+
+  // Ref callback to get the content container
+  const handleContentRef = (element: HTMLDivElement | null) => {
+    setContentRef(element);
+  };
+  
+  if (!currentPage) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -856,7 +919,8 @@ const CustomPage: React.FC = () => {
       
       {/* Custom HTML Content */}
       <div 
-        dangerouslySetInnerHTML={{ __html: pageData.content }}
+        ref={handleContentRef}
+        dangerouslySetInnerHTML={{ __html: pageContent }}
         className="custom-page-content"
       />
       
@@ -868,6 +932,19 @@ const CustomPage: React.FC = () => {
         
         .custom-page-content * {
           box-sizing: border-box;
+        }
+        
+        /* Ensure animations work */
+        .custom-page-content .hover-lift,
+        .custom-page-content .cta-button,
+        .custom-page-content .feature-card {
+          transition: all 0.3s ease !important;
+        }
+        
+        .custom-page-content .hover-lift:hover,
+        .custom-page-content .cta-button:hover,
+        .custom-page-content .feature-card:hover {
+          transform: translateY(-5px) scale(1.02) !important;
         }
         
         /* Responsive adjustments */
