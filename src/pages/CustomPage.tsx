@@ -355,7 +355,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <!-- NEW BOOK 7 -->
             <div class="flex flex-col gap-2 w-40 flex-shrink-0">
                 <div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg shadow-md" style='background-image: url("https://picsum.photos/300/400?random=4");'></div>
-                <p class="text-sm font-medium text-center">The Laughs $ Giggles Edition</p>
+                <p class="text-sm font-medium text-center">The Laughs & Giggles Edition</p>
             </div>
             
             <!-- Existing "+ more" card -->
