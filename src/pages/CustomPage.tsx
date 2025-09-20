@@ -285,286 +285,763 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GASLUR - NFT Marketplace</title>
+    <title>Globe Express Landing Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <style>
-        /* Base styles and non-inlinable CSS (pseudo-elements, pseudo-classes, animations, media queries) */
+        /* Converted SASS to CSS */
         body {
             margin: 0;
-            background-color: #252954;
+            background-color: #1a1a1a;
+            color: #FFFFFFDD;
+            position: relative;
+            overflow: hidden;
+            font-family: "Inter", sans-serif;
         }
 
-        /* Pseudo-elements for background glow effects */
-        .landingpage::before {
-            content: "";
+        .card {
             position: absolute;
-            width: 123px;
-            height: 123px;
-            left: 60%;
-            top: 138px;
-            filter: blur(90px);
-            background-color: #FB37FF;
+            left: 0;
+            top: 0;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 6px 6px 10px 2px rgba(0, 0, 0, 0.6);
         }
 
-        .landingpage::after {
-            content: "";
+        #btn {
             position: absolute;
-            width: 123px;
-            height: 123px;
-            left: 80%;
-            top: 550px;
-            background-color: #18B2DE;
-            filter: blur(80px);
+            top: 690px;
+            left: 16px;
+            z-index: 99;
         }
-        
-        .started-items:before {
-            content: "";
+
+        .card-content {
             position: absolute;
-            width: 100%;
+            left: 0;
+            top: 0;
+            color: #FFFFFFDD;
+            padding-left: 16px;
+        }
+
+        .content-place {
+            margin-top: 6px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .content-title-1,
+        .content-title-2 {
+            font-weight: 600;
+            font-size: 20px;
+            font-family: "Oswald", sans-serif;
+        }
+
+        .content-start {
+            width: 30px;
+            height: 5px;
+            border-radius: 99px;
+            background-color: #FFFFFFDD;
+        }
+
+        .details {
+            z-index: 22;
+            position: absolute;
+            top: 240px;
+            left: 60px;
+        }
+
+        .details .place-box {
+            height: 46px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .details .place-box .text {
+            padding-top: 16px;
+            font-size: 20px;
+        }
+
+        .details .place-box .text:before {
+            top: 0;
+            left: 0;
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 4px;
+            border-radius: 99px;
+            background-color: white;
+        }
+
+        .details .title-1,
+        .details .title-2 {
+            font-weight: 600;
+            font-size: 72px;
+            font-family: "Oswald", sans-serif;
+        }
+
+        .details .title-box-1,
+        .details .title-box-2 {
+            margin-top: 2px;
             height: 100px;
-            top: 80px;
-            filter: blur(80px);
-            background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+            overflow: hidden;
         }
 
-        /* Pseudo-classes for hover effects */
-        .item-img:hover {
-            transform: scale(1.05);
+        .details > .desc {
+            margin-top: 16px;
+            width: 500px;
         }
 
-        /* Keyframe animations */
-        @keyframes leftslide {
-            from {
-                transform: translateX(-700px);
-            }
-            to {
-                transform: translateX(0px);
-            }
+        .details > .cta {
+            width: 500px;
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
         }
 
-        @keyframes rightslide {
-            from {
-                transform: translateX(550px);
-            }
-            to {
-                transform: translateX(0px);
-            }
+        .details > .cta > .bookmark {
+            border: none;
+            background-color: #ecad29;
+            width: 36px;
+            height: 36px;
+            border-radius: 99px;
+            color: white;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
         }
 
-        /* Media Queries for Responsiveness */
-        @media screen and (max-width: 1500px) {
-            .landingpage {
-                max-width: 1200px !important;
-            }
+        .details > .cta > .bookmark svg {
+            width: 20px;
+            height: 20px;
         }
 
-        @media screen and (max-width: 1040px) {
-            .box {
-                flex-direction: column;
-            }
-            .infobox {
-                max-height: 450px;
-                max-width: none !important;
-                margin-bottom: 50px;
-            }
-            .display {
-                display: none !important;
-            }
-            .auction .nft {
-                grid-template-columns: auto auto;
-                justify-content: space-around;
-            }
-            .discover-items {
-                grid-template-columns: auto auto auto;
-                justify-content: space-around;
-            }
-            .footer {
-                flex-direction: column;
-            }
-            .footer-main {
-                max-width: 80% !important;
-                margin-bottom: 50px;
-                text-align: center;
-            }
-            .footer-navigate .nav:first-child {
-                margin: 0;
-            }
+        .details > .cta > .discover {
+            border: 1px solid #ffffff;
+            background-color: transparent;
+            height: 36px;
+            border-radius: 99px;
+            color: #ffffff;
+            padding: 4px 24px;
+            font-size: 12px;
+            margin-left: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
         }
 
-        @media screen and (max-width: 925px) {
-            .navlinkwrap {
-                display: none !important;
-            }
-            .buttonwrap {
-                display: none !important;
-            }
-            .hamburger {
-                display: flex !important;
-                align-items: center;
-            }
-            .started-slimtext {
-                text-align: center;
-            }
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 36px;
+            font-weight: 500;
         }
 
-        @media screen and (max-width: 825px) {
-            .started-items {
-                grid-template-columns: auto auto;
-                justify-content: space-evenly;
-                padding: 50px 0 !important;
-            }
-            .started-items:before {
-                height: 200px;
-                top: 90px;
-                filter: blur(120px);
-            }
-            .discover-items {
-                grid-template-columns: auto auto;
-                justify-content: space-around;
-            }
+        nav svg {
+            width: 20px;
+            height: 20px;
         }
 
-        @media screen and (max-width: 700px) {
-            .box .display {
-                display: block !important;
-                max-height: none;
-                max-width: none;
-            }
-            .discover-title {
-                justify-content: center;
-            }
-            .discover-title .filters {
-                display: none;
-            }
-            .auction .title {
-                justify-content: center;
-            }
-            .auction .title .titleslim {
-                display: none;
-            }
+        nav .svg-container {
+            width: 20px;
+            height: 20px;
         }
 
-        @media screen and (max-width: 600px) {
-            .landingpage {
-                padding: 0 20px !important;
-            }
-            .infobox-boldtext {
-                font-size: 45px !important;
-                line-height: 50px !important;
-            }
-            .infobox-slimtext {
-                font-size: 12px !important;
-                line-height: 16px !important;
-            }
-            .discover-items,
-            .auction .nft {
-                grid-template-columns: auto;
-                justify-content: space-around;
-            }
-            .footer-main {
-                font-size: 20px !important;
-                line-height: 30px !important;
-                max-width: 100% !important;
-                margin-bottom: 50px;
-                text-align: center;
-            }
-            .footer-navigate {
-                justify-content: space-between;
-                width: 100%;
-            }
-            .footer-navigate .nav {
-                margin-left: 20px;
-            }
-            .footer-navigate .nav h5 {
-                font-size: 15px;
-                line-height: 30px;
-            }
-            .footer-navigate .nav p {
-                font-size: 10px;
-                line-height: 18px;
-            }
+        nav > div {
+            display: inline-flex;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: 14px;
         }
 
-        @media screen and (max-width: 480px) {
-            .infobox-boldtext {
-                font-size: 32px !important;
-                line-height: 1.4em !important;
-                text-align: center;
-            }
-            .infobox-slimtext {
-                text-align: center;
-            }
-            .infobox-btnwrapper {
-                justify-content: center;
-            }
+        nav > div:first-child {
+            gap: 10px;
         }
+
+        nav > div:last-child {
+            gap: 24px;
+        }
+
+        nav > div:last-child > .active {
+            position: relative;
+        }
+
+        nav > div:last-child > .active:after {
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            position: absolute;
+            content: "";
+            height: 3px;
+            border-radius: 99px;
+            background-color: #ecad29;
+        }
+
+        .indicator {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 5px;
+            z-index: 60;
+            background-color: #ecad29;
+        }
+
+        .pagination {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: inline-flex;
+        }
+
+        .pagination > .arrow {
+            z-index: 60;
+            width: 50px;
+            height: 50px;
+            border-radius: 999px;
+            border: 2px solid #ffffff55;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+        }
+
+        .pagination > .arrow:nth-child(2) {
+            margin-left: 20px;
+        }
+
+        .pagination > .arrow svg {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2;
+            color: #ffffff99;
+        }
+
+        .pagination .progress-sub-container {
+            margin-left: 24px;
+            z-index: 60;
+            width: 500px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .pagination .progress-sub-container .progress-sub-background {
+            width: 500px;
+            height: 3px;
+            background-color: #ffffff33;
+        }
+
+        .pagination .progress-sub-container .progress-sub-foreground {
+            height: 3px;
+            background-color: #ecad29;
+        }
+
+        .pagination .slide-numbers {
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            z-index: 60;
+            position: relative;
+        }
+
+        .pagination .slide-numbers .item {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            color: white;
+            top: 0;
+            left: 0;
+            display: grid;
+            place-items: center;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .cover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 100;
+        }
+
     </style>
 </head>
 <body>
 
-<div class="landingpage" style="margin: 0 auto; padding: 0 80px; position: relative; max-width: 1100px; overflow-y: auto; overflow-x: hidden; background-color: #1F1D2B;">
-  <div class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; width: 100%;">
-    <a class="navlogo" style="height: 100%; background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Poppins'; font-style: normal; font-weight: 700; font-size: 32px;">GASLUR</a>
-    <button class="hamburger" style="display: none; color: #D7D7D7; background-color: #1F1D2B; border: none; margin-right: 10px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-          <path d="M3 12h18M3 6h18M3 18h18"/>
-        </svg>
-      </button>
-    <div class="navlinkwrap">
-      <span class="navlink selectedlink" style="font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 12px; background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; border-bottom: 1.5px solid #9B51E0; margin-right: 32px;">Home</span>
-      <span class="navlink" style="font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 12px; color: #BCBCBC; margin-right: 32px;">My Profile</span>
-      <span class="navlink" style="font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 12px; color: #BCBCBC; margin-right: 32px;">Activity</span>
-      <span class="navlink" style="font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 12px; color: #BCBCBC;">How It Works</span>
-    </div>
-    <div class="buttonwrap">
-      <button class="createbtn selectedbtn" style="cursor: pointer; background-color: transparent; width: 126px; height: 45px; color: #BCBCBC; font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 12px; border: 1px solid #D7D7D7; border-radius: 10px;">CREATE</button>
-      <button class="createbtn" style="cursor: pointer; background-color: transparent; border: none; width: 126px; height: 45px; color: #BCBCBC; font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 12px;">SIGN IN</button>
-    </div>
-  </div>
-  <div class="box" style="display: flex; align-items: center; justify-content: space-between; margin-top: 80px;">
-    <div class="infobox" style="animation-name: leftslide; animation-duration: 0.8s; max-height: 500px; max-width: 55%; overflow: hidden;">
-      <p class="infobox-boldtext" style="margin: 0; font-family: Poppins, sans-serif; color: #FFFFFF; font-size: 65px; font-weight: 600; line-height: 60px; letter-spacing: -2px; text-align: left;">
-        Discover, collect, and charity in extraordinary NFT marketplace
-      </p>
-      <p class="infobox-slimtext" style="margin: 24px 0; font-family: Poppins, sans-serif; color: #FFFFFF; font-size: 16px; font-weight: 400; line-height: 18px; letter-spacing: 0.5px; text-align: left;">
-        In aenean posuere lorem risus nec. Tempor tincidunt aenean purus purus vestibulum nibh mi venenatis
-      </p>
-      <div class="infobox-btnwrapper" style="display: flex;">
-        <button class="infobox-explorebtn selected" style="cursor: pointer; display: flex; justify-content: center; align-items: center; padding: 8px 38px; border-radius: 16px; font-family: 'Poppins'; font-style: normal; font-weight: 600; font-size: 13px; letter-spacing: -1px; color: #FFFFFF; border: none; background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%);">Explore</button>
-        <button class="infobox-createbtn" style="cursor: pointer; margin-left: 20px; display: flex; justify-content: center; align-items: center; background-color: transparent; padding: 8px 38px; border: 1px solid #D7D7D7; border-radius: 16px; font-family: 'Poppins'; font-style: normal; font-weight: 600; font-size: 13px; letter-spacing: -1px; color: #FFFFFF;">Create</button>
-      </div>
-    </div>
-    <div class="display" style="animation-name: rightslide; animation-duration: 0.8s; padding: 14px; background: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%); border-radius: 35px; max-height: 450px; max-width: 50%; overflow: hidden;">
-      <img class="display-nft" src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="unsplash-OG44d93i-NJk" border="0" style="object-fit: cover; flex-shrink: 0; width: 300px; height: 300px; border-radius: 20px;">
-      <div class="infowrapper" style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
-        <div class="info" style="display: flex; align-items: center; font-family: 'Poppins'; font-style: normal; color: #FFFFFF; font-weight: 600; font-size: 12px;">
-          <img class="info-img" src="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=385&q=80" alt="unsplash-OG44d93i-NJk" border="0" style="object-fit: cover; flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; margin-right: 10px;">
-          <div>
-            <p style="margin: 0;">Laura</p>
-            <p style="margin: 0;">0.21 Weth</p>
-          </div>
-        </div>
-        <div class="info2" style="display: flex; flex-direction: column; align-items: flex-end; font-family: 'Poppins'; color: #FFFFFF; font-style: normal; font-weight: 600; font-size: 12px;">
-          <p style="margin: 0;">WE ARE HERE</p>
-          <div class="iconwrapper" style="display: flex; align-items: center;">
-            <svg width="22" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.7365 2C3.6575 2 1.5 3.8804 1.5 6.5135c0 3.1074 2.3236 5.9603 4.8612 8.1207 1.2458 1.0606 2.4954 1.9137 3.4352 2.5022.4692.2937.8593.5203 1.1305.6727L11 17.85l.0731-.0409a27.984 27.984 0 0 0 1.1304-.6727c.9399-.5885 2.1895-1.4416 3.4353-2.5022C18.1764 12.4738 20.5 9.6209 20.5 6.5135 20.5 3.8805 18.3425 2 16.2635 2c-2.1054 0-3.8008 1.389-4.552 3.6426a.75.75 0 0 1-1.423 0C9.5373 3.389 7.8418 2 5.7365 2ZM11 18.7027l.3426.6672a.7502.7502 0 0 1-.6852 0L11 18.7027ZM0 6.5135C0 3.052 2.829.5 5.7365.5 8.0298.5 9.8808 1.7262 11 3.6048 12.1192 1.7262 13.9702.5 16.2635.5 19.171.5 22 3.052 22 6.5135c0 3.8183-2.8014 7.06-5.3888 9.2628-1.3167 1.121-2.6296 2.0166-3.6116 2.6314-.4918.308-.9025.5467-1.1918.7092a19.142 19.142 0 0 1-.4301.2347l-.0248.013-.007.0036-.0021.0011c-.0003.0001-.0012.0006-.3438-.6666-.3426.6672-.3424.6673-.3426.6672l-.0033-.0017-.007-.0036-.0248-.013a19.142 19.142 0 0 1-.4301-.2347 29.324 29.324 0 0 1-1.1918-.7092c-.982-.6148-2.295-1.5104-3.6116-2.6314C2.8014 13.5735 0 10.3318 0 6.5135Z" fill="#E0E0E0"/>
-            </svg>
-            25
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Other sections would follow the same pattern... -->
-  <!-- Due to length constraints, I've demonstrated the pattern with the first few sections. -->
-  <!-- The full conversion of every single element would make this response extremely long, -->
-  <!-- but the methodology shown above would be applied to every element that has a class. -->
+    <div class="indicator"></div>
 
-</div>
+    <nav>
+      <div>
+        <div class="svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+            />
+          </svg>
+        </div>
+        <div>Globe Express</div>
+      </div>
+      <div>
+        <div class="active">Home</div>
+        <div>Holidays</div>
+        <div>Destinations</div>
+        <div>Flights</div>
+        <div>Offers</div>
+        <div>Contact</div>
+        <div class="svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </div>
+        <div class="svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <div id="demo"></div>
+
+    <div class="details" id="details-even">
+      <div class="place-box">
+        <div class="text">Switzerland Alps</div>
+      </div>
+      <div class="title-box-1"><div class="title-1">SAINT</div></div>
+      <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
+      <div class="desc">
+        Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
+      </div>
+      <div class="cta">
+        <button class="bookmark">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button class="discover">Discover Location</button>
+      </div>
+    </div>
+
+    <div class="details" id="details-odd">
+      <div class="place-box">
+        <div class="text">Switzerland Alps</div>
+      </div>
+      <div class="title-box-1"><div class="title-1">SAINT </div></div>
+      <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
+      <div class="desc">
+        Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
+      </div>
+      <div class="cta">
+        <button class="bookmark">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button class="discover">Discover Location</button>
+      </div>
+    </div>
+
+    <div class="pagination" id="pagination">
+      <div class="arrow arrow-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </div>
+      <div class="arrow arrow-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </div>
+      <div class="progress-sub-container" >
+        <div class="progress-sub-background" >
+            <div class="progress-sub-foreground" ></div>
+        </div>
+    </div>
+    <div class="slide-numbers" id="slide-numbers"></div>
+    </div>
+
+    <div class="cover" ></div>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Page Logic Script -->
+    <script>
+        const data = [
+            {
+                place:'Switzerland Alps',
+                title:'SAINT',
+                title2:'ANTONIEN',
+                description:'Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It\'s a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.',
+                image:'https://assets.codepen.io/3685267/timed-cards-1.jpg'
+            },
+            {
+                place:'Japan Alps',
+                title:'NANGANO',
+                title2:'PREFECTURE',
+                description:'Nagano Prefecture, set within the majestic Japan Alps, is a cultural treasure trove with its historic shrines and temples, particularly the famous Zenkō-ji. The region is also a hotspot for skiing and snowboarding, offering some of the country\'s best powder.',
+                image:'https://assets.codepen.io/3685267/timed-cards-2.jpg'
+            },
+            {
+                place:'Sahara Desert - Morocco',
+                title:'MARRAKECH',
+                title2:'MEROUGA',
+                description:'The journey from the vibrant souks and palaces of Marrakech to the tranquil, starlit sands of Merzouga showcases the diverse splendor of Morocco. Camel treks and desert camps offer an unforgettable immersion into the nomadic way of life.',
+                image:'https://assets.codepen.io/3685267/timed-cards-3.jpg'
+            },
+            {
+                place:'Sierra Nevada - USA',
+                title:'YOSEMITE',
+                title2:'NATIONAL PARAK',
+                description:'Yosemite National Park is a showcase of the American wilderness, revered for its towering granite monoliths, ancient giant sequoias, and thundering waterfalls. The park offers year-round recreational activities, from rock climbing to serene valley walks.',
+                image:'https://assets.codepen.io/3685267/timed-cards-4.jpg'
+            },
+            {
+                place:'Tarifa - Spain',
+                title:'LOS LANCES',
+                title2:'BEACH',
+                description:'Los Lances Beach in Tarifa is a coastal paradise known for its consistent winds, making it a world-renowned spot for kitesurfing and windsurfing. The beach\'s long, sandy shores provide ample space for relaxation and sunbathing, with a vibrant atmosphere of beach bars and cafes.',
+                image:'https://assets.codepen.io/3685267/timed-cards-5.jpg'
+            },
+            {
+                place:'Cappadocia - Turkey',
+                title:'Göreme',
+                title2:'Valley',
+                description:'Göreme Valley in Cappadocia is a historical marvel set against a unique geological backdrop, where centuries of wind and water have sculpted the landscape into whimsical formations. The valley is also famous for its open-air museums, underground cities, and the enchanting experience of hot air ballooning.',
+                image:'https://assets.codepen.io/3685267/timed-cards-6.jpg'
+            },
+        ];
+
+        const _ = (id) => document.getElementById(id);
+        const cards = data.map((i, index) => `<div class="card" id="card${index}" style="background-image:url(${i.image})"></div>`).join('');
+
+        const cardContents = data.map((i, index) => `<div class="card-content" id="card-content-${index}">
+        <div class="content-start"></div>
+        <div class="content-place">${i.place}</div>
+        <div class="content-title-1">${i.title}</div>
+        <div class="content-title-2">${i.title2}</div>
+        </div>`).join('');
+
+        const slideNumbers = data.map((_, index) => `<div class="item" id="slide-item-${index}">${index + 1}</div>`).join('');
+
+        _('demo').innerHTML = cards + cardContents;
+        _('slide-numbers').innerHTML = slideNumbers;
+
+        const set = gsap.set;
+
+        function getCard(index) {
+            return `#card${index}`;
+        }
+        function getCardContent(index) {
+            return `#card-content-${index}`;
+        }
+        function getSliderItem(index) {
+            return `#slide-item-${index}`;
+        }
+
+        function animate(target, duration, properties) {
+            return new Promise((resolve) => {
+                gsap.to(target, {
+                    ...properties,
+                    duration: duration,
+                    onComplete: resolve,
+                });
+            });
+        }
+
+        let order = [0, 1, 2, 3, 4, 5];
+        let detailsEven = true;
+
+        let offsetTop = 200;
+        let offsetLeft = 700;
+        let cardWidth = 200;
+        let cardHeight = 300;
+        let gap = 40;
+        let numberSize = 50;
+        const ease = "sine.inOut";
+        let isAnimating = false;
+        let stopLoop = false;
+
+        function init() {
+            const [active, ...rest] = order;
+            const detailsActive = detailsEven ? "#details-even" : "#details-odd";
+            const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
+            const { innerHeight: height, innerWidth: width } = window;
+            offsetTop = height - 430;
+            offsetLeft = width - 830;
+
+            gsap.set("#pagination", {
+                top: offsetTop + 330,
+                left: offsetLeft,
+                y: 200,
+                opacity: 0,
+                zIndex: 60,
+            });
+            gsap.set("nav", { y: -200, opacity: 0 });
+
+            gsap.set(getCard(active), {
+                x: 0,
+                y: 0,
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+            gsap.set(getCardContent(active), { x: 0, y: 0, opacity: 0 });
+            gsap.set(detailsActive, { opacity: 0, zIndex: 22, x: -200 });
+            gsap.set(detailsInactive, { opacity: 0, zIndex: 12 });
+            gsap.set(`${detailsInactive} .text`, { y: 100 });
+            gsap.set(`${detailsInactive} .title-1`, { y: 100 });
+            gsap.set(`${detailsInactive} .title-2`, { y: 100 });
+            gsap.set(`${detailsInactive} .desc`, { y: 50 });
+            gsap.set(`${detailsInactive} .cta`, { y: 60 });
+
+            gsap.set(".progress-sub-foreground", {
+                width: 500 * (1 / order.length) * (active + 1),
+            });
+
+            rest.forEach((i, index) => {
+                gsap.set(getCard(i), {
+                    x: offsetLeft + 400 + index * (cardWidth + gap),
+                    y: offsetTop,
+                    width: cardWidth,
+                    height: cardHeight,
+                    zIndex: 30,
+                    borderRadius: 10,
+                });
+                gsap.set(getCardContent(i), {
+                    x: offsetLeft + 400 + index * (cardWidth + gap),
+                    zIndex: 40,
+                    y: offsetTop + cardHeight - 100,
+                });
+                gsap.set(getSliderItem(i), { x: (index + 1) * numberSize });
+            });
+
+            gsap.set(".indicator", { x: -window.innerWidth });
+
+            const startDelay = 0.6;
+
+            gsap.to(".cover", {
+                x: width + 400,
+                delay: 0.5,
+                ease,
+                onComplete: () => {
+                    setTimeout(() => {
+                        loop();
+                    }, 500);
+                },
+            });
+            rest.forEach((i, index) => {
+                gsap.to(getCard(i), {
+                    x: offsetLeft + index * (cardWidth + gap),
+                    zIndex: 30,
+                    delay: 0.05 * index,
+                    ease,
+                    delay: startDelay,
+                });
+                gsap.to(getCardContent(i), {
+                    x: offsetLeft + index * (cardWidth + gap),
+                    zIndex: 40,
+                    delay: 0.05 * index,
+                    ease,
+                    delay: startDelay,
+                });
+            });
+            gsap.to("#pagination", { y: 0, opacity: 1, ease, delay: startDelay });
+            gsap.to("nav", { y: 0, opacity: 1, ease, delay: startDelay });
+            gsap.to(detailsActive, { opacity: 1, x: 0, ease, delay: startDelay });
+        }
+
+        async function step() {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            return new Promise((resolve) => {
+                order.push(order.shift());
+                detailsEven = !detailsEven;
+
+                const detailsActive = detailsEven ? "#details-even" : "#details-odd";
+                const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
+
+                document.querySelector(`${detailsActive} .place-box .text`).textContent = data[order[0]].place;
+                document.querySelector(`${detailsActive} .title-1`).textContent = data[order[0]].title;
+                document.querySelector(`${detailsActive} .title-2`).textContent = data[order[0]].title2;
+                document.querySelector(`${detailsActive} .desc`).textContent = data[order[0]].description;
+
+                gsap.set(detailsActive, { zIndex: 22 });
+                gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
+                gsap.fromTo(`${detailsActive} .text`, { y: 100 }, { y: 0, delay: 0.1, duration: 0.7, ease });
+                gsap.fromTo(`${detailsActive} .title-1`, { y: 100 }, { y: 0, delay: 0.15, duration: 0.7, ease });
+                gsap.fromTo(`${detailsActive} .title-2`, { y: 100 }, { y: 0, delay: 0.15, duration: 0.7, ease });
+                gsap.fromTo(`${detailsActive} .desc`, { y: 50 }, { y: 0, delay: 0.3, duration: 0.4, ease });
+                gsap.fromTo(`${detailsActive} .cta`, { y: 60 }, { y: 0, delay: 0.35, duration: 0.4, onComplete: resolve, ease });
+
+                gsap.set(detailsInactive, { zIndex: 12 });
+                gsap.to(detailsInactive, { opacity: 0, duration: 0.5, ease });
+
+                const [active, ...rest] = order;
+                const prv = rest[rest.length - 1];
+
+                gsap.set(getCard(prv), { zIndex: 10 });
+                gsap.set(getCard(active), { zIndex: 20 });
+                gsap.to(getCard(prv), { scale: 1.5, ease });
+
+                gsap.to(getCardContent(active), { y: offsetTop + cardHeight - 10, opacity: 0, duration: 0.3, ease });
+                gsap.to(getSliderItem(active), { x: 0, ease });
+                gsap.to(getSliderItem(prv), { x: -numberSize, ease });
+                gsap.to(".progress-sub-foreground", { width: 500 * (1 / order.length) * (active + 1), ease });
+
+                gsap.to(getCard(active), {
+                    x: 0,
+                    y: 0,
+                    ease,
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                    borderRadius: 0,
+                    onComplete: () => {
+                        const xNew = offsetLeft + (rest.length - 1) * (cardWidth + gap);
+                        gsap.set(getCard(prv), {
+                            x: xNew,
+                            y: offsetTop,
+                            width: cardWidth,
+                            height: cardHeight,
+                            zIndex: 30,
+                            borderRadius: 10,
+                            scale: 1,
+                        });
+                        gsap.set(getCardContent(prv), {
+                            x: xNew,
+                            y: offsetTop + cardHeight - 100,
+                            opacity: 1,
+                            zIndex: 40,
+                        });
+                        gsap.set(getSliderItem(prv), { x: rest.length * numberSize });
+                        isAnimating = false;
+                    },
+                });
+
+                rest.forEach((i, index) => {
+                    if (i !== prv) {
+                        const xNew = offsetLeft + index * (cardWidth + gap);
+                        gsap.set(getCard(i), { zIndex: 30 });
+                        gsap.to(getCard(i), { x: xNew, y: offsetTop, width: cardWidth, height: cardHeight, ease, delay: 0.1 * (index + 1) });
+                        gsap.to(getCardContent(i), { x: xNew, y: offsetTop + cardHeight - 100, opacity: 1, zIndex: 40, ease, delay: 0.1 * (index + 1) });
+                        gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
+                    }
+                });
+            });
+        }
+
+        async function loop() {
+            if(stopLoop) return;
+            await animate(".indicator", 4, { x: 0, ease: "linear" });
+            gsap.killTweensOf(".indicator");
+            await animate(".indicator", 0.8, { x: window.innerWidth, ease: "power2.in" });
+            set(".indicator", { x: -window.innerWidth });
+            await step();
+            loop();
+        }
+
+        async function loadImage(src) {
+            return new Promise((resolve, reject) => {
+                let img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = reject;
+                img.src = src;
+            });
+        }
+
+        async function loadImages() {
+            const promises = data.map(({ image }) => loadImage(image));
+            return Promise.all(promises);
+        }
+
+        async function start() {
+            try {
+                await loadImages();
+                init();
+            } catch (error) {
+                console.error("One or more images failed to load", error);
+            }
+        }
+        
+        document.querySelector('.arrow-right').addEventListener('click', async () => {
+            if (isAnimating) return;
+            stopLoop = true;
+            gsap.killTweensOf(".indicator");
+            gsap.to(".indicator", { x: -window.innerWidth, duration: 0.8, ease: "power2.in" });
+            await step();
+        });
+
+        start();
+
+    </script>
 
 </body>
 </html>
