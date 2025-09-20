@@ -237,410 +237,194 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Relationship Spark Bundle - Massive Sale!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Massive Book Bundle Offer</title>
     <style>
-        /* Base styles */
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f6f2;
+            background-color: #f4f4f4;
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            color: #fff !important;
-            padding: 20px 40px;
-            font-size: 22px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
+        .header {
             text-align: center;
-        }
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-        }
-
-        /* Responsive Video Container */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            border-radius: 10px;
-            margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* FAQ Accordion Styles */
-        .faq details {
+            padding: 20px 0;
             background: #fff;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
         }
-        .faq summary {
-            padding: 20px;
-            font-weight: 700;
-            cursor: pointer;
-            outline: none;
-            font-size: 1.1em;
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
         }
-        .faq details[open] summary {
-            border-bottom: 1px solid #eee;
-        }
-        .faq div {
-            padding: 0 20px 20px 20px;
-            line-height: 1.6;
-        }
-
-        /* Exit-Intent Popup Styles */
-        #exit-intent-popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 999;
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        #exit-intent-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.9);
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            z-index: 1000;
-            max-width: 500px;
-            width: 90%;
+        .offer {
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
         }
-        #exit-intent-popup.visible {
-            display: block;
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-        }
-        #exit-intent-popup-overlay.visible {
-            display: block;
-            opacity: 1;
-        }
-        #exit-intent-popup .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
+        .offer h2 {
             font-size: 28px;
-            font-weight: bold;
-            color: #aaa;
-            cursor: pointer;
+            color: #e74c3c;
         }
-        #exit-intent-popup .close-btn:hover {
+        .offer p {
+            font-size: 20px;
             color: #333;
         }
-        
-        /* Media query for smaller screens */
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5em !important; }
-            .cta-button { font-size: 18px; padding: 15px 30px; }
-            .as-seen-on img { height: 20px !important; }
+        .books {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .book {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .book img {
+            max-width: 100%;
+            height: auto;
+        }
+        .book h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .testimonials {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+        }
+        .testimonial {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .urgency {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+        }
+        .urgency p {
+            font-size: 20px;
+            color: #e74c3c;
+        }
+        .progress-bar {
+            width: 100%;
+            background: #ddd;
+            height: 20px;
+            margin: 20px 0;
+        }
+        .progress-bar div {
+            height: 100%;
+            background: #e74c3c;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-
-    <!-- HERO SECTION with VSL -->
-    <div style="background-color: #1a1a1a; color: #fff; padding: 60px 20px; text-align: center;">
-        <h1 style="font-size: 3.5em; font-weight: 900; margin: 0; line-height: 1.1; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Ignite Unstoppable Passion & Deepen Your Connection</h1>
-        <p style="font-size: 1.4em; margin-top: 20px; color: #eee;">[WATCH] Get All 14 Of Our Bestselling Relationship & Intimacy Guides In One Ultimate Bundle.</p>
-        
-        <!-- Video Sales Letter -->
-        <div class="video-container">
-            <!-- Replace this with your YouTube or Vimeo embed code -->
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        
-        <a href="YOUR_CHECKOUT_LINK_HERE" class="cta-button">
-            YES! I Want The Bundle For Just $39.99!
-            <span style="display: block; font-size: 0.7em; font-weight: 400; margin-top: 5px;">(Save 69% Today!)</span>
-        </a>
-    </div>
-
-    <!-- AS SEEN ON BAR -->
-    <div class="as-seen-on" style="background-color: #e9ecef; padding: 20px; text-align: center;">
-        <span style="font-weight: 700; color: #6c757d; margin-right: 20px; display: inline-block; vertical-align: middle;">AS FEATURED IN</span>
-        <img src="https://i.ibb.co/6y40F22/logo-placeholder1.png" alt="Featured on Cosmopolitan" style="height: 25px; margin: 5px 15px; vertical-align: middle; filter: grayscale(100%); opacity: 0.7;">
-        <img src="https://i.ibb.co/F8SgWJq/logo-placeholder2.png" alt="Featured on Men's Health" style="height: 25px; margin: 5px 15px; vertical-align: middle; filter: grayscale(100%); opacity: 0.7;">
-        <img src="https://i.ibb.co/1q2x6y5/logo-placeholder3.png" alt="Featured on Glamour" style="height: 25px; margin: 5px 15px; vertical-align: middle; filter: grayscale(100%); opacity: 0.7;">
-    </div>
-
     <div class="container">
-
-        <!-- URGENCY & BONUS SECTION -->
-        <div style="background-color: #fff; border: 2px dashed #ff416c; padding: 30px; margin: 40px 0; border-radius: 10px; text-align: center;">
-            <h2 style="margin-top:0; font-size: 1.8em; color: #ff416c;">LIMITED TIME OFFER!</h2>
-            <p style="font-size: 1.1em;">The first <strong>50 buyers</strong> will receive our exclusive bonus:</p>
-            <p style="font-size: 1.2em; font-weight: 700; background-color: #fff3cd; padding: 10px; border-radius: 5px;">"The 5-Day Intimacy Challenge" Video Course (A $49 Value, Absolutely FREE!)</p>
-            <p style="font-weight: 700; margin-top: 30px;">Hurry, spots are filling up fast!</p>
-            
-            <div style="background-color: #e9ecef; border-radius: 50px; padding: 3px; margin: 10px auto; max-width: 400px;">
-                <div style="background: linear-gradient(45deg, #ff416c, #ff4b2b); height: 25px; width: 68%; border-radius: 50px; text-align: center; color: white; line-height: 25px; font-weight: 700;">
-                    34 of 50 Claimed!
-                </div>
+        <div class="header">
+            <h1>Massive Book Bundle Offer</h1>
+        </div>
+        <div class="offer">
+            <h2>Get All 14 Books for Just $39.99!</h2>
+            <p>Limited Time Offer: Price Increases by $100 Every 7 Days!</p>
+        </div>
+        <div class="books">
+            <div class="book">
+                <img src="book1.jpg" alt="Mastering Her Pleasure">
+                <h3>Mastering Her Pleasure</h3>
+            </div>
+            <div class="book">
+                <img src="book2.jpg" alt="Dirty Talks">
+                <h3>Dirty Talks to make her 100x wet during Sex</h3>
+            </div>
+            <div class="book">
+                <img src="book3.jpg" alt="Seducing His Senses">
+                <h3>Seducing His Senses: A Woman's Guide to Pleasuring Her Man</h3>
+            </div>
+            <div class="book">
+                <img src="book4.jpg" alt="Make Him Craving You">
+                <h3>Make Him Craving You: The Ultimate Guide to Teasing and Pleasing</h3>
+            </div>
+            <div class="book">
+                <img src="book5.jpg" alt="Couples Games - The Spicy Edition">
+                <h3>Couples Games - The Spicy Edition</h3>
+            </div>
+            <div class="book">
+                <img src="book6.jpg" alt="Couples Games - The Connection Edition">
+                <h3>Couples Games - The Connection Edition</h3>
+            </div>
+            <div class="book">
+                <img src="book7.jpg" alt="Couples Games - The Laughs $ Giggles Edition">
+                <h3>Couples Games - The Laughs $ Giggles Edition</h3>
+            </div>
+            <div class="book">
+                <img src="book8.jpg" alt="Couples Games – The 5-Minute Connector Edition">
+                <h3>Couples Games – The 5-Minute Connector Edition</h3>
+            </div>
+            <div class="book">
+                <img src="book9.jpg" alt="Truth or Dare for Couples Cards">
+                <h3>"Truth or Dare" for Couples Cards</h3>
+            </div>
+            <div class="book">
+                <img src="book10.jpg" alt="Date Night Idea Cards">
+                <h3>Date Night Idea Cards</h3>
+            </div>
+            <div class="book">
+                <img src="book11.jpg" alt="Couples' Affirmation Cards">
+                <h3>Couples' Affirmation Cards</h3>
+            </div>
+            <div class="book">
+                <img src="book12.jpg" alt="The Growth Mindset">
+                <h3>The Growth Mindset</h3>
+            </div>
+            <div class="book">
+                <img src="book13.jpg" alt="The Ultimate Date Night Planner">
+                <h3>The Ultimate Date Night Planner</h3>
+            </div>
+            <div class="book">
+                <img src="book14.jpg" alt="State of the Union Meeting Guide">
+                <h3>"State of the Union" Meeting Guide</h3>
             </div>
         </div>
-
-        <!-- PROBLEM & "WHO IS THIS FOR?" -->
-        <div style="text-align: center; padding: 40px 0;">
-            <h2 style="font-size: 2.2em; margin-bottom: 20px;">Is the "Honeymoon Phase" Feeling Like a Distant Memory?</h2>
-            <p style="font-size: 1.2em; line-height: 1.6;">You love your partner, but the daily grind can make any relationship feel... routine. If you're ready to swap predictable evenings for unforgettable experiences, you're in the right place.</p>
-            
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; text-align: left; margin-top: 40px;">
-                <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; width:100%; max-width: 320px; margin-bottom: 20px;">
-                    <h3 style="margin-top: 0; color: #2e7d32;">✅ This is for you if...</h3>
-                    <ul style="padding-left: 20px;">
-                        <li>You want to reignite the spark.</li>
-                        <li>You're tired of the same old "date nights".</li>
-                        <li>You want to explore deeper intimacy.</li>
-                        <li>You believe your relationship is worth investing in.</li>
-                    </ul>
-                </div>
-                <div style="background: #ffebee; padding: 20px; border-radius: 8px; width:100%; max-width: 320px;">
-                    <h3 style="margin-top: 0; color: #c62828;">❌ This is NOT for you if...</h3>
-                    <ul style="padding-left: 20px;">
-                        <li>You're looking for a "magic pill" fix.</li>
-                        <li>You're not willing to try new things.</li>
-                        <li>You're happy with a "roommate" dynamic.</li>
-                        <li>You're not open to honest communication.</li>
-                    </ul>
-                </div>
+        <div class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"These books have transformed our relationship!" - Jane D.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Incredible insights and practical advice. Highly recommend!" - John S.</p>
             </div>
         </div>
-
-        <!-- WHAT'S INSIDE THE BUNDLE -->
-        <div style="background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-top: 20px;">
-            <h2 style="text-align: center; font-size: 2.5em; margin-top: 0;">Introducing: The Ultimate Relationship Spark Bundle</h2>
-            <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px;">Your complete, all-in-one digital library for passion, connection, and fun. You get instant access to all 14 books, guides, and card decks.</p>
-            
-             <img src="https://images.unsplash.com/photo-1593696954577-ab3d39317b97?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZyZWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="A professional and appealing image of all 14 book covers spread out" style="max-width: 100%; height: auto; margin-bottom: 30px; border-radius: 10px;">
-            
-             <!-- Content list remains the same... -->
-
+        <div class="urgency">
+            <p>Hurry! The first 50 buyers will receive a special bonus!</p>
         </div>
-
-        <!-- VISUALLY COMPELLING OFFER & GUARANTEE -->
-        <div style="background: #1a1a1a; color: white; padding: 40px; margin-top: 40px; border-radius: 10px; text-align: center;">
-            <h2 style="font-size: 2.5em; margin-top: 0;">Get Everything Today For One Insanely Low Price</h2>
-            <p style="font-size: 1.8em; margin: 20px 0;">Total Value: <span style="text-decoration: line-through; opacity: 0.7;">$127.86</span></p>
-            <p style="font-size: 1.2em;">Plus the "5-Day Intimacy Challenge" Bonus: <span style="font-weight: 700;">$49.00</span></p>
-            <p style="font-size: 1.8em; font-weight: 700; margin-bottom: 30px;">Grand Total Value: $176.86</p>
-            
-            <div style="background: #fff; color: #333; padding: 20px; border-radius: 10px; max-width: 400px; margin: 0 auto;">
-                <p style="margin: 0; font-size: 1.2em;">GET IT ALL TODAY FOR ONLY</p>
-                <p style="margin: 10px 0; font-size: 4em; font-weight: 900; color: #ff416c; line-height: 1;">$39.99</p>
-                <p style="margin: 0; font-size: 1.2em;">(This is a one-time payment)</p>
-            </div>
-            
-            <a href="YOUR_CHECKOUT_LINK_HERE" class="cta-button" style="margin-top: 40px;">CLAIM MY 69% DISCOUNT NOW</a>
-
-            <!-- Money-Back Guarantee -->
-            <div style="margin-top: 40px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
-                <img src="https://i.ibb.co/L5hY5m9/guarantee-seal.png" alt="30-Day Money-Back Guarantee" style="height: 100px; margin-right: 20px;">
-                <div style="text-align: left; max-width: 400px;">
-                    <h3 style="margin: 0; font-size: 1.2em;">Our "Ignite The Spark" Guarantee</h3>
-                    <p style="margin: 5px 0 0 0; color: #ddd; line-height: 1.5;">Try the entire bundle for a full 30 days. If you don't feel more connected, have more fun, and experience more passion in your relationship, just send us an email and we'll refund 100% of your money. No questions asked.</p>
-                </div>
-            </div>
+        <div class="progress-bar">
+            <div style="width: 20%;"></div>
         </div>
-        
-        <!-- SOCIAL PROOF / TESTIMONIALS -->
-        <div style="padding: 60px 0;">
-            <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 40px;">Thousands of Couples Have Reignited Their Spark...</h2>
-            <!-- Testimonial cards remain the same... -->
+        <div class="footer">
+            <p>© 2025 Your Bookstore. All rights reserved.</p>
         </div>
-
-        <!-- URGENCY SECTION 2 - COUNTDOWN TIMER -->
-        <div style="background: #fff3cd; border: 2px solid #f9bf2d; padding: 30px; margin: 40px 0; border-radius: 10px; text-align: center;">
-             <h2 style="margin-top:0; font-size: 1.8em; color: #856404;">⚠️ Price Warning! This Offer Is Ending!</h2>
-             <p style="font-size: 1.2em;">This bundle price is for our launch promotion only. To protect the value for our customers, the price will return to $127.86 when the timer hits zero.</p>
-             <div id="countdown-timer" style="display: flex; justify-content: center; margin-top: 20px;">
-                <div style="text-align: center; margin: 0 10px; background: rgba(0,0,0,0.1); padding: 10px; border-radius: 5px; min-width: 60px;">
-                    <span id="days" style="font-size: 2em; font-weight: 700; color: #856404;">00</span>
-                    <div style="font-size: 0.8em; color: #856404;">Days</div>
-                </div>
-                <div style="text-align: center; margin: 0 10px; background: rgba(0,0,0,0.1); padding: 10px; border-radius: 5px; min-width: 60px;">
-                    <span id="hours" style="font-size: 2em; font-weight: 700; color: #856404;">00</span>
-                    <div style="font-size: 0.8em; color: #856404;">Hours</div>
-                </div>
-                <div style="text-align: center; margin: 0 10px; background: rgba(0,0,0,0.1); padding: 10px; border-radius: 5px; min-width: 60px;">
-                    <span id="minutes" style="font-size: 2em; font-weight: 700; color: #856404;">00</span>
-                    <div style="font-size: 0.8em; color: #856404;">Minutes</div>
-                </div>
-                <div style="text-align: center; margin: 0 10px; background: rgba(0,0,0,0.1); padding: 10px; border-radius: 5px; min-width: 60px;">
-                    <span id="seconds" style="font-size: 2em; font-weight: 700; color: #856404;">00</span>
-                    <div style="font-size: 0.8em; color: #856404;">Seconds</div>
-                </div>
-             </div>
-        </div>
-
-        <!-- FAQ SECTION -->
-        <div class="faq" style="padding: 40px 0;">
-            <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 30px;">Your Questions, Answered</h2>
-            <details>
-                <summary>What format are the books in?</summary>
-                <div>All 14 books are delivered as high-quality PDFs, compatible with any computer, smartphone, or tablet. You can read them on-screen or print them out.</div>
-            </details>
-            <details>
-                <summary>Is this a subscription or a one-time payment?</summary>
-                <div>This is a one-time payment. You pay $39.99 today and get lifetime access to all 14 resources and any future updates to them. There are no hidden fees or recurring charges.</div>
-            </details>
-            <details>
-                <summary>How will I get the files after purchase?</summary>
-                <div>Instantly! As soon as your payment is processed, you'll be redirected to a download page. You'll also receive an email with a secure link to download all the files at your convenience.</div>
-            </details>
-            <details>
-                <summary>What if my partner isn't as enthusiastic as I am?</summary>
-                <div>That's a common concern! We've designed these resources to be fun and non-intrusive. Start with the "Date Night Idea Cards" or "Couples Games" to gently introduce the idea of trying new things together. The positive experiences often open the door to deeper connection and exploration.</div>
-            </details>
-        </div>
-
-        <!-- FINAL CTA -->
-        <div style="text-align: center; padding: 40px 20px; background: #fff; border-radius: 10px;">
-            <h2 style="font-size: 2.5em;">You're At a Crossroads...</h2>
-            <p style="font-size: 1.2em; line-height: 1.6;">Continue with the same routine, or make a small, risk-free investment in your relationship that will pay dividends in passion, connection, and intimacy for years to come. The choice is yours.</p>
-            <ul style="list-style-type: '✓ '; padding-left: 20px; text-align: left; max-width: 400px; margin: 30px auto; font-size: 1.1em; line-height: 1.8;">
-                <li>Get all 14 Bestselling Guides ($127.86 Value)</li>
-                <li>Instant Digital Access</li>
-                <li>Bonus "Intimacy Challenge" Course ($49 Value)</li>
-                <li>30-Day Money-Back Guarantee</li>
-                <li>One-Time Payment, Lifetime Access</li>
-            </ul>
-            <a href="YOUR_CHECKOUT_LINK_HERE" class="cta-button" style="margin-top: 20px;">
-                Yes, I'm Ready to Transform My Relationship!
-                <span style="display: block; font-size: 0.7em; font-weight: 400; margin-top: 5px;">Click Here To Get Instant Access for $39.99</span>
-            </a>
-        </div>
-        
     </div>
-
-    <!-- FOOTER -->
-    <footer style="background-color: #1a1a1a; color: #aaa; text-align: center; padding: 20px; margin-top: 40px;">
-        <p>&copy; 2024 Your Brand Name. All Rights Reserved.</p>
-        <p><a href="#" style="color: #aaa; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #aaa; text-decoration: none;">Terms of Service</a></p>
-    </footer>
-
-    <!-- EXIT-INTENT POPUP HTML -->
-    <div id="exit-intent-popup-overlay"></div>
-    <div id="exit-intent-popup">
-        <span id="close-popup-btn" class="close-btn">&times;</span>
-        <h2 style="font-size: 2em; margin-top: 0; color: #ff416c;">WAIT! Don't Leave Empty-Handed!</h2>
-        <p style="font-size: 1.2em;">You're about to miss out on the biggest discount we've ever offered.</p>
-        <p>Are you sure you want to pass up on reigniting your relationship's spark for less than the cost of a single dinner out?</p>
-        <a href="YOUR_CHECKOUT_LINK_HERE" class="cta-button">OK, I'll Take The Bundle!</a>
-    </div>
-
-    <script>
-        // --- COUNTDOWN TIMER SCRIPT ---
-        (function() {
-            const daysEl = document.getElementById('days');
-            const hoursEl = document.getElementById('hours');
-            const minutesEl = document.getElementById('minutes');
-            const secondsEl = document.getElementById('seconds');
-
-            // Set the end date: 7 days from now
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 7);
-
-            function updateCountdown() {
-                const now = new Date();
-                const diff = endDate.getTime() - now.getTime();
-
-                if (diff <= 0) {
-                    clearInterval(timerInterval);
-                    daysEl.innerHTML = '00';
-                    hoursEl.innerHTML = '00';
-                    minutesEl.innerHTML = '00';
-                    secondsEl.innerHTML = '00';
-                    return;
-                }
-
-                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-                daysEl.innerHTML = d < 10 ? '0' + d : d;
-                hoursEl.innerHTML = h < 10 ? '0' + h : h;
-                minutesEl.innerHTML = m < 10 ? '0' + m : m;
-                secondsEl.innerHTML = s < 10 ? '0' + s : s;
-            }
-
-            const timerInterval = setInterval(updateCountdown, 1000);
-            updateCountdown();
-        })();
-
-        // --- EXIT-INTENT POPUP SCRIPT ---
-        (function() {
-            const popup = document.getElementById('exit-intent-popup');
-            const overlay = document.getElementById('exit-intent-popup-overlay');
-            const closeBtn = document.getElementById('close-popup-btn');
-            let popupShown = false;
-
-            function showPopup() {
-                if (popupShown) return;
-                popup.classList.add('visible');
-                overlay.classList.add('visible');
-                popupShown = true;
-            }
-
-            function hidePopup() {
-                popup.classList.remove('visible');
-                overlay.classList.remove('visible');
-            }
-            
-            // Show popup when mouse leaves the top of the viewport
-            document.addEventListener('mouseout', (e) => {
-                // e.clientY < 0 is a reliable way to check for this
-                if (e.clientY < 0) {
-                    showPopup();
-                }
-            });
-
-            // Close popup when close button or overlay is clicked
-            closeBtn.addEventListener('click', hidePopup);
-            overlay.addEventListener('click', hidePopup);
-
-        })();
-    </script>
-
 </body>
 </html>
     `
