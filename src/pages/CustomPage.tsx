@@ -383,7 +383,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                     <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Planners & Worksheets:</h5>
                     <p style="color: #BDBDBD;">✓ The Growth Mindset worth $7.99</p>
                     <p style="color: #BDBDBD;">✓ The Ultimate Date Night Planner worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ "State of the Union" Meeting Guide worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ "State of the Union" Meeting Guide worth $7.99</p><br/>
                     
                     <a href="#" style="background-color: #C27005; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600; display: inline-block;">DOWNLOAD BUNDLE</a>
                 </div>
