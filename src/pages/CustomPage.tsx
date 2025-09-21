@@ -381,12 +381,14 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             font-size: 28px;
             font-weight: 800;
             color: var(--text-white);
+            transition: font-size 0.3s ease;
         }
         .hero-section {
             padding: 60px 0 120px 0;
             background-image: linear-gradient(rgba(25, 28, 30, 0.9), rgba(25, 28, 30, 0.9)), url('https://images.pexels.com/photos/3771077/pexels-photo-3771077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             background-size: cover;
             background-position: center;
+            transition: padding 0.3s ease;
         }
         .hero-content {
             text-align: center;
@@ -545,11 +547,43 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         /* RESPONSIVE STYLES */
         /* ============================================= */
         @media (max-width: 768px) {
-            .navbar .btn { display: none; }
-            .hero-content { padding: 0; }
             section { padding: 60px 0; }
-            .value-content { flex-direction: column; }
-            .pricing-box { width: 100%; box-sizing: border-box; }
+            
+            /* --- HERO SECTION FIXES --- */
+            .logo {
+                font-size: 22px; /* Make logo smaller on mobile */
+            }
+            .navbar .btn { 
+                display: none; /* Hide the top-right button on mobile */
+            }
+            .hero-section {
+                padding: 40px 0 80px 0; /* Reduce vertical padding */
+            }
+            .hero-content h1 {
+                font-size: 2.2rem; /* Override clamp for better control */
+                line-height: 1.3;
+            }
+
+            /* --- PRODUCT GRID FIX --- */
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+                gap: 16px; /* Reduce gap between cards */
+            }
+            .product-card h3 {
+                font-size: 0.85rem; /* Slightly smaller text for cards */
+            }
+
+            /* --- OTHER LAYOUT FIXES --- */
+            .value-content { 
+                flex-direction: column; /* Stack value proposition vertically */
+            }
+            .value-section, .pricing-box {
+                padding: 30px; /* Reduce padding inside value boxes */
+            }
+            .pricing-box { 
+                width: 100%; 
+                box-sizing: border-box; 
+            }
         }
 
     </style>
