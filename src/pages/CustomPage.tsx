@@ -286,519 +286,431 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bundle - Soulmates Desires</title>
+    <title>The Ultimate Relationship Bundle | Soulmates Desires</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Basic reset and font settings */
+        /* ============================================= */
+        /* CSS VARIABLES & BASIC RESET */
+        /* ============================================= */
+        :root {
+            --bg-dark: #191C1E;
+            --bg-medium: #1E2225;
+            --text-light: #E0E0E0;
+            --text-medium: #BDBDBD;
+            --text-white: #FFFFFF;
+            --primary-color: #C27005;
+            --primary-color-hover: #E68A0D;
+        }
+
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #191C1E;
-            color: #ffffff;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        a {
-            text-decoration: none;
+
+        /* Fluid typography for better responsiveness */
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--text-white);
         }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; }
+        h2 { font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.3; }
+        p { font-size: clamp(1rem, 1.5vw, 1.1rem); line-height: 1.7; color: var(--text-medium); }
+        
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        section { padding: 80px 0; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .text-primary {
+            color: var(--primary-color);
+        }
+
+        /* ============================================= */
+        /* BUTTON STYLES */
+        /* ============================================= */
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--text-white);
+            box-shadow: 0 4px 15px rgba(194, 112, 5, 0.2);
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-color-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(194, 112, 5, 0.3);
+        }
+        .btn-primary-large {
+            padding: 18px 36px;
+            font-size: 18px;
+        }
+        
+        /* ============================================= */
+        /* HEADER & HERO SECTION */
+        /* ============================================= */
+        .header {
+            padding: 24px 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-white);
+        }
+        .hero-section {
+            padding: 60px 0 120px 0;
+            background-image: linear-gradient(rgba(25, 28, 30, 0.9), rgba(25, 28, 30, 0.9)), url('https://images.pexels.com/photos/3771077/pexels-photo-3771077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-content h1 {
+            margin: 0 0 24px 0;
+        }
+        .hero-content p {
+            max-width: 600px;
+            margin: 0 auto 32px auto;
+            font-size: 1.15rem;
+            color: var(--text-light);
+        }
+
+        /* ============================================= */
+        /* BUNDLE CONTENTS SECTION */
+        /* ============================================= */
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+        }
+        .product-card {
+            text-align: center;
+        }
+        .product-card img {
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 16px;
+        }
+        .product-card img:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        .product-card h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        /* ============================================= */
+        /* VALUE & PRICING SECTION */
+        /* ============================================= */
+        .value-section {
+            background-color: var(--bg-medium);
+            border-radius: 16px;
+            padding: 60px 40px;
+        }
+        .value-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        .value-list {
+            flex: 1 1 50%;
+            min-width: 300px;
+        }
+        .value-list h2 {
+            margin-top: 0;
+        }
+        .value-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .value-item svg {
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+        .pricing-box {
+            flex: 1 1 40%;
+            background-color: var(--bg-dark);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #333;
+            min-width: 300px;
+        }
+        .pricing-box .price-old {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: var(--text-medium);
+            margin: 0;
+        }
+        .pricing-box .price-new {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin: 0 0 16px 0;
+        }
+
+        /* ============================================= */
+        /* TESTIMONIALS SECTION */
+        /* ============================================= */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .testimonial-card {
+            background-color: var(--bg-medium);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+        .testimonial-card p {
+            margin: 0 0 24px 0;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .author-info h4 { margin: 0; font-weight: 600; color: var(--text-white); }
+        .author-info span { font-size: 0.9rem; color: var(--text-medium); }
+
+        /* ============================================= */
+        /* FINAL CTA & FOOTER */
+        /* ============================================= */
+        .final-cta-section {
+            background-color: var(--bg-medium);
+        }
+        .final-cta-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .footer {
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            border-top: 1px solid #333;
+        }
+
+        /* ============================================= */
+        /* RESPONSIVE STYLES */
+        /* ============================================= */
+        @media (max-width: 768px) {
+            .navbar .btn { display: none; }
+            .hero-content { padding: 0; }
+            section { padding: 60px 0; }
+            .value-content { flex-direction: column; }
+            .pricing-box { width: 100%; box-sizing: border-box; }
+        }
+
     </style>
 </head>
 
 <body>
 
-    <!-- Main Wrapper -->
-    <div style="width: 100%;">
+    <!-- ============================================= -->
+    <!-- HERO SECTION -->
+    <!-- ============================================= -->
+    <section class="hero-section">
+        <header class="header container">
+            <nav class="navbar">
+                <a href="#" class="logo">SOULMATES <span class="text-primary">DESIRES</span></a>
+                <a href="#pricing" class="btn btn-primary">DOWNLOAD BUNDLE</a>
+            </nav>
+        </header>
+        <div class="hero-content container">
+            <h1>Ignite the Passion & Deepen Your <span class="text-primary">Connection</span></h1>
+            <p>The ultimate collection of 16 digital guides, games, and planners designed to bring you closer, spark desire, and create unforgettable moments together.</p>
+            <a href="#pricing" class="btn btn-primary btn-primary-large">Get The Ultimate Bundle Now</a>
+        </div>
+    </section>
 
-        <!-- ============================================= -->
-        <!-- TOP BAR -->
-        <!-- ============================================= -->
-        <div style="background-color: #1E2225; padding: 12px 0;">
-            <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-                <div style="display: flex; align-items: center; gap: 24px; font-size: 14px; color: #BDBDBD;">
-                    
-                </div>
-                <div style="display: flex; align-items: center; gap: 24px;">
-                    <div style="display: flex; gap: 16px;">
+    <!-- ============================================= -->
+    <!-- BUNDLE CONTENTS SECTION -->
+    <!-- ============================================= -->
+    <section id="bundle-contents">
+        <div class="container">
+            <div class="section-intro">
+                <h2>What You'll <span class="text-primary">Discover Inside</span></h2>
+                <p>This isn't just a collection of books; it's a complete toolkit for a more exciting, connected, and passionate relationship. Explore every facet of your love life with these 16 powerful resources.</p>
+            </div>
+            <div class="product-grid">
+                <!-- Using placeholder images that look like book covers -->
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="The Art of making Love Book Cover"><h3>The Art of Making Love</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="365 Days, 365 Sex Positions Book Cover"><h3>365 Days, 365 Positions</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Mastering Her Pleasure Book Cover"><h3>Mastering Her Pleasure</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Dirty Talks Guide Book Cover"><h3>Dirty Talks Guide</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Seducing His Senses Book Cover"><h3>Seducing His Senses</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Make Him Craving You Book Cover"><h3>Make Him Crave You</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Couples Games - Spicy Edition Cover"><h3>Games: Spicy Edition</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Couples Games - Connection Edition Cover"><h3>Games: Connection Edition</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Truth or Dare for Couples Cards Cover"><h3>Truth or Dare Cards</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Date Night Idea Cards Cover"><h3>Date Night Idea Cards</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Couples' Affirmation Cards Cover"><h3>Couples' Affirmation Cards</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="The Ultimate Date Night Planner Cover"><h3>Date Night Planner</h3></div>
+                 <!-- Added missing items from your list to make 16 total -->
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Couples Games - Laughs & Giggles Edition"><h3>Games: Laughs & Giggles</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Couples Games - 5-Minute Connector Edition"><h3>Games: 5-Min Connector</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="The Growth Mindset Worksheets"><h3>The Growth Mindset</h3></div>
+                <div class="product-card"><img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="State of the Union Meeting Guide"><h3>'State of the Union' Guide</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- VALUE & PRICING SECTION -->
+    <!-- ============================================= -->
+    <section id="pricing">
+        <div class="container">
+            <div class="value-section">
+                <div class="value-content">
+                    <div class="value-list">
+                        <h2>Get <span class="text-primary">$150+</span> of Value in One Bundle</h2>
+                        <p>We've combined our most popular and effective resources into one incredible package. Separately, these would cost a fortune. Today, you get it all for a fraction of the price.</p>
+                        <div class="value-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span>6 In-Depth Guides on Seduction & Pleasure</span>
+                        </div>
+                        <div class="value-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span>4 Unique Couple's Games for Fun & Connection</span>
+                        </div>
+                        <div class="value-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span>3 Sets of Printable Cards (Truth or Dare, Ideas, Affirmations)</span>
+                        </div>
+                        <div class="value-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span>3 Planners & Worksheets for Growth & Organization</span>
+                        </div>
+                         <div class="value-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span>Instant Digital Download & Lifetime Access</span>
+                        </div>
                     </div>
-                    <a href="#" style="background-color: #C27005; color: white; padding: 10px 20px; border-radius: 5px; font-size: 14px; font-weight: 600;">DOWNLOAD BUNDLE</a>
+                    <div class="pricing-box">
+                        <p class="price-old">Total Value: $153.74</p>
+                        <p class="price-new">$29</p>
+                        <a href="#" class="btn btn-primary btn-primary-large" style="width: 100%;">Download Now & Save 80%</a>
+                        <p style="font-size: 0.8rem; margin-top: 16px; color: var(--text-medium);">Limited Time Offer. 100% Secure Payment.</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- ============================================= -->
-        <!-- HERO SECTION -->
-        <!-- ============================================= -->
-        <section style="background-image: linear-gradient(rgba(25, 28, 30, 0.85), rgba(25, 28, 30, 0.85)), url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; padding: 24px 0 120px 0; min-height: 600px; display: flex; flex-direction: column;">
-            <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; width: 100%; box-sizing: border-box;">
-                <!-- Header Navigation -->
-                <header style="display: flex; justify-content: space-between; align-items: center;">
-                    <a href="#" style="font-size: 32px; font-weight: 700; color: white;">SOULMATES <span style="color: #C27005;">DESIRES</span></a>
-                </header>
-
-                <!-- Hero Content -->
-                <div style="text-align: center; max-width: 700px; margin: 100px auto 0 auto;">
-                    <h1 style="font-size: 56px; line-height: 1.2; font-weight: 700; margin: 0 0 24px 0;">WANNA SPICE YOUR <span style="color: #C27005;">RELATIONSHIP?</span></h1>
-                    <p style="font-size: 16px; color: #BDBDBD; line-height: 1.6; margin: 0 0 10px 0;">Get our 14 - Books Bundle Offer.</p>
-                    <p style="font-size: 16px; color: #BDBDBD; line-height: 1.6; margin: 0 0 32px 0;">This Bundle won't last on sale for long</p>
-                    <div style="display: flex; justify-content: center; gap: 16px;">
-                        <a href="#" style="background-color: #C27005; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600;">DOWNLOAD BUNDLE</a>
-                       <!--  <a href="#" style="background-color: transparent; border: 2px solid white; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600;">DOWNLOAD BUNDLE</a>-->
+    <!-- ============================================= -->
+    <!-- TESTIMONIALS SECTION -->
+    <!-- ============================================= -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Loved by <span class="text-primary">Couples Everywhere</span></h2>
+                <p>Don't just take our word for it. Here's what people who have used the bundle are saying about the change in their relationship.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Honestly, this bundle changed everything. We were in a rut and the Date Night cards alone were worth the price. We feel like we're dating all over again. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Happy customer Jessica M.">
+                        <div class="author-info">
+                            <h4>Jessica M.</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"My partner was skeptical at first, but the 'Spicy Edition' game had us laughing and connecting on a level we haven't in years. The guides are tasteful and incredibly helpful. It's the best $29 we've ever spent on our relationship."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Happy customer David L.">
+                        <div class="author-info">
+                            <h4>David L.</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I bought this bundle just to get some new ideas, and I was blown away by the quality and amount of content. The 'Mastering Her Pleasure' guide was insightful and respectful. It's opened up so much communication between us."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Happy customer Sarah P.">
+                        <div class="author-info">
+                            <h4>Sarah P.</h4>
+                            <span>Verified Buyer</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Container for remaining sections -->
-        <div style="max-width: 1280px; margin: 0 auto; padding: 80px 40px;">
-            
-            <!-- ============================================= -->
-            <!-- SERVICES SECTION -->
-            <!-- ============================================= -->
-            <section style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 80px;">
-                <!-- Services Intro -->
-                <div style="flex: 1 1 300px;">
-                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">WHAT YOU GET IN THE <span style="color: #C27005; border-bottom: 3px solid #C27005; padding-bottom: 4px;">BUNDLE</span></h2><br/>
-                    
-                    <h5 style="font-size: 24px; line-height: 0.5; margin: 0 10px 20px 0; color: #C27005;">Ephemera:</h5>
-                    <p style="color: #BDBDBD;">✓ The Art of making Love worth $11.99</p>
-                    <p style="color: #BDBDBD;">✓ 365 Days, 365 Sex Positions. No Excuses worth $11.99</p>
-                    <p style="color: #BDBDBD;">✓ Mastering Her Pleasure: The Ultimate Guide for Men worth $11.99</p>
-                    <p style="color: #BDBDBD;">✓ Dirty Talks to make her 100x wet during Sex worth $11.99</p>
-                    <p style="color: #BDBDBD;">✓ Seducing His Senses: A Woman's Guide to Pleasuring Her Man worth $11.99</p>
-                    <p style="color: #BDBDBD;">✓ Make Him Craving You: The Ultimate Guide to Teasing and Pleasing worth $11.99</p><br/>
-
-                    <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Couples Games:</h5>
-                    <p style="color: #BDBDBD;">✓ Couples Games - The Spicy Edition worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ Couples Games - The Connection Edition worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ Couples Games - The Laughs $ Giggles Edition worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ Couples Games – The 5-Minute Connector Edition worth $7.99</p><br/>
-
-                    <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Cards:</h5>
-                    <p style="color: #BDBDBD;">✓ "Truth or Dare" for Couples Cards worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ Date Night Idea Cards worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ Couples' Affirmation Cards worth $7.99</p><br/>
-
-                    <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Planners & Worksheets:</h5>
-                    <p style="color: #BDBDBD;">✓ The Growth Mindset worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ The Ultimate Date Night Planner worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ "State of the Union" Meeting Guide worth $7.99</p><br/>
-                    
-                    <a href="#" style="background-color: #C27005; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600; display: inline-block;">DOWNLOAD BUNDLE</a>
-                </div>
-                <!-- Services Grid -->
-                <div style="flex: 2 1 600px; display: flex; flex-wrap: wrap; gap: 20px;">
-                    <!-- Card 1 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                    <!-- Card 2 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                     <!-- Card 3 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                     <!-- Card 4 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                     <!-- Card 5 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                    <!-- Card 6 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                    <!-- Card 7 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                    <!-- Card 8 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                     <!-- Card 9 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                    <!-- Card 10 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                    <!-- Card 11 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                     <!-- Card 12 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                    <!-- Card 13 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                    <!-- Card 14 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                     <!-- Card 15 -->
-                    <div style="
-                        /* Styles for the container are kept, but padding is removed */
-                        background-color: #1E2225; 
-                        border: 1px solid #333; 
-                        border-radius: 8px; 
-                        padding: 0; /* Important: Padding removed */
-                        overflow: hidden; /* Important: Clips the image corners */
-                        flex: 1 1 200px; 
-                        min-width: 200px;
-                        
-                        /* Added for better image alignment if needed */
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    ">
-                        <!-- The image is now the only content -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
-                            alt="Digital marketing professional working on a laptop" 
-                            style="
-                                width: 100%; 
-                                height: 100%; 
-                                object-fit: cover; /* This is key! */
-                            "
-                        >
-                    </div>
-                </div>
-            </section>
-
         </div>
-    </div>
+    </section>
+    
+    <!-- ============================================= -->
+    <!-- FINAL CTA SECTION -->
+    <!-- ============================================= -->
+    <section class="final-cta-section">
+        <div class="container final-cta-content">
+            <h2>Ready to Reignite Your <span class="text-primary">Relationship?</span></h2>
+            <p>Don't wait for the spark to fade. Take action now and get instant access to the complete 16-in-1 Relationship Bundle. Your next chapter of passion, fun, and deep connection starts today.</p>
+            <a href="#pricing" class="btn btn-primary btn-primary-large">Yes! I Want The Bundle For Just $29</a>
+        </div>
+    </section>
+    
+    <!-- ============================================= -->
+    <!-- FOOTER -->
+    <!-- ============================================= -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Soulmates Desires. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 
