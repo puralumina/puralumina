@@ -286,7 +286,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALPHA - Digital Creative Agency</title>
+    <title>Bundle - Soulmates Desires</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -317,23 +317,12 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
         <div style="background-color: #1E2225; padding: 12px 0;">
             <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
                 <div style="display: flex; align-items: center; gap: 24px; font-size: 14px; color: #BDBDBD;">
-                    <span style="display: flex; align-items: center; gap: 8px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        Los Angeles Gournadi, 1230 Bariasl
-                    </span>
-                    <span style="display: flex; align-items: center; gap: 8px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        Monday - Friday : 9:00 - 18:00
-                    </span>
+                    
                 </div>
                 <div style="display: flex; align-items: center; gap: 24px;">
                     <div style="display: flex; gap: 16px;">
-                        <!-- Social Icons -->
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                     </div>
-                    <a href="#" style="background-color: #27AE60; color: white; padding: 10px 20px; border-radius: 5px; font-size: 14px; font-weight: 600;">GET FREE QUOTES</a>
+                    <a href="#" style="background-color: #C27005; color: white; padding: 10px 20px; border-radius: 5px; font-size: 14px; font-weight: 600;">DOWNLOAD BUNDLE</a>
                 </div>
             </div>
         </div>
@@ -345,29 +334,17 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; width: 100%; box-sizing: border-box;">
                 <!-- Header Navigation -->
                 <header style="display: flex; justify-content: space-between; align-items: center;">
-                    <a href="#" style="font-size: 32px; font-weight: 700; color: white;">A<span style="color: #27AE60;">LP</span>HA</a>
-                    <nav style="display: flex; gap: 32px; align-items: center; font-weight: 500; text-transform: uppercase; font-size: 14px;">
-                        <a href="#" style="color: #27AE60;">Home</a>
-                        <a href="#" style="color: white;">About Us</a>
-                        <a href="#" style="color: white;">Services</a>
-                        <a href="#" style="color: white;">Pages</a>
-                        <a href="#" style="color: white;">Blog</a>
-                        <a href="#" style="color: white;">Contact</a>
-                    </nav>
+                    <a href="#" style="font-size: 32px; font-weight: 700; color: white;">SOULMATES <span style="color: #C27005;">DESIRES</span></a>
                 </header>
 
                 <!-- Hero Content -->
                 <div style="text-align: center; max-width: 700px; margin: 100px auto 0 auto;">
-                    <div style="margin-bottom: 30px;">
-                        <a href="#" style="width: 80px; height: 80px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; border: 2px solid #27AE60;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#27AE60" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        </a>
-                    </div>
-                    <h1 style="font-size: 56px; line-height: 1.2; font-weight: 700; margin: 0 0 24px 0;">GROW YOUR DIGITAL CREATIVE <span style="color: #27AE60;">AGENCY</span></h1>
-                    <p style="font-size: 16px; color: #BDBDBD; line-height: 1.6; margin: 0 0 32px 0;">Pellentesque ac volutpat a, sed-vestibulum. Lacina, nonummy placeat wisi, morbi, fringilla aliquet mauris.</p>
+                    <h1 style="font-size: 56px; line-height: 1.2; font-weight: 700; margin: 0 0 24px 0;">WANNA SPICE YOUR <span style="color: #C27005;">RELATIONSHIP?</span></h1>
+                    <p style="font-size: 16px; color: #BDBDBD; line-height: 1.6; margin: 0 0 10px 0;">Get our 14 - Books Bundle Offer.</p>
+                    <p style="font-size: 16px; color: #BDBDBD; line-height: 1.6; margin: 0 0 32px 0;">This Bundle won't last on sale for long</p>
                     <div style="display: flex; justify-content: center; gap: 16px;">
-                        <a href="#" style="background-color: #27AE60; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600;">LEARN MORE</a>
-                        <a href="#" style="background-color: transparent; border: 2px solid white; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600;">HOW IT WORKS</a>
+                        <a href="#" style="background-color: #C27005; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600;">DOWNLOAD BUNDLE</a>
+                       <!--  <a href="#" style="background-color: transparent; border: 2px solid white; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600;">DOWNLOAD BUNDLE</a>-->
                     </div>
                 </div>
             </div>
@@ -382,137 +359,442 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <section style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 80px;">
                 <!-- Services Intro -->
                 <div style="flex: 1 1 300px;">
-                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">Explore Our Best <span style="color: #27AE60; border-bottom: 3px solid #27AE60; padding-bottom: 4px;">Services</span></h2>
-                    <p style="color: #BDBDBD; line-height: 1.6; margin: 0 0 30px 0;">Duis sed-ante eu luctus ex umbra non, in tristique! Orci-fusce convallis lacinia leo, at.</p>
-                    <a href="#" style="background-color: #27AE60; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600; display: inline-block;">MORE SERVICES</a>
+                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">WHAT YOU GET IN THE <span style="color: #C27005; border-bottom: 3px solid #C27005; padding-bottom: 4px;">BUNDLE</span></h2>
+                    
+                    <h5 style="font-size: 24px; line-height: 0.5; margin: 0 10px 20px 0; color: #C27005;">Ephemera:</h5>
+                    <p style="color: #BDBDBD;">✓ The Art of making Love worth $11.99</p>
+                    <p style="color: #BDBDBD;">✓ 365 Days, 365 Sex Positions. No Excuses worth $11.99</p>
+                    <p style="color: #BDBDBD;">✓ Mastering Her Pleasure: The Ultimate Guide for Men worth $11.99</p>
+                    <p style="color: #BDBDBD;">✓ Dirty Talks to make her 100x wet during Sex worth $11.99</p>
+                    <p style="color: #BDBDBD;">✓ Seducing His Senses: A Woman's Guide to Pleasuring Her Man worth $11.99</p>
+                    <p style="color: #BDBDBD;">✓ Make Him Craving You: The Ultimate Guide to Teasing and Pleasing worth $11.99</p>
+
+                    <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Couples Games:</h5>
+                    <p style="color: #BDBDBD;">✓ Couples Games - The Spicy Edition worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ Couples Games - The Connection Edition worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ Couples Games - The Laughs $ Giggles Edition worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ Couples Games – The 5-Minute Connector Edition worth $7.99</p>
+
+                    <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Cards:</h5>
+                    <p style="color: #BDBDBD;">✓ "Truth or Dare" for Couples Cards worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ Date Night Idea Cards worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ Couples' Affirmation Cards worth $7.99</p>
+
+                    <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Planners & Worksheets:</h5>
+                    <p style="color: #BDBDBD;">✓ The Growth Mindset worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ The Ultimate Date Night Planner worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ "State of the Union" Meeting Guide worth $7.99</p>
+                    
+                    <a href="#" style="background-color: #C27005; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600; display: inline-block;">DOWNLOAD BUNDLE</a>
                 </div>
                 <!-- Services Grid -->
                 <div style="flex: 2 1 600px; display: flex; flex-wrap: wrap; gap: 20px;">
                     <!-- Card 1 -->
-                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
-                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">01.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">Graphic Designer</h3>
-                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
                     </div>
                     <!-- Card 2 -->
-                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
-                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">02.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">Web Designing</h3>
-                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
                     </div>
                      <!-- Card 3 -->
-                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
-                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">03.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">Digital Marketing</h3>
-                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
                     </div>
                      <!-- Card 4 -->
-                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
-                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">04.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">App Develop</h3>
-                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
                     </div>
                      <!-- Card 5 -->
-                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
-                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">05.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">Content Writing</h3>
-                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
                     </div>
                     <!-- Card 6 -->
-                    <div style="background-color: #1E2225; border: 1px solid #333; border-radius: 8px; padding: 24px; flex: 1 1 200px; min-width: 200px;">
-                        <p style="color: #27AE60; font-weight: 600; margin: 0 0 16px 0;">06.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                        <h3 style="margin: 16px 0 8px 0; font-size: 18px;">SEO Creating</h3>
-                        <p style="color: #BDBDBD; font-size: 14px; line-height: 1.5; margin: 0;">Metus tellus, luctus nec ullamcorper mattis.</p>
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
+                    </div>
+                    <!-- Card 7 -->
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
+                    </div>
+                    <!-- Card 8 -->
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
+                    </div>
+                     <!-- Card 9 -->
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
+                    </div>
+                    <!-- Card 10 -->
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
+                    </div>
+                    <!-- Card 11 -->
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
+                    </div>
+                     <!-- Card 12 -->
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
+                    </div>
+                    <!-- Card 13 -->
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
+                    </div>
+                    <!-- Card 14 -->
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
+                    </div>
+                     <!-- Card 15 -->
+                    <div style="
+                        /* Styles for the container are kept, but padding is removed */
+                        background-color: #1E2225; 
+                        border: 1px solid #333; 
+                        border-radius: 8px; 
+                        padding: 0; /* Important: Padding removed */
+                        overflow: hidden; /* Important: Clips the image corners */
+                        flex: 1 1 200px; 
+                        min-width: 200px;
+                        
+                        /* Added for better image alignment if needed */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        <!-- The image is now the only content -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" 
+                            alt="Digital marketing professional working on a laptop" 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover; /* This is key! */
+                            "
+                        >
                     </div>
                 </div>
-            </section>
-            
-            <!-- ============================================= -->
-            <!-- ABOUT/GROW SECTION -->
-            <!-- ============================================= -->
-            <section style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 80px;">
-                <!-- Image Grid -->
-                <div style="flex: 1 1 500px; display: flex; flex-wrap: wrap; gap: 15px;">
-                    <img src="https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team meeting 1" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover; filter: grayscale(100%);">
-                    <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team meeting 2" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover; filter: grayscale(100%);">
-                    <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team meeting 3" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover; filter: grayscale(100%);">
-                    <div style="width: 48%; background-color: #27AE60; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; box-sizing: border-box;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        <p style="font-size: 40px; font-weight: 700; margin: 10px 0 0 0;">10+</p>
-                        <p style="margin: 0; font-size: 14px;">Years of experience in this field</p>
-                    </div>
-                </div>
-                <!-- Content -->
-                <div style="flex: 1 1 500px;">
-                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">Are You Ready To Grow Your <span style="color: #27AE60; border-bottom: 3px solid #27AE60; padding-bottom: 4px;">Businesses</span></h2>
-                    <p style="color: #BDBDBD; line-height: 1.6; margin: 0 0 30px 0;">Integer tempor, id-venenatis quam pharetra. Euismod-risus vivamus, laboris-officia? Ligula-ullamcorper eget-eget consectetuer, ipsam.</p>
-                    <div style="display: flex; gap: 30px; margin-bottom: 24px;">
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#191C1E" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
-                            <span style="font-weight: 600;">Business Growth</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#191C1E" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-                            <span style="font-weight: 600;">Marketing Solution</span>
-                        </div>
-                    </div>
-                     <ul style="color: #BDBDBD; line-height: 2; padding-left: 20px; margin: 0 0 30px 0;">
-                        <li>Euismod-magnam purus-porta minima blandit.</li>
-                        <li>Nullam-magni, minima lacinia platea donec.</li>
-                        <li>Nostrud viverra ansi assumenda volutpat-nunc.</li>
-                    </ul>
-                    <a href="#" style="background-color: #27AE60; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600; display: inline-block;">MORE ABOUT US</a>
-                </div>
-            </section>
-
-            <!-- ============================================= -->
-            <!-- CLIENTS TRUST SECTION -->
-            <!-- ============================================= -->
-            <section style="background-image: linear-gradient(rgba(25, 28, 30, 0.9), rgba(25, 28, 30, 0.9)), url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; border-radius: 12px; padding: 60px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 80px;">
-                <!-- Clients Intro -->
-                 <div style="flex: 1 1 300px;">
-                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">Hundreds of Clients Trust Our <span style="color: #27AE60;">Company</span></h2>
-                    <p style="color: #BDBDBD; line-height: 1.6; margin: 0 0 30px 0;">Integer tempor, id-venenatis quam pharetra. Euismod-risus vivamus, laboris-officia? Ligula-ullamcorper.</p>
-                    <a href="#" style="background-color: #27AE60; color: white; padding: 14px 28px; border-radius: 5px; font-weight: 600; display: inline-block;">FREE QUOTES</a>
-                </div>
-                <!-- Client Logos -->
-                <div style="flex: 1 1 400px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">✧ CREATIVE</div>
-                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">Ω CREATIVE</div>
-                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600; font-family: cursive;">Name</div>
-                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">ZA BRANDNAME</div>
-                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">✕ Express</div>
-                    <div style="background-color: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 8px; padding: 20px; flex: 1 1 150px; text-align: center; font-weight: 600;">• Innovate</div>
-                </div>
-            </section>
-            
-            <!-- ============================================= -->
-            <!-- PROJECTS SECTION -->
-            <!-- ============================================= -->
-            <section>
-                <div style="text-align: center; max-width: 600px; margin: 0 auto 50px auto;">
-                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">Our Recently Completed <span style="color: #27AE60;">Projects</span></h2>
-                </div>
-                <!-- Filter Navigation -->
-                <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-bottom: 40px; font-weight: 500;">
-                    <a href="#" style="color: #191C1E; background-color: #27AE60; padding: 8px 20px; border-radius: 5px;">ALL</a>
-                    <a href="#" style="color: #BDBDBD;">BUSINESS</a>
-                    <a href="#" style="color: #BDBDBD;">MARKETING</a>
-                    <a href="#" style="color: #BDBDBD;">FINANCE</a>
-                    <a href="#" style="color: #BDBDBD;">MANAGEMENT</a>
-                </div>
-                 <!-- Project Gallery -->
-                 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                    <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 1" style="width: 100%; max-width: 30%; min-width: 300px; border-radius: 8px; object-fit: cover;">
-                    <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 2" style="width: 100%; max-width: 30%; min-width: 300px; border-radius: 8px; object-fit: cover;">
-                    <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 3" style="width: 100%; max-width: 30%; min-width: 300px; border-radius: 8px; object-fit: cover;">
-                 </div>
             </section>
 
         </div>
