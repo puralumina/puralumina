@@ -359,7 +359,7 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
             <section style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 80px;">
                 <!-- Services Intro -->
                 <div style="flex: 1 1 300px;">
-                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">WHAT YOU GET IN THE <span style="color: #C27005; border-bottom: 3px solid #C27005; padding-bottom: 4px;">BUNDLE</span></h2>
+                    <h2 style="font-size: 42px; line-height: 1.3; margin: 0 0 20px 0;">WHAT YOU GET IN THE <span style="color: #C27005; border-bottom: 3px solid #C27005; padding-bottom: 4px;">BUNDLE</span></h2><br/>
                     
                     <h5 style="font-size: 24px; line-height: 0.5; margin: 0 10px 20px 0; color: #C27005;">Ephemera:</h5>
                     <p style="color: #BDBDBD;">✓ The Art of making Love worth $11.99</p>
@@ -367,18 +367,18 @@ const customPages: { [key: string]: { title: string; content: string; music?: st
                     <p style="color: #BDBDBD;">✓ Mastering Her Pleasure: The Ultimate Guide for Men worth $11.99</p>
                     <p style="color: #BDBDBD;">✓ Dirty Talks to make her 100x wet during Sex worth $11.99</p>
                     <p style="color: #BDBDBD;">✓ Seducing His Senses: A Woman's Guide to Pleasuring Her Man worth $11.99</p>
-                    <p style="color: #BDBDBD;">✓ Make Him Craving You: The Ultimate Guide to Teasing and Pleasing worth $11.99</p>
+                    <p style="color: #BDBDBD;">✓ Make Him Craving You: The Ultimate Guide to Teasing and Pleasing worth $11.99</p><br/>
 
                     <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Couples Games:</h5>
                     <p style="color: #BDBDBD;">✓ Couples Games - The Spicy Edition worth $7.99</p>
                     <p style="color: #BDBDBD;">✓ Couples Games - The Connection Edition worth $7.99</p>
                     <p style="color: #BDBDBD;">✓ Couples Games - The Laughs $ Giggles Edition worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ Couples Games – The 5-Minute Connector Edition worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ Couples Games – The 5-Minute Connector Edition worth $7.99</p><br/>
 
                     <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Cards:</h5>
                     <p style="color: #BDBDBD;">✓ "Truth or Dare" for Couples Cards worth $7.99</p>
                     <p style="color: #BDBDBD;">✓ Date Night Idea Cards worth $7.99</p>
-                    <p style="color: #BDBDBD;">✓ Couples' Affirmation Cards worth $7.99</p>
+                    <p style="color: #BDBDBD;">✓ Couples' Affirmation Cards worth $7.99</p><br/>
 
                     <h5 style="font-size: 24px; line-height: 0.5; margin: 0 0 20px 0; color: #C27005;">Planners & Worksheets:</h5>
                     <p style="color: #BDBDBD;">✓ The Growth Mindset worth $7.99</p>
