@@ -122,24 +122,28 @@ const MobilePreview: React.FC<MobilePreviewProps> = ({ data }) => {
           
           <div className="relative z-10 px-4 py-6">
             <div className="text-center mb-6">
-              <div className="relative inline-block mb-3">
-                <SafeImage
-                  src={data.profile.imageUrl}
-                  alt={data.profile.name}
-                  className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg"
-                />
-              </div>
-              
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <h1 className="text-xl font-bold text-white">{data.profile.name}</h1>
-                {data.profile.verifiedBadgeUrl && (
+              {data.profile.showProfileImage !== false && (
+                <div className="relative inline-block mb-3">
                   <SafeImage
-                    src={data.profile.verifiedBadgeUrl}
-                    alt="Verified"
-                    className="w-5 h-5 object-cover"
+                    src={data.profile.imageUrl}
+                    alt={data.profile.name}
+                    className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg"
                   />
-                )}
-              </div>
+                </div>
+              )}
+              
+              {data.profile.showName !== false && (
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <h1 className="text-xl font-bold text-white">{data.profile.name}</h1>
+                  {data.profile.verifiedBadgeUrl && (
+                    <SafeImage
+                      src={data.profile.verifiedBadgeUrl}
+                      alt="Verified"
+                      className="w-5 h-5 object-cover"
+                    />
+                  )}
+                </div>
+              )}
               <p className="text-blue-200 font-medium mb-1 text-sm">{data.profile.subtitle}</p>
               
               {data.profile.location && (
@@ -149,9 +153,11 @@ const MobilePreview: React.FC<MobilePreviewProps> = ({ data }) => {
                 </div>
               )}
               
-              <p className="text-white/90 text-xs leading-relaxed max-w-xs mx-auto">
-                {data.profile.bio}
-              </p>
+              {data.profile.showBio !== false && (
+                <p className="text-white/90 text-xs leading-relaxed max-w-xs mx-auto">
+                  {data.profile.bio}
+                </p>
+              )}
             </div>
 
             <div className="space-y-3">

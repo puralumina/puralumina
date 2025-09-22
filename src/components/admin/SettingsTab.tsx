@@ -118,6 +118,44 @@ const SettingsTab: React.FC<SettingsTabProps> = ({ data, setData }) => {
           <span className="text-pink-500">🎨</span>
           Page Branding
         </h3>
+        
+        {/* Profile Visibility Controls */}
+        <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <h4 className="text-md font-semibold text-gray-900 mb-3">Profile Element Visibility</h4>
+          <div className="grid grid-cols-3 gap-4">
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={data.profile.showProfileImage !== false}
+                onChange={(e) => handleUpdate('profile', 'showProfileImage', e.target.checked)}
+                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              />
+              <span className="text-sm font-medium text-gray-700">Show Profile Image</span>
+            </label>
+            
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={data.profile.showName !== false}
+                onChange={(e) => handleUpdate('profile', 'showName', e.target.checked)}
+                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              />
+              <span className="text-sm font-medium text-gray-700">Show Name</span>
+            </label>
+            
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={data.profile.showBio !== false}
+                onChange={(e) => handleUpdate('profile', 'showBio', e.target.checked)}
+                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              />
+              <span className="text-sm font-medium text-gray-700">Show Bio</span>
+            </label>
+          </div>
+          <p className="text-xs text-gray-500 mt-2">Control which profile elements are visible on your live website</p>
+        </div>
+        
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Profile Image URL</label>

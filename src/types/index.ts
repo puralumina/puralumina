@@ -16,6 +16,9 @@ export interface Profile {
   bioColor?: string;
   socialMedia?: SocialMediaLink[];
   socialMediaSpacing?: number;
+  showProfileImage?: boolean;
+  showName?: boolean;
+  showBio?: boolean;
 }
 
 export interface SocialMediaLink {
