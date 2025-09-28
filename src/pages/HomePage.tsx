@@ -12,7 +12,7 @@ const HomePage = () => {
   // EDIT THIS PATH: Change '/homepage-music.mp3' to your desired music file
   useBackgroundMusic('/homepage-music.mp3', { volume: 0.2 });
 
- const handleImageClick = () => {
+  const handleImageClick = () => {
     handleDeepLink('/links', true);
   };
 
