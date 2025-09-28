@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { handleDeepLink } from '../utils/deepLinks';
-import { initializeDeepLinking, isSocialMediaBrowser, isWebView } from '../utils/deepLinks';
 
 // Custom pages configuration
 // Add your custom pages here with their HTML content
@@ -246,9 +245,6 @@ const CustomPage: React.FC = () => {
   useBackgroundMusic(pageData?.music || '/default-custom-page-music.mp3', { volume: 0.2 });
 
   useEffect(() => {
-    // Initialize SILENT NUCLEAR deep linking system
-    initializeDeepLinking();
-    
     if (pageId && customPages[pageId]) {
       const page = customPages[pageId];
       setPageData(page);
