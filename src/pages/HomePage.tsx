@@ -17,7 +17,7 @@ const HomePage = () => {
   };*/}
 
   const handleImageClick = () => {
-  window.location.href = link.url; // or whatever your URL variable is
+  window.location.href = 'https://taap.it/UNSeRh'; // or whatever your URL variable is
 };
 
   return (
