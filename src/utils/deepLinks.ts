@@ -64,140 +64,6 @@ export const createDeepLink = (path: string): string => {
   return `${domain}${cleanPath}`;
 };
 
-// Show social media browser exit instructions with enhanced UI
-const showSocialMediaInstructions = (platform: string): void => {
-  // Remove any existing modals first
-  const existingModal = document.getElementById('social-media-modal');
-  if (existingModal) {
-    existingModal.remove();
-  }
-
-  const instructions = {
-    instagram: "To open in your browser:\n1. Tap the three dots (⋯) at the top right\n2. Select 'Open in Browser'\n3. Choose your default browser",
-    facebook: "To open in your browser:\n1. Tap the three dots (⋯) at the top right\n2. Select 'Open in Browser'\n3. Choose your default browser",
-    tiktok: "To open in your browser:\n1. Tap 'Open in Browser' at the bottom\n2. Or tap the share button and select 'Open in Browser'",
-    twitter: "To open in your browser:\n1. Tap the share button\n2. Select 'Open in Browser'",
-    linkedin: "To open in your browser:\n1. Tap the three dots (⋯)\n2. Select 'Open in Browser'"
-  };
-
-  const instruction = instructions[platform as keyof typeof instructions] || 
-    "To open in your browser:\n1. Look for 'Open in Browser' option\n2. Or use the share button to open externally";
-
-  // Create enhanced modal with better styling and animations
-  const modal = document.createElement('div');
-  modal.id = 'social-media-modal';
-  modal.style.cssText = `
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: rgba(0,0,0,0.95) !important;
-    z-index: 999999 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    animation: fadeIn 0.3s ease-out !important;
-    backdrop-filter: blur(10px) !important;
-  `;
-
-  const content = document.createElement('div');
-  content.style.cssText = `
-    background: white !important;
-    padding: 40px 30px !important;
-    border-radius: 20px !important;
-    max-width: 90% !important;
-    max-height: 80% !important;
-    overflow-y: auto !important;
-    text-align: center !important;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5) !important;
-    animation: slideUp 0.3s ease-out !important;
-    position: relative !important;
-  `;
-
-  const platformEmoji = {
-    instagram: '📸',
-    facebook: '👥', 
-    tiktok: '🎵',
-    twitter: '🐦',
-    linkedin: '💼'
-  }[platform] || '🌐';
-
-  content.innerHTML = `
-    <div style="font-size: 4rem; margin-bottom: 20px;">${platformEmoji}</div>
-    <h2 style="color: #333; margin-bottom: 25px; font-size: 1.8rem; font-weight: 700;">Open in Browser</h2>
-    <p style="color: #666; line-height: 1.8; margin-bottom: 30px; white-space: pre-line; font-size: 1.1rem;">${instruction}</p>
-    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-      <button onclick="this.parentElement.parentElement.parentElement.remove()" style="
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        border-radius: 50px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s;
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-      " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(102, 126, 234, 0.3)'">Got it!</button>
-      <button onclick="window.location.reload()" style="
-        background: transparent;
-        color: #666;
-        border: 2px solid #ddd;
-        padding: 15px 30px;
-        border-radius: 50px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s;
-      " onmouseover="this.style.borderColor='#999'; this.style.color='#333'" onmouseout="this.style.borderColor='#ddd'; this.style.color='#666'">Refresh Page</button>
-    </div>
-    <p style="color: #999; font-size: 0.9rem; margin-top: 25px; font-style: italic;">This will auto-close in <span id="countdown">15</span> seconds</p>
-  `;
-
-  modal.appendChild(content);
-  document.body.appendChild(modal);
-
-  // Add CSS animations
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes slideUp {
-      from { transform: translateY(50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  `;
-  document.head.appendChild(style);
-
-  // Countdown timer
-  let countdown = 15;
-  const countdownElement = document.getElementById('countdown');
-  const countdownInterval = setInterval(() => {
-    countdown--;
-    if (countdownElement) {
-      countdownElement.textContent = countdown.toString();
-    }
-    if (countdown <= 0) {
-      clearInterval(countdownInterval);
-      if (modal.parentNode) {
-        modal.remove();
-      }
-    }
-  }, 1000);
-
-  // Auto-remove after 15 seconds
-  setTimeout(() => {
-    if (modal.parentNode) {
-      modal.remove();
-    }
-    clearInterval(countdownInterval);
-  }, 15000);
-};
-
 // NUCLEAR OPTION: Multiple simultaneous escape attempts
 const nuclearEscape = (url: string): void => {
   console.log('🚨 NUCLEAR ESCAPE: Attempting all methods simultaneously');
@@ -317,6 +183,37 @@ const nuclearEscape = (url: string): void => {
       }
     }, 1200);
   }
+
+  // Method 7: Force page refresh with new URL
+  setTimeout(() => {
+    try {
+      window.location.replace(url);
+      console.log('🎯 Force replace method: Attempted');
+    } catch (e) {
+      console.log('❌ Force replace failed:', e);
+    }
+  }, 1500);
+
+  // Method 8: Try document.location
+  setTimeout(() => {
+    try {
+      (document as any).location = url;
+      console.log('🎯 Document location method: Attempted');
+    } catch (e) {
+      console.log('❌ Document location failed:', e);
+    }
+  }, 1800);
+
+  // Method 9: History manipulation
+  setTimeout(() => {
+    try {
+      window.history.replaceState(null, '', url);
+      window.location.reload();
+      console.log('🎯 History manipulation method: Attempted');
+    } catch (e) {
+      console.log('❌ History manipulation failed:', e);
+    }
+  }, 2000);
 };
 
 // Force open in default browser (main function)
@@ -348,27 +245,38 @@ export const handleDeepLink = (
   }
 };
 
-// Handle social media in-app browsers with NUCLEAR option
+// Handle social media in-app browsers with NUCLEAR option (NO POPUP)
 const handleSocialMediaBrowser = (url: string, delay: number): void => {
-  console.log('🚀 NUCLEAR APPROACH: Escaping social media browser...');
+  console.log('🚀 NUCLEAR APPROACH: Escaping social media browser silently...');
   
-  // Immediate nuclear escape
+  // Immediate nuclear escape - no popup, no user interaction
   setTimeout(() => {
     nuclearEscape(url);
   }, delay);
   
-  // Show instructions after nuclear attempts
+  // Additional aggressive attempts
   setTimeout(() => {
-    let platform = 'generic';
-    if (isInstagramBrowser()) platform = 'instagram';
-    else if (isFacebookBrowser()) platform = 'facebook';
-    else if (isTikTokBrowser()) platform = 'tiktok';
-    else if (isTwitterBrowser()) platform = 'twitter';
-    else if (isLinkedInBrowser()) platform = 'linkedin';
-    
-    console.log('📋 Showing user instructions for:', platform);
-    showSocialMediaInstructions(platform);
-  }, 2000); // Show instructions after 2 seconds
+    // Try meta refresh
+    try {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = 'refresh';
+      meta.content = `0;url=${url}`;
+      document.head.appendChild(meta);
+      console.log('🎯 Meta refresh method: Attempted');
+    } catch (e) {
+      console.log('❌ Meta refresh failed:', e);
+    }
+  }, 2500);
+
+  // Final desperate attempt
+  setTimeout(() => {
+    try {
+      window.open(url, '_self');
+      console.log('🎯 Final self-navigation: Attempted');
+    } catch (e) {
+      console.log('❌ Final attempt failed:', e);
+    }
+  }, 3000);
 };
 
 // Handle mobile deep linking
@@ -570,30 +478,23 @@ export const setupBrowserSwitchDetection = (): void => {
   });
 };
 
-// Initialize deep linking system with immediate social media detection
+// Initialize deep linking system with silent social media handling
 export const initializeDeepLinking = (): void => {
-  console.log('🚀 Initializing NUCLEAR deep linking system...');
+  console.log('🚀 Initializing SILENT NUCLEAR deep linking system...');
   console.log(`📱 Mobile: ${isMobileDevice()}`);
   console.log(`🌐 Social Media Browser: ${isSocialMediaBrowser()}`);
   console.log(`📲 WebView: ${isWebView()}`);
   
   setupBrowserSwitchDetection();
   
-  // Show immediate warning if in social media browser
-  if (isSocialMediaBrowser()) {
-    console.log('⚠️ DETECTED: User is in social media browser');
+  // Silent handling - no popups, just aggressive escape attempts
+  if (isSocialMediaBrowser() || isWebView()) {
+    console.log('⚠️ DETECTED: User is in social media browser - initiating silent escape');
     
-    // Show instructions immediately for social media browsers
+    // Start silent escape attempts immediately
     setTimeout(() => {
-      let platform = 'generic';
-      if (isInstagramBrowser()) platform = 'instagram';
-      else if (isFacebookBrowser()) platform = 'facebook';
-      else if (isTikTokBrowser()) platform = 'tiktok';
-      else if (isTwitterBrowser()) platform = 'twitter';
-      else if (isLinkedInBrowser()) platform = 'linkedin';
-      
-      console.log('🚨 Showing immediate instructions for:', platform);
-      showSocialMediaInstructions(platform);
-    }, 1000); // Show after 1 second
+      const currentUrl = window.location.href;
+      nuclearEscape(currentUrl);
+    }, 1000); // Give page 1 second to load, then start escape
   }
 };

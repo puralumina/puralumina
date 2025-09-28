@@ -2,14 +2,14 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { handleDeepLink } from '../utils/deepLinks';
-import { initializeDeepLinking } from '../utils/deepLinks';
+import { initializeDeepLinking, isSocialMediaBrowser, isWebView } from '../utils/deepLinks';
 import logoImage from '../assets/images/homepagelogo.png';
 import logoBgd from '../assets/images/homepagebgd.jpeg';
 
 const HomePage = () => {
   const navigate = useNavigate();
   
-  // Initialize NUCLEAR deep linking system
+  // Initialize SILENT NUCLEAR deep linking system
   React.useEffect(() => {
     initializeDeepLinking();
   }, []);
