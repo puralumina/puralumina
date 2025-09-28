@@ -2,11 +2,17 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { handleDeepLink } from '../utils/deepLinks';
+import { initializeDeepLinking } from '../utils/deepLinks';
 import logoImage from '../assets/images/homepagelogo.png';
 import logoBgd from '../assets/images/homepagebgd.jpeg';
 
 const HomePage = () => {
   const navigate = useNavigate();
+  
+  // Initialize deep linking system
+  React.useEffect(() => {
+    initializeDeepLinking();
+  }, []);
   
   // Background music for homepage
   // EDIT THIS PATH: Change '/homepage-music.mp3' to your desired music file

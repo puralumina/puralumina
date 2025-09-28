@@ -5,6 +5,7 @@ import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { Product } from '../types';
 import { useCart } from '../contexts/CartContext';
 import { handleDeepLink } from '../utils/deepLinks';
+import { initializeDeepLinking } from '../utils/deepLinks';
 import IndividualPixelInjector from '../components/IndividualPixelInjector';
 
 // Sample products - you can modify these manually
@@ -479,6 +480,9 @@ const ProductPage: React.FC = () => {
   
   useBackgroundMusic(getMusicForProduct(id), { volume: 0.2 });
   useEffect(() => {
+    // Initialize deep linking system
+    initializeDeepLinking();
+    
     const foundProduct = sampleProducts.find(p => p.id === id);
     setProduct(foundProduct || null);
     setSelectedImageIndex(0); // Reset to first image when product changes

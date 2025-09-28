@@ -5,6 +5,7 @@ import { PageData, Link } from '../types';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { handleEmailLink } from '../utils/emailDeepLinks';
 import { handleDeepLink } from '../utils/deepLinks';
+import { initializeDeepLinking } from '../utils/deepLinks';
 import PixelInjector from '../components/PixelInjector';
 
 // Utility to convert Google Drive URLs to direct image URLs
@@ -106,6 +107,9 @@ const BioPage: React.FC = () => {
 
   useEffect(() => {
     const loadData = async () => {
+      // Initialize deep linking system
+      initializeDeepLinking();
+      
       try {
         const pageData = await getPageData();
         setData(pageData);

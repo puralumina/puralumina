@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Filter } from 'lucide-react';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { handleDeepLink } from '../utils/deepLinks';
+import { initializeDeepLinking } from '../utils/deepLinks';
 import { Product, Category } from '../types';
 
 // Sample products - you can modify these manually
@@ -237,6 +238,11 @@ const ShopPage: React.FC = () => {
   
   // Background music for shop page
   useBackgroundMusic('/shop-music.mp3', { volume: 0.2 });
+  
+  // Initialize deep linking system
+  useEffect(() => {
+    initializeDeepLinking();
+  }, []);
 
   // Update selected category when URL parameter changes
   useEffect(() => {

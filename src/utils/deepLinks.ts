@@ -1,23 +1,55 @@
-// Deep linking utilities for forcing browser navigation
+// Deep linking utilities for forcing browser navigation from social media apps
 export interface DeepLinkOptions {
   forceNewWindow?: boolean;
   fallbackUrl?: string;
   delay?: number;
 }
 
-// Check if we're on a mobile device
+// Enhanced device and browser detection
 export const isMobileDevice = (): boolean => {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 };
 
-// Check if we're on iOS
 export const isIOS = (): boolean => {
   return /iPad|iPhone|iPod/.test(navigator.userAgent);
 };
 
-// Check if we're on Android
 export const isAndroid = (): boolean => {
   return /Android/i.test(navigator.userAgent);
+};
+
+// Detect social media in-app browsers
+export const isInstagramBrowser = (): boolean => {
+  return /Instagram/i.test(navigator.userAgent);
+};
+
+export const isFacebookBrowser = (): boolean => {
+  return /FBAN|FBAV|FB_IAB|FB4A/i.test(navigator.userAgent);
+};
+
+export const isTikTokBrowser = (): boolean => {
+  return /TikTok/i.test(navigator.userAgent) || /musical_ly/i.test(navigator.userAgent);
+};
+
+export const isTwitterBrowser = (): boolean => {
+  return /Twitter/i.test(navigator.userAgent);
+};
+
+export const isLinkedInBrowser = (): boolean => {
+  return /LinkedInApp/i.test(navigator.userAgent);
+};
+
+export const isSocialMediaBrowser = (): boolean => {
+  return isInstagramBrowser() || isFacebookBrowser() || isTikTokBrowser() || 
+         isTwitterBrowser() || isLinkedInBrowser();
+};
+
+export const isWebView = (): boolean => {
+  // Detect various WebView implementations
+  const ua = navigator.userAgent;
+  return /wv|WebView|Version.*Chrome/i.test(ua) || 
+         !/Safari/i.test(ua) && /Chrome/i.test(ua) ||
+         isSocialMediaBrowser();
 };
 
 // Get the current domain
@@ -32,6 +64,73 @@ export const createDeepLink = (path: string): string => {
   return `${domain}${cleanPath}`;
 };
 
+// Show social media browser exit instructions
+const showSocialMediaInstructions = (platform: string): void => {
+  const instructions = {
+    instagram: "To open in your browser:\n1. Tap the three dots (⋯) at the top right\n2. Select 'Open in Browser'\n3. Choose your default browser",
+    facebook: "To open in your browser:\n1. Tap the three dots (⋯) at the top right\n2. Select 'Open in Browser'\n3. Choose your default browser",
+    tiktok: "To open in your browser:\n1. Tap 'Open in Browser' at the bottom\n2. Or tap the share button and select 'Open in Browser'",
+    twitter: "To open in your browser:\n1. Tap the share button\n2. Select 'Open in Browser'",
+    linkedin: "To open in your browser:\n1. Tap the three dots (⋯)\n2. Select 'Open in Browser'"
+  };
+
+  const instruction = instructions[platform as keyof typeof instructions] || 
+    "To open in your browser:\n1. Look for 'Open in Browser' option\n2. Or use the share button to open externally";
+
+  // Create a more prominent modal-style alert
+  const modal = document.createElement('div');
+  modal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  `;
+
+  const content = document.createElement('div');
+  content.style.cssText = `
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  `;
+
+  content.innerHTML = `
+    <h2 style="color: #333; margin-bottom: 20px; font-size: 1.5rem;">🌐 Open in Browser</h2>
+    <p style="color: #666; line-height: 1.6; margin-bottom: 20px; white-space: pre-line;">${instruction}</p>
+    <button onclick="this.parentElement.parentElement.remove()" style="
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    ">Got it!</button>
+  `;
+
+  modal.appendChild(content);
+  document.body.appendChild(modal);
+
+  // Auto-remove after 10 seconds
+  setTimeout(() => {
+    if (modal.parentNode) {
+      modal.remove();
+    }
+  }, 10000);
+};
+
 // Force open in default browser (main function)
 export const handleDeepLink = (
   path: string, 
@@ -42,9 +141,15 @@ export const handleDeepLink = (
   const fullUrl = createDeepLink(path);
   
   console.log(`🔗 Deep Link: Attempting to open ${fullUrl}`);
+  console.log(`📱 User Agent: ${navigator.userAgent}`);
+  console.log(`🌐 Is Social Media Browser: ${isSocialMediaBrowser()}`);
+  console.log(`📲 Is WebView: ${isWebView()}`);
   
   if (forceExternal) {
-    if (isMobileDevice()) {
+    // Handle social media in-app browsers with aggressive tactics
+    if (isSocialMediaBrowser() || isWebView()) {
+      handleSocialMediaBrowser(fullUrl, delay);
+    } else if (isMobileDevice()) {
       handleMobileDeepLink(fullUrl, delay);
     } else {
       handleDesktopDeepLink(fullUrl, forceNewWindow, delay);
@@ -55,29 +160,125 @@ export const handleDeepLink = (
   }
 };
 
+// Handle social media in-app browsers with multiple escape methods
+const handleSocialMediaBrowser = (url: string, delay: number): void => {
+  console.log('🚀 Attempting to escape social media browser...');
+  
+  // Method 1: Try multiple window.open attempts with different targets
+  setTimeout(() => {
+    console.log('Method 1: Multiple window.open attempts');
+    
+    // Try different window targets
+    const targets = ['_blank', '_top', '_parent', '_self'];
+    let success = false;
+    
+    targets.forEach((target, index) => {
+      setTimeout(() => {
+        if (!success) {
+          console.log(`Trying window.open with target: ${target}`);
+          const newWindow = window.open(url, target, 'noopener,noreferrer');
+          if (newWindow && !newWindow.closed) {
+            success = true;
+            console.log(`✅ Success with target: ${target}`);
+          }
+        }
+      }, index * 100);
+    });
+    
+    // Method 2: Try location methods after window.open attempts
+    setTimeout(() => {
+      if (!success) {
+        console.log('Method 2: Location-based navigation');
+        
+        // Try different location methods
+        try {
+          window.top!.location.href = url;
+          console.log('✅ Success with window.top.location');
+        } catch (e) {
+          try {
+            window.parent.location.href = url;
+            console.log('✅ Success with window.parent.location');
+          } catch (e2) {
+            try {
+              window.location.replace(url);
+              console.log('✅ Success with location.replace');
+            } catch (e3) {
+              window.location.href = url;
+              console.log('✅ Fallback to location.href');
+            }
+          }
+        }
+      }
+    }, 500);
+    
+    // Method 3: Show instructions if all else fails
+    setTimeout(() => {
+      let platform = 'generic';
+      if (isInstagramBrowser()) platform = 'instagram';
+      else if (isFacebookBrowser()) platform = 'facebook';
+      else if (isTikTokBrowser()) platform = 'tiktok';
+      else if (isTwitterBrowser()) platform = 'twitter';
+      else if (isLinkedInBrowser()) platform = 'linkedin';
+      
+      console.log('Method 3: Showing user instructions');
+      showSocialMediaInstructions(platform);
+    }, 1000);
+    
+  }, delay);
+};
+
 // Handle mobile deep linking
 const handleMobileDeepLink = (url: string, delay: number): void => {
+  console.log('📱 Mobile deep link handling');
+  
   if (isIOS()) {
-    // iOS: Use location.replace for cleaner navigation
+    // iOS: Multiple fallback methods
     setTimeout(() => {
-      window.location.replace(url);
+      console.log('🍎 iOS handling');
+      
+      // Try window.open first
+      const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+      
+      // Fallback methods
+      setTimeout(() => {
+        if (!newWindow || newWindow.closed) {
+          console.log('iOS fallback: location.replace');
+          window.location.replace(url);
+        }
+      }, 300);
+      
     }, delay);
   } else if (isAndroid()) {
     // Android: Try multiple methods for better compatibility
     setTimeout(() => {
-      // Method 1: Try window.open first
-      const newWindow = window.open(url, '_blank');
+      console.log('🤖 Android handling');
       
-      // Method 2: Fallback to location.replace if window.open fails
-      setTimeout(() => {
-        if (!newWindow || newWindow.closed) {
-          window.location.replace(url);
-        }
-      }, 500);
+      // Method 1: Intent URL for Android
+      const intentUrl = `intent://${url.replace(/https?:\/\//, '')}#Intent;scheme=https;action=android.intent.action.VIEW;end`;
+      
+      try {
+        window.location.href = intentUrl;
+        console.log('✅ Android intent URL attempted');
+      } catch (e) {
+        console.log('Android intent failed, trying window.open');
+        
+        // Method 2: Regular window.open
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        
+        // Method 3: Fallback to location.replace
+        setTimeout(() => {
+          if (!newWindow || newWindow.closed) {
+            console.log('Android fallback: location.replace');
+            window.location.replace(url);
+          }
+        }, 500);
+      }
+      
     }, delay);
   } else {
     // Other mobile devices
     setTimeout(() => {
+      console.log('📱 Other mobile device handling');
       window.location.replace(url);
     }, delay);
   }
@@ -85,6 +286,8 @@ const handleMobileDeepLink = (url: string, delay: number): void => {
 
 // Handle desktop deep linking
 const handleDesktopDeepLink = (url: string, forceNewWindow: boolean, delay: number): void => {
+  console.log('💻 Desktop deep link handling');
+  
   setTimeout(() => {
     if (forceNewWindow) {
       // Open in new tab/window
@@ -92,6 +295,7 @@ const handleDesktopDeepLink = (url: string, forceNewWindow: boolean, delay: numb
       
       // Fallback if popup blocked
       if (!newWindow) {
+        console.log('Desktop popup blocked, using location.href');
         window.location.href = url;
       }
     } else {
@@ -198,5 +402,48 @@ export const copyDeepLinkToClipboard = async (pageType: string, identifier?: str
   } catch (error) {
     console.error('Failed to copy deep link:', error);
     return false;
+  }
+};
+
+// Force refresh page to escape WebView (nuclear option)
+export const forcePageRefresh = (): void => {
+  console.log('🔄 Force refreshing page to escape WebView');
+  window.location.reload();
+};
+
+// Detect if user successfully escaped WebView
+export const detectSuccessfulEscape = (): boolean => {
+  // Check if we're no longer in a social media browser
+  return !isSocialMediaBrowser() && !isWebView();
+};
+
+// Add event listener for page visibility to detect browser switches
+export const setupBrowserSwitchDetection = (): void => {
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && detectSuccessfulEscape()) {
+      console.log('✅ Successfully escaped to default browser!');
+    }
+  });
+};
+
+// Initialize deep linking system
+export const initializeDeepLinking = (): void => {
+  console.log('🚀 Initializing deep linking system...');
+  console.log(`📱 Mobile: ${isMobileDevice()}`);
+  console.log(`🌐 Social Media Browser: ${isSocialMediaBrowser()}`);
+  console.log(`📲 WebView: ${isWebView()}`);
+  
+  setupBrowserSwitchDetection();
+  
+  // Show initial warning if in social media browser
+  if (isSocialMediaBrowser()) {
+    setTimeout(() => {
+      let platform = 'generic';
+      if (isInstagramBrowser()) platform = 'instagram';
+      else if (isFacebookBrowser()) platform = 'facebook';
+      else if (isTikTokBrowser()) platform = 'tiktok';
+      
+      console.log('⚠️ User is in social media browser, showing instructions');
+    }, 2000);
   }
 };
