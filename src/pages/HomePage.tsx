@@ -20,6 +20,7 @@ const HomePage = () => {
   window.location.href = 'https://taap.it/UNSeRh'; // or whatever your URL variable is
 };
 
+
   return (
     <div className="h-screen relative overflow-hidden">
       {/* Background Image Layer */}
