@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Filter } from 'lucide-react';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
+import { handleDeepLink } from '../utils/deepLinks';
 import { Product, Category } from '../types';
 
 // Sample products - you can modify these manually
@@ -317,13 +318,15 @@ const ShopPage: React.FC = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredProducts.map((product) => (
-            <Link
+            <div
               key={product.id}
-              to={`/product/${product.id}`}
               onClick={() => handleProductClick(product.id)}
               className="group block"
             >
-              <div className="transition-all duration-300">
+              <div 
+                className="transition-all duration-300 cursor-pointer"
+                onClick={() => handleDeepLink(`/product/${product.id}`, true)}
+              >
                 {/* Product Image */}
                 <div className="aspect-square bg-gray-100 overflow-hidden rounded-xl">
                   <img
@@ -350,7 +353,7 @@ const ShopPage: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div><br/><br/><br/>
 
