@@ -239,7 +239,7 @@ const ShopPage: React.FC = () => {
   // Background music for shop page
   useBackgroundMusic('/shop-music.mp3', { volume: 0.2 });
   
-  // Initialize deep linking system
+  // Initialize NUCLEAR deep linking system
   useEffect(() => {
     initializeDeepLinking();
   }, []);

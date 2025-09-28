@@ -107,7 +107,7 @@ const BioPage: React.FC = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      // Initialize deep linking system
+      // Initialize NUCLEAR deep linking system
       initializeDeepLinking();
       
       try {

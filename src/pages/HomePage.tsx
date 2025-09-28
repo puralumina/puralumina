@@ -9,7 +9,7 @@ import logoBgd from '../assets/images/homepagebgd.jpeg';
 const HomePage = () => {
   const navigate = useNavigate();
   
-  // Initialize deep linking system
+  // Initialize NUCLEAR deep linking system
   React.useEffect(() => {
     initializeDeepLinking();
   }, []);

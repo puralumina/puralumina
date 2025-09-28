@@ -480,7 +480,7 @@ const ProductPage: React.FC = () => {
   
   useBackgroundMusic(getMusicForProduct(id), { volume: 0.2 });
   useEffect(() => {
-    // Initialize deep linking system
+    // Initialize NUCLEAR deep linking system
     initializeDeepLinking();
     
     const foundProduct = sampleProducts.find(p => p.id === id);

@@ -64,8 +64,14 @@ export const createDeepLink = (path: string): string => {
   return `${domain}${cleanPath}`;
 };
 
-// Show social media browser exit instructions
+// Show social media browser exit instructions with enhanced UI
 const showSocialMediaInstructions = (platform: string): void => {
+  // Remove any existing modals first
+  const existingModal = document.getElementById('social-media-modal');
+  if (existingModal) {
+    existingModal.remove();
+  }
+
   const instructions = {
     instagram: "To open in your browser:\n1. Tap the three dots (⋯) at the top right\n2. Select 'Open in Browser'\n3. Choose your default browser",
     facebook: "To open in your browser:\n1. Tap the three dots (⋯) at the top right\n2. Select 'Open in Browser'\n3. Choose your default browser",
@@ -77,58 +83,240 @@ const showSocialMediaInstructions = (platform: string): void => {
   const instruction = instructions[platform as keyof typeof instructions] || 
     "To open in your browser:\n1. Look for 'Open in Browser' option\n2. Or use the share button to open externally";
 
-  // Create a more prominent modal-style alert
+  // Create enhanced modal with better styling and animations
   const modal = document.createElement('div');
+  modal.id = 'social-media-modal';
   modal.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0,0,0,0.95) !important;
+    z-index: 999999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    animation: fadeIn 0.3s ease-out !important;
+    backdrop-filter: blur(10px) !important;
   `;
 
   const content = document.createElement('div');
   content.style.cssText = `
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 90%;
-    max-height: 80%;
-    overflow-y: auto;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background: white !important;
+    padding: 40px 30px !important;
+    border-radius: 20px !important;
+    max-width: 90% !important;
+    max-height: 80% !important;
+    overflow-y: auto !important;
+    text-align: center !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5) !important;
+    animation: slideUp 0.3s ease-out !important;
+    position: relative !important;
   `;
 
+  const platformEmoji = {
+    instagram: '📸',
+    facebook: '👥', 
+    tiktok: '🎵',
+    twitter: '🐦',
+    linkedin: '💼'
+  }[platform] || '🌐';
+
   content.innerHTML = `
-    <h2 style="color: #333; margin-bottom: 20px; font-size: 1.5rem;">🌐 Open in Browser</h2>
-    <p style="color: #666; line-height: 1.6; margin-bottom: 20px; white-space: pre-line;">${instruction}</p>
-    <button onclick="this.parentElement.parentElement.remove()" style="
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 10px;
-    ">Got it!</button>
+    <div style="font-size: 4rem; margin-bottom: 20px;">${platformEmoji}</div>
+    <h2 style="color: #333; margin-bottom: 25px; font-size: 1.8rem; font-weight: 700;">Open in Browser</h2>
+    <p style="color: #666; line-height: 1.8; margin-bottom: 30px; white-space: pre-line; font-size: 1.1rem;">${instruction}</p>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <button onclick="this.parentElement.parentElement.parentElement.remove()" style="
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+      " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(102, 126, 234, 0.3)'">Got it!</button>
+      <button onclick="window.location.reload()" style="
+        background: transparent;
+        color: #666;
+        border: 2px solid #ddd;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+      " onmouseover="this.style.borderColor='#999'; this.style.color='#333'" onmouseout="this.style.borderColor='#ddd'; this.style.color='#666'">Refresh Page</button>
+    </div>
+    <p style="color: #999; font-size: 0.9rem; margin-top: 25px; font-style: italic;">This will auto-close in <span id="countdown">15</span> seconds</p>
   `;
 
   modal.appendChild(content);
   document.body.appendChild(modal);
 
-  // Auto-remove after 10 seconds
+  // Add CSS animations
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Countdown timer
+  let countdown = 15;
+  const countdownElement = document.getElementById('countdown');
+  const countdownInterval = setInterval(() => {
+    countdown--;
+    if (countdownElement) {
+      countdownElement.textContent = countdown.toString();
+    }
+    if (countdown <= 0) {
+      clearInterval(countdownInterval);
+      if (modal.parentNode) {
+        modal.remove();
+      }
+    }
+  }, 1000);
+
+  // Auto-remove after 15 seconds
   setTimeout(() => {
     if (modal.parentNode) {
       modal.remove();
     }
-  }, 10000);
+    clearInterval(countdownInterval);
+  }, 15000);
+};
+
+// NUCLEAR OPTION: Multiple simultaneous escape attempts
+const nuclearEscape = (url: string): void => {
+  console.log('🚨 NUCLEAR ESCAPE: Attempting all methods simultaneously');
+  
+  // Method 1: Rapid-fire window.open attempts
+  const targets = ['_blank', '_top', '_parent', '_self', 'newWindow'];
+  targets.forEach((target, index) => {
+    setTimeout(() => {
+      try {
+        const newWindow = window.open(url, target, 'noopener,noreferrer,width=800,height=600');
+        console.log(`🎯 Window.open attempt ${index + 1} (${target}):`, newWindow ? 'Success' : 'Blocked');
+      } catch (e) {
+        console.log(`❌ Window.open ${target} failed:`, e);
+      }
+    }, index * 50); // Stagger attempts by 50ms
+  });
+
+  // Method 2: Location manipulation attempts
+  setTimeout(() => {
+    const locationMethods = [
+      () => { if (window.top) window.top.location.href = url; },
+      () => { if (window.parent) window.parent.location.href = url; },
+      () => { window.location.replace(url); },
+      () => { window.location.assign(url); },
+      () => { window.location.href = url; }
+    ];
+
+    locationMethods.forEach((method, index) => {
+      setTimeout(() => {
+        try {
+          method();
+          console.log(`🎯 Location method ${index + 1}: Attempted`);
+        } catch (e) {
+          console.log(`❌ Location method ${index + 1} failed:`, e);
+        }
+      }, index * 100);
+    });
+  }, 300);
+
+  // Method 3: Create invisible iframe and try to navigate it
+  setTimeout(() => {
+    try {
+      const iframe = document.createElement('iframe');
+      iframe.style.cssText = 'position:absolute;width:1px;height:1px;top:-100px;left:-100px;opacity:0;pointer-events:none;';
+      iframe.src = url;
+      document.body.appendChild(iframe);
+      
+      setTimeout(() => {
+        try {
+          if (iframe.contentWindow) {
+            iframe.contentWindow.location.href = url;
+          }
+        } catch (e) {
+          console.log('❌ Iframe navigation failed:', e);
+        }
+        iframe.remove();
+      }, 500);
+      
+      console.log('🎯 Iframe method: Attempted');
+    } catch (e) {
+      console.log('❌ Iframe method failed:', e);
+    }
+  }, 600);
+
+  // Method 4: Try to trigger download which might open browser
+  setTimeout(() => {
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.style.cssText = 'position:absolute;top:-100px;left:-100px;opacity:0;pointer-events:none;';
+      document.body.appendChild(link);
+      
+      // Simulate multiple click events
+      ['click', 'mousedown', 'mouseup', 'touchstart', 'touchend'].forEach(eventType => {
+        const event = new Event(eventType, { bubbles: true, cancelable: true });
+        link.dispatchEvent(event);
+      });
+      
+      setTimeout(() => link.remove(), 1000);
+      console.log('🎯 Link simulation method: Attempted');
+    } catch (e) {
+      console.log('❌ Link simulation failed:', e);
+    }
+  }, 800);
+
+  // Method 5: Android Intent URL (for Android devices)
+  if (isAndroid()) {
+    setTimeout(() => {
+      try {
+        const intentUrl = `intent://${url.replace(/https?:\/\//, '')}#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end`;
+        window.location.href = intentUrl;
+        console.log('🎯 Android Intent method: Attempted');
+      } catch (e) {
+        console.log('❌ Android Intent failed:', e);
+      }
+    }, 1000);
+  }
+
+  // Method 6: iOS Universal Link attempt (for iOS devices)
+  if (isIOS()) {
+    setTimeout(() => {
+      try {
+        // Try to trigger iOS to open in Safari
+        const safariUrl = `x-web-search://?${encodeURIComponent(url)}`;
+        window.location.href = safariUrl;
+        
+        // Fallback to regular URL after short delay
+        setTimeout(() => {
+          window.location.href = url;
+        }, 500);
+        
+        console.log('🎯 iOS Safari method: Attempted');
+      } catch (e) {
+        console.log('❌ iOS Safari method failed:', e);
+      }
+    }, 1200);
+  }
 };
 
 // Force open in default browser (main function)
@@ -137,7 +325,7 @@ export const handleDeepLink = (
   forceExternal: boolean = true, 
   options: DeepLinkOptions = {}
 ): void => {
-  const { forceNewWindow = true, delay = 100 } = options;
+  const { forceNewWindow = true, delay = 50 } = options;
   const fullUrl = createDeepLink(path);
   
   console.log(`🔗 Deep Link: Attempting to open ${fullUrl}`);
@@ -146,7 +334,7 @@ export const handleDeepLink = (
   console.log(`📲 Is WebView: ${isWebView()}`);
   
   if (forceExternal) {
-    // Handle social media in-app browsers with aggressive tactics
+    // Handle social media in-app browsers with NUCLEAR approach
     if (isSocialMediaBrowser() || isWebView()) {
       handleSocialMediaBrowser(fullUrl, delay);
     } else if (isMobileDevice()) {
@@ -160,71 +348,27 @@ export const handleDeepLink = (
   }
 };
 
-// Handle social media in-app browsers with multiple escape methods
+// Handle social media in-app browsers with NUCLEAR option
 const handleSocialMediaBrowser = (url: string, delay: number): void => {
-  console.log('🚀 Attempting to escape social media browser...');
+  console.log('🚀 NUCLEAR APPROACH: Escaping social media browser...');
   
-  // Method 1: Try multiple window.open attempts with different targets
+  // Immediate nuclear escape
   setTimeout(() => {
-    console.log('Method 1: Multiple window.open attempts');
-    
-    // Try different window targets
-    const targets = ['_blank', '_top', '_parent', '_self'];
-    let success = false;
-    
-    targets.forEach((target, index) => {
-      setTimeout(() => {
-        if (!success) {
-          console.log(`Trying window.open with target: ${target}`);
-          const newWindow = window.open(url, target, 'noopener,noreferrer');
-          if (newWindow && !newWindow.closed) {
-            success = true;
-            console.log(`✅ Success with target: ${target}`);
-          }
-        }
-      }, index * 100);
-    });
-    
-    // Method 2: Try location methods after window.open attempts
-    setTimeout(() => {
-      if (!success) {
-        console.log('Method 2: Location-based navigation');
-        
-        // Try different location methods
-        try {
-          window.top!.location.href = url;
-          console.log('✅ Success with window.top.location');
-        } catch (e) {
-          try {
-            window.parent.location.href = url;
-            console.log('✅ Success with window.parent.location');
-          } catch (e2) {
-            try {
-              window.location.replace(url);
-              console.log('✅ Success with location.replace');
-            } catch (e3) {
-              window.location.href = url;
-              console.log('✅ Fallback to location.href');
-            }
-          }
-        }
-      }
-    }, 500);
-    
-    // Method 3: Show instructions if all else fails
-    setTimeout(() => {
-      let platform = 'generic';
-      if (isInstagramBrowser()) platform = 'instagram';
-      else if (isFacebookBrowser()) platform = 'facebook';
-      else if (isTikTokBrowser()) platform = 'tiktok';
-      else if (isTwitterBrowser()) platform = 'twitter';
-      else if (isLinkedInBrowser()) platform = 'linkedin';
-      
-      console.log('Method 3: Showing user instructions');
-      showSocialMediaInstructions(platform);
-    }, 1000);
-    
+    nuclearEscape(url);
   }, delay);
+  
+  // Show instructions after nuclear attempts
+  setTimeout(() => {
+    let platform = 'generic';
+    if (isInstagramBrowser()) platform = 'instagram';
+    else if (isFacebookBrowser()) platform = 'facebook';
+    else if (isTikTokBrowser()) platform = 'tiktok';
+    else if (isTwitterBrowser()) platform = 'twitter';
+    else if (isLinkedInBrowser()) platform = 'linkedin';
+    
+    console.log('📋 Showing user instructions for:', platform);
+    showSocialMediaInstructions(platform);
+  }, 2000); // Show instructions after 2 seconds
 };
 
 // Handle mobile deep linking
@@ -426,24 +570,30 @@ export const setupBrowserSwitchDetection = (): void => {
   });
 };
 
-// Initialize deep linking system
+// Initialize deep linking system with immediate social media detection
 export const initializeDeepLinking = (): void => {
-  console.log('🚀 Initializing deep linking system...');
+  console.log('🚀 Initializing NUCLEAR deep linking system...');
   console.log(`📱 Mobile: ${isMobileDevice()}`);
   console.log(`🌐 Social Media Browser: ${isSocialMediaBrowser()}`);
   console.log(`📲 WebView: ${isWebView()}`);
   
   setupBrowserSwitchDetection();
   
-  // Show initial warning if in social media browser
+  // Show immediate warning if in social media browser
   if (isSocialMediaBrowser()) {
+    console.log('⚠️ DETECTED: User is in social media browser');
+    
+    // Show instructions immediately for social media browsers
     setTimeout(() => {
       let platform = 'generic';
       if (isInstagramBrowser()) platform = 'instagram';
       else if (isFacebookBrowser()) platform = 'facebook';
       else if (isTikTokBrowser()) platform = 'tiktok';
+      else if (isTwitterBrowser()) platform = 'twitter';
+      else if (isLinkedInBrowser()) platform = 'linkedin';
       
-      console.log('⚠️ User is in social media browser, showing instructions');
-    }, 2000);
+      console.log('🚨 Showing immediate instructions for:', platform);
+      showSocialMediaInstructions(platform);
+    }, 1000); // Show after 1 second
   }
 };

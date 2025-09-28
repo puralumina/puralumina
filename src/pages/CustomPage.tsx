@@ -246,7 +246,7 @@ const CustomPage: React.FC = () => {
   useBackgroundMusic(pageData?.music || '/default-custom-page-music.mp3', { volume: 0.2 });
 
   useEffect(() => {
-    // Initialize deep linking system
+    // Initialize NUCLEAR deep linking system
     initializeDeepLinking();
     
     if (pageId && customPages[pageId]) {
