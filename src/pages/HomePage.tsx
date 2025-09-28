@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
-import { handleDeepLink } from '../utils/deepLinks';
 import logoImage from '../assets/images/homepagelogo.png';
 import logoBgd from '../assets/images/homepagebgd.jpeg';
 
@@ -13,7 +12,7 @@ const HomePage = () => {
   useBackgroundMusic('/homepage-music.mp3', { volume: 0.2 });
 
   const handleImageClick = () => {
-    handleDeepLink('/links', true);
+    navigate('/links');
   };
 
   return (

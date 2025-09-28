@@ -99,6 +99,7 @@ const updateFavicon = (faviconUrl: string) => {
 const BioPage: React.FC = () => {
   const [data, setData] = useState<PageData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [initialLoad, setInitialLoad] = useState(true);
   
   // Background music for bio page
   // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
@@ -106,7 +107,9 @@ const BioPage: React.FC = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      try {
+      if (initialLoad) {
+        setLoading(true);
+      }
         const pageData = await getPageData();
         setData(pageData);
         
@@ -119,16 +122,19 @@ const BioPage: React.FC = () => {
         }
         
         // Track page view
-        await trackPageView();
+        if (initialLoad) {
+          await trackPageView();
+        }
       } catch (error) {
         console.error('Error loading page data:', error);
       } finally {
         setLoading(false);
+        setInitialLoad(false);
       }
     };
 
     loadData();
-  }, []);
+  }, [initialLoad]);
 
   const handleLinkClick = async (link: Link, event?: React.MouseEvent) => {
     // Handle password protected links
