@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import { Product } from '../types';
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
+import { handleDeepLink } from '../utils/deepLinks';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 

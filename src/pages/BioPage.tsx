@@ -4,6 +4,7 @@ import { getPageData, trackPageView, trackLinkClick } from '../services/pageServ
 import { PageData, Link } from '../types';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { handleEmailLink } from '../utils/emailDeepLinks';
+import { handleDeepLink } from '../utils/deepLinks';
 import PixelInjector from '../components/PixelInjector';
 
 // Utility to convert Google Drive URLs to direct image URLs
@@ -475,7 +476,12 @@ const BioPage: React.FC = () => {
                 {link.type === 'imageBlock' && (
                   <div 
                     className="w-full cursor-pointer"
-                    onClick={() => handleLinkClick(link)}
+                    onClick={() => {
+                      handleLinkClick(link);
+                      if (link.url.startsWith('/')) {
+                        handleDeepLink(link.url, true);
+                      }
+                    }}
                   >
                     {renderImageBlock(link)}
                   </div>
@@ -521,7 +527,14 @@ const BioPage: React.FC = () => {
                 {/* Standard Link */}
                 {link.type === 'standardLink' && (
                   <button
-                    onClick={() => handleLinkClick(link)}
+                    onClick={() => {
+                      handleLinkClick(link);
+                      if (link.url.startsWith('/')) {
+                        handleDeepLink(link.url, true);
+                      } else {
+                        handleLinkClick(link);
+                      }
+                    }}
                     className="w-full backdrop-blur-sm border p-4 rounded-lg flex items-center space-x-4 hover:scale-105 transition-all duration-300 group"
                     style={getBlockStyle(link)}
                   >
@@ -549,7 +562,14 @@ const BioPage: React.FC = () => {
                     'justify-center'
                   }`}>
                     <button
-                      onClick={() => handleLinkClick(link)}
+                      onClick={() => {
+                        handleLinkClick(link);
+                        if (link.url.startsWith('/')) {
+                          handleDeepLink(link.url, true);
+                        } else {
+                          handleLinkClick(link);
+                        }
+                      }}
                       className="px-6 py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300"
                       style={{
                         backgroundColor: link.buttonStyling?.backgroundColor || data.theme.primaryColor,
@@ -568,7 +588,14 @@ const BioPage: React.FC = () => {
                 {/* Music Block */}
                 {link.type === 'musicBlock' && (
                   <button
-                    onClick={() => handleLinkClick(link)}
+                    onClick={() => {
+                      handleLinkClick(link);
+                      if (link.url.startsWith('/')) {
+                        handleDeepLink(link.url, true);
+                      } else {
+                        handleLinkClick(link);
+                      }
+                    }}
                     className="w-full backdrop-blur-sm border p-4 rounded-lg flex items-center space-x-4 hover:scale-105 transition-all duration-300 group"
                     style={getBlockStyle(link)}
                   >
@@ -611,7 +638,14 @@ const BioPage: React.FC = () => {
                       />
                     ) : (
                       <button
-                        onClick={() => handleLinkClick(link)}
+                        onClick={() => {
+                          handleLinkClick(link);
+                          if (link.url.startsWith('/')) {
+                            handleDeepLink(link.url, true);
+                          } else {
+                            handleLinkClick(link);
+                          }
+                        }}
                         className="w-full p-4 flex items-center space-x-4 group"
                       >
                         {link.thumbnailUrl && (
@@ -647,7 +681,14 @@ const BioPage: React.FC = () => {
                 {/* Product Block */}
                 {link.type === 'productBlock' && (
                   <button
-                    onClick={() => handleLinkClick(link)}
+                    onClick={() => {
+                      handleLinkClick(link);
+                      if (link.url.startsWith('/')) {
+                        handleDeepLink(link.url, true);
+                      } else {
+                        handleLinkClick(link);
+                      }
+                    }}
                     className="w-full backdrop-blur-sm border p-4 rounded-lg hover:scale-105 transition-all duration-300 group"
                     style={getBlockStyle(link)}
                   >

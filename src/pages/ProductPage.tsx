@@ -4,6 +4,7 @@ import { ArrowLeft, ShoppingCart, Plus, Minus, ChevronLeft, ChevronRight } from 
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
 import { Product } from '../types';
 import { useCart } from '../contexts/CartContext';
+import { handleDeepLink } from '../utils/deepLinks';
 import IndividualPixelInjector from '../components/IndividualPixelInjector';
 
 // Sample products - you can modify these manually
@@ -487,7 +488,7 @@ const ProductPage: React.FC = () => {
     if (product) {
       // Direct Stripe payment instead of cart
       if (product.stripePaymentLink) {
-        window.open(product.stripePaymentLink, '_blank');
+        handleDeepLink(product.stripePaymentLink, true);
       } else {
         alert('Payment link not configured for this product.');
       }
