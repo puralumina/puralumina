@@ -233,12 +233,12 @@ const BioPage: React.FC = () => {
             aspectRatio: aspectRatio.replace(':', '/'),
             maxWidth: '100%'
           }}
-          className="overflow-hidden rounded-lg"
+          className="overflow-hidden"
         >
           <SafeImage
             src={link.thumbnailUrl || ''}
             alt={link.title}
-            className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover"
           />
         </div>
       </div>
@@ -360,9 +360,9 @@ const BioPage: React.FC = () => {
       <div className="fixed inset-0 bg-black bg-opacity-40" style={{ zIndex: 2 }}></div>
       
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-start px-4 py-8">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-start px-4 pt-8">
         {/* Profile Section */}
-        <div className="text-center mb-8 max-w-md">
+        <div className="text-center mb-6 max-w-md">
           {/* Profile Image - Only show if showProfileImage is not false */}
           {data.profile.showProfileImage !== false && (
             <div className="relative inline-block mb-4">
@@ -451,7 +451,7 @@ const BioPage: React.FC = () => {
         </div>
 
         {/* Links */}
-        <div className="w-full max-w-md space-y-4">
+        <div className="w-full max-w-md">
           {visibleLinks.map((link) => {
             // Handle spacing
             const topSpacing = link.topSpacing || link.marginTop || 0;
@@ -460,6 +460,7 @@ const BioPage: React.FC = () => {
             return (
               <div 
                 key={link.id}
+                className="mb-4"
                 style={{
                   marginTop: `${topSpacing}px`,
                   marginBottom: `${bottomSpacing}px`
@@ -489,7 +490,7 @@ const BioPage: React.FC = () => {
 
                 {/* Image Only Block */}
                 {link.type === 'imageOnly' && (
-                  <div className="w-full">
+                  <div className="w-full -mx-4">
                     {renderImageBlock(link)}
                   </div>
                 )}
