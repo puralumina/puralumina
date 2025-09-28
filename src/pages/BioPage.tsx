@@ -490,7 +490,8 @@ const BioPage: React.FC = () => {
 
                 {/* Image Only Block */}
                 {link.type === 'imageOnly' && (
-                  <div className="w-full -mx-4">
+                {/* <div className="w-full -mx-4"> */}
+                  <div className="w-full">
                     {renderImageBlock(link)}
                   </div>
                 )}
