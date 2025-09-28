@@ -98,8 +98,6 @@ const updateFavicon = (faviconUrl: string) => {
 
 const BioPage: React.FC = () => {
   const [data, setData] = useState<PageData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [initialLoad, setInitialLoad] = useState(true);
   
   // Background music for bio page
   // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
@@ -107,9 +105,7 @@ const BioPage: React.FC = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      if (initialLoad) {
-        setLoading(true);
-      }
+      try {
         const pageData = await getPageData();
         setData(pageData);
         
@@ -122,19 +118,14 @@ const BioPage: React.FC = () => {
         }
         
         // Track page view
-        if (initialLoad) {
-          await trackPageView();
-        }
+        await trackPageView();
       } catch (error) {
         console.error('Error loading page data:', error);
-      } finally {
-        setLoading(false);
-        setInitialLoad(false);
       }
     };
 
     loadData();
-  }, [initialLoad]);
+  }, []);
 
   const handleLinkClick = async (link: Link, event?: React.MouseEvent) => {
     // Handle password protected links
@@ -302,18 +293,25 @@ const BioPage: React.FC = () => {
     );
   };
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-      </div>
-    );
-  }
-
   if (!data) {
+    // Return default structure immediately while data loads
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center text-white">
-        <p>Failed to load page data</p>
+      <div className="min-h-screen relative" style={{ fontFamily: "'Inter', sans-serif" }}>
+        {/* Default background */}
+        <div className="fixed inset-0 bg-gradient-to-br from-blue-600 to-purple-700" />
+        <div className="fixed inset-0 bg-black bg-opacity-40"></div>
+        
+        {/* Content placeholder */}
+        <div className="relative z-10 min-h-screen flex flex-col items-center justify-start px-4 pt-8">
+          <div className="text-center mb-6 max-w-md">
+            <div className="relative inline-block mb-4">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-white/20 animate-pulse"></div>
+            </div>
+            <div className="h-8 bg-white/20 rounded animate-pulse mb-2"></div>
+            <div className="h-4 bg-white/20 rounded animate-pulse mb-2"></div>
+            <div className="h-4 bg-white/20 rounded animate-pulse"></div>
+          </div>
+        </div>
       </div>
     );
   }
