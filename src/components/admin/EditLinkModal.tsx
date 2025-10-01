@@ -624,7 +624,7 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
                   <option value="4:3">4:3 (Standard)</option>
                   <option value="1:1">1:1 (Square)</option>
                   <option value="3:4">3:4 (Portrait)</option>
-                  <option value="9:16">9:16 (Vertical)</option>
+                  <option value="9:24">9:24 (Vertical)</option>
                 </select>
               </div>
             )}
