@@ -103,7 +103,7 @@ const BioPage: React.FC = () => {
   
   // Background music for bio page
   // EDIT THIS PATH: Change '/biopage-music.mp3' to your desired music file
-  useBackgroundMusic('/biopage-music.mp3', { volume: 0.2 });
+  useBackgroundMusic('/biopage-music', { volume: 0.2 });
 
   useEffect(() => {
     const loadData = async () => {
