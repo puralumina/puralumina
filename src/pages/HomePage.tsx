@@ -17,7 +17,7 @@ const HomePage = () => {
   
   
   const handleImageClick = () => {
-    window.open('https://taap.it/UNSeRh');
+    window.open('https://taap.it/UNSeRh', '_self');
   };
 
   return (
