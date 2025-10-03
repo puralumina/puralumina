@@ -17,7 +17,7 @@ const HomePage = () => {
   
   
   const handleImageClick = () => {
-    navigate('https://taap.it/UNSeRh');
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
   };
 
   return (
