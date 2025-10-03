@@ -1,8 +1,4 @@
 # netlify.toml
-[build]
-  publish = "build"    # or "dist" if you use Vite
-  command = "npm run build"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
