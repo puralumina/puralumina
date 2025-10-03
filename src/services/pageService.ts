@@ -17,9 +17,6 @@ const defaultPageData: PageData = {
     bioColor: 'rgba(255, 255, 255, 0.9)',
     socialMedia: [],
     socialMediaSpacing: 12,
-    showProfileImage: true,
-    showName: true,
-    showBio: true,
   },
   theme: {
     preset: 'Default Light',

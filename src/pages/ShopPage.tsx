@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Filter } from 'lucide-react';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
-import { handleDeepLink } from '../utils/deepLinks';
 import { Product, Category } from '../types';
 
 // Sample products - you can modify these manually
@@ -227,25 +226,14 @@ const addToRecentlyViewed = (productId: string) => {
 };
 
 const ShopPage: React.FC = () => {
-  const { category: urlCategory } = useParams<{ category: string }>();
-  const navigate = useNavigate();
   const [products] = useState<Product[]>(sampleProducts);
   const [categories] = useState<Category[]>(sampleCategories);
-  const [selectedCategory, setSelectedCategory] = useState<string>(urlCategory || 'all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const [recentlyViewed, setRecentlyViewed] = useState<Product[]>([]);
   
   // Background music for shop page
   useBackgroundMusic('/shop-music.mp3', { volume: 0.2 });
-
-  // Update selected category when URL parameter changes
-  useEffect(() => {
-    if (urlCategory && urlCategory !== selectedCategory) {
-      setSelectedCategory(urlCategory);
-    } else if (!urlCategory && selectedCategory !== 'all') {
-      setSelectedCategory('all');
-    }
-  }, [urlCategory, selectedCategory]);
 
   useEffect(() => {
     if (selectedCategory === 'all') {
@@ -258,15 +246,6 @@ const ShopPage: React.FC = () => {
   useEffect(() => {
     setRecentlyViewed(getRecentlyViewed());
   }, []);
-
-  const handleCategoryChange = (categoryId: string) => {
-    setSelectedCategory(categoryId);
-    if (categoryId === 'all') {
-      navigate('/shop');
-    } else {
-      navigate(`/shop/${encodeURIComponent(categoryId)}`);
-    }
-  };
 
   const handleProductClick = (productId: string) => {
     addToRecentlyViewed(productId);
@@ -300,7 +279,7 @@ const ShopPage: React.FC = () => {
             {categories.map((category) => (
               <button
                 key={category.id}
-                onClick={() => handleCategoryChange(category.id)}
+                onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${
                   selectedCategory === category.id
                     ? 'bg-[#C27006] text-white'
@@ -318,15 +297,13 @@ const ShopPage: React.FC = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredProducts.map((product) => (
-            <div
+            <Link
               key={product.id}
+              to={`/product/${product.id}`}
               onClick={() => handleProductClick(product.id)}
               className="group block"
             >
-              <div 
-                className="transition-all duration-300 cursor-pointer"
-                onClick={() => handleDeepLink(`/product/${product.id}`, true)}
-              >
+              <div className="transition-all duration-300">
                 {/* Product Image */}
                 <div className="aspect-square bg-gray-100 overflow-hidden rounded-xl">
                   <img
@@ -353,7 +330,7 @@ const ShopPage: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div><br/><br/><br/>
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { ExternalLink, LogOut, Save, Check } from 'lucide-react';
-import { handleDeepLink } from '../../utils/deepLinks';
 
 interface HeaderProps {
   hasUnsavedChanges: boolean;
@@ -30,13 +29,15 @@ const Header: React.FC<HeaderProps> = ({
         </div>
         
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => handleDeepLink('/links', true)}
+          <a
+            href="/links"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ExternalLink className="w-4 h-4" />
             Preview Links Page
-          </button>
+          </a>
           
           <button
             onClick={onSave}

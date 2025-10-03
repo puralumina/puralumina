@@ -621,19 +621,10 @@ const EditLinkModal: React.FC<EditLinkModalProps> = ({ isOpen, onClose, link, on
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="16:9">16:9 (Widescreen)</option>
-                  <option value="16:6">16:6 (Ultra Widescreen)</option>
                   <option value="4:3">4:3 (Standard)</option>
                   <option value="1:1">1:1 (Square)</option>
                   <option value="3:4">3:4 (Portrait)</option>
-                  <option value="9:5">9:5 (Custom 1)</option>
-                  <option value="9:16">9:16 (Reels)</option>
-                  <option value="9:18">9:18 (Custom 1)</option>
-                  <option value="9:20">9:20 (Custom 2)</option>
-                  <option value="9:22">9:22 (Custom 3)</option>
-                  <option value="9:24">9:24 (Custom 4)</option>
-                  <option value="9:26">9:26 (Custom 5)</option>
-                  <option value="9:28">9:28 (Custom 6)</option>
-                  <option value="9:30">9:30 (Custom 7)</option>
+                  <option value="9:16">9:16 (Vertical)</option>
                 </select>
               </div>
             )}
