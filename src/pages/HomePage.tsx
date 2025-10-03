@@ -14,6 +14,11 @@ const HomePage = () => {
   const handleImageClick = () => {
     navigate('/links');
   };
+  
+  
+  {/* const handleImageClick = () => {
+    window.open('https://taap.it/UNSeRh', '_self');
+  };*/}
 
   return (
     <div className="h-screen relative overflow-hidden">
