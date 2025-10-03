@@ -1564,6 +1564,30 @@ const BioPage: React.FC = () => {
             <p className="text-white/60 text-sm">
               Copyright © 2025 Soulmates Desires. All rights reserved.
             </p>
+  
+            {/* Horizontal legal links with separators */}
+            <div className="mt-4 flex justify-center items-center gap-1 text-white/60 text-sm">
+              <a 
+                href="/faq" 
+                className="hover:text-white transition-colors whitespace-nowrap"
+              >
+                FAQ
+              </a>
+              <span aria-hidden="true">•</span>
+              <a 
+                href="/privacy-policy" 
+                className="hover:text-white transition-colors whitespace-nowrap"
+              >
+                Privacy Policy
+              </a>
+              <span aria-hidden="true">•</span>
+              <a 
+                href="/terms-of-service" 
+                className="hover:text-white transition-colors whitespace-nowrap"
+              >
+                Terms of Service
+              </a>
+            </div>
           </footer>
         </div>
       </main>
