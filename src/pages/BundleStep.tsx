@@ -39,7 +39,7 @@ const BundleStep: React.FC = () => {
   // Simple CTA handler (redirects to your main shop/product page)
   const handleCTAClick = () => {
     // Replace with your actual destination URL
-    window.location.href = 'https://taap.it/HIPsqT';
+    window.location.href = '/product/exclusive-bundle-collection';
   };
 
   return (
