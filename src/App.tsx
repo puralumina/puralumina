@@ -10,6 +10,7 @@ import ShopPage from './pages/ShopPage';
 import ProductPage from './pages/ProductPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import BundleStep from './pages/BundleStep';
 import FAQ from './pages/FAQ';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/shop" element={<ShopPage />} />
+            <Route path="/bundle-step" element={<BundleStep />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route 

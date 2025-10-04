@@ -104,18 +104,18 @@ const sampleProducts: Product[] = [
     stripePaymentLink: 'https://buy.stripe.com/28E6oHd2Webm3Zh3sX7wA03',
   },
   {
-    id: '4',
-    name: 'Make Him Craving You: The Ultimate Guide to Teasing and Pleasing',
-    price: 14.99,
-    originalPrice: 29.99,
+    id: 'make-him-crave-you',
+    name: 'Make Him Crave You: The Ultimate Guide to Teasing and Pleasing',
+    price: 11.99,
+    originalPrice: 14.99,
     isOnSale: true,
     saleLabel: 'SALE',
     currency: 'USD',
-    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+    image: 'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366632/Book6_Make_Him_Crave_You_ctkf5j.jpg',
     images: [
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
-      'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg'
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366632/Book6_Make_Him_Crave_You_ctkf5j.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366632/Book6_Make_Him_Crave_You_ctkf5j.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366632/Book6_Make_Him_Crave_You_ctkf5j.jpg'
     ],
     description: `<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: justify;">Become the irresistible force in his life with <strong>"Make Him Craving You: The Ultimate Guide to Teasing and Pleasing."</strong> This book is your go-to resource for mastering the art of teasing and pleasing, teaching you how to drive him wild with desire and make him beg for more. Discover the secrets to understanding his needs, communicating effectively, and creating a connection that is both sensual and emotional.</p>
 
@@ -134,92 +134,90 @@ const sampleProducts: Product[] = [
     stripePaymentLink: 'https://buy.stripe.com/28E28r0gaebm53le7B7wA02',
   },
   {
-    id: '5',
-    name: 'Couples Games - The Spicy Edition',
-    price: 7.99,
-    originalPrice: 14.99,
+    id: 'couples-games-4-in-1-edition',
+    name: 'Couples Games 4-in-1 Edition',
+    price: 17.99,
+    originalPrice: 31.99,
+    isOnSale: true,
+    saleLabel: 'SALE',
     currency: 'USD',
-    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+    image: 'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759535562/4-in-1_Couples_Games_lqqb00.jpg',
     images: [
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
-      'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg',
-      'https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg'
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759535562/4-in-1_Couples_Games_lqqb00.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366626/Booklet_1_Couples_Games_-_Spicy_Edition_go9v3i.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366626/Booklet_2_Couples_Games_-_Connection_Edition_jvnuky.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366625/Booklet_3_Couples_Games_-_Laughs_Giggles_Edition_dyfygx.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366625/Booklet_4_Couples_Games_-_5-Minute_Connector_Edition_woq5b8.jpg'
     ],
     description: `Your financial life isn't a spreadsheet, it's a house with seven essential rooms. From the Foundation (emergency savings) to the Engine Room (passive income), each space plays a vital role in stability and growth. This book walks you through building, organizing, and maintaining your personal "Wealth Home," so you're not just making money. Rather you're creating a safe, sustainable, and scalable financial life.
 `,
-    category: 'books',
+    category: 'Couples Games',
     stripePaymentLink: 'https://buy.stripe.com/7sY6oH9QKd7igM39Rl7wA01',
   },
   {
-    id: '6',
-    name: 'Couples Games - The Connection Edition',
-    price: 7.99,
+    id: 'dirty-truth-or-dare-for-couples',
+    name: 'Dirty Truth or Dare for Couples',
+    price: 9.99,
+    currency: 'USD',
+    image: 'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366627/Booklet_5_Cards_-_Truth_or_Dare_do6zkw.jpg',
+    images: [
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366627/Booklet_5_Cards_-_Truth_or_Dare_do6zkw.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366627/Booklet_5_Cards_-_Truth_or_Dare_do6zkw.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366627/Booklet_5_Cards_-_Truth_or_Dare_do6zkw.jpg'
+    ],
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+`,
+    category: 'Cards',
+    stripePaymentLink: 'https://youtube.com',
+  },
+  {
+    id: 'daily-couples-affirmations',
+    name: 'Daily Couples Affirmations',
+    price: 11.99,
+    currency: 'USD',
+    image: 'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366638/Booklet_7_Cards_-_Couples_Affirmation_zgh0s4.jpg',
+    images: [
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366638/Booklet_7_Cards_-_Couples_Affirmation_zgh0s4.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366638/Booklet_7_Cards_-_Couples_Affirmation_zgh0s4.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366638/Booklet_7_Cards_-_Couples_Affirmation_zgh0s4.jpg'
+    ],
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+`,
+    category: 'Cards',
+    stripePaymentLink: 'https://youtube.com',
+  },
+  {
+    id: 'must-do-couples-checklist',
+    name: 'The MUST-DO Couples Checklist',
+    price: 14.99,
+    originalPrice: 19.99,
+    isOnSale: true,
+    saleLabel: 'SALE',
+    currency: 'USD',
+    image: 'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366625/Booklet_8_Cards_-_The_Must-Do_Couples_Checklist_nuq8c0.jpg',
+    images: [
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366625/Booklet_8_Cards_-_The_Must-Do_Couples_Checklist_nuq8c0.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366625/Booklet_8_Cards_-_The_Must-Do_Couples_Checklist_nuq8c0.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366625/Booklet_8_Cards_-_The_Must-Do_Couples_Checklist_nuq8c0.jpg'
+    ],
+    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
+`,
+    category: 'Cards',
+    stripePaymentLink: 'https://youtube.com',
+  },
+  {
+    id: 'date-night-ideas',
+    name: 'Date Night Ideas',
+    price: 9.99,
     originalPrice: 14.99,
     isOnSale: true,
-    saleLabel: 'CLEARANCE',
+    saleLabel: 'SALE',
     currency: 'USD',
-    image: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
+    image: 'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366631/Booklet_6_Cards_-_Date_Night_Ideas_j8hn3o.jpg',
     images: [
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg'
-    ],
-    description: `High-quality professional camera perfect for photography enthusiasts and professionals alike. Features advanced autofocus, excellent low-light performance, and durable construction that can withstand various shooting conditions.`,
-    category: 'Cards',
-    stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_6',
-  },
-  {
-    id: '7',
-    name: 'Couples Games - The Laughs & Giggles Edition',
-    price: 7.99,
-    originalPrice: 14.99,
-    currency: 'USD',
-    image: 'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-    images: [
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
-    ],
-    description: `Premium camera lens with excellent optical quality and superior build. Perfect for portrait photography, landscape shots, and professional work. Features fast autofocus and weather sealing.`,
-    category: 'Planners & Worksheets',
-    stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_7',
-  },
-  {
-    id: '8',
-    name: 'Couples Games - The 5-Minute Connector Edition',
-    price: 7.99,
-    originalPrice: 14.99,
-    isOnSale: true,
-    saleLabel: 'MEGA SALE',
-    currency: 'USD',
-    image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
-    images: [
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg'
-    ],
-    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.`,
-    category: 'books',
-    stripePaymentLink: 'https://buy.stripe.com/test_your_payment_link_8',
-  },
-  {
-    id: '9',
-    name: '"Truth or Dare" for Couples Cards',
-    price: 7.99,
-    originalPrice: 19.99,
-    isOnSale: true,
-    saleLabel: 'MEGA SALE',
-    currency: 'USD',
-    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    images: [
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366631/Booklet_6_Cards_-_Date_Night_Ideas_j8hn3o.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366631/Booklet_6_Cards_-_Date_Night_Ideas_j8hn3o.jpg',
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759366631/Booklet_6_Cards_-_Date_Night_Ideas_j8hn3o.jpg'
     ],
     description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
 `,
@@ -227,128 +225,24 @@ const sampleProducts: Product[] = [
     stripePaymentLink: 'https://youtube.com',
   },
   {
-    id: '10',
-    name: 'Date Night Idea Cards',
-    price: 7.99,
-    originalPrice: 19.99,
+    id: 'exclusive-bundle-collection',
+    name: 'All Products Bundle (with limited-time Exclusive Bonus)',
+    price: 39.99,
+    originalPrice: 449.99,
     isOnSale: true,
     saleLabel: 'MEGA SALE',
     currency: 'USD',
-    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
+    image: 'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759509899/Landing_Page_2_OptimizedAsset_18_ktdji3.png',
     images: [
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
-    ],
-    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
-`,
-    category: 'Cards',
-    stripePaymentLink: 'https://youtube.com',
-  },
-  {
-    id: '11',
-    name: 'Couples\' Affirmation Cards',
-    price: 7.99,
-    originalPrice: 19.99,
-    isOnSale: true,
-    saleLabel: 'MEGA SALE',
-    currency: 'USD',
-    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    images: [
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
-    ],
-    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
-`,
-    category: 'Cards',
-    stripePaymentLink: 'https://youtube.com',
-  },
-  {
-    id: '12',
-    name: 'Vintage Camera',
-    price: 7.99,
-    originalPrice: 19.99,
-    isOnSale: true,
-    saleLabel: 'MEGA SALE',
-    currency: 'USD',
-    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    images: [
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
-    ],
-    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
-`,
-    category: 'Planners & Worksheets',
-    stripePaymentLink: 'https://youtube.com',
-  },
-  {
-    id: '13',
-    name: 'The Ultimate Date Night Planner',
-    price: 7.99,
-    originalPrice: 19.99,
-    isOnSale: true,
-    saleLabel: 'MEGA SALE',
-    currency: 'USD',
-    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    images: [
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
-    ],
-    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
-`,
-    category: 'Planners & Worksheets',
-    stripePaymentLink: 'https://youtube.com',
-  },
-  {
-    id: '14',
-    name: '"State of the Union" Meeting Guide',
-    price: 7.99,
-    originalPrice: 19.99,
-    isOnSale: true,
-    saleLabel: 'MEGA SALE',
-    currency: 'USD',
-    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    images: [
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
-    ],
-    description: `Complete photography kit for beginners and professionals. Includes camera, lens, tripod, memory cards, and carrying case. Everything you need to start your photography journey.
-`,
-    category: 'Planners & Worksheets',
-    stripePaymentLink: 'https://youtube.com',
-  },
-  {
-    id: '15',
-    name: 'All Products Bundle',
-    price: 69.99,
-    originalPrice: 149.99,
-    isOnSale: true,
-    saleLabel: 'MEGA SALE',
-    currency: 'USD',
-    image: 'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-    images: [
-      'https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg',
-      'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg',
-      'https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg',
-      'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg'
+      'https://res.cloudinary.com/dmjtr9kop/image/upload/v1759509899/Landing_Page_2_OptimizedAsset_18_ktdji3.png'
     ],
     description: `
-<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">Discover the ultimate resource for enhancing your intimate life with our exclusive 14 Digital Book Bundle! This comprehensive package includes every book available on our website, spanning all categories, offering you a wealth of expert insights and techniques to transform your relationship and satisfy your deepest desires. Here's what you'll receive:</p>
+<p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">Discover the ultimate resource for enhancing your intimate life with our exclusive 22 Digital Book Bundle! This comprehensive package includes every book available on our website, spanning all categories, offering you a wealth of expert insights and techniques to transform your relationship and satisfy your deepest desires. Here's what you'll receive:</p>
 
 <ul style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin: 20px 0; padding-left: 20px;">
     <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Books Category:</strong> Dive into expert guides on intimacy and pleasure with titles like "Mastering Her Pleasure" and "Seducing His Senses."</li>
     <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Couples Games:</strong> Explore fun and sensual games designed to spice up your relationship and deepen your connection.</li>
     <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Cards:</strong> Utilize playful cards to explore desires, build intimacy, and keep things exciting in the bedroom.</li>
-    <li style="margin-bottom: 15px;"><strong style="color: #2c3e50; font-weight: 600;">Planners &amp; Worksheets:</strong> Organize and enhance your journey to a more satisfying relationship with practical tools and resources.</li>
 </ul>
 
 <p style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; margin-bottom: 20px; text-align: left;">With this bundle, you'll receive a comprehensive library of resources designed to enhance your intimate life. From building confidence and improving communication to exploring new techniques and scenarios, this bundle has everything you need to keep the spark alive and satisfy your partner's deepest desires. Don't miss out on this incredible offer. Elevate your connection and pleasure today at an unbeatable price!</p>
@@ -463,7 +357,7 @@ const ProductPage: React.FC = () => {
   // EDIT THESE PATHS: Add music files for each product ID
   const getMusicForProduct = (productId: string | undefined) => {
     const musicMap: { [key: string]: string } = {
-      '1': '/product-1-music.mp3',  // The Richest Habit
+      'couples-games-4-in-1-edition': '/product-1-music.mp3',  // The Richest Habit
       '2': '/product-2-music.mp3',  // The Compound Engine
       '3': '/product-3-music.mp3',  // Money is a Language
       '4': '/product-4-music.mp3',  // The Delayed Dividend
