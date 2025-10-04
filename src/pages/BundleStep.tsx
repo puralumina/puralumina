@@ -85,8 +85,9 @@ const BundleStep: React.FC = () => {
       >
         <div 
           style={{
-            backgroundColor: '#12530bff',
+            backgroundColor: '#35353595',
             borderRadius: '20px',
+            border: '2px solid #bebebeff',
             padding: '24px',
             maxWidth: '500px',
             width: '100%',
