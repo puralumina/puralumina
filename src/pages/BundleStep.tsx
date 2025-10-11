@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const BundleStep: React.FC = () => {
   // Countdown to a specific date (adjust as needed)
-  const targetDate = new Date('2025-10-04T11:59:59').getTime();
+  const targetDate = new Date('2025-10-11T11:59:59').getTime();
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
